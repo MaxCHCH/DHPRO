@@ -324,8 +324,15 @@
 		83EC8C721E9E015E0007D820 /* FooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 83EC8C6D1E9E015E0007D820 /* FooterView.m */; };
 		83EC8C731E9E015E0007D820 /* SectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 83EC8C6F1E9E015E0007D820 /* SectionHeaderView.m */; };
 		83EC8C741E9E015E0007D820 /* TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 83EC8C711E9E015E0007D820 /* TableViewCell.m */; };
-		83EC8C771E9E01880007D820 /* ListViewHeaderFooterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83EC8C761E9E01880007D820 /* ListViewHeaderFooterViewController.m */; };
 		83EC8C7A1E9E034C0007D820 /* UIView+AdjustFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 83EC8C791E9E034C0007D820 /* UIView+AdjustFrame.m */; };
+		83EC8C9E1E9E09E40007D820 /* ListViewHeaderFooterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83EC8C9D1E9E09E40007D820 /* ListViewHeaderFooterViewController.m */; };
+		83EC8CA41E9E0AF30007D820 /* ShowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83EC8CA01E9E0AF30007D820 /* ShowViewController.m */; };
+		83EC8CA51E9E0AF30007D820 /* TagPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 83EC8CA21E9E0AF30007D820 /* TagPickerView.m */; };
+		83EC8CB11E9E0B3B0007D820 /* HXTagAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 83EC8CA81E9E0B3B0007D820 /* HXTagAttribute.m */; };
+		83EC8CB21E9E0B3B0007D820 /* HXTagCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 83EC8CAA1E9E0B3B0007D820 /* HXTagCollectionViewCell.m */; };
+		83EC8CB31E9E0B3B0007D820 /* HXTagCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 83EC8CAC1E9E0B3B0007D820 /* HXTagCollectionViewFlowLayout.m */; };
+		83EC8CB41E9E0B3B0007D820 /* HXTagsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 83EC8CAE1E9E0B3B0007D820 /* HXTagsCell.m */; };
+		83EC8CB51E9E0B3B0007D820 /* HXTagsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 83EC8CB01E9E0B3B0007D820 /* HXTagsView.m */; };
 		83FD35CC1D1CDECF00A445C8 /* TTTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83FD35CA1D1CDECF00A445C8 /* TTTViewController.m */; };
 		83FD35CD1D1CDECF00A445C8 /* TTTViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83FD35CB1D1CDECF00A445C8 /* TTTViewController.xib */; };
 		83FD35CF1D1CE19500A445C8 /* tjtp-168@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 83FD35CE1D1CE19500A445C8 /* tjtp-168@2x.png */; };
@@ -889,10 +896,24 @@
 		83EC8C6F1E9E015E0007D820 /* SectionHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SectionHeaderView.m; sourceTree = "<group>"; };
 		83EC8C701E9E015E0007D820 /* TableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewCell.h; sourceTree = "<group>"; };
 		83EC8C711E9E015E0007D820 /* TableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewCell.m; sourceTree = "<group>"; };
-		83EC8C751E9E01880007D820 /* ListViewHeaderFooterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListViewHeaderFooterViewController.h; sourceTree = "<group>"; };
-		83EC8C761E9E01880007D820 /* ListViewHeaderFooterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListViewHeaderFooterViewController.m; sourceTree = "<group>"; };
 		83EC8C781E9E034C0007D820 /* UIView+AdjustFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+AdjustFrame.h"; sourceTree = "<group>"; };
 		83EC8C791E9E034C0007D820 /* UIView+AdjustFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+AdjustFrame.m"; sourceTree = "<group>"; };
+		83EC8C9C1E9E09E40007D820 /* ListViewHeaderFooterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListViewHeaderFooterViewController.h; sourceTree = "<group>"; };
+		83EC8C9D1E9E09E40007D820 /* ListViewHeaderFooterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListViewHeaderFooterViewController.m; sourceTree = "<group>"; };
+		83EC8C9F1E9E0AF30007D820 /* ShowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowViewController.h; sourceTree = "<group>"; };
+		83EC8CA01E9E0AF30007D820 /* ShowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowViewController.m; sourceTree = "<group>"; };
+		83EC8CA11E9E0AF30007D820 /* TagPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TagPickerView.h; sourceTree = "<group>"; };
+		83EC8CA21E9E0AF30007D820 /* TagPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TagPickerView.m; sourceTree = "<group>"; };
+		83EC8CA71E9E0B3B0007D820 /* HXTagAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXTagAttribute.h; sourceTree = "<group>"; };
+		83EC8CA81E9E0B3B0007D820 /* HXTagAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXTagAttribute.m; sourceTree = "<group>"; };
+		83EC8CA91E9E0B3B0007D820 /* HXTagCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXTagCollectionViewCell.h; sourceTree = "<group>"; };
+		83EC8CAA1E9E0B3B0007D820 /* HXTagCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXTagCollectionViewCell.m; sourceTree = "<group>"; };
+		83EC8CAB1E9E0B3B0007D820 /* HXTagCollectionViewFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXTagCollectionViewFlowLayout.h; sourceTree = "<group>"; };
+		83EC8CAC1E9E0B3B0007D820 /* HXTagCollectionViewFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXTagCollectionViewFlowLayout.m; sourceTree = "<group>"; };
+		83EC8CAD1E9E0B3B0007D820 /* HXTagsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXTagsCell.h; sourceTree = "<group>"; };
+		83EC8CAE1E9E0B3B0007D820 /* HXTagsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXTagsCell.m; sourceTree = "<group>"; };
+		83EC8CAF1E9E0B3B0007D820 /* HXTagsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXTagsView.h; sourceTree = "<group>"; };
+		83EC8CB01E9E0B3B0007D820 /* HXTagsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXTagsView.m; sourceTree = "<group>"; };
 		83F560241D0576D6005B0C4C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		83F560261D0576E2005B0C4C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		83F560281D0576E9005B0C4C /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -1381,10 +1402,15 @@
 				836FE2AE1DEE841B0071526B /* libexidcard */,
 				83BCFE061CFEBB12007076DC /* ViewController.h */,
 				836F304E1D9E0C370000577C /* ViewController.m */,
+				83EC8C9F1E9E0AF30007D820 /* ShowViewController.h */,
+				83EC8CA01E9E0AF30007D820 /* ShowViewController.m */,
+				83EC8CA11E9E0AF30007D820 /* TagPickerView.h */,
+				83EC8CA21E9E0AF30007D820 /* TagPickerView.m */,
+				83EC8CA61E9E0B3B0007D820 /* TagView */,
+				83EC8C9C1E9E09E40007D820 /* ListViewHeaderFooterViewController.h */,
+				83EC8C9D1E9E09E40007D820 /* ListViewHeaderFooterViewController.m */,
 				83EC8C781E9E034C0007D820 /* UIView+AdjustFrame.h */,
 				83EC8C791E9E034C0007D820 /* UIView+AdjustFrame.m */,
-				83EC8C751E9E01880007D820 /* ListViewHeaderFooterViewController.h */,
-				83EC8C761E9E01880007D820 /* ListViewHeaderFooterViewController.m */,
 				83EC8C411E9DFE240007D820 /* registerInterface.h */,
 				83EC8C421E9DFE240007D820 /* registerInterface.m */,
 				83EC8C431E9DFE240007D820 /* registerInterface.xib */,
@@ -1738,6 +1764,23 @@
 				83EC8C711E9E015E0007D820 /* TableViewCell.m */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		83EC8CA61E9E0B3B0007D820 /* TagView */ = {
+			isa = PBXGroup;
+			children = (
+				83EC8CA71E9E0B3B0007D820 /* HXTagAttribute.h */,
+				83EC8CA81E9E0B3B0007D820 /* HXTagAttribute.m */,
+				83EC8CA91E9E0B3B0007D820 /* HXTagCollectionViewCell.h */,
+				83EC8CAA1E9E0B3B0007D820 /* HXTagCollectionViewCell.m */,
+				83EC8CAB1E9E0B3B0007D820 /* HXTagCollectionViewFlowLayout.h */,
+				83EC8CAC1E9E0B3B0007D820 /* HXTagCollectionViewFlowLayout.m */,
+				83EC8CAD1E9E0B3B0007D820 /* HXTagsCell.h */,
+				83EC8CAE1E9E0B3B0007D820 /* HXTagsCell.m */,
+				83EC8CAF1E9E0B3B0007D820 /* HXTagsView.h */,
+				83EC8CB01E9E0B3B0007D820 /* HXTagsView.m */,
+			);
+			path = TagView;
 			sourceTree = "<group>";
 		};
 		83FD35D31D1CE42C00A445C8 /* SuPhotoPicker */ = {
@@ -2227,7 +2270,6 @@
 				8364C2311E5D230300E2FBFD /* LBLabel&TextFieldCell.m in Sources */,
 				835593D91E2DBA5A0061376D /* AddressBookViewController.m in Sources */,
 				83FD369A1D1D012100A445C8 /* MLSelectPhotoPickerAssetsViewController.m in Sources */,
-				83EC8C771E9E01880007D820 /* ListViewHeaderFooterViewController.m in Sources */,
 				83EC8C6A1E9E01510007D820 /* ResultModel.m in Sources */,
 				835331021D35EAA400A62BCE /* ToastUtils.m in Sources */,
 				83FD36921D1D012100A445C8 /* UIImage+MLTint.m in Sources */,
@@ -2287,6 +2329,7 @@
 				83FD369F1D1D012100A445C8 /* MLSelectPhotoPickerBrowserPhotoScrollView.m in Sources */,
 				83FD369B1D1D012100A445C8 /* MLSelectPhotoPickerGroupViewController.m in Sources */,
 				838EACAA1DB86A3100448DB0 /* TabTableViewCell.m in Sources */,
+				83EC8CA51E9E0AF30007D820 /* TagPickerView.m in Sources */,
 				83A1A7201DED776B00BC5F58 /* LabelNilMethodBlockViewController.m in Sources */,
 				834BE2C61D47469D001105A1 /* GetDictionaryByID.m in Sources */,
 				83FD360B1D1CE42C00A445C8 /* UIView+SuLine.m in Sources */,
@@ -2302,6 +2345,7 @@
 				8353310A1D35EAA400A62BCE /* ZLProgressHUD.m in Sources */,
 				834F21071D6198710080B5F3 /* DoubleTableViewController.m in Sources */,
 				835D5D611D34F2C6000F4E02 /* CardViewController.m in Sources */,
+				83EC8CB21E9E0B3B0007D820 /* HXTagCollectionViewCell.m in Sources */,
 				835EC85C1DC3433A00D91CB3 /* ESMHomeViewController.m in Sources */,
 				834AE7E21D4079E700BDD80A /* split.c in Sources */,
 				8320E4271E00E26300A8D2A2 /* MonitsAllViewController.m in Sources */,
@@ -2309,6 +2353,7 @@
 				83C55C411DF7E9A500B77434 /* TestTwoVC.m in Sources */,
 				83FD369E1D1D012100A445C8 /* MLSelectPhotoPickerBrowserPhotoImageView.m in Sources */,
 				83C273801DE5A4900019F12F /* TimeChooseTableViewCell.m in Sources */,
+				83EC8CB41E9E0B3B0007D820 /* HXTagsCell.m in Sources */,
 				83EC8C591E9DFE3E0007D820 /* SFProgressHUD.m in Sources */,
 				83B3DCDA1D29FAC80044A7FF /* HeaderViewController.m in Sources */,
 				835331181D36298400A62BCE /* ZLShowBigImage.m in Sources */,
@@ -2345,6 +2390,7 @@
 				834AE8011D40A71500BDD80A /* pinyin.c in Sources */,
 				839FE3E71D0D66F600D1A014 /* HYBHeaderView.m in Sources */,
 				835D6CD01DB75B59006A2DE6 /* BaseTabBarViewController.m in Sources */,
+				83EC8C9E1E9E09E40007D820 /* ListViewHeaderFooterViewController.m in Sources */,
 				83FD35CC1D1CDECF00A445C8 /* TTTViewController.m in Sources */,
 				83547FDC1D6DA85500518CC3 /* SectionSectionViewController.m in Sources */,
 				83547FD91D6DA84600518CC3 /* FirstFirstViewController.m in Sources */,
@@ -2392,6 +2438,7 @@
 				836315741E49ADC000D0689F /* RadioButton.m in Sources */,
 				83FD36981D1D012100A445C8 /* MLSelectPhotoBrowserViewController.m in Sources */,
 				83C55BF61DF15E0100B77434 /* CCTableViewCell.m in Sources */,
+				83EC8CB11E9E0B3B0007D820 /* HXTagAttribute.m in Sources */,
 				83C55BF11DF145C900B77434 /* EquiPmentViewController.m in Sources */,
 				83A1A7061DED529400BC5F58 /* homeViewController.m in Sources */,
 				83EC8C481E9DFE240007D820 /* registerViewController.m in Sources */,
@@ -2402,6 +2449,7 @@
 				835EC8631DC3433A00D91CB3 /* ESMTestViewController.m in Sources */,
 				83FD361C1D1CE42C00A445C8 /* SuPhotoAblumCell.m in Sources */,
 				8385F78A1CFFDA7400409181 /* JFDetailViewController.m in Sources */,
+				83EC8CB31E9E0B3B0007D820 /* HXTagCollectionViewFlowLayout.m in Sources */,
 				8397EA7D1D23A5E0003FF91E /* WViewController.m in Sources */,
 				8385F78E1CFFDBFB00409181 /* UIColor+JFColor.m in Sources */,
 				83C4015A1DB0CFE500B8AC92 /* GragView.m in Sources */,
@@ -2410,9 +2458,11 @@
 				83A1A70D1DED60AF00BC5F58 /* SignatureViewController.m in Sources */,
 				836EEA021E0920DA000966A7 /* IncludeNibTableViewController.m in Sources */,
 				83FD36A21D1D012100A445C8 /* MLSelectPhotoPickerCollectionViewCell.m in Sources */,
+				83EC8CB51E9E0B3B0007D820 /* HXTagsView.m in Sources */,
 				835EC8641DC3433A00D91CB3 /* ESMTwoViewController.m in Sources */,
 				8353310C1D35EAA400A62BCE /* ZLShowBigImgViewController.m in Sources */,
 				83FD360D1D1CE42C00A445C8 /* SuPhotoBaseController.m in Sources */,
+				83EC8CA41E9E0AF30007D820 /* ShowViewController.m in Sources */,
 				836783351DB47AE000E9F0E5 /* TZPhotoPreviewCell.m in Sources */,
 				8367832D1DB47AE000E9F0E5 /* LxGridViewFlowLayout.m in Sources */,
 				836783371DB47AE000E9F0E5 /* TZTestCell.m in Sources */,
@@ -2553,9 +2603,72 @@
 					"$(PROJECT_DIR)/Test",
 					"$(PROJECT_DIR)/Test/libexidcard",
 				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"sqlite3.0\"",
+					"-l\"stdc++.6.0.9\"",
+					"-framework",
+					"\"AFNetworking\"",
+					"-framework",
+					"\"BaiduMapAPI_Base\"",
+					"-framework",
+					"\"BaiduMapAPI_Cloud\"",
+					"-framework",
+					"\"BaiduMapAPI_Location\"",
+					"-framework",
+					"\"BaiduMapAPI_Map\"",
+					"-framework",
+					"\"BaiduMapAPI_Radar\"",
+					"-framework",
+					"\"BaiduMapAPI_Search\"",
+					"-framework",
+					"\"BaiduMapAPI_Utils\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreLocation\"",
+					"-framework",
+					"\"CoreTelephony\"",
+					"-framework",
+					"\"FBRetainCycleDetector\"",
+					"-framework",
+					"\"FDFullscreenPopGesture\"",
+					"-framework",
+					"\"FSCalendar\"",
+					"-framework",
+					"\"IQKeyboardManager\"",
+					"-framework",
+					"\"MBProgressHUD\"",
+					"-framework",
+					"\"MJExtension\"",
+					"-framework",
+					"\"MLeaksFinder\"",
+					"-framework",
+					"\"Masonry\"",
+					"-framework",
+					"\"OpenGLES\"",
+					"-framework",
+					"\"QMUIKit\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"SDAutoLayout\"",
+					"-framework",
+					"\"SDWebImage\"",
+					"-framework",
+					"\"SVProgressHUD\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"YYKit\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = con.zhongkehuabo.Test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				VALID_ARCHS = "arm64 armv7 armv7s";
 			};
 			name = Debug;
 		};
@@ -2581,9 +2694,72 @@
 					"$(PROJECT_DIR)/Test",
 					"$(PROJECT_DIR)/Test/libexidcard",
 				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"sqlite3.0\"",
+					"-l\"stdc++.6.0.9\"",
+					"-framework",
+					"\"AFNetworking\"",
+					"-framework",
+					"\"BaiduMapAPI_Base\"",
+					"-framework",
+					"\"BaiduMapAPI_Cloud\"",
+					"-framework",
+					"\"BaiduMapAPI_Location\"",
+					"-framework",
+					"\"BaiduMapAPI_Map\"",
+					"-framework",
+					"\"BaiduMapAPI_Radar\"",
+					"-framework",
+					"\"BaiduMapAPI_Search\"",
+					"-framework",
+					"\"BaiduMapAPI_Utils\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreLocation\"",
+					"-framework",
+					"\"CoreTelephony\"",
+					"-framework",
+					"\"FBRetainCycleDetector\"",
+					"-framework",
+					"\"FDFullscreenPopGesture\"",
+					"-framework",
+					"\"FSCalendar\"",
+					"-framework",
+					"\"IQKeyboardManager\"",
+					"-framework",
+					"\"MBProgressHUD\"",
+					"-framework",
+					"\"MJExtension\"",
+					"-framework",
+					"\"MLeaksFinder\"",
+					"-framework",
+					"\"Masonry\"",
+					"-framework",
+					"\"OpenGLES\"",
+					"-framework",
+					"\"QMUIKit\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"SDAutoLayout\"",
+					"-framework",
+					"\"SDWebImage\"",
+					"-framework",
+					"\"SVProgressHUD\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"YYKit\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = con.zhongkehuabo.Test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				VALID_ARCHS = "arm64 armv7 armv7s";
 			};
 			name = Release;
 		};

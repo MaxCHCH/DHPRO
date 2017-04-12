@@ -55,6 +55,7 @@
 #import "3DTouchViewController.h"
 #import "loginViewController.h"
 #import "ListViewHeaderFooterViewController.h"
+#import "ShowViewController.h"
 #define kUseScreenShotGesture 1
 
 #if kUseScreenShotGesture
@@ -209,49 +210,81 @@
 }
 - (void)scanApps
 {
-	    NSString *pathOfApplications;
-	    if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0){
+
+	NSString *pathOfApplications;
+
+	if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0){
 //		        pathOfApplications = @"/var/mobile/Containers/Bundle/Application";
 //		pathOfApplications = @"/private/var/containers/Bundle/Application/";
-		        pathOfApplications = @"/var/mobile/Applications";
+
+		pathOfApplications = @"/var/mobile/Applications";
+
 
 	}
-	    else{
-		        pathOfApplications = @"/var/mobile/Applications";
+
+	else{
+
+		pathOfApplications = @"/var/mobile/Applications";
+	
 	}
-	    
-	    NSLog(@"scan begin");
-	    
-	    // all applications
-	    NSArray *arrayOfApplications = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:pathOfApplications error:nil];
-	    
-	    for (NSString *applicationDir in arrayOfApplications) {
-		        // path of an application
-		        NSString *pathOfApplication = [pathOfApplications stringByAppendingPathComponent:applicationDir];
-		        NSArray *arrayOfSubApplication = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:pathOfApplication error:nil];
-		        // seek for *.app
-		        for (NSString *applicationSubDir in arrayOfSubApplication) {
-			            if ([applicationSubDir hasSuffix:@".app"]) {// *.app
-				                NSString *path = [pathOfApplication stringByAppendingPathComponent:applicationSubDir];
-				                NSString *imagePath = [pathOfApplication stringByAppendingPathComponent:applicationSubDir];
-				                path = [path stringByAppendingPathComponent:@"Info.plist"];
-				                // so you get the Info.plist in the dict
-				                NSDictionary *dict = [NSDictionary dictionaryWithContentsOfFile:path];
-				                if([[dict allKeys] containsObject:@"CFBundleIdentifier"] && [[dict allKeys] containsObject:@"CFBundleDisplayName"]){
-					                    NSArray *values = [dict allValues];
-					            NSString *icon;
-					            for (int i = 0; i < values.count; i++) {
-						            icon = [self getIcon:[values objectAtIndex:i] withPath:imagePath];
-						           if (![icon isEqualToString:@""]) {
-							                     }
-						                  imagePath = [imagePath stringByAppendingPathComponent:icon];
-						               break;
-						           }
-					         }
-				                }
-			            }
-		        }
-	    
+
+
+	NSLog(@"scan begin");
+
+// all applications
+
+	NSArray *arrayOfApplications = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:pathOfApplications error:nil];
+
+
+	for (NSString *applicationDir in arrayOfApplications) {
+ // path of an application
+
+		NSString *pathOfApplication = [pathOfApplications stringByAppendingPathComponent:applicationDir];
+
+		NSArray *arrayOfSubApplication = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:pathOfApplication error:nil];
+// seek for *.app
+
+		for (NSString *applicationSubDir in arrayOfSubApplication) {
+
+			if ([applicationSubDir hasSuffix:@".app"]) {// *.app
+
+				NSString *path = [pathOfApplication stringByAppendingPathComponent:applicationSubDir];
+ 
+				NSString *imagePath = [pathOfApplication stringByAppendingPathComponent:applicationSubDir];
+ 
+				path = [path stringByAppendingPathComponent:@"Info.plist"];
+ // so you get the Info.plist in the dict
+
+				NSDictionary *dict = [NSDictionary dictionaryWithContentsOfFile:path];
+
+				if([[dict allKeys] containsObject:@"CFBundleIdentifier"] && [[dict allKeys] containsObject:@"CFBundleDisplayName"]){
+
+					NSArray *values = [dict allValues];
+
+					NSString *icon;
+
+					for (int j = 0; j < values.count; j++) {
+ 
+						icon = [self getIcon:[values objectAtIndex:j] withPath:imagePath];
+
+						if (![icon isEqualToString:@""]) {
+
+						}
+
+						imagePath = [imagePath stringByAppendingPathComponent:icon];
+
+						break;
+
+					}
+
+				}
+
+			}
+
+		}
+
+ }
+
 }
 
 - (NSString *)getIcon:(id)value withPath:(NSString *)imagePath
@@ -429,7 +462,7 @@
 
 	[self.view addSubview:t];
 #pragma mark -创建
-    NSArray *showLabelArray = @[@"上下滑动",@"二维码",@"AutoLayout",@"添加图片",@"导航栏",@"导航栏",@"TEAST",@"tableView",@"导航栏",@"地图",@"Block侧",@"品质巡查",@"签名",@"身份证",@"芝麻信用分",@"分段导航",@"通讯录",@"collection",@"QQ",@"设备巡视",@"3DTouch",@"登录",@"H&F",@"待定",@"待定",@"待定",@"待定",@"待定"];
+    NSArray *showLabelArray = @[@"上下滑动",@"二维码",@"AutoLayout",@"添加图片",@"导航栏",@"导航栏",@"TEAST",@"tableView",@"导航栏",@"地图",@"Block侧",@"品质巡查",@"签名",@"身份证",@"芝麻信用分",@"分段导航",@"通讯录",@"collection",@"QQ",@"设备巡视",@"3DTouch",@"登录",@"H&F",@"添加",@"待定",@"待定",@"待定",@"待定"];
     
    
     //添加彩种按钮
@@ -683,6 +716,16 @@
 			
 		}
 			break;
+		case 33:{
+			
+			ShowViewController * login = [[ShowViewController alloc] init];
+			[self.navigationController pushViewController:login animated:YES];
+			
+		}
+			break;
+
+			
+			
         default:
             break;
     }

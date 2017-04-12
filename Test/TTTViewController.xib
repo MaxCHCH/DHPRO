@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TTTViewController">
+            <connections>
+                <outlet property="tableViewMy" destination="Qh9-9E-rUd" id="Ppg-d9-rV4"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Qh9-9E-rUd">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <variation key="widthClass=compact" misplaced="YES">
+                        <rect key="frame" x="41" y="58" width="240" height="128"/>
+                    </variation>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <gestureRecognizers/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="Qh9-9E-rUd" secondAttribute="bottom" id="AyL-IS-MhS"/>
+                <constraint firstItem="Qh9-9E-rUd" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="eoj-pp-YIG"/>
+                <constraint firstItem="Qh9-9E-rUd" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="nhX-Mq-6ub"/>
+                <constraint firstAttribute="trailing" secondItem="Qh9-9E-rUd" secondAttribute="trailing" id="quc-TG-GGd"/>
+            </constraints>
+            <variation key="default">
+                <mask key="subviews">
+                    <exclude reference="Qh9-9E-rUd"/>
+                </mask>
+                <mask key="constraints">
+                    <exclude reference="AyL-IS-MhS"/>
+                    <exclude reference="eoj-pp-YIG"/>
+                    <exclude reference="nhX-Mq-6ub"/>
+                    <exclude reference="quc-TG-GGd"/>
+                </mask>
+            </variation>
+            <variation key="widthClass=compact">
+                <mask key="subviews">
+                    <include reference="Qh9-9E-rUd"/>
+                </mask>
+                <mask key="constraints">
+                    <include reference="AyL-IS-MhS"/>
+                    <include reference="eoj-pp-YIG"/>
+                    <include reference="nhX-Mq-6ub"/>
+                    <include reference="quc-TG-GGd"/>
+                </mask>
+            </variation>
+            <connections>
+                <outletCollection property="gestureRecognizers" destination="q7C-XB-Qra" appends="YES" id="Pyr-a3-T4I"/>
+            </connections>
+        </view>
+        <swipeGestureRecognizer direction="right" id="q7C-XB-Qra">
+            <connections>
+                <action selector="Back:" destination="-1" id="Hdl-uA-2ay"/>
+            </connections>
+        </swipeGestureRecognizer>
+    </objects>
+</document>

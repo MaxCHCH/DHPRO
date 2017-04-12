@@ -52,6 +52,9 @@
 #import "ImageViewController.h"
 #import "NSMutableArray+Util.h"
 #import "AddressBookViewController.h"
+#import "3DTouchViewController.h"
+#import "loginViewController.h"
+#import "ListViewHeaderFooterViewController.h"
 #define kUseScreenShotGesture 1
 
 #if kUseScreenShotGesture
@@ -425,7 +428,8 @@
 	[t sd_setImageWithURL:[NSURL URLWithString:@"https://img3.imgtn.bdimg.com/it/u=1639391100,2392882587&fm=21&gp=0.jpg"]];
 
 	[self.view addSubview:t];
-    NSArray *showLabelArray = @[@"上下滑动",@"二维码",@"AutoLayout",@"添加图片",@"导航栏",@"导航栏",@"TEAST",@"tableView",@"导航栏",@"地图",@"Block侧",@"品质巡查",@"签名",@"身份证",@"芝麻信用分",@"分段导航",@"通讯录",@"collection",@"QQ",@"设备巡视",@"待定",@"待定",@"待定",@"待定",@"待定",@"待定",@"待定",@"待定"];
+#pragma mark -创建
+    NSArray *showLabelArray = @[@"上下滑动",@"二维码",@"AutoLayout",@"添加图片",@"导航栏",@"导航栏",@"TEAST",@"tableView",@"导航栏",@"地图",@"Block侧",@"品质巡查",@"签名",@"身份证",@"芝麻信用分",@"分段导航",@"通讯录",@"collection",@"QQ",@"设备巡视",@"3DTouch",@"登录",@"H&F",@"待定",@"待定",@"待定",@"待定",@"待定"];
     
    
     //添加彩种按钮
@@ -657,6 +661,26 @@
 			
 			LBEquiXSViewController*moitsVC = [[LBEquiXSViewController alloc]init];
 			[self presentViewController:moitsVC animated:YES completion:nil];
+		}
+			break;
+		case 30:{
+			
+			_DTouchViewController*moitsVC = [[_DTouchViewController alloc]init];
+			[self.navigationController pushViewController:moitsVC animated:YES];
+		}
+			break;
+		case 31:{
+			
+			loginViewController * login = [[loginViewController alloc] init];
+			[self presentViewController:login animated:YES completion:nil];
+
+		}
+			break;
+		case 32:{
+			
+			ListViewHeaderFooterViewController * login = [[ListViewHeaderFooterViewController alloc] init];
+			[self.navigationController pushViewController:login animated:YES];
+			
 		}
 			break;
         default:
@@ -892,17 +916,17 @@
 			[valueArr addObject:model];
 
 		}];
-		YQMXModel *model;
-		
-		model= valueArr[0];
-		NSLog(@"积分: %@",model.jifen);
-		NSLog(@"姓名: %@",model.name);
-		NSLog(@"时间: %@",model.time);
-		
-		model = valueArr[1];
-		NSLog(@"积分: %@",model.jifen);
-		NSLog(@"姓名: %@",model.name);
-		NSLog(@"时间: %@",model.time);
+//		YQMXModel *model;
+//		
+//		model= valueArr[0];
+//		NSLog(@"积分: %@",model.jifen);
+//		NSLog(@"姓名: %@",model.name);
+//		NSLog(@"时间: %@",model.time);
+//		
+//		model = valueArr[1];
+//		NSLog(@"积分: %@",model.jifen);
+//		NSLog(@"姓名: %@",model.name);
+//		NSLog(@"时间: %@",model.time);
 		
 	} failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
 

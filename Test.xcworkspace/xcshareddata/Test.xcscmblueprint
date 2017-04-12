@@ -1,17 +1,19 @@
 {
-  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "3F0B51F5BEF9F1FFCE6D8CD4B6B48DCD6500D9AB",
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "450517F1D46642B48EB84D0C78C71DDA2682ED75",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
 
   },
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
-    "3F0B51F5BEF9F1FFCE6D8CD4B6B48DCD6500D9AB" : 9223372036854775807,
     "013FCBDB6D3B5F742A79BD6654B1A17F22F5A346" : 9223372036854775807,
+    "3F0B51F5BEF9F1FFCE6D8CD4B6B48DCD6500D9AB" : 9223372036854775807,
+    "450517F1D46642B48EB84D0C78C71DDA2682ED75" : 9223372036854775807,
     "1B84A696296D86E7C1CBB070D1E3BA9C9BAEAF1C" : 9223372036854775807
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "BE8AA86B-80E9-440F-9AB9-60E1E5B1C71C",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
-    "3F0B51F5BEF9F1FFCE6D8CD4B6B48DCD6500D9AB" : "Tests\/",
     "013FCBDB6D3B5F742A79BD6654B1A17F22F5A346" : "Test\/",
+    "3F0B51F5BEF9F1FFCE6D8CD4B6B48DCD6500D9AB" : "Tests\/",
+    "450517F1D46642B48EB84D0C78C71DDA2682ED75" : "TestPor\/",
     "1B84A696296D86E7C1CBB070D1E3BA9C9BAEAF1C" : "LeBang_iOS\/LeBangProject\/"
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "Test",
@@ -32,6 +34,11 @@
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Andrew5\/Test.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "3F0B51F5BEF9F1FFCE6D8CD4B6B48DCD6500D9AB"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/git.oschina.net\/jabraknights\/Test.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "450517F1D46642B48EB84D0C78C71DDA2682ED75"
     }
   ]
 }

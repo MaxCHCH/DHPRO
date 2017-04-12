@@ -914,6 +914,7 @@
 		83EC8CAE1E9E0B3B0007D820 /* HXTagsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXTagsCell.m; sourceTree = "<group>"; };
 		83EC8CAF1E9E0B3B0007D820 /* HXTagsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXTagsView.h; sourceTree = "<group>"; };
 		83EC8CB01E9E0B3B0007D820 /* HXTagsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXTagsView.m; sourceTree = "<group>"; };
+		83EC8CC61E9E0DFB0007D820 /* TestHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestHeader.pch; sourceTree = "<group>"; };
 		83F560241D0576D6005B0C4C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		83F560261D0576E2005B0C4C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		83F560281D0576E9005B0C4C /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -1697,6 +1698,7 @@
 		83BCFE001CFEBB12007076DC /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				83EC8CC61E9E0DFB0007D820 /* TestHeader.pch */,
 				83BCFE011CFEBB12007076DC /* main.m */,
 				834AE7E31D407AE000BDD80A /* Macros_Font.pch */,
 			);
@@ -2594,7 +2596,7 @@
 					"$(PROJECT_DIR)/Test",
 					"$(PROJECT_DIR)/Test/Test/easyar.framework",
 				);
-				GCC_PREFIX_HEADER = /Users/Rillakkuma/Desktop/Tests/Test/TestHeader.pch;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/Test/TestHeader.pch";
 				INFOPLIST_FILE = Test/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -2685,7 +2687,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Test",
 				);
-				GCC_PREFIX_HEADER = /Users/Rillakkuma/Desktop/Tests/Test/TestHeader.pch;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/Test/TestHeader.pch";
 				INFOPLIST_FILE = Test/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

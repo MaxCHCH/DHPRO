@@ -21,7 +21,7 @@
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>1031</string>
+	<string>1033</string>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
 		<string>Identification</string>

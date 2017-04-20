@@ -268,6 +268,7 @@
 		83B3DCEA1D2A66BF0044A7FF /* TViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83B3DCE81D2A66BF0044A7FF /* TViewController.xib */; };
 		83B3DCEE1D2A66CB0044A7FF /* TTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B3DCEC1D2A66CB0044A7FF /* TTableViewCell.m */; };
 		83B3DCEF1D2A66CB0044A7FF /* TTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83B3DCED1D2A66CB0044A7FF /* TTableViewCell.xib */; };
+		83B9A6CB1EA05B6A00508E98 /* AssistiveTouchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B9A6CA1EA05B6A00508E98 /* AssistiveTouchViewController.m */; };
 		83BCFE021CFEBB12007076DC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 83BCFE011CFEBB12007076DC /* main.m */; };
 		83BCFE051CFEBB12007076DC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 83BCFE041CFEBB12007076DC /* AppDelegate.m */; };
 		83BCFE0B1CFEBB12007076DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83BCFE091CFEBB12007076DC /* Main.storyboard */; };
@@ -786,6 +787,8 @@
 		83B3DCEB1D2A66CB0044A7FF /* TTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTableViewCell.h; sourceTree = "<group>"; };
 		83B3DCEC1D2A66CB0044A7FF /* TTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTableViewCell.m; sourceTree = "<group>"; };
 		83B3DCED1D2A66CB0044A7FF /* TTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TTableViewCell.xib; sourceTree = "<group>"; };
+		83B9A6C91EA05B6A00508E98 /* AssistiveTouchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AssistiveTouchViewController.h; sourceTree = "<group>"; };
+		83B9A6CA1EA05B6A00508E98 /* AssistiveTouchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AssistiveTouchViewController.m; sourceTree = "<group>"; };
 		83BCFDFD1CFEBB12007076DC /* Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83BCFE011CFEBB12007076DC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		83BCFE031CFEBB12007076DC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -1403,6 +1406,8 @@
 				836FE2AE1DEE841B0071526B /* libexidcard */,
 				83BCFE061CFEBB12007076DC /* ViewController.h */,
 				836F304E1D9E0C370000577C /* ViewController.m */,
+				83B9A6C91EA05B6A00508E98 /* AssistiveTouchViewController.h */,
+				83B9A6CA1EA05B6A00508E98 /* AssistiveTouchViewController.m */,
 				83EC8C9F1E9E0AF30007D820 /* ShowViewController.h */,
 				83EC8CA01E9E0AF30007D820 /* ShowViewController.m */,
 				83EC8CA11E9E0AF30007D820 /* TagPickerView.h */,
@@ -2415,6 +2420,7 @@
 				8397EA791D23A30E003FF91E /* JPCommentHeaderView.m in Sources */,
 				83C55BED1DF141FE00B77434 /* Dictionary.m in Sources */,
 				83C55BD51DF1057E00B77434 /* Capture.m in Sources */,
+				83B9A6CB1EA05B6A00508E98 /* AssistiveTouchViewController.m in Sources */,
 				83EC8C4E1E9DFE2C0007D820 /* loginInterface.m in Sources */,
 				8368DF471D138DAD00FF8492 /* ImageModel.m in Sources */,
 				836DDC5E1E5C3D66007A06F8 /* LBEquiXSViewController.m in Sources */,

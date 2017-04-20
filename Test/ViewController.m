@@ -56,6 +56,7 @@
 #import "loginViewController.h"
 #import "ListViewHeaderFooterViewController.h"
 #import "ShowViewController.h"
+#import "AssistiveTouchViewController.h"
 #define kUseScreenShotGesture 1
 
 #if kUseScreenShotGesture
@@ -391,7 +392,7 @@
 
 	[self.view addSubview:t];
 #pragma mark -创建
-    NSArray *showLabelArray = @[@"上下滑动",@"二维码",@"AutoLayout",@"添加图片",@"导航栏",@"导航栏",@"TEAST",@"tableView",@"导航栏",@"地图",@"Block侧",@"品质巡查",@"签名",@"身份证",@"芝麻信用分",@"分段导航",@"通讯录",@"collection",@"QQ",@"设备巡视",@"3DTouch",@"登录",@"H&F",@"添加",@"待定",@"待定",@"待定",@"待定"];
+    NSArray *showLabelArray = @[@"上下滑动",@"二维码",@"AutoLayout",@"添加图片",@"导航栏",@"导航栏",@"TEAST",@"tableView",@"导航栏",@"地图",@"Block侧",@"品质巡查",@"签名",@"身份证",@"芝麻信用分",@"分段导航",@"通讯录",@"collection",@"QQ",@"设备巡视",@"3DTouch",@"登录",@"H&F",@"添加",@"AssistiveTouch",@"待定",@"待定",@"待定"];
     
    
     //添加彩种按钮
@@ -648,6 +649,13 @@
 		case 33:{
 			
 			ShowViewController * login = [[ShowViewController alloc] init];
+			[self.navigationController pushViewController:login animated:YES];
+			
+		}
+			break;
+		case 34:{
+			
+			AssistiveTouchViewController * login = [[AssistiveTouchViewController alloc] init];
 			[self.navigationController pushViewController:login animated:YES];
 			
 		}

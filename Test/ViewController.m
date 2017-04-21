@@ -27,6 +27,7 @@
 #import "AutoLayoutViewController.h"
 #import "ReleaseViewController.h"
 #import "QRCodeVC.h"
+#import "ScottPopMenu.h"
 #import "UIViewExt.h"
 #import "LSTabBarViewController.h"
 #import "BaseTabBarViewController.h"
@@ -62,7 +63,7 @@
 #if kUseScreenShotGesture
 #import "ScreenShotView.h"
 #endif
-@interface ViewController ()<QRScanViewDelegate,SKStoreProductViewControllerDelegate>{
+@interface ViewController ()<QRScanViewDelegate,ScottPopMenuDelegate,SKStoreProductViewControllerDelegate>{
 	NSMutableArray *valueArr;
 }
 @property (nonatomic,strong)UIButton *button;
@@ -454,14 +455,18 @@
     switch (sender.tag) {
         case 10:
         {
-			[SVProgressHUD showSuccessWithStatus:@"店家"];
-			AudioServicesPlaySystemSound(1005);
-			//一句话解决iphone  ipad 声音提示
-//			AudioServicesPlaySystemSound(SOUNDID);
-//			AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
+//			[SVProgressHUD showSuccessWithStatus:@"店家"];
+//			AudioServicesPlaySystemSound(1005);
+//			//一句话解决iphone  ipad 声音提示
+////			AudioServicesPlaySystemSound(SOUNDID);
+////			AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
+//			
+//            ContentOffSetVC *tabbar = [[ContentOffSetVC alloc]init];
+//            [self.navigationController pushViewController:tabbar animated:YES];
 			
-            ContentOffSetVC *tabbar = [[ContentOffSetVC alloc]init];
-            [self.navigationController pushViewController:tabbar animated:YES];
+			ScottPopMenu *uiui = [ScottPopMenu popMenuAtPoint:CGPointMake(0, 300) withTitles:@[@"开始",@"结束"] icons:@[@"left_",@"right"] menuWidth:50 delegate:self];//[ScottPopMenu popMenuRelyOnView:self.view withTitles:@[@"adf",@"adf"] icons:@[@"left_",@"right"] menuWidth:50 delegate:self];
+			[self.view addSubview:uiui];
+			
         }
             break;
         case 11:

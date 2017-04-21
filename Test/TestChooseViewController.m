@@ -466,8 +466,11 @@ static float progressValue = 0.0f;
 	打仗 += 2;
 	
 	printf(" %i",打仗);
+	NSDictionary*YUDICT = @{@"ext1":@"",@"ext2":@"",@"mernum":@"898110289993770",@"orderId":@"228",@"reqTime":@"20161011153236",@"sign":@"c4fe1149bafec7052cdeacf1b73eaea6",@"termid":@"77000598"}
+							;
 	
-	[self POSTHttpWithURL:API params:parameters completionBlock:^(NSMutableDictionary *dict, BOOL isOK, NSString *errInfo) {
+	NSString *URLS  = @"http://kaifa.homesoft.cn/WebService/Handler1.ashx?json=SearchOrder";
+	[self POSTHttpWithURL:URLS params:YUDICT completionBlock:^(NSMutableDictionary *dict, BOOL isOK, NSString *errInfo) {
 		NSLog(@"dict %@",dict);
 		NSLog(@"errInfo %@",errInfo);
 	}];
@@ -712,6 +715,10 @@ static float progressValue = 0.0f;
 
 - (void)POSTHttpWithURL:(NSString *)url params:(NSDictionary *)params completionBlock:(void(^)(NSMutableDictionary *dict,BOOL isOK,NSString *errInfo))block{
 	HTTPSETT
+	AFJSONResponseSerializer*response = [AFJSONResponseSerializer serializer];
+	response.removesKeysWithNullValues=YES;
+	manager.responseSerializer= response;
+	manager.requestSerializer= [AFJSONRequestSerializer serializer];
 	[manager POST:url parameters:params constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
 		
 		NSInteger imgCount = 0;

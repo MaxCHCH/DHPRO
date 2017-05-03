@@ -15,7 +15,7 @@
 		831FD5771EAE0041005704B1 /* ExpandCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 831FD5731EAE0041005704B1 /* ExpandCell.m */; };
 		831FD5781EAE0041005704B1 /* ExpandTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 831FD5751EAE0041005704B1 /* ExpandTableVC.m */; };
 		831FD57B1EAE0181005704B1 /* ZSTCacheUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 831FD57A1EAE0181005704B1 /* ZSTCacheUtil.m */; };
-		831FDADE1EAE03DD005704B1 /* KeychainItemWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 831FDADD1EAE03DD005704B1 /* KeychainItemWrapper.m */; };
+		831FDADE1EAE03DD005704B1 /* KeychainItemWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 831FDADD1EAE03DD005704B1 /* KeychainItemWrapper.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		8320E4111DFA937D00A8D2A2 /* ZLDashboardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8320E4101DFA937D00A8D2A2 /* ZLDashboardView.m */; };
 		8320E4141DFA94E600A8D2A2 /* ZLDashboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8320E4131DFA94E600A8D2A2 /* ZLDashboardViewController.m */; };
 		8320E4241E00E25500A8D2A2 /* MonitsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8320E4231E00E25500A8D2A2 /* MonitsViewController.m */; };
@@ -27,6 +27,8 @@
 		833366021D10EF6C00578EA4 /* HYJNegotiateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 833365FF1D10EF6C00578EA4 /* HYJNegotiateView.m */; };
 		833366031D10EF6C00578EA4 /* HYJNegotiateView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 833366011D10EF6C00578EA4 /* HYJNegotiateView.xib */; };
 		833366361D11578800578EA4 /* JSTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 833366351D11578800578EA4 /* JSTextView.m */; };
+		833B85601EB8872B007A5DB2 /* CeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 833B855F1EB8872B007A5DB2 /* CeModel.m */; };
+		833B85631EB889BF007A5DB2 /* CrModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 833B85621EB889BF007A5DB2 /* CrModel.m */; };
 		833DF9D81EA9D6EB00918584 /* ScottPopMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 833DF9D71EA9D6EB00918584 /* ScottPopMenu.m */; };
 		833DF9E61EAA14EE00918584 /* ProgressTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 833DF9E31EAA14EE00918584 /* ProgressTableViewCell.m */; };
 		833DF9E71EAA14EE00918584 /* ProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 833DF9E51EAA14EE00918584 /* ProgressView.m */; };
@@ -436,6 +438,10 @@
 		833366011D10EF6C00578EA4 /* HYJNegotiateView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HYJNegotiateView.xib; sourceTree = "<group>"; };
 		833366341D11578200578EA4 /* JSTextView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSTextView.h; sourceTree = "<group>"; };
 		833366351D11578800578EA4 /* JSTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSTextView.m; sourceTree = "<group>"; };
+		833B855E1EB8872B007A5DB2 /* CeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CeModel.h; sourceTree = "<group>"; };
+		833B855F1EB8872B007A5DB2 /* CeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CeModel.m; sourceTree = "<group>"; };
+		833B85611EB889BF007A5DB2 /* CrModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrModel.h; sourceTree = "<group>"; };
+		833B85621EB889BF007A5DB2 /* CrModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrModel.m; sourceTree = "<group>"; };
 		833DF9D61EA9D6EB00918584 /* ScottPopMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScottPopMenu.h; sourceTree = "<group>"; };
 		833DF9D71EA9D6EB00918584 /* ScottPopMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScottPopMenu.m; sourceTree = "<group>"; };
 		833DF9E21EAA14EE00918584 /* ProgressTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressTableViewCell.h; sourceTree = "<group>"; };
@@ -1469,6 +1475,10 @@
 				836FE2AE1DEE841B0071526B /* libexidcard */,
 				83BCFE061CFEBB12007076DC /* ViewController.h */,
 				836F304E1D9E0C370000577C /* ViewController.m */,
+				833B855E1EB8872B007A5DB2 /* CeModel.h */,
+				833B855F1EB8872B007A5DB2 /* CeModel.m */,
+				833B85611EB889BF007A5DB2 /* CrModel.h */,
+				833B85621EB889BF007A5DB2 /* CrModel.m */,
 				833DF9E81EAA15A700918584 /* CommonMenuView.h */,
 				833DF9E91EAA15A700918584 /* CommonMenuView.m */,
 				833DF9EA1EAA15A700918584 /* MenuTableViewCell.h */,
@@ -2454,6 +2464,7 @@
 				83C55C3A1DF7E89F00B77434 /* SGSegmentedControl.m in Sources */,
 				8320E42A1E00E27B00A8D2A2 /* MonitsTableViewCell.m in Sources */,
 				836783391DB47AE000E9F0E5 /* UIView+Layout.m in Sources */,
+				833B85601EB8872B007A5DB2 /* CeModel.m in Sources */,
 				831FD57B1EAE0181005704B1 /* ZSTCacheUtil.m in Sources */,
 				832DEFC21E56F652008F3642 /* YQMXModel.m in Sources */,
 				835EC8601DC3433A00D91CB3 /* ESMOneViewController.m in Sources */,
@@ -2536,6 +2547,7 @@
 				83FD36961D1D012100A445C8 /* MLSelectPhotoPickerDatas.m in Sources */,
 				83C55BE11DF12C0900B77434 /* EquipmentXunshiViewController.m in Sources */,
 				835EC8631DC3433A00D91CB3 /* ESMTestViewController.m in Sources */,
+				833B85631EB889BF007A5DB2 /* CrModel.m in Sources */,
 				83FD361C1D1CE42C00A445C8 /* SuPhotoAblumCell.m in Sources */,
 				8385F78A1CFFDA7400409181 /* JFDetailViewController.m in Sources */,
 				83EC8CB31E9E0B3B0007D820 /* HXTagCollectionViewFlowLayout.m in Sources */,

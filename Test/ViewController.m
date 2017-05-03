@@ -14,6 +14,7 @@
 #define SOUNDID  1109  //1012 -iphone   1152 ipad  1109 ipad  http://iphonedevwiki.net/index.php/AudioServices
 
 #include <objc/runtime.h>
+#import "CeModel.h"
 #import <StoreKit/StoreKit.h>
 #import <NetworkExtension/NetworkExtension.h>
 #import <SystemConfiguration/CaptiveNetwork.h>
@@ -393,11 +394,11 @@
 
 	[self.view addSubview:t];
 #pragma mark -创建
-    NSArray *showLabelArray = @[@"上下滑动",@"二维码",@"AutoLayout",@"添加图片",@"导航栏",@"导航栏",@"TEAST",@"tableView",@"导航栏",@"地图",@"Block侧",@"品质巡查",@"签名",@"身份证",@"芝麻信用分",@"分段导航",@"通讯录",@"collection",@"QQ",@"设备巡视",@"3DTouch",@"登录",@"H&F",@"添加",@"AssistiveTouch",@"待定",@"待定",@"待定"];
+    NSArray *showLabelArray = @[@"10上下滑动",@"11二维码",@"12AutoLayout",@"13添加图片",@"14导航栏",@"15导航栏",@"16TEAST",@"17tableView",@"18导航栏",@"19地图",@"20Block侧",@"21品质巡查",@"22签名",@"23身份证",@"24芝麻信用分",@"25分段导航",@"26通讯录",@"27collection",@"28QQ",@"29设备巡视",@"303DTouch",@"31登录",@"32H&F",@"33添加",@"34AssistiveTouch",@"35待定",@"36待定",@"37待定",@"38待定",@"39待定",@"40待定",@"41待定"];
     
    
     //添加彩种按钮
-    for (int i= 0; i<4; i++) {
+    for (int i= 0; i<5; i++) {
         for (int j = 0; j<6; j++) {
 
             _button = [self button];

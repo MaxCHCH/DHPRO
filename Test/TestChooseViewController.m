@@ -11,6 +11,7 @@
 #import "UIImageView+WebCache.h"
 #import "UIActivityIndicatorView+AFNetworking.h"
 #import "UIProgressView+AFNetworking.h"
+#import "CeModel.h"
 @interface TestChooseViewController ()<UITextFieldDelegate>{
     UIImageView *u;
     UILabel *progressLabel;
@@ -511,17 +512,37 @@ static float progressValue = 0.0f;
 	
 }
 - (void)getDict{
-	NSString *urlll =[NSString stringWithFormat:@"%@&DTypeID=PJM004",API_BASE_URL(@"GetDictionaryByID")];
+//	NSString *urlll =[NSString stringWithFormat:@"%@&DTypeID=PJM004",API_BASE_URL(@"GetDictionaryByID")];
+//	
+//	urlll = [urlll stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet characterSetWithCharactersInString:@"`#%^{}\"[]|\\<> "].invertedSet];
 	
-	urlll = [urlll stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet characterSetWithCharactersInString:@"`#%^{}\"[]|\\<> "].invertedSet];
-	
-	urlll = @"http://kaifa.homesoft.cn/WebService/jsonInterface.ashx?json=GetEquipmentByRecordID&RecordID=3463";
+	NSString * urlll = @"http://www.haoyebao.com/api/index.php?act=store_original&op=goods_class&store_id=3";
+	AFJSONResponseSerializer * response = [AFJSONResponseSerializer serializer];
+	response.removesKeysWithNullValues = YES;
+
 	AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+	[manager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+
 	manager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/html"];
+	[manager.responseSerializer setAcceptableContentTypes:[NSSet setWithObjects:@"text/plain",@"application/json",@"text/json",@"text/javascript",@"text/html", nil]];
+
 	[manager GET:urlll parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
 		
 	} success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-		NSLog(@"GetDictionaryByID %@",responseObject);
+		NSLog(@"GetDictionaryByID %@",responseObject[@"data"]);
+		NSArray *dataArray = [CeModel mj_objectArrayWithKeyValuesArray:responseObject[@"data"][@"list"]];
+		NSLog(@"%@",dataArray);
+		[dataArray enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+			CeModel *m = dataArray[idx];
+			NSArray *arr = m.child_list;
+			NSLog(@"arr %@",arr);
+//			[arr enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+//				CrModel *r = arr[idx];
+//				
+//				NSLog(@"%@",r.gc_dyname);
+//			}];
+		}];
+		
 		/*
 		 {
 		 EquipmentSe =     (
@@ -540,7 +561,7 @@ static float progressValue = 0.0f;
 		//		arrayID = [GetDictionaryByID mj_objectArrayWithKeyValuesArray:responseObject[@"Dictionary"]];
 		
 	} failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-		
+		NSLog(@"error %@",error);
 	}];
 }
 

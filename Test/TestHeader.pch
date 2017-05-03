@@ -25,6 +25,8 @@
 #define DeviceHeight [UIScreen mainScreen].bounds.size.height
 
 #import "Masonry.h"
+#import "MJExtension.h"
+
 #import "AFNetworking.h"
 #import "SVProgressHUD.h"
 #import "UIView+SDAutoLayout.h"

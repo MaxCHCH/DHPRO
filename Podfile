@@ -12,6 +12,9 @@ pod 'MLeaksFinder'
 pod 'AFNetworking', '~> 3.0'
 pod 'BaiduMapKit', '~> 3.1.0'
 pod 'FDFullscreenPopGesture'
+pod 'WechatOpenSDK'
+pod 'AliPaySDK', '~> 1.0'
+
 pod 'IQKeyboardManager'
 pod 'MBProgressHUD'
 use_frameworks!

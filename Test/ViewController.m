@@ -15,6 +15,7 @@
 
 #include <objc/runtime.h>
 #import "CeModel.h"
+#import "AlipayViewController.h"
 #import <StoreKit/StoreKit.h>
 #import <NetworkExtension/NetworkExtension.h>
 #import <SystemConfiguration/CaptiveNetwork.h>
@@ -394,7 +395,7 @@
 
 	[self.view addSubview:t];
 #pragma mark -创建
-    NSArray *showLabelArray = @[@"10上下滑动",@"11二维码",@"12AutoLayout",@"13添加图片",@"14导航栏",@"15导航栏",@"16TEAST",@"17tableView",@"18导航栏",@"19地图",@"20Block侧",@"21品质巡查",@"22签名",@"23身份证",@"24芝麻信用分",@"25分段导航",@"26通讯录",@"27collection",@"28QQ",@"29设备巡视",@"303DTouch",@"31登录",@"32H&F",@"33添加",@"34AssistiveTouch",@"35待定",@"36待定",@"37待定",@"38待定",@"39待定",@"40待定",@"41待定"];
+    NSArray *showLabelArray = @[@"10上下滑动",@"11二维码",@"12AutoLayout",@"13添加图片",@"14导航栏",@"15导航栏",@"16TEAST",@"17tableView",@"18导航栏",@"19地图",@"20Block侧",@"21品质巡查",@"22签名",@"23身份证",@"24芝麻信用分",@"25分段导航",@"26通讯录",@"27collection",@"28QQ",@"29设备巡视",@"303DTouch",@"31登录",@"32H&F",@"33添加",@"34AssistiveTouch",@"35支付宝",@"36微信",@"37待定",@"38待定",@"39待定",@"40待定",@"41待定"];
     
    
     //添加彩种按钮
@@ -462,11 +463,11 @@
 ////			AudioServicesPlaySystemSound(SOUNDID);
 ////			AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
 //			
-//            ContentOffSetVC *tabbar = [[ContentOffSetVC alloc]init];
-//            [self.navigationController pushViewController:tabbar animated:YES];
+            ContentOffSetVC *tabbar = [[ContentOffSetVC alloc]init];
+            [self.navigationController pushViewController:tabbar animated:YES];
 			
-			ScottPopMenu *uiui = [ScottPopMenu popMenuAtPoint:CGPointMake(0, 300) withTitles:@[@"开始",@"结束"] icons:@[@"left_",@"right"] menuWidth:50 delegate:self];//[ScottPopMenu popMenuRelyOnView:self.view withTitles:@[@"adf",@"adf"] icons:@[@"left_",@"right"] menuWidth:50 delegate:self];
-			[self.view addSubview:uiui];
+//			ScottPopMenu *uiui = [ScottPopMenu popMenuAtPoint:CGPointMake(0, 64+30) withTitles:@[@"开始",@"结束"] icons:@[@"left_",@"right"] menuWidth:50 delegate:self];//[ScottPopMenu popMenuRelyOnView:self.view withTitles:@[@"adf",@"adf"] icons:@[@"left_",@"right"] menuWidth:50 delegate:self];
+//			[self.view addSubview:uiui];
 			
         }
             break;
@@ -666,6 +667,45 @@
 			
 		}
 			break;
+		case 35:{
+			
+			AlipayViewController * login = [[AlipayViewController alloc] init];
+			[self.navigationController pushViewController:login animated:YES];
+			
+		}
+			break;
+		case 36:{
+				
+			
+			}
+			break;
+		case 37:{
+				
+			
+			}
+			break;
+		case 38:{
+				
+			
+				
+			}
+			break;
+		case 39:{
+				
+			
+			}
+			break;
+		case 40:{
+			
+			
+		}
+			break;
+		case 41:{
+			
+			
+			
+		}
+			break;
 
 			
 			
@@ -708,12 +748,20 @@
 	AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
 	manager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/html"];
 	NSDictionary *paramS=@{
-						   @"tableName":@"OFM_DocTransact",
-						   @"Url":[NSString stringWithFormat:@"EmpID=2"]
+						   @"type":@"M"
 						   };
 
-	NSString *url =@"http://112.74.174.20:8080/contactOne/jsonService/user/reg.json";
-	[manager POST:url parameters:nil constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
+	NSString *url =@"http://kaifa.homesoft.cn/WebService/jsonPostInterfaceNew.ashx?json=GetDailywork";
+	
+	[manager GET:url parameters:paramS progress:^(NSProgress * _Nonnull downloadProgress) {
+		
+	} success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+		NSLog(@"responseObject %@",responseObject);
+	} failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+		NSLog(@"error %@",error);
+	}];
+	
+	[manager POST:url parameters:paramS constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
 		
 //		 AVURLAsset *asset ;//[AVURLAsset URLAssetWithURL:];
 //		    AVAssetExportSession *exportSession= [[AVAssetExportSession alloc] initWithAsset:asset     presetName:AVAssetExportPresetMediumQuality];

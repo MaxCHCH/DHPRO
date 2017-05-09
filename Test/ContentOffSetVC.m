@@ -13,12 +13,13 @@
 #define UserCellIdetifeir @"UserCell"
 
 #import "ContentOffSetVC.h"
-
-@interface ContentOffSetVC ()<UITextFieldDelegate>
+#import "KeyBoardView.h"
+@interface ContentOffSetVC ()<UITextFieldDelegate,KeyBoardViewDelegate>
 {
 	UITextField *textF;
 	int codeV;
 }
+@property (nonatomic,strong)KeyBoardView *cusInputView;
 @end
 
 @implementation ContentOffSetVC
@@ -40,7 +41,21 @@
     [self loadData];
     
     [self layoutTableView];
+	
+//	[self.view addSubview:[self cusInputView]];
 
+}
+- (KeyBoardView *)cusInputView{
+	if (!_cusInputView) {
+		_cusInputView = [[KeyBoardView alloc]initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.frame), 250)];
+		//设置代理对象
+		_cusInputView.delegate = self;
+	}
+	return _cusInputView;
+}
+- (void)sendMessageInView:(KeyBoardView *)bView
+			  backContent:(NSString *)content{
+	NSLog(@"----%@",content);
 }
 -(void)createNaView
 {
@@ -244,6 +259,8 @@
 	}
 	
 }
+
+
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView{
     
     int contentOffsety = scrollView.contentOffset.y;

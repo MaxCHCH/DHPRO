@@ -15,7 +15,6 @@
 
 #include <objc/runtime.h>
 #import "CeModel.h"
-#import "AlipayViewController.h"
 #import <StoreKit/StoreKit.h>
 #import <NetworkExtension/NetworkExtension.h>
 #import <SystemConfiguration/CaptiveNetwork.h>
@@ -353,6 +352,12 @@
 	NSLog(@"apps: %@", [workspace performSelector:@selector(allApplications)]);
 	[self scanApps];
 	
+	[[AFNetworkReachabilityManager sharedManager] setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
+		NSLog(@"状态 %ld",(long)status);
+	}];
+	
+	[[AFNetworkReachabilityManager sharedManager] startMonitoring];
+
 	/**
 	 *  引导页
 	 */
@@ -669,8 +674,8 @@
 			break;
 		case 35:{
 			
-			AlipayViewController * login = [[AlipayViewController alloc] init];
-			[self.navigationController pushViewController:login animated:YES];
+//			AlipayViewController * login = [[AlipayViewController alloc] init];
+//			[self.navigationController pushViewController:login animated:YES];
 			
 		}
 			break;

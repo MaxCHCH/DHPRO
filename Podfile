@@ -14,7 +14,7 @@ pod 'BaiduMapKit', '~> 3.1.0'
 pod 'FDFullscreenPopGesture'
 pod 'WechatOpenSDK'
 pod 'AliPaySDK', '~> 1.0'
-
+pod 'Masonry'
 pod 'IQKeyboardManager'
 pod 'MBProgressHUD'
 use_frameworks!

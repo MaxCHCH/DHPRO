@@ -516,32 +516,42 @@ static float progressValue = 0.0f;
 //	
 //	urlll = [urlll stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet characterSetWithCharactersInString:@"`#%^{}\"[]|\\<> "].invertedSet];
 	
-	NSString * urlll = @"http://www.haoyebao.com/api/index.php?act=store_original&op=goods_class&store_id=3";
-	AFJSONResponseSerializer * response = [AFJSONResponseSerializer serializer];
-	response.removesKeysWithNullValues = YES;
-
+	NSString * urlll = @"http://192.168.0.211:8015/houseInterface.ashx?json=PostLogin";
+	NSDictionary *dict = @{
+						   @"password":@"paws",
+						   @"type":@"1",
+						   @"usercode":@"qwqw",
+						   @"ver":@"2"
+						   };
+	
 	AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-	[manager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
-
 	manager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/html"];
-	[manager.responseSerializer setAcceptableContentTypes:[NSSet setWithObjects:@"text/plain",@"application/json",@"text/json",@"text/javascript",@"text/html", nil]];
+//	AFJSONResponseSerializer * response = [AFJSONResponseSerializer serializer];
+	
+//	response.removesKeysWithNullValues = YES;
+//
+//	AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+	[manager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+//
+//	manager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/html"];
+//	[manager.responseSerializer setAcceptableContentTypes:[NSSet setWithObjects:@"text/plain",@"application/json",@"text/json",@"text/javascript",@"text/html", nil]];
 
-	[manager GET:urlll parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
+	[manager GET:urlll parameters:dict progress:^(NSProgress * _Nonnull downloadProgress) {
 		
 	} success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-		NSLog(@"GetDictionaryByID %@",responseObject[@"data"]);
-		NSArray *dataArray = [CeModel mj_objectArrayWithKeyValuesArray:responseObject[@"data"][@"list"]];
-		NSLog(@"%@",dataArray);
-		[dataArray enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-			CeModel *m = dataArray[idx];
-			NSArray *arr = m.child_list;
-			NSLog(@"arr %@",arr);
-//			[arr enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-//				CrModel *r = arr[idx];
-//				
-//				NSLog(@"%@",r.gc_dyname);
-//			}];
-		}];
+		NSLog(@"GetDictionaryByID %@",responseObject);
+//		NSArray *dataArray = [CeModel mj_objectArrayWithKeyValuesArray:responseObject[@"data"][@"list"]];
+//		NSLog(@"%@",dataArray);
+//		[dataArray enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+//			CeModel *m = dataArray[idx];
+//			NSArray *arr = m.child_list;
+//			NSLog(@"arr %@",arr);
+////			[arr enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+////				CrModel *r = arr[idx];
+////				
+////				NSLog(@"%@",r.gc_dyname);
+////			}];
+//		}];
 		
 		/*
 		 {

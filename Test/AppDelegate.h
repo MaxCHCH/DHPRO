@@ -20,6 +20,7 @@
 @property (strong, nonatomic) ScreenShotView *screenshotView;
 #endif
 
++ (AppDelegate* )shareAppDelegate;
 
 
 @end

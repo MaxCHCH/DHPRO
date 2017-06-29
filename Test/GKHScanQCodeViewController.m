@@ -9,7 +9,7 @@
 #import "GKHScanQCodeViewController.h"
 #import "QRCodeReaderView.h"
 #import "UIViewExt.h"
-
+#import <ImageIO/CGImageProperties.h>
 #import <AVFoundation/AVFoundation.h>
 #import <AudioToolbox/AudioToolbox.h>
 
@@ -25,6 +25,8 @@
 
     BOOL isFirst;//第一次进入该页面
     BOOL isPush;//跳转到下一级页面
+	
+	float brightnessValue;
 }
 
 @property (strong, nonatomic) CIDetector *detector;
@@ -32,13 +34,41 @@
 @end
 
 @implementation GKHScanQCodeViewController
+-  (void)captureOutput:(AVCaptureOutput *)captureOutput didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer fromConnection:(AVCaptureConnection *)connection
+{
+	CFDictionaryRef metadataDict = CMCopyDictionaryOfAttachments(NULL,sampleBuffer, kCMAttachmentMode_ShouldPropagate);
+	NSDictionary *metadata = [[NSMutableDictionary alloc] initWithDictionary:(__bridge NSDictionary*)metadataDict];
+	CFRelease(metadataDict);
+	NSDictionary *exifMetadata = [[metadata objectForKey:(NSString *)kCGImagePropertyExifDictionary] mutableCopy];
+	brightnessValue = [[exifMetadata objectForKey:(NSString *)kCGImagePropertyExifBrightnessValue] floatValue];
+	
+	NSLog(@"%f",brightnessValue);
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.title = @"扫描";
     self.view.backgroundColor = [UIColor whiteColor];
-    
+	
+	AVCaptureDevice *device = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
+	BOOL result = [device hasTorch];// 判断设备是否有闪光灯
+	if ((brightnessValue < 0) && result) {// 打开闪光灯
+		
+		[device lockForConfiguration:nil];
+		
+		[device setTorchMode: AVCaptureTorchModeOn];//开
+		
+		[device unlockForConfiguration];
+		
+	}else if((brightnessValue > 0) && result) {// 关闭闪光灯
+		
+		[device lockForConfiguration:nil];
+		[device setTorchMode: AVCaptureTorchModeOff];//关
+		[device unlockForConfiguration];
+		
+	}
+	
     UIBarButtonItem * rbbItem = [[UIBarButtonItem alloc]initWithTitle:@"相册" style:UIBarButtonItemStyleDone target:self action:@selector(alumbBtnEvent)];
     self.navigationItem.rightBarButtonItem = rbbItem;
     

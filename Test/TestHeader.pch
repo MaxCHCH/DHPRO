@@ -14,7 +14,18 @@
 #define adnUrl(__URL__) [NSString stringWithFormat:@"/WebService/jsonInterface.ashx?json=%@",__URL__]
 #define USERDEFAULTS [NSUserDefaults standardUserDefaults]
 
+//导航push
+#define push(vc)\
+\
+[self.navigationController pushViewController:vc animated:YES]
+//导航pop
+#define pop [self.navigationController popViewControllerAnimated:YES];
 
+#define dis [self dismissViewControllerAnimated:YES completion:nil];
+
+#define present(vc)\
+\
+[self presentViewController:vc animated:YES completion:nil]
 
 
 #define API_BASE_URL(_URL_)  [NSString stringWithFormat:@"http://kaifa.homesoft.cn/houseInterface.ashx?json=%@",_URL_]
@@ -29,6 +40,7 @@
 
 #import "AFNetworking.h"
 #import "SVProgressHUD.h"
+#import "UIView+Extension.h"
 #import "UIView+SDAutoLayout.h"
 #import "UITableView+SDAutoTableViewCellHeight.h"
 #import <BaiduMapAPI_Map/BMKMapView.h>//只引入所需的单个头文件

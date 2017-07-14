@@ -1,0 +1,261 @@
+
+(void)hexagonIconWith:(UIImageView *)imageView frame:(CGRect)iconFrame{
+float viewWidth = iconFrame.size.width;
+UIBezierPath * path = [UIBezierPath bezierPath];
+path.lineWidth = 2;
+[[UIColor blueColor] setStroke];
+[path moveToPoint:CGPointMake((sin(M_1_PI / 180 * 60)) * (viewWidth / 2), (viewWidth / 4))];
+[path addLineToPoint:CGPointMake((viewWidth / 2), 0)];
+[path addLineToPoint:CGPointMake(viewWidth - ((sin(M_1_PI / 180 * 60)) * (viewWidth / 2)), (viewWidth / 4))];
+[path addLineToPoint:CGPointMake(viewWidth - ((sin(M_1_PI / 180 * 60)) * (viewWidth / 2)), (viewWidth / 2) + (viewWidth / 4))];
+[path addLineToPoint:CGPointMake((viewWidth / 2), viewWidth)];
+[path addLineToPoint:CGPointMake((sin(M_1_PI / 180 * 60)) * (viewWidth / 2), (viewWidth / 2) + (viewWidth / 4))];
+[path closePath];
+
+CAShapeLayer * shapLayer = [CAShapeLayer layer];
+shapLayer.lineWidth = 2;
+shapLayer.strokeColor = [UIColor redColor].CGColor;
+shapLayer.path = path.CGPath;
+imageView.layer.mask = shapLayer;
+
+}
+
+- (void)layoutUI {
+//根图层
+CALayer *rootLayer = self.view.layer;
+rootLayer.backgroundColor = [UIColor colorWithRed:0.769 green:0.940 blue:0.943 alpha:1.000].CGColor;
+rootLayer.cornerRadius = 40.0;
+
+//    [self createShadowCornerImage:[UIImage imageNamed:@"me"]
+//                    withRootLayer:rootLayer];
+
+CGRect rect = CGRectMake(20.0, 40.0, 150.0, 150.0);
+UIImageView *circleImageView = [[UIImageView alloc] initWithFrame:rect];
+[self hexagonIconWith:circleImageView frame:rect];
+circleImageView.image = [UIImage imageNamed:@"me"];
+[self createShadowCornerImage:circleImageView.image withRootLayer:rootLayer];
+
+[self createCustomDrawingLayer:rootLayer];
+[self createSuccessIconDrawingLayer:rootLayer];
+[self createWarningIconDrawingLayer:rootLayer];
+[self createErrorIconDrawingLayer:rootLayer];
+}
+
+- (void)test1{
+
+//    self.view.backgroundColor = [UIColor lightGrayColor];
+
+float viewWidth = 100;
+
+UIBezierPath * path = [UIBezierPath bezierPath];
+
+path.lineWidth = 5;
+path.lineJoinStyle = kCGLineJoinRound;
+//    path.lineCapStyle = kCGLineCapRound;
+
+[[UIColor lightGrayColor] setStroke];
+
+[path moveToPoint:CGPointMake((sin(M_1_PI / 180 * 60)) * (viewWidth / 2), (viewWidth / 4))];
+[path addLineToPoint:CGPointMake((viewWidth / 2), 0)];
+[path addLineToPoint:CGPointMake(viewWidth - ((sin(M_1_PI / 180 * 60)) * (viewWidth / 2)), (viewWidth / 4))];
+[path addLineToPoint:CGPointMake(viewWidth - ((sin(M_1_PI / 180 * 60)) * (viewWidth / 2)), (viewWidth / 2) + (viewWidth / 4))];
+[path addLineToPoint:CGPointMake((viewWidth / 2), viewWidth)];
+[path addLineToPoint:CGPointMake((sin(M_1_PI / 180 * 60)) * (viewWidth / 2), (viewWidth / 2) + (viewWidth / 4))];
+[path closePath];
+//*************************************************
+
+CAShapeLayer * shapLayer = [CAShapeLayer layer];
+shapLayer.lineWidth = 2;
+
+shapLayer.strokeColor = [UIColor lightGrayColor].CGColor;
+shapLayer.path = path.CGPath;
+//    circleImageView.layer.mask = shapLayer;
+
+//*************************************************
+
+shapLayer.shadowColor = [UIColor blackColor].CGColor;
+
+shapLayer.shadowOffset = CGSizeMake(0, 0);
+
+shapLayer.shadowPath = path.CGPath;
+
+shapLayer.shadowOpacity = 0.6;
+
+shapLayer.shadowRadius = 10;
+
+//*************************************************
+
+
+}
+/**
+*  创建带阴影效果的圆角图片图层
+*
+*  @param image     图片
+*  @param rootLayer 根图层
+*/
+- (void)createShadowCornerImage:(UIImage *)image withRootLayer:(CALayer *)rootLayer {
+// 子图层（图片的阴影图层）
+CALayer *subLayer = [CALayer layer];
+subLayer.frame = CGRectMake(20.0, 40.0, 150.0, 150.0);
+subLayer.backgroundColor = [UIColor lightGrayColor].CGColor;
+subLayer.cornerRadius = kCornerRadius;
+subLayer.borderColor = [UIColor blackColor].CGColor;
+subLayer.borderWidth = 2.0;
+subLayer.shadowColor = [UIColor blackColor].CGColor; // 设置阴影颜色
+subLayer.shadowOpacity = 0.7; // 设置阴影不透明度
+subLayer.shadowOffset = CGSizeMake(4.0, 3.0); // 设置阴影位置偏差
+subLayer.shadowRadius = 5.0; // 设置阴影圆角半径
+[rootLayer addSublayer:subLayer];
+
+// 子图层的子图层（图片的内容图层）
+CALayer *imageLayer = [CALayer layer];
+imageLayer.frame = subLayer.bounds;
+imageLayer.contents = (id)image.CGImage;
+imageLayer.masksToBounds = YES; // 设置标示剪切界限；内容图层需设置为 YES，才能有圆角效果
+imageLayer.cornerRadius = kCornerRadius;
+CGAffineTransform affineTransform = CGAffineTransformConcat(CGAffineTransformMakeScale(0.8, 0.8), CGAffineTransformMakeRotation(M_PI_4/9)); // 合并缩放和旋转效果；以0.8比例居中缩放，以45度/9=5度的角度顺时针旋转
+imageLayer.affineTransform = affineTransform;
+[subLayer addSublayer:imageLayer];
+}
+
+/**
+*  创建自定义绘画内容图层（KMLayerDelegate）
+*
+*  @param rootLayer 根图层
+*/
+- (void)createCustomDrawingLayer:(CALayer *)rootLayer {
+CALayer *drawingLayer = [CALayer layer];
+drawingLayer.frame = CGRectMake(200.0, 40.0, 150.0, 150.0);
+drawingLayer.backgroundColor = [UIColor orangeColor].CGColor; // 背景颜色会被内容图层遮住，所以最终呈现的以内容图层为准
+drawingLayer.masksToBounds = YES; // 设置标示剪切界限；内容图层需设置为 YES，才能有圆角效果
+drawingLayer.cornerRadius = kCornerRadius;
+drawingLayer.borderColor = [UIColor blackColor].CGColor;
+drawingLayer.borderWidth = 2.0;
+drawingLayer.shadowColor = [UIColor darkGrayColor].CGColor; // 设置阴影颜色
+drawingLayer.shadowOpacity = 0.8; // 设置阴影不透明度
+drawingLayer.shadowOffset = CGSizeMake(8.0, 6.0); // 设置阴影位置偏差
+drawingLayer.shadowRadius = 5.0; // 设置阴影圆角半径
+
+_layerDelegate = [KMLayerDelegate new];
+//    drawingLayer.delegate = _layerDelegate;
+drawingLayer.delegate = self;
+[drawingLayer setNeedsDisplay]; // 这里必须调用方法 setNeedsDisplay，才会触发委托代理方法 drawLayer:
+[rootLayer addSublayer:drawingLayer];
+}
+
+/**
+*  创建绿色成功图标内容图层
+*
+*  @param rootLayer 根图层
+*/
+- (void)createSuccessIconDrawingLayer:(CALayer *)rootLayer {
+// 成功图标颜色：绿色
+UIColor *const color = [UIColor colorWithRed:0.000 green:1.000 blue:0.502 alpha:1.000];
+
+// 贝塞尔曲线路径；开始画圆
+UIBezierPath* path = [UIBezierPath bezierPathWithOvalInRect: CGRectMake(0.0, 0.0, kWidthOfIcon, kWidthOfIcon)];
+// 然后以三点形成「打勾」效果
+[path moveToPoint:CGPointMake(kWidthOfIcon/kBaseNumber*4, kWidthOfIcon/kBaseNumber*12)];
+CGPoint p1 = CGPointMake(kWidthOfIcon/kBaseNumber*8, kWidthOfIcon/kBaseNumber*16);
+[path addLineToPoint:p1];
+
+CGPoint p2 = CGPointMake(kWidthOfIcon/kBaseNumber*18, kWidthOfIcon/kBaseNumber*6);
+[path addLineToPoint:p2];
+
+// 子图层
+CAShapeLayer *subLayer = [CAShapeLayer layer];
+subLayer.frame = CGRectMake(125.0, 210.0, kWidthOfIcon, kWidthOfIcon);
+subLayer.path = path.CGPath;
+subLayer.lineWidth = kLineWidth; // 线条宽度
+subLayer.strokeColor = color.CGColor; // 线条颜色
+subLayer.fillColor = [UIColor clearColor].CGColor; //清除填充色
+[rootLayer addSublayer:subLayer];
+}
+
+/**
+*  创建黄色警告图标内容图层
+*
+*  @param rootLayer 根图层
+*/
+- (void)createWarningIconDrawingLayer:(CALayer *)rootLayer {
+CGFloat centerOfWidth = (kWidthOfIcon - kLineWidth)/2;
+// 警告图标颜色：黄色
+UIColor *const color = [UIColor colorWithRed:1.000 green:0.800 blue:0.400 alpha:1.000];
+
+// 贝塞尔曲线路径；开始画圆
+UIBezierPath* path = [UIBezierPath bezierPathWithOvalInRect: CGRectMake(0.0, 0.0, kWidthOfIcon, kWidthOfIcon)];
+// 然后画感叹号
+[path moveToPoint:CGPointMake(centerOfWidth, kWidthOfIcon/kBaseNumber*4)];
+CGPoint p1 = CGPointMake(centerOfWidth, kWidthOfIcon/kBaseNumber*16);
+[path addLineToPoint:p1];
+
+[path moveToPoint:CGPointMake(centerOfWidth, kWidthOfIcon/kBaseNumber*19)];
+[path addArcWithCenter:CGPointMake(centerOfWidth, kWidthOfIcon/kBaseNumber*19) radius:3.0 startAngle:0 endAngle:M_PI*2 clockwise:YES];
+
+// 子图层
+CAShapeLayer *subLayer = [CAShapeLayer layer];
+subLayer.frame = CGRectMake(125.0, 360.0, kWidthOfIcon, kWidthOfIcon);
+subLayer.path = path.CGPath;
+subLayer.lineWidth = kLineWidth; // 线条宽度
+subLayer.strokeColor = color.CGColor; // 线条颜色
+subLayer.fillColor = [UIColor clearColor].CGColor; //清除填充色
+[rootLayer addSublayer:subLayer];
+}
+
+/**
+*  创建红色错误图标内容图层
+*
+*  @param rootLayer 根图层
+*/
+- (void)createErrorIconDrawingLayer:(CALayer *)rootLayer {
+CGFloat keyVal1 = kWidthOfIcon/kBaseNumber*6;
+CGFloat keyVal2 = kWidthOfIcon/kBaseNumber*18;
+// 失败图标颜色：红色
+UIColor *const color = [UIColor colorWithRed:1.000 green:0.400 blue:0.400 alpha:1.000];
+
+// 贝塞尔曲线路径；开始画圆
+UIBezierPath* path = [UIBezierPath bezierPathWithOvalInRect: CGRectMake(0.0, 0.0, kWidthOfIcon, kWidthOfIcon)];
+// 然后画交叉号
+CGPoint p1 =  CGPointMake(keyVal1, keyVal1);
+[path moveToPoint:p1];
+
+CGPoint p2 =  CGPointMake(keyVal2, keyVal2);
+[path addLineToPoint:p2];
+
+CGPoint p3 =  CGPointMake(keyVal2, keyVal1);
+[path moveToPoint:p3];
+
+CGPoint p4 =  CGPointMake(keyVal1, keyVal2);
+[path addLineToPoint:p4];
+
+// 子图层
+CAShapeLayer *subLayer = [CAShapeLayer layer];
+subLayer.frame = CGRectMake(125.0, 510.0, kWidthOfIcon, kWidthOfIcon);
+subLayer.path = path.CGPath;
+subLayer.lineWidth = kLineWidth; // 线条宽度
+subLayer.strokeColor = color.CGColor; // 线条颜色
+subLayer.fillColor = [UIColor clearColor].CGColor; //清除填充色
+[rootLayer addSublayer:subLayer];
+}
+
+NSLog(@"%@",[[[[ASIdentifierManager sharedManager]advertisingIdentifier]UUIDString] stringByReplacingOccurrencesOfString:@"-" withString:@""]);
+BOOL bo = 8960;
+NSLog(@"%p:",&bo);
+NSLog(@"%i",bo);
+NSLog(@"当前方法名：%@",NSStringFromSelector(_cmd));
+NSLog(@"当前方法名: %s",sel_getName(_cmd));
+NSLog(@"[类 方法]：%s",__func__);
+NSLog(@"[类 方法]：%s",__FUNCTION__);
+NSLog(@"当前类名：%@",NSStringFromClass([self class]));
+NSLog(@"当前行号：%d",__LINE__);
+NSLog(@"当前文件存储路径：%s",__FILE__);
+NSString *pathStr = [NSString stringWithCString:__FILE__ encoding:NSUTF8StringEncoding]; //将CString -> NSString
+NSLog(@"当前文件名：%@",[pathStr lastPathComponent]);
+NSLog(@"当前日期：%s",__DATE__);
+NSLog(@"当前时间：%s",__TIME__);
+NSLog(@"当前App运行要求的最低ios版本：%d",__IPHONE_OS_VERSION_MIN_REQUIRED);  //Develop Target: 已选8.0
+NSLog(@"当前App支持的最高ios版本：%d",__IPHONE_OS_VERSION_MAX_ALLOWED);    //Develop Target: 最高9.0
+NSLog(@"打印__IPHONE_7_0：%d",__IPHONE_7_0);  //打印ios7.0
+NSLog(@"当前线程：%@",[NSThread currentThread]);
+NSLog(@"主线程：%@",[NSThread mainThread]);
+NSLog(@"当前栈信息：%@", [NSThread callStackSymbols]);

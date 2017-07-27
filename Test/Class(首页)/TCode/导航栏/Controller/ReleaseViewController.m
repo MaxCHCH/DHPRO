@@ -101,6 +101,9 @@
         _layout.minimumInteritemSpacing = _margin;
         _layout.minimumLineSpacing = _margin;
         _collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(_margin, 64, (self.view.tz_width-2*_margin)/4*MaxCount, _itemWH+5) collectionViewLayout:_layout];
+		
+		_collectionView.layer.borderColor = [UIColor redColor].CGColor;
+		_collectionView.layer.borderWidth = 1.0;
         //        CGFloat rgb = 244 / 255.0;
         _collectionView.backgroundColor = [UIColor whiteColor];
 		_collectionView.scrollEnabled = NO;

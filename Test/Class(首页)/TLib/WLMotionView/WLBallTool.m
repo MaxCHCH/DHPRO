@@ -48,8 +48,6 @@ static dispatch_once_t onceToken;
     [self.gravity addItem:ballView];
     
     [self run];
-    
-    
 }
 
 - (void)run {

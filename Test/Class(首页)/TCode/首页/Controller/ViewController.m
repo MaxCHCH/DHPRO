@@ -74,8 +74,10 @@
 #import "ZLDashboardViewController.h"//动画
 #import "ActionViewController.h"//咖啡机动画
 #import "TMotionViewController.h"//碰撞球
+#import "TShopAnimationViewController.h"//购物车动画
 #import "TSidebarViewController.h"//侧边栏
 #import "TGuideMViewController.h"//引导页
+#import "IDCardViewController.h"
 //@interface ViewController ()<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout,QRScanViewDelegate,ScottPopMenuDelegate,SKStoreProductViewControllerDelegate>{
 
 @interface ViewController ()
@@ -116,6 +118,310 @@
 	} else {
 		NSLog(@"有物品离开");
 	}
+	/*
+	 IsInterface = 1;
+	 Mark = "";
+	 PNumber = 4JH39P;
+	 PayType = "1,2,3";
+	 "WX_AppId" = wx135d6c874a008913;
+	 "WX_AppSecret" = a002fa50d77506b86b2339dc26c9d97d;
+	 "ZFB_Key" = 66sgyebo4se126fqobzk8rdenp8xgomn;
+	 "ZFB_PID" = 2088711930722495;
+	 createDate = "2013/12/4 11:21:19";
+	 id = 4;
+	 ip = "http://kaifa.homesoft.cn/";
+	 isDelete = 0;
+	 modifyDate = "2017/7/19 13:56:32";
+	 name = "\U5317\U4eac\U4e2d\U79d1\U534e\U535a\U7269\U4e1a";
+	 userName = admin;
+	 userPWD = 123456;
+	 webservice = "http://kaifa.homesoft.cn/webService/forcelandEstateService.asmx";
+	 */
+	/*
+	 MethodType = GET;
+	 Url = "http://kaifa.homesoft.cn/WebService/jsonInterface.ashx";
+	 Value = "?json=UserLogin&UserName=admin&Pwd=pwd";
+
+	 */
+	
+	/*
+	 {
+	 UserInfo =     (
+	 {
+	 EmpId = 712;
+	 "HX_UserID" = "1_712";
+	 HeadUrl = "<null>";
+	 Name = "TP_\U7cfb\U7edf\U7ba1\U7406";
+	 },
+	 {
+	 EmpId = 679;
+	 "HX_UserID" = "1_679";
+	 HeadUrl = "<null>";
+	 Name = "\U5f20\U4e39_\U7cfb\U7edf\U7ba1\U7406";
+	 },
+	 {
+	 EmpId = 731;
+	 "HX_UserID" = "<null>";
+	 HeadUrl = "<null>";
+	 Name = "\U90b8\U6743\U9f9901_\U516c\U53f8\U9886\U5bfc";
+	 },
+	 {
+	 EmpId = 402;
+	 "HX_UserID" = "1_402";
+	 HeadUrl = "<null>";
+	 Name = "\U6d4b\U8bd5402_\U884c\U653f\U4eba\U4e8b\U90e8";
+	 },
+	 {
+	 EmpId = 682;
+	 "HX_UserID" = "1_682";
+	 HeadUrl = "<null>";
+	 Name = "\U909d\U7fa4_\U884c\U653f\U4eba\U4e8b\U90e8";
+	 },
+	 {
+	 EmpId = 653;
+	 "HX_UserID" = "1_653";
+	 HeadUrl = "<null>";
+	 Name = "\U5f20\U9999\U9999_12\U5ba2\U670d\U90e8";
+	 },
+	 {
+	 EmpId = 667;
+	 "HX_UserID" = "1_667";
+	 HeadUrl = "<null>";
+	 Name = "\U6d4b\U8bd511_12\U5ba2\U670d\U90e8";
+	 },
+	 {
+	 EmpId = 427;
+	 "HX_UserID" = "1_427";
+	 HeadUrl = "<null>";
+	 Name = "\U6d4b\U8bd5427_12\U5ba2\U670d\U90e8";
+	 },
+	 {
+	 EmpId = 523;
+	 "HX_UserID" = "1_523";
+	 HeadUrl = "<null>";
+	 Name = "\U6d4b\U8bd5523_\U5de5\U7a0b\U90e8";
+	 },
+	 {
+	 EmpId = 676;
+	 "HX_UserID" = "1_676";
+	 HeadUrl = "<null>";
+	 Name = "\U6a80\U76fc_\U5ba2\U670d\U90e8";
+	 },
+	 {
+	 EmpId = 694;
+	 "HX_UserID" = "1_694";
+	 HeadUrl = "<null>";
+	 Name = "\U5362\U6dd1\U82b1_\U5ba2\U670d\U90e8";
+	 },
+	 {
+	 EmpId = 697;
+	 "HX_UserID" = "1_697";
+	 HeadUrl = "<null>";
+	 Name = "\U6817\U6653\U6960_\U5ba2\U670d\U90e8";
+	 },
+	 {
+	 EmpId = 678;
+	 "HX_UserID" = "1_678";
+	 HeadUrl = "<null>";
+	 Name = "\U90dd\U745e\U7ea2_\U5ba2\U670d\U90e8";
+	 },
+	 {
+	 EmpId = 672;
+	 "HX_UserID" = "1_672";
+	 HeadUrl = "<null>";
+	 Name = "\U738b\U9707_\U5ba2\U670d\U90e8";
+	 },
+	 {
+	 EmpId = 700;
+	 "HX_UserID" = "1_700";
+	 HeadUrl = "<null>";
+	 Name = "\U6e29\U677e_\U5ba2\U670d\U90e8";
+	 },
+	 {
+	 EmpId = 636;
+	 "HX_UserID" = "1_636";
+	 HeadUrl = "<null>";
+	 Name = "\U6d4b\U8bd5_\U6d4b\U8bd5\U90e8\U95e8";
+	 },
+	 {
+	 EmpId = 654;
+	 "HX_UserID" = "1_654";
+	 HeadUrl = "<null>";
+	 Name = "\U7ba1\U7406\U5458_\U6d4b\U8bd5";
+	 },
+	 {
+	 EmpId = 650;
+	 "HX_UserID" = "1_650";
+	 HeadUrl = "<null>";
+	 Name = "\U5f20\U96e8\U7530_\U6d4b\U8bd5";
+	 },
+	 {
+	 EmpId = 681;
+	 "HX_UserID" = "1_681";
+	 HeadUrl = "attachment/Employee/2017-01-24/681_0_20170124162918.jpg";
+	 Name = "\U738b\U8f89_\U603b\U7ecf\U529e";
+	 },
+	 {
+	 EmpId = 663;
+	 "HX_UserID" = "1_663";
+	 HeadUrl = "<null>";
+	 Name = "\U59d3\U540d_\U5176\U4ed6\U90e8\U95e8";
+	 },
+	 {
+	 EmpId = 683;
+	 "HX_UserID" = "1_683";
+	 HeadUrl = "<null>";
+	 Name = "\U6ee1\U8fbe_\U9500\U552e\U90e8";
+	 },
+	 {
+	 EmpId = 685;
+	 "HX_UserID" = "1_685";
+	 HeadUrl = "<null>";
+	 Name = "\U5218\U65b9_\U9500\U552e\U90e8";
+	 },
+	 {
+	 EmpId = 684;
+	 "HX_UserID" = "1_684";
+	 HeadUrl = "attachment/Employee/2017-06-17/684_0_20170617120027.jpg";
+	 Name = "\U90b8\U6743\U9f99_\U9500\U552e\U90e8";
+	 },
+	 {
+	 EmpId = 686;
+	 "HX_UserID" = "1_686";
+	 HeadUrl = "<null>";
+	 Name = "\U674e\U9662\U9e4f_\U9500\U552e\U90e8";
+	 },
+	 {
+	 EmpId = 687;
+	 "HX_UserID" = "1_687";
+	 HeadUrl = "<null>";
+	 Name = "\U90ed\U91d1\U534e_\U9500\U552e\U90e8";
+	 },
+	 {
+	 EmpId = 701;
+	 "HX_UserID" = "1_701";
+	 HeadUrl = "attachment/Employee/2017-01-24/701_0_20170124170114.jpg";
+	 Name = "\U95eb\U5cf0_\U5f00\U53d1\U90e8";
+	 },
+	 {
+	 EmpId = 704;
+	 "HX_UserID" = "1_704";
+	 HeadUrl = "<null>";
+	 Name = "\U5468\U6d77\U6960_\U5f00\U53d1\U90e8";
+	 },
+	 {
+	 EmpId = 702;
+	 "HX_UserID" = "1_702";
+	 HeadUrl = "attachment/Employee/2017-03-14/702_0_1489469708684.jpg";
+	 Name = "\U5510\U6cfd\U8d35_\U5f00\U53d1\U90e8";
+	 },
+	 {
+	 EmpId = 703;
+	 "HX_UserID" = "1_703";
+	 HeadUrl = "attachment/Employee/2017-05-27/703_0_20170527104533.jpg";
+	 Name = "\U8d75\U5b66\U793c_\U5f00\U53d1\U90e8";
+	 },
+	 {
+	 EmpId = 709;
+	 "HX_UserID" = "1_709";
+	 HeadUrl = "attachment/Employee/2017-03-13/709_0_1489381891559.jpeg";
+	 Name = "\U8d75\U8fde\U4e1c_\U5f00\U53d1\U90e8";
+	 },
+	 {
+	 EmpId = 707;
+	 "HX_UserID" = "1_707";
+	 HeadUrl = "<null>";
+	 Name = "\U5f20\U4e91\U9e64_\U5f00\U53d1\U90e8";
+	 },
+	 {
+	 EmpId = 652;
+	 "HX_UserID" = "1_652";
+	 HeadUrl = "attachment/Employee/2017-02-10/652_0_IMG20161224185424.jpg";
+	 Name = "\U5f20\U5965_\U5f00\U53d1\U90e8";
+	 },
+	 {
+	 EmpId = 738;
+	 "HX_UserID" = "<null>";
+	 HeadUrl = "<null>";
+	 Name = "ws_Sander";
+	 },
+	 {
+	 EmpId = 720;
+	 "HX_UserID" = "1_720";
+	 HeadUrl = "<null>";
+	 Name = "\U535a\U4f17\U6d4b\U8bd5_\U5ba2\U670d\U90e8";
+	 },
+	 {
+	 EmpId = 661;
+	 "HX_UserID" = "1_661";
+	 HeadUrl = "<null>";
+	 Name = "\U7ef4\U4fee\U5458_\U5de5\U7a0b\U90e8";
+	 },
+	 {
+	 EmpId = 33;
+	 "HX_UserID" = "1_33";
+	 HeadUrl = "attachment/Employee/2017-01-23/33_0_20170123112933.jpg";
+	 Name = "\U6708_\U5ba2\U670d\U4eba\U5458";
+	 },
+	 {
+	 EmpId = 403;
+	 "HX_UserID" = "1_403";
+	 HeadUrl = "<null>";
+	 Name = "\U6d4b\U8bd5403_\U4e2d\U63a7\U5ba4";
+	 },
+	 {
+	 EmpId = 644;
+	 "HX_UserID" = "1_644";
+	 HeadUrl = "<null>";
+	 Name = "\U5c0f\U674e_\U529e\U516c\U5ba4";
+	 },
+	 {
+	 EmpId = 719;
+	 "HX_UserID" = "1_719";
+	 HeadUrl = "<null>";
+	 Name = "\U535a\U4f17_\U5ba2\U670d\U90e8";
+	 },
+	 {
+	 EmpId = 717;
+	 "HX_UserID" = "1_717";
+	 HeadUrl = "<null>";
+	 Name = "yiyi_\U529e\U516c\U5ba4";
+	 },
+	 {
+	 EmpId = 677;
+	 "HX_UserID" = "1_677";
+	 HeadUrl = "<null>";
+	 Name = "admin999_\U5de5\U7a0b\U90e8";
+	 },
+	 {
+	 EmpId = 61;
+	 "HX_UserID" = "<null>";
+	 HeadUrl = "<null>";
+	 Name = "\U6d4b\U8bd561_\U5de5\U7a0b\U90e8";
+	 },
+	 {
+	 EmpId = 632;
+	 "HX_UserID" = "1_632";
+	 HeadUrl = "<null>";
+	 Name = "\U6d4b\U8bd5632_\U4fdd\U5b89\U90e8";
+	 },
+	 {
+	 EmpId = 680;
+	 "HX_UserID" = "1_680";
+	 HeadUrl = "<null>";
+	 Name = "\U6d4b\U8bd5\U4eba\U5458_\U6d4b\U8bd5\U90e8\U95e8";
+	 },
+	 {
+	 EmpId = 718;
+	 "HX_UserID" = "1_718";
+	 HeadUrl = "<null>";
+	 Name = "\U5f20\U6d2a\U5cf0_\U5ba2\U670d\U90e8";
+	 }
+	 );
+	 count = 45;
+	 result = True;
+	 }
+	 */
 }
 - (void)accelerometer:(UIAccelerometer *)accelerometer didAccelerate:(UIAcceleration *)acceleration
 {
@@ -197,7 +503,7 @@
 	_collectionView.delegate=self;
 	[_collectionView setBackgroundColor:[UIColor whiteColor]];
 	[self.view addSubview:_collectionView];
-	_arr_title = @[@"10上下滑动",@"113DTouch",@"12二维码",@"13滑动",@"14导航栏",@"15签名",@"16动画",@"17咖啡机",@"18碰撞球",@"19侧边栏",@"20引导页",@"21品质巡查",@"22签名",@"23身份证",@"24芝麻信用分",@"25分段导航",@"26通讯录",@"27collection",@"28QQ",@"29设备巡视",@"303DTouch",@"31登录",@"32H&F",@"33添加",@"34AssistiveTouch",@"35待定",@"36待定",@"37待定",@"38待定",@"39待定",@"40待定",@"41待定"];
+	_arr_title = @[@"10上下滑动",@"113DTouch",@"12二维码",@"13滑动",@"14导航栏",@"15签名",@"16动画",@"17咖啡机",@"18碰撞球",@"19侧边栏",@"20购物车",@"21身份证",@"22待定",@"23待定",@"24待定",@"25待定",@"26待定",@"27待定",@"28待定",@"29待定",@"30待定",@"31待定",@"32待定",@"33待定",@"34待定",@"35待定",@"36待定",@"37待定",@"38待定",@"39待定",@"40待定",@"41待定"];
 	
 	_lb_showinfo = [[UILabel alloc]init];
 	_lb_showinfo.backgroundColor = [UIColor brownColor];
@@ -209,10 +515,11 @@
 	[self.view addSubview:_lb_showinfo];
 	
 	[self developer];
+	[self scrollerLabel];
 	
 }
 - (void)scrollerLabel{
-	UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(20, 120, DeviceWidth, 30)];
+	UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 120, DeviceWidth, 30)];
 	label.text = @"两块钱,你买不了吃亏,两块钱,你买不了上当,真正的物有所值,拿啥啥便宜,买啥啥不贵,都两块,买啥都两块,全场卖两块,随便挑,随便选,都两块！";
 	//	label.backgroundColor = [UIColor redColor];
 	label.layer.borderColor = [UIColor redColor].CGColor;
@@ -320,8 +627,15 @@
 		}
 			break;
 		case 10:{
-//			TGuideMViewController*tabbarTwo = [[TGuideMViewController alloc]init];
-//			push(tabbarTwo);
+			TShopAnimationViewController*tabbarTwo = [[TShopAnimationViewController alloc]init];
+			push(tabbarTwo);
+		}
+			break;
+			
+		case 11:{
+
+			IDCardViewController*tabbarTwo = [[IDCardViewController alloc]init];
+			push(tabbarTwo);
 		}
 			break;
 			

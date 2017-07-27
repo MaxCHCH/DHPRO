@@ -131,6 +131,15 @@
 		836DA0041F29CC9B0071F6D2 /* Capture.m in Sources */ = {isa = PBXBuildFile; fileRef = 836D9FFA1F29CC9B0071F6D2 /* Capture.m */; };
 		836DA0051F29CC9B0071F6D2 /* IdInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 836D9FFC1F29CC9B0071F6D2 /* IdInfo.m */; };
 		836DA0061F29CC9B0071F6D2 /* myCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 836D9FFF1F29CC9B0071F6D2 /* myCell.m */; };
+		836DA03E1F29DCAF0071F6D2 /* TabbarBundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 836DA03D1F29DCAF0071F6D2 /* TabbarBundle.bundle */; };
+		836DA0441F29E0380071F6D2 /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 836DA0411F29E0380071F6D2 /* BaseNavigationController.m */; };
+		836DA0451F29E0380071F6D2 /* BaseTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 836DA0431F29E0380071F6D2 /* BaseTabBarViewController.m */; };
+		836DA0491F29E6000071F6D2 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 836DA0481F29E6000071F6D2 /* BaseViewController.m */; };
+		836DA0581F29E8460071F6D2 /* DHMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 836DA0571F29E8460071F6D2 /* DHMainViewController.m */; };
+		836DA05B1F29E8B50071F6D2 /* DHAdressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 836DA05A1F29E8B50071F6D2 /* DHAdressViewController.m */; };
+		836DA0611F29E8D20071F6D2 /* DHMyInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 836DA0601F29E8D20071F6D2 /* DHMyInfoViewController.m */; };
+		836DA0641F29E8FF0071F6D2 /* DHWorkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 836DA0631F29E8FF0071F6D2 /* DHWorkViewController.m */; };
+		836DA0671F29EB510071F6D2 /* DHTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 836DA0661F29EB510071F6D2 /* DHTool.m */; };
 		836FE2941DEE805D0071526B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83F560261D0576E2005B0C4C /* UIKit.framework */; };
 		836FE2951DEE80620071526B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83F560241D0576D6005B0C4C /* Foundation.framework */; };
 		83A089A81EC1C4AB0042D791 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 83A089A71EC1C4AB0042D791 /* libc++.tbd */; };
@@ -411,6 +420,23 @@
 		836D9FFC1F29CC9B0071F6D2 /* IdInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IdInfo.m; sourceTree = "<group>"; };
 		836D9FFE1F29CC9B0071F6D2 /* myCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = myCell.h; sourceTree = "<group>"; };
 		836D9FFF1F29CC9B0071F6D2 /* myCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = myCell.m; sourceTree = "<group>"; };
+		836DA03D1F29DCAF0071F6D2 /* TabbarBundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = TabbarBundle.bundle; sourceTree = "<group>"; };
+		836DA0401F29E0380071F6D2 /* BaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNavigationController.h; sourceTree = "<group>"; };
+		836DA0411F29E0380071F6D2 /* BaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNavigationController.m; sourceTree = "<group>"; };
+		836DA0421F29E0380071F6D2 /* BaseTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTabBarViewController.h; sourceTree = "<group>"; };
+		836DA0431F29E0380071F6D2 /* BaseTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTabBarViewController.m; sourceTree = "<group>"; };
+		836DA0471F29E6000071F6D2 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		836DA0481F29E6000071F6D2 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		836DA0561F29E8460071F6D2 /* DHMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHMainViewController.h; sourceTree = "<group>"; };
+		836DA0571F29E8460071F6D2 /* DHMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHMainViewController.m; sourceTree = "<group>"; };
+		836DA0591F29E8B50071F6D2 /* DHAdressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHAdressViewController.h; sourceTree = "<group>"; };
+		836DA05A1F29E8B50071F6D2 /* DHAdressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHAdressViewController.m; sourceTree = "<group>"; };
+		836DA05F1F29E8D10071F6D2 /* DHMyInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHMyInfoViewController.h; sourceTree = "<group>"; };
+		836DA0601F29E8D20071F6D2 /* DHMyInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHMyInfoViewController.m; sourceTree = "<group>"; };
+		836DA0621F29E8FF0071F6D2 /* DHWorkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHWorkViewController.h; sourceTree = "<group>"; };
+		836DA0631F29E8FF0071F6D2 /* DHWorkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHWorkViewController.m; sourceTree = "<group>"; };
+		836DA0651F29EB510071F6D2 /* DHTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHTool.h; sourceTree = "<group>"; };
+		836DA0661F29EB510071F6D2 /* DHTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHTool.m; sourceTree = "<group>"; };
 		83A089A71EC1C4AB0042D791 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		83A089A91EC1C4B10042D791 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		83A089AB1EC1C4BD0042D791 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
@@ -422,7 +448,7 @@
 		83BCFE0C1CFEBB12007076DC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		83BCFE0F1CFEBB12007076DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		83BCFE111CFEBB12007076DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		83EC8CC61E9E0DFB0007D820 /* TestHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestHeader.pch; sourceTree = "<group>"; };
+		83EC8CC61E9E0DFB0007D820 /* TestHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TestHeader.pch; path = ../../../TestHeader.pch; sourceTree = "<group>"; };
 		83F560241D0576D6005B0C4C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		83F560261D0576E2005B0C4C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		83F560281D0576E9005B0C4C /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -535,6 +561,7 @@
 		831E51201F12150100F0B6D7 /* Class(首页) */ = {
 			isa = PBXGroup;
 			children = (
+				836DA03F1F29E0380071F6D2 /* TBaseData */,
 				8348AF5D1F1890FA00F1F7CB /* TLib */,
 				8348AF9A1F1890FA00F1F7CB /* TTools */,
 				831E514B1F12150100F0B6D7 /* TCode */,
@@ -721,6 +748,14 @@
 			children = (
 				831E52BD1F12150100F0B6D7 /* AppDelegate.h */,
 				831E52BE1F12150100F0B6D7 /* AppDelegate.m */,
+				836DA0561F29E8460071F6D2 /* DHMainViewController.h */,
+				836DA0571F29E8460071F6D2 /* DHMainViewController.m */,
+				836DA0591F29E8B50071F6D2 /* DHAdressViewController.h */,
+				836DA05A1F29E8B50071F6D2 /* DHAdressViewController.m */,
+				836DA0621F29E8FF0071F6D2 /* DHWorkViewController.h */,
+				836DA0631F29E8FF0071F6D2 /* DHWorkViewController.m */,
+				836DA05F1F29E8D10071F6D2 /* DHMyInfoViewController.h */,
+				836DA0601F29E8D20071F6D2 /* DHMyInfoViewController.m */,
 				831E52BF1F12150100F0B6D7 /* ViewController.h */,
 				831E52C01F12150100F0B6D7 /* ViewController.m */,
 			);
@@ -929,19 +964,23 @@
 		8348AF9A1F1890FA00F1F7CB /* TTools */ = {
 			isa = PBXGroup;
 			children = (
-				8348AF9B1F1890FA00F1F7CB /* UI快捷方法 */,
+				8348AF9B1F1890FA00F1F7CB /* 快捷方法 */,
 				8348AFA01F1890FA00F1F7CB /* UI扩展类 */,
 				8348AFB11F1890FA00F1F7CB /* 网络请求 */,
 			);
 			path = TTools;
 			sourceTree = "<group>";
 		};
-		8348AF9B1F1890FA00F1F7CB /* UI快捷方法 */ = {
+		8348AF9B1F1890FA00F1F7CB /* 快捷方法 */ = {
 			isa = PBXGroup;
 			children = (
+				836DA0651F29EB510071F6D2 /* DHTool.h */,
+				836DA0661F29EB510071F6D2 /* DHTool.m */,
+				83EC8CC61E9E0DFB0007D820 /* TestHeader.pch */,
 				8348AF9E1F1890FA00F1F7CB /* KeyBoardView.h */,
 				8348AF9F1F1890FA00F1F7CB /* KeyBoardView.m */,
 			);
+			name = "快捷方法";
 			path = "UI快捷方法";
 			sourceTree = "<group>";
 		};
@@ -1313,6 +1352,19 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		836DA03F1F29E0380071F6D2 /* TBaseData */ = {
+			isa = PBXGroup;
+			children = (
+				836DA0401F29E0380071F6D2 /* BaseNavigationController.h */,
+				836DA0411F29E0380071F6D2 /* BaseNavigationController.m */,
+				836DA0421F29E0380071F6D2 /* BaseTabBarViewController.h */,
+				836DA0431F29E0380071F6D2 /* BaseTabBarViewController.m */,
+				836DA0471F29E6000071F6D2 /* BaseViewController.h */,
+				836DA0481F29E6000071F6D2 /* BaseViewController.m */,
+			);
+			path = TBaseData;
+			sourceTree = "<group>";
+		};
 		83BCFDF41CFEBB12007076DC = {
 			isa = PBXGroup;
 			children = (
@@ -1322,6 +1374,7 @@
 				03746EE5F3296F2515E2549B /* Frameworks */,
 			);
 			sourceTree = "<group>";
+			usesTabs = 1;
 		};
 		83BCFDFE1CFEBB12007076DC /* Products */ = {
 			isa = PBXGroup;
@@ -1338,6 +1391,7 @@
 				835594501E3057A50061376D /* easyar.framework */,
 				83BCFE091CFEBB12007076DC /* Main.storyboard */,
 				83BCFE0C1CFEBB12007076DC /* Assets.xcassets */,
+				836DA03D1F29DCAF0071F6D2 /* TabbarBundle.bundle */,
 				8348B03D1F18C90B00F1F7CB /* File */,
 				83BCFE0E1CFEBB12007076DC /* LaunchScreen.storyboard */,
 				83BCFE111CFEBB12007076DC /* Info.plist */,
@@ -1350,7 +1404,6 @@
 		83BCFE001CFEBB12007076DC /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				83EC8CC61E9E0DFB0007D820 /* TestHeader.pch */,
 				83BCFE011CFEBB12007076DC /* main.m */,
 				834AE7E31D407AE000BDD80A /* Macros_Font.pch */,
 			);
@@ -1495,6 +1548,7 @@
 		83BCFDF51CFEBB12007076DC /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = BaseViewController;
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = Rillakkuma;
 				TargetAttributes = {
@@ -1548,6 +1602,7 @@
 				831E535B1F12150200F0B6D7 /* scanLine@3x.png in Resources */,
 				831E53531F12150200F0B6D7 /* lightSelect.png in Resources */,
 				83FD36171D1CE42C00A445C8 /* SuPhoto_unselected@2x.png in Resources */,
+				836DA03E1F29DCAF0071F6D2 /* TabbarBundle.bundle in Resources */,
 				8348B03E1F18C90B00F1F7CB /* File in Resources */,
 				83FD36151D1CE42C00A445C8 /* SuPhoto_circle@2x.png in Resources */,
 				83FD36111D1CE42C00A445C8 /* SuPhotoPreviewer.xib in Resources */,
@@ -1624,17 +1679,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				831E53441F12150100F0B6D7 /* NaView.m in Sources */,
+				836DA0491F29E6000071F6D2 /* BaseViewController.m in Sources */,
 				8348AFD51F1890FA00F1F7CB /* UIView+AdjustFrame.m in Sources */,
 				8348B03C1F18C47500F1F7CB /* KSGuideManager.m in Sources */,
 				8348AFD71F1890FA00F1F7CB /* UIView+SGExtension.m in Sources */,
 				8348AF401F1875FC00F1F7CB /* ESMNavigationViewController.m in Sources */,
 				831E534A1F12150200F0B6D7 /* GKHScanQCodeViewController.m in Sources */,
 				8348AFC11F1890FA00F1F7CB /* EditPicturesViewController.m in Sources */,
+				836DA0671F29EB510071F6D2 /* DHTool.m in Sources */,
 				8348AF421F1875FC00F1F7CB /* ESMTabBarVC.m in Sources */,
 				83FD36191D1CE42C00A445C8 /* SuMessageTool.m in Sources */,
 				8348AF3F1F1875FC00F1F7CB /* ESMMoneyViewController.m in Sources */,
 				8348AFBA1F1890FA00F1F7CB /* InfiniteRollScrollView.m in Sources */,
 				8348AFD61F1890FA00F1F7CB /* UIView+Extension.m in Sources */,
+				836DA0581F29E8460071F6D2 /* DHMainViewController.m in Sources */,
 				8348AFED1F189EAB00F1F7CB /* PJRSignatureView.m in Sources */,
 				8348B0091F18A0A900F1F7CB /* gaunzi.m in Sources */,
 				8348AFC21F1890FA00F1F7CB /* LxGridViewFlowLayout.m in Sources */,
@@ -1662,12 +1720,14 @@
 				8348B01F1F18B3FE00F1F7CB /* LLBlurSidebar.m in Sources */,
 				83FD361A1D1CE42C00A445C8 /* SuPhotoCenter.m in Sources */,
 				8348AFD81F1890FA00F1F7CB /* UIViewExt.m in Sources */,
+				836DA0451F29E0380071F6D2 /* BaseTabBarViewController.m in Sources */,
 				8348AF3C1F1875FC00F1F7CB /* ESMBaseViewController.m in Sources */,
 				83FD36091D1CE42C00A445C8 /* UIView+SU.m in Sources */,
 				83FD361B1D1CE42C00A445C8 /* SuPhotoManager.m in Sources */,
 				8348AFD21F1890FA00F1F7CB /* UIColor+JFColor.m in Sources */,
 				8348AF431F1875FC00F1F7CB /* ESMTabBarViewController.m in Sources */,
 				8348AFBB1F1890FA00F1F7CB /* JSTextView.m in Sources */,
+				836DA0611F29E8D20071F6D2 /* DHMyInfoViewController.m in Sources */,
 				8348AFD31F1890FA00F1F7CB /* UIImage+compressIMG.m in Sources */,
 				831E53331F12150100F0B6D7 /* GZBaseViewController.m in Sources */,
 				8348AFDD1F18912200F1F7CB /* LSTabBarViewController.m in Sources */,
@@ -1695,8 +1755,11 @@
 				83FD36121D1CE42C00A445C8 /* SuAblumInfo.m in Sources */,
 				8348AFC41F1890FA00F1F7CB /* TZAssetCell.m in Sources */,
 				8348AF591F18907400F1F7CB /* YSYPreviewViewController.m in Sources */,
+				836DA0441F29E0380071F6D2 /* BaseNavigationController.m in Sources */,
 				8348AFD11F1890FA00F1F7CB /* NSMutableArray+Util.m in Sources */,
 				83FD36071D1CE42C00A445C8 /* UIButton+SU.m in Sources */,
+				836DA0641F29E8FF0071F6D2 /* DHWorkViewController.m in Sources */,
+				836DA05B1F29E8B50071F6D2 /* DHAdressViewController.m in Sources */,
 				8348AF451F1875FC00F1F7CB /* ESMTwoViewController.m in Sources */,
 				83FD360B1D1CE42C00A445C8 /* UIView+SuLine.m in Sources */,
 				8348AF561F18906200F1F7CB /* DetailsDrawViewController.m in Sources */,

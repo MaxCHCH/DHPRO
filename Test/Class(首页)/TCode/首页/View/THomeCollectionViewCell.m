@@ -33,7 +33,7 @@
 		.centerXEqualToView(self.contentView)
 		.topSpaceToView(self.contentView,4);
 		
-		[_labelName setSingleLineAutoResizeWithMaxWidth:DeviceWidth];
+		[_labelName setSingleLineAutoResizeWithMaxWidth:DH_DeviceWidth];
 		_labelName.sd_layout
 		.heightIs(14)
 		.topSpaceToView(_imageCover, 5)

@@ -33,7 +33,7 @@ static showView *instance;
 
 - (instancetype)init
 {
-    if ((self = [super initWithFrame:CGRectMake(0, 0, DeviceWidth, DeviceHeight)]))
+    if ((self = [super initWithFrame:CGRectMake(0, 0, DH_DeviceWidth, DH_DeviceHeight)]))
     {
         self.backgroundColor = [UIColor clearColor];
         if (self.window == nil)

@@ -492,7 +492,7 @@
 //	flowLayout.minimumInteritemSpacing = 5.0;//cell左右之间的距离
 //	flowLayout.headerReferenceSize = CGSizeMake(self.view.frame.size.width, 20);
 	
-	_collectionView=[[UICollectionView alloc] initWithFrame:CGRectMake(15, 0, DeviceWidth-30, DeviceHeight) collectionViewLayout:flowLayout];
+	_collectionView=[[UICollectionView alloc] initWithFrame:CGRectMake(15, 0, DH_DeviceWidth-30, DH_DeviceHeight) collectionViewLayout:flowLayout];
 //	_collectionView=[[UICollectionView alloc] init];
 //	_collectionView.collectionViewLayout = flowLayout;
 	//注册Cell，必须要有
@@ -511,7 +511,7 @@
 	_lb_showinfo.font = [UIFont systemFontOfSize:14];
 	_lb_showinfo.layer.borderColor = [UIColor redColor].CGColor;
 	_lb_showinfo.layer.borderWidth = 1.0;
-	_lb_showinfo.frame = CGRectMake(0, DeviceHeight-20, DeviceWidth, 20);
+	_lb_showinfo.frame = CGRectMake(0, DH_DeviceHeight-20, DH_DeviceWidth, 20);
 	[self.view addSubview:_lb_showinfo];
 	
 	[self developer];
@@ -519,7 +519,7 @@
 	
 }
 - (void)scrollerLabel{
-	UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 120, DeviceWidth, 30)];
+	UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 120, DH_DeviceWidth, 30)];
 	label.text = @"两块钱,你买不了吃亏,两块钱,你买不了上当,真正的物有所值,拿啥啥便宜,买啥啥不贵,都两块,买啥都两块,全场卖两块,随便挑,随便选,都两块！";
 	//	label.backgroundColor = [UIColor redColor];
 	label.layer.borderColor = [UIColor redColor].CGColor;

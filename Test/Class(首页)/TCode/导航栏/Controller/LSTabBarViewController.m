@@ -21,15 +21,15 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self setTabBar];
-    
 }
+
 - (void)setTabBar
 {
-    
+	
     AutoLayoutViewController *InforVC = [[AutoLayoutViewController alloc] init];
     InforVC.title = @"aadh";
-    [self setupChildViewController:InforVC title:@"消息" imageName:@"soul11@2x" selectedImageName:@"soul11@2x"];
-    
+    [self setupChildViewController:InforVC title:@"消息" imageName:@"TabbarBundle.bundle/tabbar_mainframe" selectedImageName:@"TabbarBundle.bundle/tabbar_mainframeHL"];
+	
     ReleaseViewController *BrandVC = [[ReleaseViewController alloc] init];
     [self setupChildViewController:BrandVC title:@"品牌" imageName:@"soul3" selectedImageName:@"soul33"];
     

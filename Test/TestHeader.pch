@@ -10,34 +10,42 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-
-#define adnUrl(__URL__) [NSString stringWithFormat:@"/WebService/jsonInterface.ashx?json=%@",__URL__]
-#define USERDEFAULTS [NSUserDefaults standardUserDefaults]
-
 //导航push
 #define push(vc)\
 \
 [self.navigationController pushViewController:vc animated:YES]
 //导航pop
 #define pop [self.navigationController popViewControllerAnimated:YES];
-
+//dis
 #define dis [self dismissViewControllerAnimated:YES completion:nil];
-
+//pre
 #define present(vc)\
 \
 [self presentViewController:vc animated:YES completion:nil]
 
 
-#define API_BASE_URL(_URL_)  [NSString stringWithFormat:@"http://kaifa.homesoft.cn/houseInterface.ashx?json=%@",_URL_]
-#define URLMAIN  @"http://zkhb.homesoft.cn"
-#define API_BASE_URLS(_URL_) [NSString stringWithFormat:@"%@/WebService/jsonInterface.ashx?json=%@",URLMAIN,_URL_]
+#define DH_Notifica [NSNotificationCenter defaultCenter]
+#define DH_USERDEFAULTS [NSUserDefaults standardUserDefaults]
+#define DH_DeviceWidth  [UIScreen mainScreen].bounds.size.width
+#define DH_DeviceHeight [UIScreen mainScreen].bounds.size.height
+#define DH_FontSize(fontSize) [UIFont systemFontOfSize:fontSize]
+//weakSelf
+#define DH_WEAKSELF typeof(self) __weak weakSelf = self
+#define DH_WeakSelf(type)  __weak typeof(type) weak##type = type;
 
-#define DeviceWidth [UIScreen mainScreen].bounds.size.width
-#define DeviceHeight [UIScreen mainScreen].bounds.size.height
+// strongSelf
+#define DH_StrongSelf(type)  __strong typeof(type) type = weak##type;
+//图片
+#define DH_ImageName(imageName) [UIImage imageNamed:imageName]
+//获取图片资源
+#define DH_GetImage(imageName) [UIImage imageNamed:[NSString stringWithFormat:@"%@",imageName]]
+
+#define DHColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
+
 
 #import "Masonry.h"
 #import "MJExtension.h"
-
+#import "DHTool.h"
 #import "AFNetworking.h"
 #import "SVProgressHUD.h"
 #import "UIView+Extension.h"

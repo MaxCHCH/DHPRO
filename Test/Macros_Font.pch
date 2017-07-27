@@ -11,18 +11,6 @@
 #import <UIKit/UIKit.h>
 
 
-#define adnUrl(__URL__) [NSString stringWithFormat:@"/WebService/jsonInterface.ashx?json=%@",__URL__]
-#define USERDEFAULTS [NSUserDefaults standardUserDefaults]
-
-
-
-
-#define API_BASE_URL(_URL_)  [NSString stringWithFormat:@"http://kaifa.homesoft.cn/houseInterface.ashx?json=%@",_URL_]
-#define URLMAIN  @"http://zkhb.homesoft.cn"
-#define API_BASE_URLS(_URL_) [NSString stringWithFormat:@"%@/WebService/jsonInterface.ashx?json=%@",URLMAIN,_URL_]
-
-#define DeviceWidth [UIScreen mainScreen].bounds.size.width
-#define DeviceHeight [UIScreen mainScreen].bounds.size.height
 #import "Macros_UIAdapter.h"
 #import "Macros_Font.h"
 #import "Macros_Color.h"

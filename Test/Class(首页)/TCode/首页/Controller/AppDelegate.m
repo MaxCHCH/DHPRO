@@ -10,7 +10,7 @@
 #import "showView.h"
 
 #import "AppDelegate.h"
-#import "ViewController.h"
+#import "BaseTabBarViewController.h"
 #import "IQKeyboardManager.h"
 
 @interface AppDelegate ()
@@ -180,9 +180,9 @@
 
 	
 	
-    ViewController *viewC = [[ViewController alloc]init];
+    BaseTabBarViewController *viewC = [[BaseTabBarViewController alloc]init];
     UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:viewC];
-	nav.navigationBar.barTintColor = [UIColor yellowColor];
+//	nav.navigationBar.barTintColor = [UIColor yellowColor];
 //    nav.navigationBar.barTintColor = [UIColor colorWithRed:62/255.0 green:173/255.0 blue:176/255.0 alpha:1.0];
 //    nav.navigationBar.topItem.title = @"我的小demo";
 //    [nav.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];

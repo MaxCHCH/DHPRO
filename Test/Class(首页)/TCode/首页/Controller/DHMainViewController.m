@@ -47,8 +47,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 	[self setUPUI];
-
-    // Do any additional setup after loading the view.
 }
 - (void)proximityStateDidChange
 {

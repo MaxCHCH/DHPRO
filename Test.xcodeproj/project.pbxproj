@@ -120,6 +120,7 @@
 		835594551E3057C70061376D /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 835594541E3057C70061376D /* CoreMedia.framework */; };
 		835594571E3057CD0061376D /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 835594561E3057CD0061376D /* CoreVideo.framework */; };
 		835594591E3057D30061376D /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 835594581E3057D30061376D /* OpenGLES.framework */; };
+		835633471F2ADD1400475839 /* REAMD.md in Sources */ = {isa = PBXBuildFile; fileRef = 835633461F2ADD1400475839 /* REAMD.md */; };
 		835D5D581D34EBBD000F4E02 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 835D5D571D34EBBD000F4E02 /* QuartzCore.framework */; };
 		836315A71E4C150D00D0689F /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 836315A61E4C150D00D0689F /* StoreKit.framework */; };
 		8368DF5F1D1396C400FF8492 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8368DF5E1D1396C400FF8492 /* CoreTelephony.framework */; };
@@ -402,6 +403,7 @@
 		835594541E3057C70061376D /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		835594561E3057CD0061376D /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		835594581E3057D30061376D /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		835633461F2ADD1400475839 /* REAMD.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = REAMD.md; sourceTree = "<group>"; };
 		835D5D571D34EBBD000F4E02 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		836315A61E4C150D00D0689F /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		8368DF5E1D1396C400FF8492 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
@@ -1393,6 +1395,7 @@
 				83BCFE0C1CFEBB12007076DC /* Assets.xcassets */,
 				836DA03D1F29DCAF0071F6D2 /* TabbarBundle.bundle */,
 				8348B03D1F18C90B00F1F7CB /* File */,
+				835633461F2ADD1400475839 /* REAMD.md */,
 				83BCFE0E1CFEBB12007076DC /* LaunchScreen.storyboard */,
 				83BCFE111CFEBB12007076DC /* Info.plist */,
 				83FD35D31D1CE42C00A445C8 /* SuPhotoPicker */,
@@ -1774,6 +1777,7 @@
 				8348AF441F1875FC00F1F7CB /* ESMTestViewController.m in Sources */,
 				831E53341F12150100F0B6D7 /* T3DTouchViewController.m in Sources */,
 				8348B0291F18B46200F1F7CB /* TSidebarViewController.m in Sources */,
+				835633471F2ADD1400475839 /* REAMD.md in Sources */,
 				8348AF411F1875FC00F1F7CB /* ESMOneViewController.m in Sources */,
 				8348AFCD1F1890FA00F1F7CB /* TZVideoPlayerController.m in Sources */,
 				8348B0481F1AFF1400F1F7CB /* TShopAnimationViewController.m in Sources */,

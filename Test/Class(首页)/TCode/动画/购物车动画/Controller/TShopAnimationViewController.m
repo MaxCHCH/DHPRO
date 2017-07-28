@@ -136,7 +136,7 @@
 	
 	// 关键帧
 	CAKeyframeAnimation *animation = [CAKeyframeAnimation animationWithKeyPath:@"position"];
-	 CGMutablePathRef path = CGPathCreateMutable();
+//	CGMutablePathRef path = CGPathCreateMutable();
 //	CGPathAddArcToPoint(path, nil, 60, 60, 100, 100, 50);
 //	CGPathAddArcToPoint(path, nil, 100, 160, 200, 200, 50);
 //

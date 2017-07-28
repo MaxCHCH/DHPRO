@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8308064E1F2ACD4B0057F23D /* AppDelegate+DHCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 8308064D1F2ACD4B0057F23D /* AppDelegate+DHCategory.m */; };
+		830806511F2ACD7C0057F23D /* showView.m in Sources */ = {isa = PBXBuildFile; fileRef = 830806501F2ACD7C0057F23D /* showView.m */; };
 		83116AE51D051FD10013188A /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83116AE41D051FD10013188A /* CoreBluetooth.framework */; };
 		83116AE71D051FDA0013188A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83116AE61D051FDA0013188A /* CoreGraphics.framework */; };
 		831E53331F12150100F0B6D7 /* GZBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 831E514F1F12150100F0B6D7 /* GZBaseViewController.m */; };
@@ -36,7 +38,6 @@
 		831E535C1F12150200F0B6D7 /* scanscanBg.png in Resources */ = {isa = PBXBuildFile; fileRef = 831E51AF1F12150100F0B6D7 /* scanscanBg.png */; };
 		831E535D1F12150200F0B6D7 /* QRCodeAreaView.m in Sources */ = {isa = PBXBuildFile; fileRef = 831E51B31F12150100F0B6D7 /* QRCodeAreaView.m */; };
 		831E53D81F12150200F0B6D7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 831E52BE1F12150100F0B6D7 /* AppDelegate.m */; };
-		831E53D91F12150200F0B6D7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 831E52C01F12150100F0B6D7 /* ViewController.m */; };
 		831E53DA1F12150200F0B6D7 /* THomeCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 831E52C41F12150100F0B6D7 /* THomeCollectionViewCell.m */; };
 		8348AF3C1F1875FC00F1F7CB /* ESMBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8348AF271F1875FC00F1F7CB /* ESMBaseViewController.m */; };
 		8348AF3D1F1875FC00F1F7CB /* ESMHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8348AF291F1875FC00F1F7CB /* ESMHomeViewController.m */; };
@@ -113,7 +114,6 @@
 		8348B0391F18C45600F1F7CB /* TGuideMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8348B0381F18C45600F1F7CB /* TGuideMViewController.m */; };
 		8348B03C1F18C47500F1F7CB /* KSGuideManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8348B03B1F18C47500F1F7CB /* KSGuideManager.m */; };
 		8348B03E1F18C90B00F1F7CB /* File in Resources */ = {isa = PBXBuildFile; fileRef = 8348B03D1F18C90B00F1F7CB /* File */; };
-		8348B0411F18D02400F1F7CB /* showView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8348B0401F18D02400F1F7CB /* showView.m */; };
 		8348B0481F1AFF1400F1F7CB /* TShopAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8348B0471F1AFF1400F1F7CB /* TShopAnimationViewController.m */; };
 		835594511E3057A50061376D /* easyar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 835594501E3057A50061376D /* easyar.framework */; };
 		835594531E3057C00061376D /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 835594521E3057C00061376D /* CoreImage.framework */; };
@@ -184,6 +184,10 @@
 /* Begin PBXFileReference section */
 		039FFEF870AA169994FB92C4 /* Pods_Test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5908F0D1C1BF2DB81DA7CB7F /* Pods-Test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Test.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Test/Pods-Test.debug.xcconfig"; sourceTree = "<group>"; };
+		8308064C1F2ACD4B0057F23D /* AppDelegate+DHCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+DHCategory.h"; sourceTree = "<group>"; };
+		8308064D1F2ACD4B0057F23D /* AppDelegate+DHCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+DHCategory.m"; sourceTree = "<group>"; };
+		8308064F1F2ACD7C0057F23D /* showView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = showView.h; sourceTree = "<group>"; };
+		830806501F2ACD7C0057F23D /* showView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = showView.m; sourceTree = "<group>"; };
 		83116AE41D051FD10013188A /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 		83116AE61D051FDA0013188A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		831E514E1F12150100F0B6D7 /* GZBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GZBaseViewController.h; sourceTree = "<group>"; };
@@ -233,8 +237,6 @@
 		831E51B31F12150100F0B6D7 /* QRCodeAreaView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCodeAreaView.m; sourceTree = "<group>"; };
 		831E52BD1F12150100F0B6D7 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		831E52BE1F12150100F0B6D7 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		831E52BF1F12150100F0B6D7 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		831E52C01F12150100F0B6D7 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		831E52C31F12150100F0B6D7 /* THomeCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THomeCollectionViewCell.h; sourceTree = "<group>"; };
 		831E52C41F12150100F0B6D7 /* THomeCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THomeCollectionViewCell.m; sourceTree = "<group>"; };
 		8348AF261F1875FC00F1F7CB /* ESMBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESMBaseViewController.h; sourceTree = "<group>"; };
@@ -391,8 +393,6 @@
 		8348B03A1F18C47500F1F7CB /* KSGuideManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSGuideManager.h; sourceTree = "<group>"; };
 		8348B03B1F18C47500F1F7CB /* KSGuideManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSGuideManager.m; sourceTree = "<group>"; };
 		8348B03D1F18C90B00F1F7CB /* File */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = File; sourceTree = "<group>"; };
-		8348B03F1F18D02400F1F7CB /* showView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = showView.h; sourceTree = "<group>"; };
-		8348B0401F18D02400F1F7CB /* showView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = showView.m; sourceTree = "<group>"; };
 		8348B0461F1AFF1400F1F7CB /* TShopAnimationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TShopAnimationViewController.h; sourceTree = "<group>"; };
 		8348B0471F1AFF1400F1F7CB /* TShopAnimationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TShopAnimationViewController.m; sourceTree = "<group>"; };
 		834AE7E31D407AE000BDD80A /* Macros_Font.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Macros_Font.pch; sourceTree = "<group>"; };
@@ -756,8 +756,6 @@
 				836DA0631F29E8FF0071F6D2 /* DHWorkViewController.m */,
 				836DA05F1F29E8D10071F6D2 /* DHMyInfoViewController.h */,
 				836DA0601F29E8D20071F6D2 /* DHMyInfoViewController.m */,
-				831E52BF1F12150100F0B6D7 /* ViewController.h */,
-				831E52C01F12150100F0B6D7 /* ViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -774,8 +772,6 @@
 			children = (
 				831E52C31F12150100F0B6D7 /* THomeCollectionViewCell.h */,
 				831E52C41F12150100F0B6D7 /* THomeCollectionViewCell.m */,
-				8348B03F1F18D02400F1F7CB /* showView.h */,
-				8348B0401F18D02400F1F7CB /* showView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -979,6 +975,8 @@
 				83EC8CC61E9E0DFB0007D820 /* TestHeader.pch */,
 				8348AF9E1F1890FA00F1F7CB /* KeyBoardView.h */,
 				8348AF9F1F1890FA00F1F7CB /* KeyBoardView.m */,
+				8308064F1F2ACD7C0057F23D /* showView.h */,
+				830806501F2ACD7C0057F23D /* showView.m */,
 			);
 			name = "快捷方法";
 			path = "UI快捷方法";
@@ -1003,6 +1001,8 @@
 				8348AFAE1F1890FA00F1F7CB /* UIView+SGExtension.m */,
 				8348AFAF1F1890FA00F1F7CB /* UIViewExt.h */,
 				8348AFB01F1890FA00F1F7CB /* UIViewExt.m */,
+				8308064C1F2ACD4B0057F23D /* AppDelegate+DHCategory.h */,
+				8308064D1F2ACD4B0057F23D /* AppDelegate+DHCategory.m */,
 			);
 			path = "UI扩展类";
 			sourceTree = "<group>";
@@ -1716,6 +1716,7 @@
 				831E534C1F12150200F0B6D7 /* mask.c in Sources */,
 				8348B0021F189FC900F1F7CB /* ZLDashboardView.m in Sources */,
 				831E53591F12150200F0B6D7 /* QRCodeViewController.m in Sources */,
+				8308064E1F2ACD4B0057F23D /* AppDelegate+DHCategory.m in Sources */,
 				8348AFF71F189F0000F1F7CB /* SignatureViewController.m in Sources */,
 				8348B01F1F18B3FE00F1F7CB /* LLBlurSidebar.m in Sources */,
 				83FD361A1D1CE42C00A445C8 /* SuPhotoCenter.m in Sources */,
@@ -1739,7 +1740,6 @@
 				836DA0001F29CC9B0071F6D2 /* CardViewController.m in Sources */,
 				8348AFB71F1890FA00F1F7CB /* GragView.m in Sources */,
 				8348AFBF1F1890FA00F1F7CB /* SGSegmentedControl.m in Sources */,
-				8348B0411F18D02400F1F7CB /* showView.m in Sources */,
 				8348B01C1F18AC6F00F1F7CB /* WLBallView.m in Sources */,
 				8348B02C1F18B93300F1F7CB /* ALiAlertView.m in Sources */,
 				8348AFD01F1890FA00F1F7CB /* KeyBoardView.m in Sources */,
@@ -1779,6 +1779,7 @@
 				8348B0481F1AFF1400F1F7CB /* TShopAnimationViewController.m in Sources */,
 				8348B01B1F18AC6F00F1F7CB /* WLBallTool.m in Sources */,
 				831E53561F12150200F0B6D7 /* QRCodeGenerator.m in Sources */,
+				830806511F2ACD7C0057F23D /* showView.m in Sources */,
 				8348AF531F18904D00F1F7CB /* ReleaseViewController.m in Sources */,
 				831E53DA1F12150200F0B6D7 /* THomeCollectionViewCell.m in Sources */,
 				8348AFC81F1890FA00F1F7CB /* TZImagePickerController.m in Sources */,
@@ -1800,7 +1801,6 @@
 				83BCFE021CFEBB12007076DC /* main.m in Sources */,
 				8348AFB61F1890FA00F1F7CB /* ChineseString.m in Sources */,
 				83FD361C1D1CE42C00A445C8 /* SuPhotoAblumCell.m in Sources */,
-				831E53D91F12150200F0B6D7 /* ViewController.m in Sources */,
 				836DA0061F29CC9B0071F6D2 /* myCell.m in Sources */,
 				83FD360D1D1CE42C00A445C8 /* SuPhotoBaseController.m in Sources */,
 			);

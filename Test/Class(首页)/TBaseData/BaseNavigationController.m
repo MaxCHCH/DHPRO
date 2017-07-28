@@ -121,10 +121,10 @@
 //	}
 //	
 //}
--(void)dealloc
-{
-	[[NSNotificationCenter defaultCenter] removeObserver:self name:@"moreMore" object:nil];
-}
+//-(void)dealloc
+//{
+//	[[NSNotificationCenter defaultCenter] removeObserver:self name:@"moreMore" object:nil];
+//}
 
 
 - (void)setupBase{

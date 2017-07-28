@@ -63,7 +63,7 @@
 	DH_WEAKSELF;
 	[dataArray enumerateObjectsUsingBlock:^(NSDictionary *dict, NSUInteger idx, BOOL * _Nonnull stop) {
 		UIViewController *vc = [NSClassFromString(dict[DH_ClassKey]) new];
-		vc.navigationItem.title = dict[DH_TitleKey];
+		vc.title = dict[DH_TitleKey];
 		
 		BaseNavigationController *navi = [[BaseNavigationController alloc] initWithRootViewController:vc];
 		UITabBarItem *item = navi.tabBarItem;

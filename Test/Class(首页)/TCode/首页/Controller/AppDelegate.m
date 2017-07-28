@@ -12,6 +12,7 @@
 #import "AppDelegate.h"
 #import "BaseTabBarViewController.h"
 #import "IQKeyboardManager.h"
+#import "AppDelegate+DHCategory.h"
 
 @interface AppDelegate ()
 {
@@ -21,88 +22,6 @@
 @end
 
 @implementation AppDelegate
-+ (AppDelegate* )shareAppDelegate{
-	//    发送通知信息
-//	[[NSNotificationCenter defaultCenter] postNotificationName:@"Screens" object:nil userInfo:@{@"ScreensState":[NSNumber numberWithBool:YES]}];
-	[[NSNotificationCenter defaultCenter] addObserverForName:UIApplicationUserDidTakeScreenshotNotification
-													  object:nil
-													   queue:nil
-												  usingBlock:^(NSNotification *note) {
-													  // executes after screenshot
-												  }];
-	return (AppDelegate*)[UIApplication sharedApplication].delegate;
-	
-}
-//截屏响应
-- (void)takeScreenshotMethod
-{
-	NSLog(@"检测到截屏");
-	//人为截屏, 模拟用户截屏行为, 获取所截图片
-	UIImage *image = [self imageWithScreenshot];
-	[showView showWelcomeView:image];
-}
-/**
- *  返回截取到的图片
- *
- *  @return UIImage *
- */
-- (UIImage *)imageWithScreenshot
-{
-	NSData *imageData = [self dataWithScreenshotInPNGFormat];
-	return [UIImage imageWithData:imageData];
-}
-
-/**
- *  截取当前屏幕
- *
- *  @return NSData *
- */
-- (NSData *)dataWithScreenshotInPNGFormat
-{
-	CGSize imageSize = CGSizeZero;
-	UIInterfaceOrientation orientation = [UIApplication sharedApplication].statusBarOrientation;
-	if (UIInterfaceOrientationIsPortrait(orientation))
-		imageSize = [UIScreen mainScreen].bounds.size;
-	else
-		imageSize = CGSizeMake([UIScreen mainScreen].bounds.size.height, [UIScreen mainScreen].bounds.size.width);
-	
-	UIGraphicsBeginImageContextWithOptions(imageSize, NO, 0);
-	CGContextRef context = UIGraphicsGetCurrentContext();
-	for (UIWindow *window in [[UIApplication sharedApplication] windows])
-	{
-		CGContextSaveGState(context);
-		CGContextTranslateCTM(context, window.center.x, window.center.y);
-		CGContextConcatCTM(context, window.transform);
-		CGContextTranslateCTM(context, -window.bounds.size.width * window.layer.anchorPoint.x, -window.bounds.size.height * window.layer.anchorPoint.y);
-		if (orientation == UIInterfaceOrientationLandscapeLeft)
-		{
-			CGContextRotateCTM(context, M_PI_2);
-			CGContextTranslateCTM(context, 0, -imageSize.width);
-		}
-		else if (orientation == UIInterfaceOrientationLandscapeRight)
-		{
-			CGContextRotateCTM(context, -M_PI_2);
-			CGContextTranslateCTM(context, -imageSize.height, 0);
-		} else if (orientation == UIInterfaceOrientationPortraitUpsideDown) {
-			CGContextRotateCTM(context, M_PI);
-			CGContextTranslateCTM(context, -imageSize.width, -imageSize.height);
-		}
-		if ([window respondsToSelector:@selector(drawViewHierarchyInRect:afterScreenUpdates:)])
-		{
-			[window drawViewHierarchyInRect:window.bounds afterScreenUpdates:YES];
-		}
-		else
-		{
-			[window.layer renderInContext:context];
-		}
-		CGContextRestoreGState(context);
-	}
-	
-	UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
-	UIGraphicsEndImageContext();
-	
-	return UIImagePNGRepresentation(image);
-}
 
 //- (BOOL)application:(UIApplication *)application
 //			openURL:(NSURL *)url
@@ -177,15 +96,12 @@
 	manager.shouldToolbarUsesTextFieldTintColor = YES;//控制键盘上的工具条文字颜色是否用户自定义。
 	manager.enableAutoToolbar = NO;//控制是否显示键盘上的工具条。
 	[[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
-
-	
-	
-    BaseTabBarViewController *viewC = [[BaseTabBarViewController alloc]init];
-    UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:viewC];
-//	nav.navigationBar.barTintColor = [UIColor yellowColor];
-//    nav.navigationBar.barTintColor = [UIColor colorWithRed:62/255.0 green:173/255.0 blue:176/255.0 alpha:1.0];
-//    nav.navigationBar.topItem.title = @"我的小demo";
-//    [nav.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
+	/*! 版本更新  */
+//	[self VersonUpdate];
+	/*! 保存当前时间  */
+	[self saveCurrentTime];
+//截屏
+	[self screenshot];
 	
 	_mapManager = [[BMKMapManager alloc]init];
 	// 如果要关注网络及授权验证事件，请设定     generalDelegate参数
@@ -194,7 +110,7 @@
 		NSLog(@"manager start failed!");
 	}
 	
-    self.window.rootViewController =nav;
+	self.window.rootViewController = [BaseTabBarViewController new];
 
     [self.window makeKeyWindow];
     // Override point for customization after application launch.

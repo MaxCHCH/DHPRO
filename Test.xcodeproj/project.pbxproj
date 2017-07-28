@@ -120,6 +120,7 @@
 		835594551E3057C70061376D /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 835594541E3057C70061376D /* CoreMedia.framework */; };
 		835594571E3057CD0061376D /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 835594561E3057CD0061376D /* CoreVideo.framework */; };
 		835594591E3057D30061376D /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 835594581E3057D30061376D /* OpenGLES.framework */; };
+		835633451F2AD96E00475839 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 835633441F2AD96E00475839 /* README.md */; };
 		835D5D581D34EBBD000F4E02 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 835D5D571D34EBBD000F4E02 /* QuartzCore.framework */; };
 		836315A71E4C150D00D0689F /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 836315A61E4C150D00D0689F /* StoreKit.framework */; };
 		8368DF5F1D1396C400FF8492 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8368DF5E1D1396C400FF8492 /* CoreTelephony.framework */; };
@@ -402,6 +403,7 @@
 		835594541E3057C70061376D /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		835594561E3057CD0061376D /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		835594581E3057D30061376D /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		835633441F2AD96E00475839 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		835D5D571D34EBBD000F4E02 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		836315A61E4C150D00D0689F /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		8368DF5E1D1396C400FF8492 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
@@ -1394,6 +1396,7 @@
 				836DA03D1F29DCAF0071F6D2 /* TabbarBundle.bundle */,
 				8348B03D1F18C90B00F1F7CB /* File */,
 				83BCFE0E1CFEBB12007076DC /* LaunchScreen.storyboard */,
+				835633441F2AD96E00475839 /* README.md */,
 				83BCFE111CFEBB12007076DC /* Info.plist */,
 				83FD35D31D1CE42C00A445C8 /* SuPhotoPicker */,
 				83BCFE001CFEBB12007076DC /* Supporting Files */,
@@ -1702,6 +1705,7 @@
 				831E535D1F12150200F0B6D7 /* QRCodeAreaView.m in Sources */,
 				831E534D1F12150200F0B6D7 /* qrencode.c in Sources */,
 				8348AF3D1F1875FC00F1F7CB /* ESMHomeViewController.m in Sources */,
+				835633451F2AD96E00475839 /* README.md in Sources */,
 				8348AFD41F1890FA00F1F7CB /* UIImage+ImageEffects.m in Sources */,
 				8348AF5C1F1890A200F1F7CB /* PostTableViewController.m in Sources */,
 				8348B0391F18C45600F1F7CB /* TGuideMViewController.m in Sources */,

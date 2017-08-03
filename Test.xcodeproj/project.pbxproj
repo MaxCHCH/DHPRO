@@ -39,6 +39,11 @@
 		831E535D1F12150200F0B6D7 /* QRCodeAreaView.m in Sources */ = {isa = PBXBuildFile; fileRef = 831E51B31F12150100F0B6D7 /* QRCodeAreaView.m */; };
 		831E53D81F12150200F0B6D7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 831E52BE1F12150100F0B6D7 /* AppDelegate.m */; };
 		831E53DA1F12150200F0B6D7 /* THomeCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 831E52C41F12150100F0B6D7 /* THomeCollectionViewCell.m */; };
+		833A836A1F332BB300F45F56 /* UITableView+SDAutoTableViewCellHeight.m in Sources */ = {isa = PBXBuildFile; fileRef = 833A83671F332BB300F45F56 /* UITableView+SDAutoTableViewCellHeight.m */; };
+		833A836B1F332BB300F45F56 /* UIView+SDAutoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 833A83691F332BB300F45F56 /* UIView+SDAutoLayout.m */; };
+		833A83721F332D1C00F45F56 /* GZTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 833A83711F332D1C00F45F56 /* GZTableViewCell.m */; };
+		833A83751F332D2300F45F56 /* GZTimeLineModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 833A83741F332D2300F45F56 /* GZTimeLineModel.m */; };
+		833A83781F332D5100F45F56 /* DHNoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 833A83771F332D5100F45F56 /* DHNoteViewController.m */; };
 		8348AF3C1F1875FC00F1F7CB /* ESMBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8348AF271F1875FC00F1F7CB /* ESMBaseViewController.m */; };
 		8348AF3D1F1875FC00F1F7CB /* ESMHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8348AF291F1875FC00F1F7CB /* ESMHomeViewController.m */; };
 		8348AF3E1F1875FC00F1F7CB /* ESMMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8348AF2B1F1875FC00F1F7CB /* ESMMeViewController.m */; };
@@ -240,6 +245,17 @@
 		831E52BE1F12150100F0B6D7 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		831E52C31F12150100F0B6D7 /* THomeCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THomeCollectionViewCell.h; sourceTree = "<group>"; };
 		831E52C41F12150100F0B6D7 /* THomeCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THomeCollectionViewCell.m; sourceTree = "<group>"; };
+		833A83651F332BB300F45F56 /* SDAutoLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDAutoLayout.h; sourceTree = "<group>"; };
+		833A83661F332BB300F45F56 /* UITableView+SDAutoTableViewCellHeight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+SDAutoTableViewCellHeight.h"; sourceTree = "<group>"; };
+		833A83671F332BB300F45F56 /* UITableView+SDAutoTableViewCellHeight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+SDAutoTableViewCellHeight.m"; sourceTree = "<group>"; };
+		833A83681F332BB300F45F56 /* UIView+SDAutoLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SDAutoLayout.h"; sourceTree = "<group>"; };
+		833A83691F332BB300F45F56 /* UIView+SDAutoLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SDAutoLayout.m"; sourceTree = "<group>"; };
+		833A83701F332D1C00F45F56 /* GZTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GZTableViewCell.h; sourceTree = "<group>"; };
+		833A83711F332D1C00F45F56 /* GZTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GZTableViewCell.m; sourceTree = "<group>"; };
+		833A83731F332D2300F45F56 /* GZTimeLineModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GZTimeLineModel.h; sourceTree = "<group>"; };
+		833A83741F332D2300F45F56 /* GZTimeLineModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GZTimeLineModel.m; sourceTree = "<group>"; };
+		833A83761F332D5100F45F56 /* DHNoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHNoteViewController.h; sourceTree = "<group>"; };
+		833A83771F332D5100F45F56 /* DHNoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHNoteViewController.m; sourceTree = "<group>"; };
 		8348AF261F1875FC00F1F7CB /* ESMBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESMBaseViewController.h; sourceTree = "<group>"; };
 		8348AF271F1875FC00F1F7CB /* ESMBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESMBaseViewController.m; sourceTree = "<group>"; };
 		8348AF281F1875FC00F1F7CB /* ESMHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESMHomeViewController.h; sourceTree = "<group>"; };
@@ -574,6 +590,7 @@
 		831E514B1F12150100F0B6D7 /* TCode */ = {
 			isa = PBXGroup;
 			children = (
+				833A836C1F332CF300F45F56 /* 节点列表 */,
 				836D9FEC1F29CC9B0071F6D2 /* 身份证 */,
 				8348B0331F18C43500F1F7CB /* 引导页 */,
 				8348B0201F18B40E00F1F7CB /* 侧边栏 */,
@@ -778,6 +795,55 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		833A83641F332BB300F45F56 /* SDAutolayout */ = {
+			isa = PBXGroup;
+			children = (
+				833A83651F332BB300F45F56 /* SDAutoLayout.h */,
+				833A83661F332BB300F45F56 /* UITableView+SDAutoTableViewCellHeight.h */,
+				833A83671F332BB300F45F56 /* UITableView+SDAutoTableViewCellHeight.m */,
+				833A83681F332BB300F45F56 /* UIView+SDAutoLayout.h */,
+				833A83691F332BB300F45F56 /* UIView+SDAutoLayout.m */,
+			);
+			path = SDAutolayout;
+			sourceTree = "<group>";
+		};
+		833A836C1F332CF300F45F56 /* 节点列表 */ = {
+			isa = PBXGroup;
+			children = (
+				833A836D1F332CF300F45F56 /* Controller */,
+				833A836E1F332CF300F45F56 /* Model */,
+				833A836F1F332CF300F45F56 /* View */,
+			);
+			path = "节点列表";
+			sourceTree = "<group>";
+		};
+		833A836D1F332CF300F45F56 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				833A83761F332D5100F45F56 /* DHNoteViewController.h */,
+				833A83771F332D5100F45F56 /* DHNoteViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		833A836E1F332CF300F45F56 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				833A83731F332D2300F45F56 /* GZTimeLineModel.h */,
+				833A83741F332D2300F45F56 /* GZTimeLineModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		833A836F1F332CF300F45F56 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				833A83701F332D1C00F45F56 /* GZTableViewCell.h */,
+				833A83711F332D1C00F45F56 /* GZTableViewCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		8348AF251F1875FC00F1F7CB /* HomeKit */ = {
 			isa = PBXGroup;
 			children = (
@@ -861,6 +927,7 @@
 		8348AF5D1F1890FA00F1F7CB /* TLib */ = {
 			isa = PBXGroup;
 			children = (
+				833A83641F332BB300F45F56 /* SDAutolayout */,
 				8348B0161F18AC6F00F1F7CB /* WLMotionView */,
 				8348AFEA1F189EAB00F1F7CB /* PJRSignatureView */,
 				8348AF5E1F1890FA00F1F7CB /* ChineseString.h */,
@@ -1708,6 +1775,7 @@
 				8348AFD41F1890FA00F1F7CB /* UIImage+ImageEffects.m in Sources */,
 				8348AF5C1F1890A200F1F7CB /* PostTableViewController.m in Sources */,
 				8348B0391F18C45600F1F7CB /* TGuideMViewController.m in Sources */,
+				833A83751F332D2300F45F56 /* GZTimeLineModel.m in Sources */,
 				8348AFE01F18915D00F1F7CB /* TestOneVC.m in Sources */,
 				831E534E1F12150200F0B6D7 /* qrinput.c in Sources */,
 				8348AFCA1F1890FA00F1F7CB /* TZPhotoPreviewCell.m in Sources */,
@@ -1747,6 +1815,7 @@
 				8348B02C1F18B93300F1F7CB /* ALiAlertView.m in Sources */,
 				8348AFD01F1890FA00F1F7CB /* KeyBoardView.m in Sources */,
 				831E53501F12150200F0B6D7 /* rscode.c in Sources */,
+				833A836B1F332BB300F45F56 /* UIView+SDAutoLayout.m in Sources */,
 				8348B0311F18BC5100F1F7CB /* LabelMethodBlockSubVC.m in Sources */,
 				8348AFE31F18917400F1F7CB /* TestTwoVC.m in Sources */,
 				8348AFD91F1890FA00F1F7CB /* RequestPostUploadHelper.m in Sources */,
@@ -1767,6 +1836,7 @@
 				83FD360B1D1CE42C00A445C8 /* UIView+SuLine.m in Sources */,
 				8348AF561F18906200F1F7CB /* DetailsDrawViewController.m in Sources */,
 				83FD361E1D1CE42C00A445C8 /* SuPhotoBrowserCell.m in Sources */,
+				833A83781F332D5100F45F56 /* DHNoteViewController.m in Sources */,
 				8348AFB81F1890FA00F1F7CB /* GYChangeTextView.m in Sources */,
 				8348B0321F18BC5100F1F7CB /* LabelNilMethodBlockViewController.m in Sources */,
 				83FD360A1D1CE42C00A445C8 /* UIView+SuAnimation.m in Sources */,
@@ -1775,6 +1845,7 @@
 				831E534B1F12150200F0B6D7 /* bitstream.c in Sources */,
 				8348AFCB1F1890FA00F1F7CB /* TZPhotoPreviewController.m in Sources */,
 				8348AF441F1875FC00F1F7CB /* ESMTestViewController.m in Sources */,
+				833A836A1F332BB300F45F56 /* UITableView+SDAutoTableViewCellHeight.m in Sources */,
 				831E53341F12150100F0B6D7 /* T3DTouchViewController.m in Sources */,
 				8348B0291F18B46200F1F7CB /* TSidebarViewController.m in Sources */,
 				835633471F2ADD1400475839 /* REAMD.md in Sources */,
@@ -1783,6 +1854,7 @@
 				8348B0481F1AFF1400F1F7CB /* TShopAnimationViewController.m in Sources */,
 				8348B01B1F18AC6F00F1F7CB /* WLBallTool.m in Sources */,
 				831E53561F12150200F0B6D7 /* QRCodeGenerator.m in Sources */,
+				833A83721F332D1C00F45F56 /* GZTableViewCell.m in Sources */,
 				830806511F2ACD7C0057F23D /* showView.m in Sources */,
 				8348AF531F18904D00F1F7CB /* ReleaseViewController.m in Sources */,
 				831E53DA1F12150200F0B6D7 /* THomeCollectionViewCell.m in Sources */,

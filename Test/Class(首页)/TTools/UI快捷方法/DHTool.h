@@ -18,7 +18,8 @@
 //颜色色值
 + (UIColor *) colorWithHexString: (NSString *) stringToConvert;  //@"#5a5a5a"
 + (UIColor *) colorWithHexString:(NSString *)color alpha:(CGFloat)alpha;
-
+/*获取网络流量信息*/
++ (long long) getInterfaceBytes;
 //获得行高
 + (CGFloat)contentSizeWithText:(NSString *)text;
 /*!

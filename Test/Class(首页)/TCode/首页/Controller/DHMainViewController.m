@@ -24,6 +24,7 @@
 #import "TSidebarViewController.h"//侧边栏
 #import "TGuideMViewController.h"//引导页
 #import "IDCardViewController.h"
+#import "DHNoteViewController.h"//节点
 
 @interface DHMainViewController ()<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout,QRScanViewDelegate,UIAccelerometerDelegate>{
 	NSMutableArray *valueArr;
@@ -31,6 +32,10 @@
 	UICollectionView *_collectionView;
 	NSArray *_arr_title;
 	UILabel *_lb_showinfo;
+	//测试
+	NSTimer *timer;
+	UILabel  *displayLabel;//提示语
+
 }
 @property (nonatomic, strong) CMMotionManager *mgr; // 保证不死
 
@@ -47,6 +52,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 	[self setUPUI];
+	displayLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, DH_DeviceHeight-50, DH_DeviceWidth, 40)];
+	displayLabel.backgroundColor = [UIColor colorWithRed:0.962 green:0.971 blue:1.000 alpha:1.000];
+	displayLabel.layer.shadowColor = [UIColor lightGrayColor].CGColor;
+	displayLabel.layer.shadowOffset = CGSizeMake(0, -5);
+	displayLabel.layer.shadowOpacity = 0.5;
+	displayLabel.layer.shadowRadius= 4;
+	displayLabel.textColor = [UIColor blackColor];
+	displayLabel.hidden = YES;
+	displayLabel.lineBreakMode = NSLineBreakByWordWrapping;
+	displayLabel.numberOfLines = 0;
+	[self.view addSubview:displayLabel];
+	[[UIApplication sharedApplication].keyWindow addSubview:displayLabel];
 }
 - (void)proximityStateDidChange
 {
@@ -69,6 +86,36 @@
 	}
 	return _mgr;
 }
+//- (id)transformedValue:(id)value﻿
+//{﻿
+//	
+//	﻿
+//	
+//	   double convertedValue = [value doubleValue];﻿
+//	
+//	   int multiplyFactor = 0;﻿
+//	
+//	﻿
+//	
+//	   NSArray *tokens = [NSArray arrayWithObjects:@"bytes",@"KB",@"MB",@"GB",@"TB",@“PB”, @“EB”, @“ZB”, @“YB”,nil];﻿
+//	
+//	﻿
+//	
+//	   while (convertedValue > 1024) {﻿
+//		
+//		       convertedValue /= 1024;﻿
+//		
+//		       multiplyFactor++;﻿
+//		
+//		   }﻿
+//	
+//	﻿
+//	
+//	   return [NSString stringWithFormat:@"%4.2f %@",convertedValue, [tokens objectAtIndex:multiplyFactor]];﻿
+//	
+//}
+
+
 - (void)developer{
 	
 	// 1.获取单例对象
@@ -98,7 +145,8 @@
 		
 		CMAcceleration acceleration = accelerometerData.acceleration;
 		NSLog(@"4/n获取加速计信息 x:%f y:%f z:%f", acceleration.x, acceleration.y, acceleration.z);
-		_lb_showinfo.text = [NSString stringWithFormat:@"获取的X:%.2f,获取的Y:%.2f,获取的Z:%.2f",acceleration.x, acceleration.y, acceleration.z];
+		_lb_showinfo.text = [NSString stringWithFormat:@"获取的X:%.2f,获取的Y:%.2f,获取的Z:%.2f,获取网速:%lld",acceleration.x, acceleration.y, acceleration.z,[DHTool getInterfaceBytes]];
+		NSLog(@"速度:%@",[NSByteCountFormatter stringFromByteCount:[DHTool getInterfaceBytes] countStyle:NSByteCountFormatterCountStyleFile]);
 	}];
 	
 	if (![CMPedometer isStepCountingAvailable]) {
@@ -115,6 +163,8 @@
 	}];
 }
 - (void)setUPUI{
+
+
 	// 监听有物品靠近还是离开
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(proximityStateDidChange) name:UIDeviceProximityStateDidChangeNotification object:nil];
 	[UIDevice currentDevice].proximityMonitoringEnabled = YES;
@@ -145,7 +195,7 @@
 	_lb_showinfo.font = [UIFont systemFontOfSize:14];
 	_lb_showinfo.layer.borderColor = [UIColor redColor].CGColor;
 	_lb_showinfo.layer.borderWidth = 1.0;
-	_lb_showinfo.frame = CGRectMake(0, DH_DeviceHeight-20, DH_DeviceWidth, 20);
+	_lb_showinfo.frame = CGRectMake(0, DH_DeviceHeight-44-30, DH_DeviceWidth, 25);
 	[self.view addSubview:_lb_showinfo];
 	
 	[self developer];
@@ -273,7 +323,12 @@
 		}
 			break;
 			
-			
+		case 12:{
+			[self showPromptlanguage:@"全场卖两块,随便挑,随便选,都两块"];
+			DHNoteViewController*tabbarTwo = [[DHNoteViewController alloc]init];
+			push(tabbarTwo);
+		}
+			 break;
 		default:
 			break;
 	}
@@ -355,6 +410,47 @@
 	UIGraphicsEndImageContext();
 	
 	return UIImagePNGRepresentation(image);
+}
+//测试
+- (void)showPromptlanguage:(NSString *)string
+{
+	[UIView animateWithDuration:1.0 animations:^{
+		
+		displayLabel.text = string;
+		displayLabel.hidden = NO;
+		
+		//自适应高度
+		CGRect txtFrame = displayLabel.frame;
+		
+		displayLabel.frame = CGRectMake(0, DH_DeviceHeight-50, DH_DeviceWidth,
+										txtFrame.size.height =[string boundingRectWithSize:
+															   CGSizeMake(txtFrame.size.width, CGFLOAT_MAX)
+																				   options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading
+																				attributes:[NSDictionary dictionaryWithObjectsAndKeys:displayLabel.font,NSFontAttributeName, nil] context:nil].size.height);
+		NSLog(@"执行");
+
+
+	} completion:^(BOOL finished) {
+		timer = [NSTimer scheduledTimerWithTimeInterval:10.5f
+												 target:self
+											   selector:@selector(hiddenDataPicker)
+											   userInfo:nil
+												repeats:YES];
+		[timer fire];
+		
+		NSLog(@"完成");
+		
+	}];
+}
+
+- (void)hiddenDataPicker{
+	[UIView animateWithDuration:0.5 animations:^{
+		displayLabel.frame = CGRectMake(0, DH_DeviceHeight+50, DH_DeviceWidth, 20);
+		NSLog(@"执行隐藏");
+	} completion:^(BOOL finished) {
+		NSLog(@"执行完毕");
+		[timer invalidate];
+	}];
 }
 
 - (void)didReceiveMemoryWarning {

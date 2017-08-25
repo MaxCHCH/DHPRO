@@ -57,10 +57,17 @@
         [selectedAssets addObject:model.asset];
     }
     for (TZAssetModel *model in _models) {
-        if ([selectedAssets containsObject:model.asset]) {
+        if ([[TZImageManager manager] isAssetsArray:selectedAssets containAsset:model.asset]) {
             self.selectedCount ++;
         }
     }
+}
+
+- (NSString *)name {
+    if (_name) {
+        return _name;
+    }
+    return @"";
 }
 
 @end

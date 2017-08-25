@@ -18,7 +18,7 @@
 #define widthRate DeviceMaxWidth/320
 #define IOS8 ([[UIDevice currentDevice].systemVersion intValue] >= 8 ? YES : NO)
 
-@interface GKHScanQCodeViewController ()<QRCodeReaderViewDelegate,AVCaptureMetadataOutputObjectsDelegate,UINavigationControllerDelegate,UIImagePickerControllerDelegate,UIAlertViewDelegate,UITextViewDelegate>
+@interface GKHScanQCodeViewController ()<QRCodeReaderViewDelegate,AVCaptureMetadataOutputObjectsDelegate,UINavigationControllerDelegate,UIImagePickerControllerDelegate,UIAlertViewDelegate,UITextViewDelegate,UIGestureRecognizerDelegate>
 {
     QRCodeReaderView * readview;//二维码扫描对象
     UITextView *playlabel;
@@ -47,6 +47,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+	self.navigationController.interactivePopGestureRecognizer.delegate = self;
+
     // Do any additional setup after loading the view.
     self.title = @"扫描";
     self.view.backgroundColor = [UIColor whiteColor];

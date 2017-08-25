@@ -18,19 +18,6 @@
 
 @implementation EditPicturesViewController
 
-- (void)viewWillAppear:(BOOL)animated {
-	[super viewWillAppear:animated];
-	self.navigationController.navigationBarHidden = YES;
-	[self hiddenTheTabBar];
-}
-
-- (void)viewWillDisappear:(BOOL)animated {
-	[super viewWillDisappear:animated];
-	self.navigationController.navigationBarHidden = NO;
-	[self showTheTabBar];
-
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -48,6 +35,10 @@
     [self imageView];
     
     self.title =[NSString stringWithFormat:@"%ld/%ld",self.integer+1,self.imageArray.count];
+
+    
+    
+   
 
 }
 - (void)imageView{
@@ -98,32 +89,6 @@
 }
 - (void)tapZX:(UITapGestureRecognizer *)sender{
     
-}
-//显示标签栏
-- (void)showTheTabBar
-{
-	NSArray *arr1=self.tabBarController.view.subviews;
-	
-	UITabBar *tabBarView1=[arr1 objectAtIndex:1];
-	[UIView animateWithDuration:0.5f delay:0.0f options:UIViewAnimationOptionCurveEaseOut animations:^(){
-		CGRect frame = tabBarView1.frame;
-		frame.origin.y -= (49.0f + 18.0f);
-		tabBarView1.frame = frame;
-	} completion:nil];
-	
-}
-//隐藏标签栏
-- (void)hiddenTheTabBar
-{
-	NSArray *arr1=self.tabBarController.view.subviews;
-	
-	UITabBar *tabBarView1=[arr1 objectAtIndex:1];
-	[UIView animateWithDuration:0.5f delay:0.0f options:UIViewAnimationOptionCurveEaseOut animations:^(){
-		CGRect frame = tabBarView1.frame;
-		frame.origin.y += (49.0f + 18.0f);
-		tabBarView1.frame = frame;
-	} completion:nil];
-	
 }
 
 - (void)didReceiveMemoryWarning {

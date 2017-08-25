@@ -7,11 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BaseViewController.h"
+
 @class GKHScanQCodeViewController;
 @protocol QRScanViewDelegate <NSObject>
 - (void)GKHScanQCodeViewController:(GKHScanQCodeViewController *)lhScanQCodeViewController readerScanResult:(NSString *)result;//二维码扫描的字符串
 @end
-@interface GKHScanQCodeViewController : UIViewController
+@interface GKHScanQCodeViewController : BaseViewController
 @property (weak,nonatomic)  id<QRScanViewDelegate> delegate;
 
 //二维码扫描使用方法

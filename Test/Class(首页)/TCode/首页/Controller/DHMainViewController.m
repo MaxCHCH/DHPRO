@@ -28,7 +28,7 @@
 #import "DHZanViewController.h"//点赞
 #import "ScrollImageViewViewController.h"
 #import "DHImagePickerViewController.h"//高级定制添加图片
-
+#import "CardViewController.h"
 #import "NetTestViewController.h"
 @interface DHMainViewController ()<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout,QRScanViewDelegate,UIAccelerometerDelegate>{
 	NSMutableArray *valueArr;

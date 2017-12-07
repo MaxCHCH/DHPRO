@@ -113,6 +113,7 @@
 		NSLog(@"manager start failed!");
 	}
 	
+	
 	self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 	self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[[DHGuidepageViewController alloc] init]];
 	

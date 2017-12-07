@@ -14,6 +14,9 @@
 #import "IQKeyboardManager.h"
 #import "AppDelegate+DHCategory.h"
 
+#import "DHGuidepageViewController.h"
+#import "DHGuidePageHUD.h"
+
 @interface AppDelegate ()
 {
 	BMKMapManager* _mapManager;
@@ -110,8 +113,9 @@
 		NSLog(@"manager start failed!");
 	}
 	
-	self.window.rootViewController = [BaseTabBarViewController new];
-
+	self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+	self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[[DHGuidepageViewController alloc] init]];
+	
     [self.window makeKeyWindow];
     // Override point for customization after application launch.
     return YES;

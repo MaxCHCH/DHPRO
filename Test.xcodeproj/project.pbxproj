@@ -39,6 +39,20 @@
 		831E535D1F12150200F0B6D7 /* QRCodeAreaView.m in Sources */ = {isa = PBXBuildFile; fileRef = 831E51B31F12150100F0B6D7 /* QRCodeAreaView.m */; };
 		831E53D81F12150200F0B6D7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 831E52BE1F12150100F0B6D7 /* AppDelegate.m */; };
 		831E53DA1F12150200F0B6D7 /* THomeCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 831E52C41F12150100F0B6D7 /* THomeCollectionViewCell.m */; };
+		831EF3D11FD965E100D79F4F /* GuideImage.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 831EF3CC1FD965E100D79F4F /* GuideImage.bundle */; };
+		831EF3D21FD965E100D79F4F /* DHGifImageOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 831EF3CD1FD965E100D79F4F /* DHGifImageOperation.m */; };
+		831EF3D31FD965E100D79F4F /* DHGuidePageHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 831EF3D01FD965E100D79F4F /* DHGuidePageHUD.m */; };
+		831EF3D61FD965FE00D79F4F /* DHGuidepageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 831EF3D51FD965FE00D79F4F /* DHGuidepageViewController.m */; };
+		831EF3E21FD9664800D79F4F /* guideImage1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 831EF3D81FD9664800D79F4F /* guideImage1.jpg */; };
+		831EF3E31FD9664800D79F4F /* guideImage2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 831EF3D91FD9664800D79F4F /* guideImage2.jpg */; };
+		831EF3E41FD9664800D79F4F /* guideImage3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 831EF3DA1FD9664800D79F4F /* guideImage3.jpg */; };
+		831EF3E51FD9664800D79F4F /* guideImage4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 831EF3DB1FD9664800D79F4F /* guideImage4.jpg */; };
+		831EF3E61FD9664800D79F4F /* guideImage5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 831EF3DC1FD9664800D79F4F /* guideImage5.jpg */; };
+		831EF3E71FD9664800D79F4F /* guideImage8.gif in Resources */ = {isa = PBXBuildFile; fileRef = 831EF3DD1FD9664800D79F4F /* guideImage8.gif */; };
+		831EF3E81FD9664800D79F4F /* guideMovie1.mov in Resources */ = {isa = PBXBuildFile; fileRef = 831EF3DE1FD9664800D79F4F /* guideMovie1.mov */; };
+		831EF3E91FD9664800D79F4F /* view_bg_image.png in Resources */ = {isa = PBXBuildFile; fileRef = 831EF3DF1FD9664800D79F4F /* view_bg_image.png */; };
+		831EF3EA1FD9664800D79F4F /* guideImage7.gif in Resources */ = {isa = PBXBuildFile; fileRef = 831EF3E01FD9664800D79F4F /* guideImage7.gif */; };
+		831EF3EB1FD9664800D79F4F /* guideImage6.gif in Resources */ = {isa = PBXBuildFile; fileRef = 831EF3E11FD9664800D79F4F /* guideImage6.gif */; };
 		833A836A1F332BB300F45F56 /* UITableView+SDAutoTableViewCellHeight.m in Sources */ = {isa = PBXBuildFile; fileRef = 833A83671F332BB300F45F56 /* UITableView+SDAutoTableViewCellHeight.m */; };
 		833A836B1F332BB300F45F56 /* UIView+SDAutoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 833A83691F332BB300F45F56 /* UIView+SDAutoLayout.m */; };
 		833A83721F332D1C00F45F56 /* GZTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 833A83711F332D1C00F45F56 /* GZTableViewCell.m */; };
@@ -333,6 +347,23 @@
 		831E52BE1F12150100F0B6D7 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		831E52C31F12150100F0B6D7 /* THomeCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THomeCollectionViewCell.h; sourceTree = "<group>"; };
 		831E52C41F12150100F0B6D7 /* THomeCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THomeCollectionViewCell.m; sourceTree = "<group>"; };
+		831EF3CC1FD965E100D79F4F /* GuideImage.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GuideImage.bundle; sourceTree = "<group>"; };
+		831EF3CD1FD965E100D79F4F /* DHGifImageOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHGifImageOperation.m; sourceTree = "<group>"; };
+		831EF3CE1FD965E100D79F4F /* DHGuidePageHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHGuidePageHUD.h; sourceTree = "<group>"; };
+		831EF3CF1FD965E100D79F4F /* DHGifImageOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHGifImageOperation.h; sourceTree = "<group>"; };
+		831EF3D01FD965E100D79F4F /* DHGuidePageHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHGuidePageHUD.m; sourceTree = "<group>"; };
+		831EF3D41FD965FA00D79F4F /* DHGuidepageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHGuidepageViewController.h; sourceTree = "<group>"; };
+		831EF3D51FD965FE00D79F4F /* DHGuidepageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHGuidepageViewController.m; sourceTree = "<group>"; };
+		831EF3D81FD9664800D79F4F /* guideImage1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = guideImage1.jpg; sourceTree = "<group>"; };
+		831EF3D91FD9664800D79F4F /* guideImage2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = guideImage2.jpg; sourceTree = "<group>"; };
+		831EF3DA1FD9664800D79F4F /* guideImage3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = guideImage3.jpg; sourceTree = "<group>"; };
+		831EF3DB1FD9664800D79F4F /* guideImage4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = guideImage4.jpg; sourceTree = "<group>"; };
+		831EF3DC1FD9664800D79F4F /* guideImage5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = guideImage5.jpg; sourceTree = "<group>"; };
+		831EF3DD1FD9664800D79F4F /* guideImage8.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = guideImage8.gif; sourceTree = "<group>"; };
+		831EF3DE1FD9664800D79F4F /* guideMovie1.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = guideMovie1.mov; sourceTree = "<group>"; };
+		831EF3DF1FD9664800D79F4F /* view_bg_image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = view_bg_image.png; sourceTree = "<group>"; };
+		831EF3E01FD9664800D79F4F /* guideImage7.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = guideImage7.gif; sourceTree = "<group>"; };
+		831EF3E11FD9664800D79F4F /* guideImage6.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = guideImage6.gif; sourceTree = "<group>"; };
 		833A83651F332BB300F45F56 /* SDAutoLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDAutoLayout.h; sourceTree = "<group>"; };
 		833A83661F332BB300F45F56 /* UITableView+SDAutoTableViewCellHeight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+SDAutoTableViewCellHeight.h"; sourceTree = "<group>"; };
 		833A83671F332BB300F45F56 /* UITableView+SDAutoTableViewCellHeight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+SDAutoTableViewCellHeight.m"; sourceTree = "<group>"; };
@@ -1019,8 +1050,11 @@
 		831E52BC1F12150100F0B6D7 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				831EF3D71FD9664800D79F4F /* Images */,
 				831E52BD1F12150100F0B6D7 /* AppDelegate.h */,
 				831E52BE1F12150100F0B6D7 /* AppDelegate.m */,
+				831EF3D41FD965FA00D79F4F /* DHGuidepageViewController.h */,
+				831EF3D51FD965FE00D79F4F /* DHGuidepageViewController.m */,
 				836DA0561F29E8460071F6D2 /* DHMainViewController.h */,
 				836DA0571F29E8460071F6D2 /* DHMainViewController.m */,
 				836DA0591F29E8B50071F6D2 /* DHAdressViewController.h */,
@@ -1040,6 +1074,35 @@
 				831E52C41F12150100F0B6D7 /* THomeCollectionViewCell.m */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		831EF3CB1FD965E100D79F4F /* DHGuidePageHUD */ = {
+			isa = PBXGroup;
+			children = (
+				831EF3CC1FD965E100D79F4F /* GuideImage.bundle */,
+				831EF3CD1FD965E100D79F4F /* DHGifImageOperation.m */,
+				831EF3CE1FD965E100D79F4F /* DHGuidePageHUD.h */,
+				831EF3CF1FD965E100D79F4F /* DHGifImageOperation.h */,
+				831EF3D01FD965E100D79F4F /* DHGuidePageHUD.m */,
+			);
+			path = DHGuidePageHUD;
+			sourceTree = "<group>";
+		};
+		831EF3D71FD9664800D79F4F /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				831EF3D81FD9664800D79F4F /* guideImage1.jpg */,
+				831EF3D91FD9664800D79F4F /* guideImage2.jpg */,
+				831EF3DA1FD9664800D79F4F /* guideImage3.jpg */,
+				831EF3DB1FD9664800D79F4F /* guideImage4.jpg */,
+				831EF3DC1FD9664800D79F4F /* guideImage5.jpg */,
+				831EF3DD1FD9664800D79F4F /* guideImage8.gif */,
+				831EF3DE1FD9664800D79F4F /* guideMovie1.mov */,
+				831EF3DF1FD9664800D79F4F /* view_bg_image.png */,
+				831EF3E01FD9664800D79F4F /* guideImage7.gif */,
+				831EF3E11FD9664800D79F4F /* guideImage6.gif */,
+			);
+			path = Images;
 			sourceTree = "<group>";
 		};
 		833A83641F332BB300F45F56 /* SDAutolayout */ = {
@@ -1226,6 +1289,7 @@
 		8348AF5D1F1890FA00F1F7CB /* TLib */ = {
 			isa = PBXGroup;
 			children = (
+				831EF3CB1FD965E100D79F4F /* DHGuidePageHUD */,
 				83650C911FD8DF70001FAA3D /* UIButton-touch */,
 				83650C871FD8DF5D001FAA3D /* YPTabBarController */,
 				834337461F4FD0F300382DEE /* TZImagePickerController */,
@@ -2399,9 +2463,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				831EF3E21FD9664800D79F4F /* guideImage1.jpg in Resources */,
 				83650D171FD8E04E001FAA3D /* SenderAppNodeBkg_HL@2x.png in Resources */,
 				834337451F4FC8DF00382DEE /* DHImagePickerViewController.xib in Resources */,
 				83650D201FD8E04E001FAA3D /* ReceiverVoiceNodeDownloading.png in Resources */,
+				831EF3E41FD9664800D79F4F /* guideImage3.jpg in Resources */,
 				83FD36141D1CE42C00A445C8 /* SuBack@3x.png in Resources */,
 				83650D261FD8E04E001FAA3D /* photo1.png in Resources */,
 				83FD361F1D1CE42C00A445C8 /* SuPhotoBrowserCell.xib in Resources */,
@@ -2415,18 +2481,25 @@
 				83650D221FD8E04E001FAA3D /* ReceiverVoiceNodePlaying.png in Resources */,
 				8348B00E1F18A0B100F1F7CB /* ActionViewController.xib in Resources */,
 				83FD361D1D1CE42C00A445C8 /* SuPhotoAblumCell.xib in Resources */,
+				831EF3E91FD9664800D79F4F /* view_bg_image.png in Resources */,
 				83650D241FD8E04E001FAA3D /* SenderAppNodeBkg_HL.png in Resources */,
 				83650D1A1FD8E04E001FAA3D /* ReceiverTextNodeBkg@2x.png in Resources */,
+				831EF3E81FD9664800D79F4F /* guideMovie1.mov in Resources */,
 				83650D1C1FD8E04E001FAA3D /* ReceiverVoiceNodeDownloading@2x.png in Resources */,
+				831EF3E51FD9664800D79F4F /* guideImage4.jpg in Resources */,
 				83650D591FD8E075001FAA3D /* ZSDPaymentView.xib in Resources */,
 				83FD36161D1CE42C00A445C8 /* SuPhoto_selected@2x.png in Resources */,
 				831E535A1F12150200F0B6D7 /* scanLine@2x.png in Resources */,
 				83650D191FD8E04E001FAA3D /* Default@2x.png in Resources */,
 				831E53521F12150200F0B6D7 /* lightNormal.png in Resources */,
 				83BCFE101CFEBB12007076DC /* LaunchScreen.storyboard in Resources */,
+				831EF3EB1FD9664800D79F4F /* guideImage6.gif in Resources */,
+				831EF3E61FD9664800D79F4F /* guideImage5.jpg in Resources */,
 				83FD36131D1CE42C00A445C8 /* SuBack@2x.png in Resources */,
+				831EF3E71FD9664800D79F4F /* guideImage8.gif in Resources */,
 				83650D1F1FD8E04E001FAA3D /* SenderVoiceNodePlaying.png in Resources */,
 				83650D251FD8E04E001FAA3D /* photo1@2x.png in Resources */,
+				831EF3E31FD9664800D79F4F /* guideImage2.jpg in Resources */,
 				83650D181FD8E04E001FAA3D /* ReceiverTextNodeBkg.png in Resources */,
 				83BCFE0D1CFEBB12007076DC /* Assets.xcassets in Resources */,
 				83FD360F1D1CE42C00A445C8 /* SuPhotoBrowser.xib in Resources */,
@@ -2434,6 +2507,7 @@
 				831E535B1F12150200F0B6D7 /* scanLine@3x.png in Resources */,
 				831E53531F12150200F0B6D7 /* lightSelect.png in Resources */,
 				83FD36171D1CE42C00A445C8 /* SuPhoto_unselected@2x.png in Resources */,
+				831EF3D11FD965E100D79F4F /* GuideImage.bundle in Resources */,
 				836DA03E1F29DCAF0071F6D2 /* TabbarBundle.bundle in Resources */,
 				8348B03E1F18C90B00F1F7CB /* File in Resources */,
 				83650D231FD8E04E001FAA3D /* SenderVoiceNodePlaying@2x.png in Resources */,
@@ -2441,6 +2515,7 @@
 				83FD36111D1CE42C00A445C8 /* SuPhotoPreviewer.xib in Resources */,
 				83BB709B1F4E84250023A24A /* MLSelectPhoto.bundle in Resources */,
 				83650D161FD8E04E001FAA3D /* ReceiverVoiceNodePlaying@2x.png in Resources */,
+				831EF3EA1FD9664800D79F4F /* guideImage7.gif in Resources */,
 				83BCFE0B1CFEBB12007076DC /* Main.storyboard in Resources */,
 				8343376A1F4FD0F300382DEE /* TZImagePickerController.bundle in Resources */,
 				83650D431FD8E06D001FAA3D /* CountdownViewController.xib in Resources */,
@@ -2571,6 +2646,7 @@
 				836DA0671F29EB510071F6D2 /* DHTool.m in Sources */,
 				834337781F4FD11F00382DEE /* TZTestCell.m in Sources */,
 				8348AF421F1875FC00F1F7CB /* ESMTabBarVC.m in Sources */,
+				831EF3D61FD965FE00D79F4F /* DHGuidepageViewController.m in Sources */,
 				83FD36191D1CE42C00A445C8 /* SuMessageTool.m in Sources */,
 				834337721F4FD0F300382DEE /* UIView+Layout.m in Sources */,
 				8348AF3F1F1875FC00F1F7CB /* ESMMoneyViewController.m in Sources */,
@@ -2579,6 +2655,7 @@
 				836DA0581F29E8460071F6D2 /* DHMainViewController.m in Sources */,
 				83650C971FD8DF70001FAA3D /* UIButton+touch.m in Sources */,
 				8348AFED1F189EAB00F1F7CB /* PJRSignatureView.m in Sources */,
+				831EF3D31FD965E100D79F4F /* DHGuidePageHUD.m in Sources */,
 				8348B0091F18A0A900F1F7CB /* gaunzi.m in Sources */,
 				83BB70991F4E84250023A24A /* MLSelectPhotoPickerFooterCollectionReusableView.m in Sources */,
 				8348AFB91F1890FA00F1F7CB /* iCarousel.m in Sources */,
@@ -2607,6 +2684,7 @@
 				83FD36081D1CE42C00A445C8 /* UIImage+SU.m in Sources */,
 				83650D6D1FD8E110001FAA3D /* NSString+PinYin4Cocoa.m in Sources */,
 				831E534C1F12150200F0B6D7 /* mask.c in Sources */,
+				831EF3D21FD965E100D79F4F /* DHGifImageOperation.m in Sources */,
 				8348B0021F189FC900F1F7CB /* ZLDashboardView.m in Sources */,
 				831E53591F12150200F0B6D7 /* QRCodeViewController.m in Sources */,
 				834337661F4FD0F300382DEE /* TZAssetModel.m in Sources */,

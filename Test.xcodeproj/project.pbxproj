@@ -133,6 +133,12 @@
 		835633471F2ADD1400475839 /* REAMD.md in Sources */ = {isa = PBXBuildFile; fileRef = 835633461F2ADD1400475839 /* REAMD.md */; };
 		835D5D581D34EBBD000F4E02 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 835D5D571D34EBBD000F4E02 /* QuartzCore.framework */; };
 		836315A71E4C150D00D0689F /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 836315A61E4C150D00D0689F /* StoreKit.framework */; };
+		83650C8E1FD8DF5D001FAA3D /* YPTabItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 83650C8B1FD8DF5D001FAA3D /* YPTabItem.m */; };
+		83650C8F1FD8DF5D001FAA3D /* YPTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83650C8C1FD8DF5D001FAA3D /* YPTabBarController.m */; };
+		83650C901FD8DF5D001FAA3D /* YPTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 83650C8D1FD8DF5D001FAA3D /* YPTabBar.m */; };
+		83650C961FD8DF70001FAA3D /* UIButton+Delay.m in Sources */ = {isa = PBXBuildFile; fileRef = 83650C921FD8DF70001FAA3D /* UIButton+Delay.m */; };
+		83650C971FD8DF70001FAA3D /* UIButton+touch.m in Sources */ = {isa = PBXBuildFile; fileRef = 83650C941FD8DF70001FAA3D /* UIButton+touch.m */; };
+		83650C9A1FD8DFB4001FAA3D /* NetWork.m in Sources */ = {isa = PBXBuildFile; fileRef = 83650C991FD8DFB4001FAA3D /* NetWork.m */; };
 		8368DF5F1D1396C400FF8492 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8368DF5E1D1396C400FF8492 /* CoreTelephony.framework */; };
 		836C38F01DB9C12B0002BEA1 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 836C38EF1DB9C12B0002BEA1 /* AVFoundation.framework */; };
 		836DA0001F29CC9B0071F6D2 /* CardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 836D9FEF1F29CC9B0071F6D2 /* CardViewController.m */; };
@@ -467,6 +473,18 @@
 		835633461F2ADD1400475839 /* REAMD.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = REAMD.md; sourceTree = "<group>"; };
 		835D5D571D34EBBD000F4E02 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		836315A61E4C150D00D0689F /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		83650C881FD8DF5D001FAA3D /* YPTabItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YPTabItem.h; sourceTree = "<group>"; };
+		83650C891FD8DF5D001FAA3D /* YPTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YPTabBar.h; sourceTree = "<group>"; };
+		83650C8A1FD8DF5D001FAA3D /* YPTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YPTabBarController.h; sourceTree = "<group>"; };
+		83650C8B1FD8DF5D001FAA3D /* YPTabItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YPTabItem.m; sourceTree = "<group>"; };
+		83650C8C1FD8DF5D001FAA3D /* YPTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YPTabBarController.m; sourceTree = "<group>"; };
+		83650C8D1FD8DF5D001FAA3D /* YPTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YPTabBar.m; sourceTree = "<group>"; };
+		83650C921FD8DF70001FAA3D /* UIButton+Delay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Delay.m"; sourceTree = "<group>"; };
+		83650C931FD8DF70001FAA3D /* UIButton+touch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+touch.h"; sourceTree = "<group>"; };
+		83650C941FD8DF70001FAA3D /* UIButton+touch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+touch.m"; sourceTree = "<group>"; };
+		83650C951FD8DF70001FAA3D /* UIButton+Delay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Delay.h"; sourceTree = "<group>"; };
+		83650C981FD8DFAF001FAA3D /* NetWork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetWork.h; sourceTree = "<group>"; };
+		83650C991FD8DFB4001FAA3D /* NetWork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetWork.m; sourceTree = "<group>"; };
 		8368DF5E1D1396C400FF8492 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		836C38EF1DB9C12B0002BEA1 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		836D9FEE1F29CC9B0071F6D2 /* CardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardViewController.h; sourceTree = "<group>"; };
@@ -1070,6 +1088,8 @@
 		8348AF5D1F1890FA00F1F7CB /* TLib */ = {
 			isa = PBXGroup;
 			children = (
+				83650C911FD8DF70001FAA3D /* UIButton-touch */,
+				83650C871FD8DF5D001FAA3D /* YPTabBarController */,
 				834337461F4FD0F300382DEE /* TZImagePickerController */,
 				833A83641F332BB300F45F56 /* SDAutolayout */,
 				8348B0161F18AC6F00F1F7CB /* WLMotionView */,
@@ -1192,6 +1212,8 @@
 				8348AFB31F1890FA00F1F7CB /* RequestPostUploadHelper.m */,
 				8348AFB41F1890FA00F1F7CB /* SFNetWorkManager.h */,
 				8348AFB51F1890FA00F1F7CB /* SFNetWorkManager.m */,
+				83650C981FD8DFAF001FAA3D /* NetWork.h */,
+				83650C991FD8DFB4001FAA3D /* NetWork.m */,
 			);
 			path = "网络请求";
 			sourceTree = "<group>";
@@ -1467,6 +1489,30 @@
 			children = (
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		83650C871FD8DF5D001FAA3D /* YPTabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				83650C881FD8DF5D001FAA3D /* YPTabItem.h */,
+				83650C891FD8DF5D001FAA3D /* YPTabBar.h */,
+				83650C8A1FD8DF5D001FAA3D /* YPTabBarController.h */,
+				83650C8B1FD8DF5D001FAA3D /* YPTabItem.m */,
+				83650C8C1FD8DF5D001FAA3D /* YPTabBarController.m */,
+				83650C8D1FD8DF5D001FAA3D /* YPTabBar.m */,
+			);
+			path = YPTabBarController;
+			sourceTree = "<group>";
+		};
+		83650C911FD8DF70001FAA3D /* UIButton-touch */ = {
+			isa = PBXGroup;
+			children = (
+				83650C921FD8DF70001FAA3D /* UIButton+Delay.m */,
+				83650C931FD8DF70001FAA3D /* UIButton+touch.h */,
+				83650C941FD8DF70001FAA3D /* UIButton+touch.m */,
+				83650C951FD8DF70001FAA3D /* UIButton+Delay.h */,
+			);
+			path = "UIButton-touch";
 			sourceTree = "<group>";
 		};
 		836D9FEC1F29CC9B0071F6D2 /* 身份证 */ = {
@@ -2007,13 +2053,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Test-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		44C54C79426CE87911D70970 /* [CP] Embed Pods Frameworks */ = {
@@ -2022,9 +2071,40 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Test/Pods-Test-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/AliPaySDK/AliPaySDK.framework",
+				"${BUILT_PRODUCTS_DIR}/FBRetainCycleDetector/FBRetainCycleDetector.framework",
+				"${BUILT_PRODUCTS_DIR}/FDFullscreenPopGesture/FDFullscreenPopGesture.framework",
+				"${BUILT_PRODUCTS_DIR}/FSCalendar/FSCalendar.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/MJExtension/MJExtension.framework",
+				"${BUILT_PRODUCTS_DIR}/MLeaksFinder/MLeaksFinder.framework",
+				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
+				"${BUILT_PRODUCTS_DIR}/ReactiveCocoa/ReactiveCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/SDAutoLayout/SDAutoLayout.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/YYKit/YYKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AliPaySDK.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBRetainCycleDetector.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FDFullscreenPopGesture.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FSCalendar.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManager.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJExtension.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MLeaksFinder.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDAutoLayout.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -2050,9 +2130,12 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Test/Pods-Test-resources.sh",
+				"${PODS_ROOT}/BaiduMapKit/BaiduMapKit/BaiduMapAPI_Map.framework/Resources/mapapi.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -2087,6 +2170,7 @@
 				8348AFBA1F1890FA00F1F7CB /* InfiniteRollScrollView.m in Sources */,
 				8348AFD61F1890FA00F1F7CB /* UIView+Extension.m in Sources */,
 				836DA0581F29E8460071F6D2 /* DHMainViewController.m in Sources */,
+				83650C971FD8DF70001FAA3D /* UIButton+touch.m in Sources */,
 				8348AFED1F189EAB00F1F7CB /* PJRSignatureView.m in Sources */,
 				8348B0091F18A0A900F1F7CB /* gaunzi.m in Sources */,
 				83BB70991F4E84250023A24A /* MLSelectPhotoPickerFooterCollectionReusableView.m in Sources */,
@@ -2100,6 +2184,7 @@
 				831E534D1F12150200F0B6D7 /* qrencode.c in Sources */,
 				83BB708C1F4E84250023A24A /* MLSelectPhotoPickerDatas.m in Sources */,
 				8348AF3D1F1875FC00F1F7CB /* ESMHomeViewController.m in Sources */,
+				83650C8F1FD8DF5D001FAA3D /* YPTabBarController.m in Sources */,
 				8348AFD41F1890FA00F1F7CB /* UIImage+ImageEffects.m in Sources */,
 				8348AF5C1F1890A200F1F7CB /* PostTableViewController.m in Sources */,
 				8348B0391F18C45600F1F7CB /* TGuideMViewController.m in Sources */,
@@ -2107,6 +2192,7 @@
 				8348AFE01F18915D00F1F7CB /* TestOneVC.m in Sources */,
 				831E534E1F12150200F0B6D7 /* qrinput.c in Sources */,
 				83BB70971F4E84250023A24A /* MLSelectPhotoPickerCollectionView.m in Sources */,
+				83650C901FD8DF5D001FAA3D /* YPTabBar.m in Sources */,
 				831E53551F12150200F0B6D7 /* QRCodeBacgrouView.m in Sources */,
 				836DA0051F29CC9B0071F6D2 /* IdInfo.m in Sources */,
 				83FD36081D1CE42C00A445C8 /* UIImage+SU.m in Sources */,
@@ -2141,6 +2227,7 @@
 				8343376D1F4FD0F300382DEE /* TZPhotoPickerController.m in Sources */,
 				83BB708F1F4E84250023A24A /* MLSelectPhotoNavigationViewController.m in Sources */,
 				836DA0041F29CC9B0071F6D2 /* Capture.m in Sources */,
+				83650C8E1FD8DF5D001FAA3D /* YPTabItem.m in Sources */,
 				834337641F4FD0F300382DEE /* NSBundle+TZImagePicker.m in Sources */,
 				8348B0151F18AC6100F1F7CB /* TMotionViewController.m in Sources */,
 				8348AFE91F18925000F1F7CB /* AddCellViewController.m in Sources */,
@@ -2198,6 +2285,7 @@
 				8343376E1F4FD0F300382DEE /* TZPhotoPreviewCell.m in Sources */,
 				8348B01B1F18AC6F00F1F7CB /* WLBallTool.m in Sources */,
 				8343376B1F4FD0F300382DEE /* TZImagePickerController.m in Sources */,
+				83650C961FD8DF70001FAA3D /* UIButton+Delay.m in Sources */,
 				83BB709D1F4E84250023A24A /* CollectionImageView.m in Sources */,
 				831E53561F12150200F0B6D7 /* QRCodeGenerator.m in Sources */,
 				833A83721F332D1C00F45F56 /* GZTableViewCell.m in Sources */,
@@ -2221,6 +2309,7 @@
 				8348AF3E1F1875FC00F1F7CB /* ESMMeViewController.m in Sources */,
 				831E53D81F12150200F0B6D7 /* AppDelegate.m in Sources */,
 				8343376F1F4FD0F300382DEE /* TZPhotoPreviewController.m in Sources */,
+				83650C9A1FD8DFB4001FAA3D /* NetWork.m in Sources */,
 				8348B0011F189FC900F1F7CB /* ZLDashboardViewController.m in Sources */,
 				831E53451F12150100F0B6D7 /* UserCell.m in Sources */,
 				8348B00D1F18A0B100F1F7CB /* ActionViewController.m in Sources */,
@@ -2360,7 +2449,7 @@
 					"\"${PODS_ROOT}/Headers/Public/WechatOpenSDK\"",
 				);
 				INFOPLIST_FILE = Test/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2454,7 +2543,7 @@
 					"\"${PODS_ROOT}/Headers/Public/WechatOpenSDK\"",
 				);
 				INFOPLIST_FILE = Test/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",

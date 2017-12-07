@@ -8,7 +8,7 @@
 
 #import "SignatureViewController.h"
 #import "PJRSignatureView.h"
-
+#import "SKGraphicView.h"
 @interface SignatureViewController ()
 {
 	PJRSignatureView *signatureView;
@@ -28,12 +28,18 @@
 	
 	
 	UIButton *signaturebutton = [UIButton buttonWithType:UIButtonTypeCustom];
-	[signaturebutton setFrame:CGRectMake(10, 350, 80,30)];
+	[signaturebutton setFrame:CGRectMake(10, signatureView.bottom+5, self.view.bounds.size.width-20,30)];
+	signaturebutton.backgroundColor = [UIColor blueColor];
 	[signaturebutton setTitle:@"生成" forState:(UIControlStateNormal)];
-	[signaturebutton setTitleColor:[UIColor redColor] forState:(UIControlStateNormal)];
+	[signaturebutton setTitleColor:[UIColor whiteColor] forState:(UIControlStateNormal)];
 	[signaturebutton addTarget:self action:@selector(aaaa) forControlEvents:(UIControlEventTouchUpInside)];
-	signaturebutton.backgroundColor = [UIColor colorWithRed:1.00 green:1.00 blue:1.00 alpha:0.00];       //背景颜色
 	[self.view addSubview:signaturebutton];
+	
+	SKGraphicView *view = [[SKGraphicView alloc] initWithFrame:CGRectMake(0, signaturebutton.bottom+5, self.view.bounds.size.width, 200)];
+	view.backgroundColor = [UIColor whiteColor];
+	view.color = [UIColor blackColor];
+	view.lineWidth = 10;
+	[self.view addSubview:view];
 
 	
 }

@@ -37,7 +37,9 @@
 #import "DropViewController.h"//拖拽
 #import "ScrollViewController.h"//滚动
 #import "WXPaoPaoViewController.h"//微信气泡聊天
-#import "BaseAdressBookViewController.h"
+#import "BaseAdressBookViewController.h"//通讯刘
+#import "ShowViewController.h"//弹出框
+#import "QQListViewController.h"//仿照QQ列表
 
 @interface DHMainViewController ()<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout,QRScanViewDelegate,UIAccelerometerDelegate>{
 	NSMutableArray *valueArr;
@@ -174,8 +176,54 @@
 		// 4.获取采样数据
 		NSLog(@"获取采样数据 = %@", pedometerData.numberOfSteps);
 	}];
+	
+//	UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+//	[button setFrame:CGRectMake(100.0 ,100.0 ,100.0 ,40.0)];
+//	button.backgroundColor = [UIColor colorWithRed:1.00 green:1.00 blue:1.00 alpha:0.00];       //背景颜色
+//	[button setTitle:@"点击" forState:0];
+//	[button addTarget:self action:@selector(btnModelInCurrViewTouchupInside:) forControlEvents:(UIControlEventTouchUpInside)];
+//	[self.view addSubview:button];
+//
+//	UIButton *button1 = [UIButton buttonWithType:UIButtonTypeCustom];
+//	[button1 setFrame:CGRectMake(100.0 ,200.0 ,100.0 ,40.0)];
+//	[button1 setTitle:@"点击11" forState:0];
+//	button1.backgroundColor = [UIColor colorWithRed:1.00 green:1.00 blue:1.00 alpha:0.00];       //背景颜色
+//	[button1 addTarget:self action:@selector(cancelRun:) forControlEvents:(UIControlEventTouchUpInside)];
+//
+//	[self.view addSubview:button1];
+	
+	
+}
+- (void)btnModelInCurrViewTouchupInside:(id)sender {
+	[self performSelector:@selector(didRuninCurrModel:) withObject:[NSNumber numberWithBool:YES] afterDelay:3.0f];
+	
+	[self performSelector:@selector(didRuninCurrModelNoArgument) withObject:nil afterDelay:3.0f];
+	
+	NSLog(@"Test start....");
 }
 
+- (void)cancelRun:(id)sender {
+	[NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(didRuninCurrModel:) object:[NSNumber numberWithBool:YES]];//true
+	
+	[NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(didRuninCurrModel:) object:[NSNumber numberWithBool:NO]];//false
+	
+	[NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(didRuninCurrModel:) object:nil];//false
+	
+	[NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(didRuninCurrModelNoArgument) object:nil];//true
+	
+	[NSObject cancelPreviousPerformRequestsWithTarget:self];//all ok
+	[[self class] cancelPreviousPerformRequestsWithTarget:self];
+}
+
+- (void)didRuninCurrModel:(NSNumber *)numFin
+{
+	NSLog(@"- (void)didRuninCurrModel:%@", numFin.boolValue ? @"YES":@"NO");
+}
+
+- (void)didRuninCurrModelNoArgument
+{
+	NSLog(@"- (void)didRuninCurrModelNoArgument");
+}
 - (void)setUPUI{
 	
 	// 监听有物品靠近还是离开
@@ -226,7 +274,12 @@
 	[self addCell:@"21拖拽" class:@"DropViewController"];
 	[self addCell:@"22滚动视图" class:@"ScrollViewController"];
 	[self addCell:@"23微信气泡聊天" class:@"WXPaoPaoViewController"];
-	[self addCell:@"通讯录" class:@"BaseAdressBookViewController"];
+	[self addCell:@"24通讯录" class:@"BaseAdressBookViewController"];
+	[self addCell:@"25弹出框" class:@"ShowViewController"];
+	[self addCell:@"26QQ联系人" class:@"QQListViewController"];
+	
+	
+	
 	
 	[_collectionView reloadData];
 	_lb_showinfo = [[UILabel alloc]init];
@@ -289,11 +342,9 @@
 {
 	static NSString * CellIdentifier = @"THomeCollectionViewCell";
 	THomeCollectionViewCell *_cell = [collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifier forIndexPath:indexPath];
-	//	_cell.imageCover.image = [UIImage imageNamed:@"Facebook"];
+	_cell.imageCover.image = [UIImage imageNamed:@"Facebook"];
 	_cell.labelName.text = _titles[indexPath.row];
-	_cell.labelName.layer.borderColor = [UIColor blueColor].CGColor;
-	_cell.labelName.layer.borderWidth = 1.0;
-	
+
 	_cell.layer.borderColor = [UIColor redColor].CGColor;
 	_cell.layer.borderWidth = 1.0;
 	
@@ -311,6 +362,7 @@
 		[UIApplication sharedApplication].keyWindow.rootViewController = navController;
 		return;
 	}
+	
 	Class class = NSClassFromString(className);
 	if (class) {
 		UIViewController *ctrl = class.new;
@@ -318,94 +370,7 @@
 		push(ctrl);
 	}
 	
-	//	switch (indexPath.row) {
-	//		case 0:
-	//		{
-	//			ContentOffSetVC *tabbarOne = [[ContentOffSetVC alloc]init];
-	//			push(tabbarOne);
-	//		}
-	//			break;
-	//		case 1:{
-	//			T3DTouchViewController*tabbarTwo = [[T3DTouchViewController alloc]init];
-	//			push(tabbarTwo);
-	//		}
-	//			break;
-	//		case 2:{
-	//			GKHScanQCodeViewController * sqVC = [[GKHScanQCodeViewController alloc]init];
-	//			sqVC.delegate=self;
-	//			UINavigationController * nVC = [[UINavigationController alloc]initWithRootViewController:sqVC];
-	//			[self presentViewController:nVC animated:YES completion:nil];
-	//
-	//		}
-	//			break;
-	//		case 3:{
-	//			ContentOffSetVC*tabbarTwo = [[ContentOffSetVC alloc]init];
-	//			push(tabbarTwo);
-	//		}
-	//			break;
-	//		case 4:{
-	//			LSTabBarViewController*tabbarTwo = [[LSTabBarViewController alloc]init];
-	//			push(tabbarTwo);
-	//		}
-	//			break;
-	//		case 5:{
-	//			SignatureViewController*tabbarTwo = [[SignatureViewController alloc]init];
-	//			push(tabbarTwo);
-	//		}
-	//			break;
-	//		case 6:{
-	//			ZLDashboardViewController*tabbarTwo = [[ZLDashboardViewController alloc]init];
-	//			push(tabbarTwo);
-	//		}
-	//			break;
-	//		case 7:{
-	//			ActionViewController*tabbarTwo = [[ActionViewController alloc]init];
-	//			push(tabbarTwo);
-	//		}
-	//			break;
-	//		case 8:{
-	//			TMotionViewController*tabbarTwo = [[TMotionViewController alloc]init];
-	//			push(tabbarTwo);
-	//		}
-	//			break;
-	//
-	//		case 9:{
-	//			TSidebarViewController*tabbarTwo = [[TSidebarViewController alloc]init];
-	//			push(tabbarTwo);
-	//		}
-	//			break;
-	//		case 10:{
-	//			TShopAnimationViewController*tabbarTwo = [[TShopAnimationViewController alloc]init];
-	//			push(tabbarTwo);
-	//		}
-	//			break;
-	//
-	//		case 11:{
-	//			IDCardViewController*tabbarTwo = [[IDCardViewController alloc]init];
-	//			push(tabbarTwo);
-	//		}
-	//			break;
-	//
-	//		case 12:{
-	//			[self showPromptlanguage:@"全场卖两块,随便挑,随便选,都两块"];
-	//			DHNoteViewController*tabbarTwo = [[DHNoteViewController alloc]init];
-	//			push(tabbarTwo);
-	//		}
-	//			 break;
-	//		case 13:{
-	//			NetTestViewController*tabbarTwo = [[NetTestViewController alloc]init];
-	//			push(tabbarTwo);
-	//		}
-	//			break;
-	//		case 14:{
-	//			DHZanViewController*tabbarTwo = [[DHZanViewController alloc]init];
-	//			push(tabbarTwo);
-	//		}
-	//			break;
-	//
-	//		default:
-	//			break;
-	//	}
+	
 }
 #pragma mark --UICollectionViewDelegateFlowLayout
 //////定义每个Item 的大小(cell的宽高)

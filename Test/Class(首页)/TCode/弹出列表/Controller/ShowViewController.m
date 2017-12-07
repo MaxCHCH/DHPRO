@@ -40,7 +40,7 @@
 - (void)tapClick: (UITapGestureRecognizer *)tap {
     
     TagPickerView *tagsView = [TagPickerView shareInstance];
-    tagsView.tagsArray = @[@"aaa", @"bbb", @"ccc", @"思思童鞋", @"ddd", @"11111111111",@"哈哈哈哈哈哈", @"开心,😊每天都是好心情!!!"];
+    tagsView.tagsArray = @[@"aaa", @"bbb", @"ccc", @"思思童鞋", @"ddd", @"11111111111",@"哈哈哈哈哈哈", @"开心,😊每天都是好心情!!!",@"上班啦",@"今天吃麦当劳"];
     [self.view addSubview:tagsView];  // 注意要将放到self.view上
     tagsView.selectedTagBlock = ^(NSArray *tagsArray) {
         NSLog(@"当前选择的标签个数: %ld 标签是: ",tagsArray.count);

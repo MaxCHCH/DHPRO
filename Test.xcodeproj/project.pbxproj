@@ -53,6 +53,32 @@
 		831EF3E91FD9664800D79F4F /* view_bg_image.png in Resources */ = {isa = PBXBuildFile; fileRef = 831EF3DF1FD9664800D79F4F /* view_bg_image.png */; };
 		831EF3EA1FD9664800D79F4F /* guideImage7.gif in Resources */ = {isa = PBXBuildFile; fileRef = 831EF3E01FD9664800D79F4F /* guideImage7.gif */; };
 		831EF3EB1FD9664800D79F4F /* guideImage6.gif in Resources */ = {isa = PBXBuildFile; fileRef = 831EF3E11FD9664800D79F4F /* guideImage6.gif */; };
+		831EF3F31FD96D1500D79F4F /* SoapUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 831EF3ED1FD96D1500D79F4F /* SoapUtil.m */; };
+		831EF3F41FD96D1500D79F4F /* XMLDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 831EF3F01FD96D1500D79F4F /* XMLDictionary.m */; };
+		831EF3F51FD96D1500D79F4F /* WebServiceRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 831EF3F21FD96D1500D79F4F /* WebServiceRequest.m */; };
+		831EF41D1FD982B000D79F4F /* XHIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 831EF40E1FD982B000D79F4F /* XHIndicatorView.m */; };
+		831EF41E1FD982B000D79F4F /* UIScrollView+XHVisibleCenterScroll.m in Sources */ = {isa = PBXBuildFile; fileRef = 831EF40F1FD982B000D79F4F /* UIScrollView+XHVisibleCenterScroll.m */; };
+		831EF41F1FD982B000D79F4F /* XHMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 831EF4111FD982B000D79F4F /* XHMenu.m */; };
+		831EF4201FD982B000D79F4F /* managerMenuButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 831EF4131FD982B000D79F4F /* managerMenuButton@2x.png */; };
+		831EF4211FD982B000D79F4F /* rightShadow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 831EF4141FD982B000D79F4F /* rightShadow@2x.png */; };
+		831EF4221FD982B000D79F4F /* leftShadow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 831EF4151FD982B000D79F4F /* leftShadow@2x.png */; };
+		831EF4231FD982B000D79F4F /* logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 831EF4161FD982B000D79F4F /* logo@2x.png */; };
+		831EF4241FD982B000D79F4F /* XHMenuButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 831EF41A1FD982B000D79F4F /* XHMenuButton.m */; };
+		831EF4251FD982B000D79F4F /* XHScrollMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 831EF41C1FD982B000D79F4F /* XHScrollMenu.m */; };
+		831EF4621FD98A9F00D79F4F /* ShopCollectionViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 831EF4471FD98A9F00D79F4F /* ShopCollectionViewViewController.m */; };
+		831EF4631FD98A9F00D79F4F /* ShopCustomCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 831EF44A1FD98A9F00D79F4F /* ShopCustomCollectionViewCell.m */; };
+		831EF4641FD98A9F00D79F4F /* ScottPopMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 831EF44E1FD98A9F00D79F4F /* ScottPopMenu.m */; };
+		831EF4651FD98A9F00D79F4F /* ShowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 831EF4521FD98A9F00D79F4F /* ShowViewController.m */; };
+		831EF4661FD98A9F00D79F4F /* TagPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 831EF4551FD98A9F00D79F4F /* TagPickerView.m */; };
+		831EF4671FD98A9F00D79F4F /* HXTagCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 831EF4581FD98A9F00D79F4F /* HXTagCollectionViewCell.m */; };
+		831EF4681FD98A9F00D79F4F /* HXTagsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 831EF45A1FD98A9F00D79F4F /* HXTagsView.m */; };
+		831EF4691FD98A9F00D79F4F /* HXTagsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 831EF45B1FD98A9F00D79F4F /* HXTagsCell.m */; };
+		831EF46A1FD98A9F00D79F4F /* HXTagAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 831EF45D1FD98A9F00D79F4F /* HXTagAttribute.m */; };
+		831EF46B1FD98A9F00D79F4F /* HXTagCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 831EF4601FD98A9F00D79F4F /* HXTagCollectionViewFlowLayout.m */; };
+		831EF4901FD9931F00D79F4F /* SKGraphicView.m in Sources */ = {isa = PBXBuildFile; fileRef = 831EF48F1FD9931F00D79F4F /* SKGraphicView.m */; };
+		831EF4971FD9954400D79F4F /* QQListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 831EF4961FD9954400D79F4F /* QQListViewController.m */; };
+		831EF49C1FD9955400D79F4F /* HYBHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 831EF4991FD9955400D79F4F /* HYBHeaderView.m */; };
+		831EF49D1FD9955400D79F4F /* HYBSectionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 831EF49B1FD9955400D79F4F /* HYBSectionModel.m */; };
 		833A836A1F332BB300F45F56 /* UITableView+SDAutoTableViewCellHeight.m in Sources */ = {isa = PBXBuildFile; fileRef = 833A83671F332BB300F45F56 /* UITableView+SDAutoTableViewCellHeight.m */; };
 		833A836B1F332BB300F45F56 /* UIView+SDAutoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 833A83691F332BB300F45F56 /* UIView+SDAutoLayout.m */; };
 		833A83721F332D1C00F45F56 /* GZTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 833A83711F332D1C00F45F56 /* GZTableViewCell.m */; };
@@ -364,6 +390,54 @@
 		831EF3DF1FD9664800D79F4F /* view_bg_image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = view_bg_image.png; sourceTree = "<group>"; };
 		831EF3E01FD9664800D79F4F /* guideImage7.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = guideImage7.gif; sourceTree = "<group>"; };
 		831EF3E11FD9664800D79F4F /* guideImage6.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = guideImage6.gif; sourceTree = "<group>"; };
+		831EF3ED1FD96D1500D79F4F /* SoapUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoapUtil.m; sourceTree = "<group>"; };
+		831EF3EE1FD96D1500D79F4F /* XMLDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLDictionary.h; sourceTree = "<group>"; };
+		831EF3EF1FD96D1500D79F4F /* WebServiceRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebServiceRequest.h; sourceTree = "<group>"; };
+		831EF3F01FD96D1500D79F4F /* XMLDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLDictionary.m; sourceTree = "<group>"; };
+		831EF3F11FD96D1500D79F4F /* SoapUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoapUtil.h; sourceTree = "<group>"; };
+		831EF3F21FD96D1500D79F4F /* WebServiceRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebServiceRequest.m; sourceTree = "<group>"; };
+		831EF40E1FD982B000D79F4F /* XHIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHIndicatorView.m; sourceTree = "<group>"; };
+		831EF40F1FD982B000D79F4F /* UIScrollView+XHVisibleCenterScroll.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+XHVisibleCenterScroll.m"; sourceTree = "<group>"; };
+		831EF4101FD982B000D79F4F /* XHMenuButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHMenuButton.h; sourceTree = "<group>"; };
+		831EF4111FD982B000D79F4F /* XHMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHMenu.m; sourceTree = "<group>"; };
+		831EF4131FD982B000D79F4F /* managerMenuButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "managerMenuButton@2x.png"; sourceTree = "<group>"; };
+		831EF4141FD982B000D79F4F /* rightShadow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rightShadow@2x.png"; sourceTree = "<group>"; };
+		831EF4151FD982B000D79F4F /* leftShadow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "leftShadow@2x.png"; sourceTree = "<group>"; };
+		831EF4161FD982B000D79F4F /* logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo@2x.png"; sourceTree = "<group>"; };
+		831EF4171FD982B000D79F4F /* XHScrollMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHScrollMenu.h; sourceTree = "<group>"; };
+		831EF4181FD982B000D79F4F /* UIScrollView+XHVisibleCenterScroll.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+XHVisibleCenterScroll.h"; sourceTree = "<group>"; };
+		831EF4191FD982B000D79F4F /* XHIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHIndicatorView.h; sourceTree = "<group>"; };
+		831EF41A1FD982B000D79F4F /* XHMenuButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHMenuButton.m; sourceTree = "<group>"; };
+		831EF41B1FD982B000D79F4F /* XHMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHMenu.h; sourceTree = "<group>"; };
+		831EF41C1FD982B000D79F4F /* XHScrollMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHScrollMenu.m; sourceTree = "<group>"; };
+		831EF4471FD98A9F00D79F4F /* ShopCollectionViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShopCollectionViewViewController.m; sourceTree = "<group>"; };
+		831EF4481FD98A9F00D79F4F /* ShopCollectionViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopCollectionViewViewController.h; sourceTree = "<group>"; };
+		831EF44A1FD98A9F00D79F4F /* ShopCustomCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShopCustomCollectionViewCell.m; sourceTree = "<group>"; };
+		831EF44B1FD98A9F00D79F4F /* ShopCustomCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopCustomCollectionViewCell.h; sourceTree = "<group>"; };
+		831EF44E1FD98A9F00D79F4F /* ScottPopMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScottPopMenu.m; sourceTree = "<group>"; };
+		831EF44F1FD98A9F00D79F4F /* ScottPopMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScottPopMenu.h; sourceTree = "<group>"; };
+		831EF4521FD98A9F00D79F4F /* ShowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowViewController.m; sourceTree = "<group>"; };
+		831EF4531FD98A9F00D79F4F /* ShowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowViewController.h; sourceTree = "<group>"; };
+		831EF4551FD98A9F00D79F4F /* TagPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TagPickerView.m; sourceTree = "<group>"; };
+		831EF4561FD98A9F00D79F4F /* TagPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TagPickerView.h; sourceTree = "<group>"; };
+		831EF4581FD98A9F00D79F4F /* HXTagCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXTagCollectionViewCell.m; sourceTree = "<group>"; };
+		831EF4591FD98A9F00D79F4F /* HXTagAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXTagAttribute.h; sourceTree = "<group>"; };
+		831EF45A1FD98A9F00D79F4F /* HXTagsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXTagsView.m; sourceTree = "<group>"; };
+		831EF45B1FD98A9F00D79F4F /* HXTagsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXTagsCell.m; sourceTree = "<group>"; };
+		831EF45C1FD98A9F00D79F4F /* HXTagCollectionViewFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXTagCollectionViewFlowLayout.h; sourceTree = "<group>"; };
+		831EF45D1FD98A9F00D79F4F /* HXTagAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXTagAttribute.m; sourceTree = "<group>"; };
+		831EF45E1FD98A9F00D79F4F /* HXTagCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXTagCollectionViewCell.h; sourceTree = "<group>"; };
+		831EF45F1FD98A9F00D79F4F /* HXTagsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXTagsView.h; sourceTree = "<group>"; };
+		831EF4601FD98A9F00D79F4F /* HXTagCollectionViewFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXTagCollectionViewFlowLayout.m; sourceTree = "<group>"; };
+		831EF4611FD98A9F00D79F4F /* HXTagsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXTagsCell.h; sourceTree = "<group>"; };
+		831EF48E1FD9931F00D79F4F /* SKGraphicView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKGraphicView.h; sourceTree = "<group>"; };
+		831EF48F1FD9931F00D79F4F /* SKGraphicView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKGraphicView.m; sourceTree = "<group>"; };
+		831EF4951FD9954400D79F4F /* QQListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QQListViewController.h; sourceTree = "<group>"; };
+		831EF4961FD9954400D79F4F /* QQListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QQListViewController.m; sourceTree = "<group>"; };
+		831EF4981FD9955400D79F4F /* HYBHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYBHeaderView.h; sourceTree = "<group>"; };
+		831EF4991FD9955400D79F4F /* HYBHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYBHeaderView.m; sourceTree = "<group>"; };
+		831EF49A1FD9955400D79F4F /* HYBSectionModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYBSectionModel.h; sourceTree = "<group>"; };
+		831EF49B1FD9955400D79F4F /* HYBSectionModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYBSectionModel.m; sourceTree = "<group>"; };
 		833A83651F332BB300F45F56 /* SDAutoLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDAutoLayout.h; sourceTree = "<group>"; };
 		833A83661F332BB300F45F56 /* UITableView+SDAutoTableViewCellHeight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+SDAutoTableViewCellHeight.h"; sourceTree = "<group>"; };
 		833A83671F332BB300F45F56 /* UITableView+SDAutoTableViewCellHeight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+SDAutoTableViewCellHeight.m"; sourceTree = "<group>"; };
@@ -867,6 +941,9 @@
 		831E514B1F12150100F0B6D7 /* TCode */ = {
 			isa = PBXGroup;
 			children = (
+				831EF4911FD9953000D79F4F /* 收缩列表 */,
+				831EF4501FD98A9F00D79F4F /* 弹出列表 */,
+				831EF4451FD98A9F00D79F4F /* 日历 */,
 				83650D441FD8E075001FAA3D /* 支付密码 */,
 				83650D3D1FD8E06D001FAA3D /* 倒计时 */,
 				83650D271FD8E060001FAA3D /* 分段导航栏 */,
@@ -1105,6 +1182,183 @@
 			path = Images;
 			sourceTree = "<group>";
 		};
+		831EF3EC1FD96D1500D79F4F /* webservice */ = {
+			isa = PBXGroup;
+			children = (
+				831EF3F11FD96D1500D79F4F /* SoapUtil.h */,
+				831EF3ED1FD96D1500D79F4F /* SoapUtil.m */,
+				831EF3EE1FD96D1500D79F4F /* XMLDictionary.h */,
+				831EF3F01FD96D1500D79F4F /* XMLDictionary.m */,
+				831EF3EF1FD96D1500D79F4F /* WebServiceRequest.h */,
+				831EF3F21FD96D1500D79F4F /* WebServiceRequest.m */,
+			);
+			path = webservice;
+			sourceTree = "<group>";
+		};
+		831EF40B1FD982B000D79F4F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		831EF40C1FD982B000D79F4F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				831EF40D1FD982B000D79F4F /* XHSource */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		831EF40D1FD982B000D79F4F /* XHSource */ = {
+			isa = PBXGroup;
+			children = (
+				831EF40E1FD982B000D79F4F /* XHIndicatorView.m */,
+				831EF40F1FD982B000D79F4F /* UIScrollView+XHVisibleCenterScroll.m */,
+				831EF4101FD982B000D79F4F /* XHMenuButton.h */,
+				831EF4111FD982B000D79F4F /* XHMenu.m */,
+				831EF4121FD982B000D79F4F /* Resources */,
+				831EF4171FD982B000D79F4F /* XHScrollMenu.h */,
+				831EF4181FD982B000D79F4F /* UIScrollView+XHVisibleCenterScroll.h */,
+				831EF4191FD982B000D79F4F /* XHIndicatorView.h */,
+				831EF41A1FD982B000D79F4F /* XHMenuButton.m */,
+				831EF41B1FD982B000D79F4F /* XHMenu.h */,
+				831EF41C1FD982B000D79F4F /* XHScrollMenu.m */,
+			);
+			path = XHSource;
+			sourceTree = "<group>";
+		};
+		831EF4121FD982B000D79F4F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				831EF4131FD982B000D79F4F /* managerMenuButton@2x.png */,
+				831EF4141FD982B000D79F4F /* rightShadow@2x.png */,
+				831EF4151FD982B000D79F4F /* leftShadow@2x.png */,
+				831EF4161FD982B000D79F4F /* logo@2x.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		831EF4451FD98A9F00D79F4F /* 日历 */ = {
+			isa = PBXGroup;
+			children = (
+				831EF4461FD98A9F00D79F4F /* Controller */,
+				831EF4491FD98A9F00D79F4F /* View */,
+			);
+			path = "日历";
+			sourceTree = "<group>";
+		};
+		831EF4461FD98A9F00D79F4F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				831EF4471FD98A9F00D79F4F /* ShopCollectionViewViewController.m */,
+				831EF4481FD98A9F00D79F4F /* ShopCollectionViewViewController.h */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		831EF4491FD98A9F00D79F4F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				831EF44A1FD98A9F00D79F4F /* ShopCustomCollectionViewCell.m */,
+				831EF44B1FD98A9F00D79F4F /* ShopCustomCollectionViewCell.h */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		831EF4501FD98A9F00D79F4F /* 弹出列表 */ = {
+			isa = PBXGroup;
+			children = (
+				831EF4511FD98A9F00D79F4F /* Controller */,
+				831EF4541FD98A9F00D79F4F /* View */,
+			);
+			path = "弹出列表";
+			sourceTree = "<group>";
+		};
+		831EF4511FD98A9F00D79F4F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				831EF4531FD98A9F00D79F4F /* ShowViewController.h */,
+				831EF4521FD98A9F00D79F4F /* ShowViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		831EF4541FD98A9F00D79F4F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				831EF44F1FD98A9F00D79F4F /* ScottPopMenu.h */,
+				831EF44E1FD98A9F00D79F4F /* ScottPopMenu.m */,
+				831EF4551FD98A9F00D79F4F /* TagPickerView.m */,
+				831EF4561FD98A9F00D79F4F /* TagPickerView.h */,
+				831EF4571FD98A9F00D79F4F /* TagView */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		831EF4571FD98A9F00D79F4F /* TagView */ = {
+			isa = PBXGroup;
+			children = (
+				831EF4581FD98A9F00D79F4F /* HXTagCollectionViewCell.m */,
+				831EF4591FD98A9F00D79F4F /* HXTagAttribute.h */,
+				831EF45A1FD98A9F00D79F4F /* HXTagsView.m */,
+				831EF45B1FD98A9F00D79F4F /* HXTagsCell.m */,
+				831EF45C1FD98A9F00D79F4F /* HXTagCollectionViewFlowLayout.h */,
+				831EF45D1FD98A9F00D79F4F /* HXTagAttribute.m */,
+				831EF45E1FD98A9F00D79F4F /* HXTagCollectionViewCell.h */,
+				831EF45F1FD98A9F00D79F4F /* HXTagsView.h */,
+				831EF4601FD98A9F00D79F4F /* HXTagCollectionViewFlowLayout.m */,
+				831EF4611FD98A9F00D79F4F /* HXTagsCell.h */,
+			);
+			path = TagView;
+			sourceTree = "<group>";
+		};
+		831EF48D1FD9931600D79F4F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				831EF48E1FD9931F00D79F4F /* SKGraphicView.h */,
+				831EF48F1FD9931F00D79F4F /* SKGraphicView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		831EF4911FD9953000D79F4F /* 收缩列表 */ = {
+			isa = PBXGroup;
+			children = (
+				831EF4921FD9953000D79F4F /* Controller */,
+				831EF4931FD9953000D79F4F /* Model */,
+				831EF4941FD9953000D79F4F /* View */,
+			);
+			path = "收缩列表";
+			sourceTree = "<group>";
+		};
+		831EF4921FD9953000D79F4F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				831EF4951FD9954400D79F4F /* QQListViewController.h */,
+				831EF4961FD9954400D79F4F /* QQListViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		831EF4931FD9953000D79F4F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		831EF4941FD9953000D79F4F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				831EF4981FD9955400D79F4F /* HYBHeaderView.h */,
+				831EF4991FD9955400D79F4F /* HYBHeaderView.m */,
+				831EF49A1FD9955400D79F4F /* HYBSectionModel.h */,
+				831EF49B1FD9955400D79F4F /* HYBSectionModel.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		833A83641F332BB300F45F56 /* SDAutolayout */ = {
 			isa = PBXGroup;
 			children = (
@@ -1238,9 +1492,9 @@
 		8348AF471F188FFC00F1F7CB /* 导航栏 */ = {
 			isa = PBXGroup;
 			children = (
+				831EF40B1FD982B000D79F4F /* Model */,
+				831EF40C1FD982B000D79F4F /* View */,
 				8348AF481F188FFC00F1F7CB /* Controller */,
-				8348AF4B1F188FFC00F1F7CB /* Model */,
-				8348AF4C1F188FFC00F1F7CB /* View */,
 			);
 			path = "导航栏";
 			sourceTree = "<group>";
@@ -1272,23 +1526,10 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		8348AF4B1F188FFC00F1F7CB /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		8348AF4C1F188FFC00F1F7CB /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
 		8348AF5D1F1890FA00F1F7CB /* TLib */ = {
 			isa = PBXGroup;
 			children = (
+				831EF3EC1FD96D1500D79F4F /* webservice */,
 				831EF3CB1FD965E100D79F4F /* DHGuidePageHUD */,
 				83650C911FD8DF70001FAA3D /* UIButton-touch */,
 				83650C871FD8DF5D001FAA3D /* YPTabBarController */,
@@ -1432,9 +1673,8 @@
 		8348AFEE1F189EF100F1F7CB /* 签名 */ = {
 			isa = PBXGroup;
 			children = (
+				831EF48D1FD9931600D79F4F /* View */,
 				8348AFEF1F189EF100F1F7CB /* Controller */,
-				8348AFF01F189EF100F1F7CB /* Model */,
-				8348AFF11F189EF100F1F7CB /* View */,
 			);
 			path = "签名";
 			sourceTree = "<group>";
@@ -1446,20 +1686,6 @@
 				8348AFF61F189F0000F1F7CB /* SignatureViewController.m */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		8348AFF01F189EF100F1F7CB /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		8348AFF11F189EF100F1F7CB /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		8348AFF81F189FC900F1F7CB /* 动画 */ = {
@@ -2472,6 +2698,7 @@
 				83650D261FD8E04E001FAA3D /* photo1.png in Resources */,
 				83FD361F1D1CE42C00A445C8 /* SuPhotoBrowserCell.xib in Resources */,
 				83650D1B1FD8E04E001FAA3D /* SenderVoiceNodeDownloading@2x.png in Resources */,
+				831EF4201FD982B000D79F4F /* managerMenuButton@2x.png in Resources */,
 				831E53541F12150200F0B6D7 /* noticeMusic.wav in Resources */,
 				836DA0021F29CC9B0071F6D2 /* zocr0.lib in Resources */,
 				83650D1D1FD8E04E001FAA3D /* photo.png in Resources */,
@@ -2493,6 +2720,7 @@
 				83650D191FD8E04E001FAA3D /* Default@2x.png in Resources */,
 				831E53521F12150200F0B6D7 /* lightNormal.png in Resources */,
 				83BCFE101CFEBB12007076DC /* LaunchScreen.storyboard in Resources */,
+				831EF4211FD982B000D79F4F /* rightShadow@2x.png in Resources */,
 				831EF3EB1FD9664800D79F4F /* guideImage6.gif in Resources */,
 				831EF3E61FD9664800D79F4F /* guideImage5.jpg in Resources */,
 				83FD36131D1CE42C00A445C8 /* SuBack@2x.png in Resources */,
@@ -2500,6 +2728,7 @@
 				83650D1F1FD8E04E001FAA3D /* SenderVoiceNodePlaying.png in Resources */,
 				83650D251FD8E04E001FAA3D /* photo1@2x.png in Resources */,
 				831EF3E31FD9664800D79F4F /* guideImage2.jpg in Resources */,
+				831EF4221FD982B000D79F4F /* leftShadow@2x.png in Resources */,
 				83650D181FD8E04E001FAA3D /* ReceiverTextNodeBkg.png in Resources */,
 				83BCFE0D1CFEBB12007076DC /* Assets.xcassets in Resources */,
 				83FD360F1D1CE42C00A445C8 /* SuPhotoBrowser.xib in Resources */,
@@ -2516,6 +2745,7 @@
 				83BB709B1F4E84250023A24A /* MLSelectPhoto.bundle in Resources */,
 				83650D161FD8E04E001FAA3D /* ReceiverVoiceNodePlaying@2x.png in Resources */,
 				831EF3EA1FD9664800D79F4F /* guideImage7.gif in Resources */,
+				831EF4231FD982B000D79F4F /* logo@2x.png in Resources */,
 				83BCFE0B1CFEBB12007076DC /* Main.storyboard in Resources */,
 				8343376A1F4FD0F300382DEE /* TZImagePickerController.bundle in Resources */,
 				83650D431FD8E06D001FAA3D /* CountdownViewController.xib in Resources */,
@@ -2664,6 +2894,7 @@
 				831E53581F12150200F0B6D7 /* QRCodeVC.m in Sources */,
 				83650D601FD8E0CE001FAA3D /* BaseAdressBookViewController.m in Sources */,
 				83FD36061D1CE42C00A445C8 /* NSString+SU.m in Sources */,
+				831EF3F31FD96D1500D79F4F /* SoapUtil.m in Sources */,
 				831E535D1F12150200F0B6D7 /* QRCodeAreaView.m in Sources */,
 				83F79B5F1F3D44A4002105A0 /* UserModel.m in Sources */,
 				831E534D1F12150200F0B6D7 /* qrencode.c in Sources */,
@@ -2691,7 +2922,9 @@
 				8308064E1F2ACD4B0057F23D /* AppDelegate+DHCategory.m in Sources */,
 				8348AFF71F189F0000F1F7CB /* SignatureViewController.m in Sources */,
 				83BB70891F4E84250023A24A /* UIView+MLExtension.m in Sources */,
+				831EF41D1FD982B000D79F4F /* XHIndicatorView.m in Sources */,
 				8348B01F1F18B3FE00F1F7CB /* LLBlurSidebar.m in Sources */,
+				831EF3F41FD96D1500D79F4F /* XMLDictionary.m in Sources */,
 				83FD361A1D1CE42C00A445C8 /* SuPhotoCenter.m in Sources */,
 				834337711F4FD0F300382DEE /* TZVideoPlayerController.m in Sources */,
 				8348AFD81F1890FA00F1F7CB /* UIViewExt.m in Sources */,
@@ -2702,6 +2935,7 @@
 				83650D6E1FD8E110001FAA3D /* PinyinFormatter.m in Sources */,
 				83FD361B1D1CE42C00A445C8 /* SuPhotoManager.m in Sources */,
 				83F79B531F3D4405002105A0 /* NetTestViewController.m in Sources */,
+				831EF3F51FD96D1500D79F4F /* WebServiceRequest.m in Sources */,
 				8348AFD21F1890FA00F1F7CB /* UIColor+JFColor.m in Sources */,
 				8348AF431F1875FC00F1F7CB /* ESMTabBarViewController.m in Sources */,
 				8348AFBB1F1890FA00F1F7CB /* JSTextView.m in Sources */,
@@ -2712,8 +2946,10 @@
 				836DA0611F29E8D20071F6D2 /* DHMyInfoViewController.m in Sources */,
 				8348AFD31F1890FA00F1F7CB /* UIImage+compressIMG.m in Sources */,
 				831E53331F12150100F0B6D7 /* GZBaseViewController.m in Sources */,
+				831EF41F1FD982B000D79F4F /* XHMenu.m in Sources */,
 				8348AFDD1F18912200F1F7CB /* LSTabBarViewController.m in Sources */,
 				8348B0261F18B40E00F1F7CB /* SidebarViewController.m in Sources */,
+				831EF4251FD982B000D79F4F /* XHScrollMenu.m in Sources */,
 				83650D6B1FD8E110001FAA3D /* HanyuPinyinOutputFormat.m in Sources */,
 				83650D131FD8E04E001FAA3D /* WMDragView.m in Sources */,
 				8343376D1F4FD0F300382DEE /* TZPhotoPickerController.m in Sources */,
@@ -2721,10 +2957,13 @@
 				83650D391FD8E060001FAA3D /* DynamicItemWidthTabController.m in Sources */,
 				836DA0041F29CC9B0071F6D2 /* Capture.m in Sources */,
 				83650C8E1FD8DF5D001FAA3D /* YPTabItem.m in Sources */,
+				831EF46B1FD98A9F00D79F4F /* HXTagCollectionViewFlowLayout.m in Sources */,
 				83650D421FD8E06D001FAA3D /* CountdownViewController.m in Sources */,
+				831EF4901FD9931F00D79F4F /* SKGraphicView.m in Sources */,
 				834337641F4FD0F300382DEE /* NSBundle+TZImagePicker.m in Sources */,
 				8348B0151F18AC6100F1F7CB /* TMotionViewController.m in Sources */,
 				8348AFE91F18925000F1F7CB /* AddCellViewController.m in Sources */,
+				831EF4671FD98A9F00D79F4F /* HXTagCollectionViewCell.m in Sources */,
 				836DA0001F29CC9B0071F6D2 /* CardViewController.m in Sources */,
 				8348AFB71F1890FA00F1F7CB /* GragView.m in Sources */,
 				8348AFBF1F1890FA00F1F7CB /* SGSegmentedControl.m in Sources */,
@@ -2735,6 +2974,7 @@
 				83650D3B1FD8E060001FAA3D /* SubparagraphRootViewController.h.m in Sources */,
 				833A836B1F332BB300F45F56 /* UIView+SDAutoLayout.m in Sources */,
 				8348B0311F18BC5100F1F7CB /* LabelMethodBlockSubVC.m in Sources */,
+				831EF4971FD9954400D79F4F /* QQListViewController.m in Sources */,
 				83650D3C1FD8E060001FAA3D /* UnscrollTabController.m in Sources */,
 				83650D571FD8E075001FAA3D /* PayViewController.m in Sources */,
 				8348AFE31F18917400F1F7CB /* TestTwoVC.m in Sources */,
@@ -2748,6 +2988,7 @@
 				83FD36121D1CE42C00A445C8 /* SuAblumInfo.m in Sources */,
 				8348AF591F18907400F1F7CB /* YSYPreviewViewController.m in Sources */,
 				8343376C1F4FD0F300382DEE /* TZLocationManager.m in Sources */,
+				831EF4641FD98A9F00D79F4F /* ScottPopMenu.m in Sources */,
 				836DA0441F29E0380071F6D2 /* BaseNavigationController.m in Sources */,
 				8348AFD11F1890FA00F1F7CB /* NSMutableArray+Util.m in Sources */,
 				83FD36071D1CE42C00A445C8 /* UIButton+SU.m in Sources */,
@@ -2755,6 +2996,7 @@
 				83650D721FD8E117001FAA3D /* ContactModel.m in Sources */,
 				836DA05B1F29E8B50071F6D2 /* DHAdressViewController.m in Sources */,
 				83650D121FD8E04E001FAA3D /* DragViewController.m in Sources */,
+				831EF46A1FD98A9F00D79F4F /* HXTagAttribute.m in Sources */,
 				83650D381FD8E060001FAA3D /* SubparagraphViewController.m in Sources */,
 				83650D371FD8E060001FAA3D /* FixedItemWidthTabController.m in Sources */,
 				8348AF451F1875FC00F1F7CB /* ESMTwoViewController.m in Sources */,
@@ -2763,28 +3005,35 @@
 				83FD361E1D1CE42C00A445C8 /* SuPhotoBrowserCell.m in Sources */,
 				833A83781F332D5100F45F56 /* DHNoteViewController.m in Sources */,
 				83BB709A1F4E84250023A24A /* MLSelectPhotoPickerGroupTableViewCell.m in Sources */,
+				831EF4631FD98A9F00D79F4F /* ShopCustomCollectionViewCell.m in Sources */,
+				831EF4241FD982B000D79F4F /* XHMenuButton.m in Sources */,
 				83BB70981F4E84250023A24A /* MLSelectPhotoPickerCollectionViewCell.m in Sources */,
 				834337431F4FC85000382DEE /* DHImagePickerViewController.m in Sources */,
 				83650D0E1FD8E04E001FAA3D /* ScrollViewController.m in Sources */,
 				8348AFB81F1890FA00F1F7CB /* GYChangeTextView.m in Sources */,
+				831EF49C1FD9955400D79F4F /* HYBHeaderView.m in Sources */,
 				83650D111FD8E04E001FAA3D /* DropViewController.m in Sources */,
 				83BB708D1F4E84250023A24A /* MLSelectPhotoPickerGroup.m in Sources */,
 				8348B0321F18BC5100F1F7CB /* LabelNilMethodBlockViewController.m in Sources */,
+				831EF4691FD98A9F00D79F4F /* HXTagsCell.m in Sources */,
 				83BB708B1F4E84250023A24A /* MLSelectPhotoPickerBrowserPhoto.m in Sources */,
 				83FD360A1D1CE42C00A445C8 /* UIView+SuAnimation.m in Sources */,
 				83650D581FD8E075001FAA3D /* ZSDSetPasswordView.m in Sources */,
 				83650D6F1FD8E110001FAA3D /* ChineseToPinyinResource.m in Sources */,
 				8348AFBE1F1890FA00F1F7CB /* SGImageButton.m in Sources */,
+				831EF4661FD98A9F00D79F4F /* TagPickerView.m in Sources */,
 				83650D101FD8E04E001FAA3D /* ZJBLTimerButton.m in Sources */,
 				83650D151FD8E04E001FAA3D /* WXPaoPaoViewController.m in Sources */,
 				83FD360C1D1CE42C00A445C8 /* SuPhotoAblumList.m in Sources */,
 				831E534B1F12150200F0B6D7 /* bitstream.c in Sources */,
 				8348AF441F1875FC00F1F7CB /* ESMTestViewController.m in Sources */,
+				831EF4651FD98A9F00D79F4F /* ShowViewController.m in Sources */,
 				834337681F4FD0F300382DEE /* TZImageCropManager.m in Sources */,
 				833A836A1F332BB300F45F56 /* UITableView+SDAutoTableViewCellHeight.m in Sources */,
 				83BB709E1F4E84250023A24A /* ScrollImageView.m in Sources */,
 				831E53341F12150100F0B6D7 /* T3DTouchViewController.m in Sources */,
 				83650D5D1FD8E076001FAA3D /* NSString+Category.m in Sources */,
+				831EF4621FD98A9F00D79F4F /* ShopCollectionViewViewController.m in Sources */,
 				8348B0291F18B46200F1F7CB /* TSidebarViewController.m in Sources */,
 				835633471F2ADD1400475839 /* REAMD.md in Sources */,
 				83F79B561F3D447B002105A0 /* DataModel.m in Sources */,
@@ -2803,6 +3052,7 @@
 				83650D6C1FD8E110001FAA3D /* PinyinHelper.m in Sources */,
 				83650D3A1FD8E060001FAA3D /* SegmentTabController.m in Sources */,
 				831E53DA1F12150200F0B6D7 /* THomeCollectionViewCell.m in Sources */,
+				831EF4681FD98A9F00D79F4F /* HXTagsView.m in Sources */,
 				831E53571F12150200F0B6D7 /* QRCodeReaderView.m in Sources */,
 				8343377D1F4FD1E100382DEE /* EditPicturesViewController.m in Sources */,
 				8348AFDA1F1890FA00F1F7CB /* SFNetWorkManager.m in Sources */,
@@ -2813,6 +3063,7 @@
 				831E53511F12150200F0B6D7 /* split.c in Sources */,
 				83BB70911F4E84250023A24A /* MLSelectPhotoPickerGroupViewController.m in Sources */,
 				8348AF461F1875FC00F1F7CB /* ScreenShotView.m in Sources */,
+				831EF41E1FD982B000D79F4F /* UIScrollView+XHVisibleCenterScroll.m in Sources */,
 				83FD360E1D1CE42C00A445C8 /* SuPhotoBrowser.m in Sources */,
 				831E534F1F12150200F0B6D7 /* qrspec.c in Sources */,
 				83FD36181D1CE42C00A445C8 /* SuPhotoPicker.m in Sources */,
@@ -2820,6 +3071,7 @@
 				831E53D81F12150200F0B6D7 /* AppDelegate.m in Sources */,
 				8343376F1F4FD0F300382DEE /* TZPhotoPreviewController.m in Sources */,
 				83650C9A1FD8DFB4001FAA3D /* NetWork.m in Sources */,
+				831EF49D1FD9955400D79F4F /* HYBSectionModel.m in Sources */,
 				8348B0011F189FC900F1F7CB /* ZLDashboardViewController.m in Sources */,
 				831E53451F12150100F0B6D7 /* UserCell.m in Sources */,
 				8348B00D1F18A0B100F1F7CB /* ActionViewController.m in Sources */,

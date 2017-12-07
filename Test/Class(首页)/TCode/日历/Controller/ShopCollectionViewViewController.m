@@ -33,7 +33,7 @@
 	UICollectionViewFlowLayout *flowLayout=[[UICollectionViewFlowLayout alloc] init];
 	[flowLayout setScrollDirection:UICollectionViewScrollDirectionVertical];
 	
-	collectionViewS=[[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, DeviceWidth, DeviceHeight/2+50) collectionViewLayout:flowLayout];
+	collectionViewS=[[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, DH_DeviceWidth, DH_DeviceHeight/2+50) collectionViewLayout:flowLayout];
 		collectionViewS.dataSource=self;
 	collectionViewS.delegate=self;
 	collectionViewS.backgroundColor = [UIColor whiteColor];
@@ -41,7 +41,7 @@
 	[self.view addSubview:collectionViewS];
 
 	UIView *calendarView = [[UIView alloc]init];
-	calendarView.frame = CGRectMake(0, collectionViewS.height, DeviceWidth, DeviceHeight-collectionViewS.height);
+	calendarView.frame = CGRectMake(0, collectionViewS.height, DH_DeviceWidth, DH_DeviceHeight-collectionViewS.height);
 	calendarView.backgroundColor = [UIColor groupTableViewBackgroundColor];
 	[self.view addSubview:calendarView];
 	

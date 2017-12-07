@@ -21,7 +21,7 @@
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>10</string>
+	<string>52</string>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
 		<string>Identification</string>
@@ -46,6 +46,8 @@
 	<key>NSMicrophoneUsageDescription</key>
 	<string>Microphone Usage Description</string>
 	<key>NSMotionUsageDescription</key>
+	<string>允许</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
 	<string>允许</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>Photo Library Usage Description</string>

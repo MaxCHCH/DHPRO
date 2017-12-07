@@ -28,18 +28,26 @@
 #import "DHZanViewController.h"//点赞
 #import "ScrollImageViewViewController.h"
 #import "DHImagePickerViewController.h"//高级定制添加图片
+//#import "DocumentViewController.h"//文档
+#import "PayViewController.h"//支付密码
+#import "NetTestViewController.h"//网络测试
 #import "CardViewController.h"
-#import "NetTestViewController.h"
+#import "CountdownViewController.h"//倒计时
+#import "SubparagraphRootViewController.h"//菜单栏
+#import "DropViewController.h"//拖拽
+#import "ScrollViewController.h"//滚动
+#import "WXPaoPaoViewController.h"//微信气泡聊天
+#import "BaseAdressBookViewController.h"
+
 @interface DHMainViewController ()<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout,QRScanViewDelegate,UIAccelerometerDelegate>{
 	NSMutableArray *valueArr;
 	
 	UICollectionView *_collectionView;
-	NSArray *_arr_title;
 	UILabel *_lb_showinfo;
 	//测试
 	NSTimer *timer;
 	UILabel  *displayLabel;//提示语
-
+	
 }
 @property (nonatomic, strong) CMMotionManager *mgr; // 保证不死
 @property (nonatomic, strong) UIButton *button1;
@@ -56,7 +64,7 @@
 @implementation DHMainViewController
 
 - (void)viewDidLoad {
-    [super viewDidLoad];
+	[super viewDidLoad];
 	[self setUPUI];
 	displayLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, DH_DeviceHeight-50, DH_DeviceWidth, 40)];
 	displayLabel.backgroundColor = [UIColor colorWithRed:0.962 green:0.971 blue:1.000 alpha:1.000];
@@ -78,7 +86,7 @@
 	} else {
 		NSLog(@"有物品离开");
 	}
-
+	
 }
 - (void)accelerometer:(UIAccelerometer *)accelerometer didAccelerate:(UIAcceleration *)acceleration
 {
@@ -94,31 +102,31 @@
 }
 //- (id)transformedValue:(id)value﻿
 //{﻿
-//	
+//
 //	﻿
-//	
+//
 //	   double convertedValue = [value doubleValue];﻿
-//	
+//
 //	   int multiplyFactor = 0;﻿
-//	
+//
 //	﻿
-//	
+//
 //	   NSArray *tokens = [NSArray arrayWithObjects:@"bytes",@"KB",@"MB",@"GB",@"TB",@“PB”, @“EB”, @“ZB”, @“YB”,nil];﻿
-//	
+//
 //	﻿
-//	
+//
 //	   while (convertedValue > 1024) {﻿
-//		
+//
 //		       convertedValue /= 1024;﻿
-//		
+//
 //		       multiplyFactor++;﻿
-//		
+//
 //		   }﻿
-//	
+//
 //	﻿
-//	
+//
 //	   return [NSString stringWithFormat:@"%4.2f %@",convertedValue, [tokens objectAtIndex:multiplyFactor]];﻿
-//	
+//
 //}
 
 
@@ -169,11 +177,10 @@
 }
 
 - (void)setUPUI{
-
+	
 	// 监听有物品靠近还是离开
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(proximityStateDidChange) name:UIDeviceProximityStateDidChangeNotification object:nil];
 	[UIDevice currentDevice].proximityMonitoringEnabled = YES;
-	
 	
 	UICollectionViewFlowLayout *flowLayout=[[UICollectionViewFlowLayout alloc] init];
 	[flowLayout setScrollDirection:UICollectionViewScrollDirectionVertical];
@@ -196,7 +203,6 @@
 	self.titles = @[].mutableCopy;
 	self.classNames = @[].mutableCopy;
 	
-//	_arr_title = @[@"01上下滑动",@"023DTouch",@"03二维码",@"04上下滑动",@"05导航栏",@"06签名",@"07动画",@"08咖啡机",@"09碰撞球",@"10侧边栏",@"11购物车",@"12身份证",@"13GZWaterfall",@"14网络",@"15赞",@"16待定",@"17待定",@"18待定",@"19待定",@"20待定",@"21待定",@"22待定",@"23待定",@"24待定",@"25待定",@"26待定",@"27待定",@"28待定",@"29待定",@"30待定",@"31待定",@"32待定"];
 	[self addCell:@"01上下滑动" class:@"ContentOffSetVC"];
 	[self addCell:@"023DTouch" class:@"T3DTouchViewController"];
 	[self addCell:@"03二维码" class:@"GKHScanQCodeViewController"];
@@ -211,11 +217,17 @@
 	[self addCell:@"12身份证" class:@"IDCardViewController"];
 	[self addCell:@"13图片滚动" class:@"ScrollImageViewViewController"];
 	[self addCell:@"14添加图片" class:@"DHImagePickerViewController"];
-	[self addCell:@"15待定" class:@"YYImageExample"];
-	[self addCell:@"16待定" class:@"YYImageExample"];
-	[self addCell:@"17待定" class:@"YYImageExample"];
-
-
+	[self addCell:@"15文档" class:@"DocumentViewController"];
+	[self addCell:@"16支付密码框" class:@"PayViewController"];
+	[self addCell:@"17网络测试" class:@"NetTestViewController"];
+	[self addCell:@"18倒计时" class:@"CountdownViewController"];
+	[self addCell:@"19菜单栏" class:@"SubparagraphRootViewController"];
+	[self addCell:@"20点赞" class:@"DHZanViewController"];
+	[self addCell:@"21拖拽" class:@"DropViewController"];
+	[self addCell:@"22滚动视图" class:@"ScrollViewController"];
+	[self addCell:@"23微信气泡聊天" class:@"WXPaoPaoViewController"];
+	[self addCell:@"通讯录" class:@"BaseAdressBookViewController"];
+	
 	[_collectionView reloadData];
 	_lb_showinfo = [[UILabel alloc]init];
 	_lb_showinfo.backgroundColor = [UIColor brownColor];
@@ -277,7 +289,7 @@
 {
 	static NSString * CellIdentifier = @"THomeCollectionViewCell";
 	THomeCollectionViewCell *_cell = [collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifier forIndexPath:indexPath];
-//	_cell.imageCover.image = [UIImage imageNamed:@"Facebook"];
+	//	_cell.imageCover.image = [UIImage imageNamed:@"Facebook"];
 	_cell.labelName.text = _titles[indexPath.row];
 	_cell.labelName.layer.borderColor = [UIColor blueColor].CGColor;
 	_cell.labelName.layer.borderWidth = 1.0;
@@ -290,7 +302,15 @@
 }
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
 	[_collectionView deselectItemAtIndexPath:indexPath animated:NO];
+	
 	NSString *className = self.classNames[indexPath.row];
+	if ([className isEqualToString:@"SubparagraphRootViewController"]) {
+		SubparagraphRootViewController *controller = [[SubparagraphRootViewController alloc] init];
+		UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:controller];
+		navController.navigationBarHidden = YES;
+		[UIApplication sharedApplication].keyWindow.rootViewController = navController;
+		return;
+	}
 	Class class = NSClassFromString(className);
 	if (class) {
 		UIViewController *ctrl = class.new;
@@ -298,94 +318,94 @@
 		push(ctrl);
 	}
 	
-//	switch (indexPath.row) {
-//		case 0:
-//		{
-//			ContentOffSetVC *tabbarOne = [[ContentOffSetVC alloc]init];
-//			push(tabbarOne);
-//		}
-//			break;
-//		case 1:{
-//			T3DTouchViewController*tabbarTwo = [[T3DTouchViewController alloc]init];
-//			push(tabbarTwo);
-//		}
-//			break;
-//		case 2:{
-//			GKHScanQCodeViewController * sqVC = [[GKHScanQCodeViewController alloc]init];
-//			sqVC.delegate=self;
-//			UINavigationController * nVC = [[UINavigationController alloc]initWithRootViewController:sqVC];
-//			[self presentViewController:nVC animated:YES completion:nil];
-//			
-//		}
-//			break;
-//		case 3:{
-//			ContentOffSetVC*tabbarTwo = [[ContentOffSetVC alloc]init];
-//			push(tabbarTwo);
-//		}
-//			break;
-//		case 4:{
-//			LSTabBarViewController*tabbarTwo = [[LSTabBarViewController alloc]init];
-//			push(tabbarTwo);
-//		}
-//			break;
-//		case 5:{
-//			SignatureViewController*tabbarTwo = [[SignatureViewController alloc]init];
-//			push(tabbarTwo);
-//		}
-//			break;
-//		case 6:{
-//			ZLDashboardViewController*tabbarTwo = [[ZLDashboardViewController alloc]init];
-//			push(tabbarTwo);
-//		}
-//			break;
-//		case 7:{
-//			ActionViewController*tabbarTwo = [[ActionViewController alloc]init];
-//			push(tabbarTwo);
-//		}
-//			break;
-//		case 8:{
-//			TMotionViewController*tabbarTwo = [[TMotionViewController alloc]init];
-//			push(tabbarTwo);
-//		}
-//			break;
-//			
-//		case 9:{
-//			TSidebarViewController*tabbarTwo = [[TSidebarViewController alloc]init];
-//			push(tabbarTwo);
-//		}
-//			break;
-//		case 10:{
-//			TShopAnimationViewController*tabbarTwo = [[TShopAnimationViewController alloc]init];
-//			push(tabbarTwo);
-//		}
-//			break;
-//			
-//		case 11:{
-//			IDCardViewController*tabbarTwo = [[IDCardViewController alloc]init];
-//			push(tabbarTwo);
-//		}
-//			break;
-//			
-//		case 12:{
-//			[self showPromptlanguage:@"全场卖两块,随便挑,随便选,都两块"];
-//			DHNoteViewController*tabbarTwo = [[DHNoteViewController alloc]init];
-//			push(tabbarTwo);
-//		}
-//			 break;
-//		case 13:{
-//			NetTestViewController*tabbarTwo = [[NetTestViewController alloc]init];
-//			push(tabbarTwo);
-//		}
-//			break;
-//		case 14:{
-//			DHZanViewController*tabbarTwo = [[DHZanViewController alloc]init];
-//			push(tabbarTwo);
-//		}
-//			break;
-//		
-//		default:
-//			break;
-//	}
+	//	switch (indexPath.row) {
+	//		case 0:
+	//		{
+	//			ContentOffSetVC *tabbarOne = [[ContentOffSetVC alloc]init];
+	//			push(tabbarOne);
+	//		}
+	//			break;
+	//		case 1:{
+	//			T3DTouchViewController*tabbarTwo = [[T3DTouchViewController alloc]init];
+	//			push(tabbarTwo);
+	//		}
+	//			break;
+	//		case 2:{
+	//			GKHScanQCodeViewController * sqVC = [[GKHScanQCodeViewController alloc]init];
+	//			sqVC.delegate=self;
+	//			UINavigationController * nVC = [[UINavigationController alloc]initWithRootViewController:sqVC];
+	//			[self presentViewController:nVC animated:YES completion:nil];
+	//
+	//		}
+	//			break;
+	//		case 3:{
+	//			ContentOffSetVC*tabbarTwo = [[ContentOffSetVC alloc]init];
+	//			push(tabbarTwo);
+	//		}
+	//			break;
+	//		case 4:{
+	//			LSTabBarViewController*tabbarTwo = [[LSTabBarViewController alloc]init];
+	//			push(tabbarTwo);
+	//		}
+	//			break;
+	//		case 5:{
+	//			SignatureViewController*tabbarTwo = [[SignatureViewController alloc]init];
+	//			push(tabbarTwo);
+	//		}
+	//			break;
+	//		case 6:{
+	//			ZLDashboardViewController*tabbarTwo = [[ZLDashboardViewController alloc]init];
+	//			push(tabbarTwo);
+	//		}
+	//			break;
+	//		case 7:{
+	//			ActionViewController*tabbarTwo = [[ActionViewController alloc]init];
+	//			push(tabbarTwo);
+	//		}
+	//			break;
+	//		case 8:{
+	//			TMotionViewController*tabbarTwo = [[TMotionViewController alloc]init];
+	//			push(tabbarTwo);
+	//		}
+	//			break;
+	//
+	//		case 9:{
+	//			TSidebarViewController*tabbarTwo = [[TSidebarViewController alloc]init];
+	//			push(tabbarTwo);
+	//		}
+	//			break;
+	//		case 10:{
+	//			TShopAnimationViewController*tabbarTwo = [[TShopAnimationViewController alloc]init];
+	//			push(tabbarTwo);
+	//		}
+	//			break;
+	//
+	//		case 11:{
+	//			IDCardViewController*tabbarTwo = [[IDCardViewController alloc]init];
+	//			push(tabbarTwo);
+	//		}
+	//			break;
+	//
+	//		case 12:{
+	//			[self showPromptlanguage:@"全场卖两块,随便挑,随便选,都两块"];
+	//			DHNoteViewController*tabbarTwo = [[DHNoteViewController alloc]init];
+	//			push(tabbarTwo);
+	//		}
+	//			 break;
+	//		case 13:{
+	//			NetTestViewController*tabbarTwo = [[NetTestViewController alloc]init];
+	//			push(tabbarTwo);
+	//		}
+	//			break;
+	//		case 14:{
+	//			DHZanViewController*tabbarTwo = [[DHZanViewController alloc]init];
+	//			push(tabbarTwo);
+	//		}
+	//			break;
+	//
+	//		default:
+	//			break;
+	//	}
 }
 #pragma mark --UICollectionViewDelegateFlowLayout
 //////定义每个Item 的大小(cell的宽高)
@@ -482,8 +502,8 @@
 																				   options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading
 																				attributes:[NSDictionary dictionaryWithObjectsAndKeys:displayLabel.font,NSFontAttributeName, nil] context:nil].size.height);
 		NSLog(@"执行");
-
-
+		
+		
 	} completion:^(BOOL finished) {
 		timer = [NSTimer scheduledTimerWithTimeInterval:10.5f
 												 target:self
@@ -508,18 +528,67 @@
 }
 
 - (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+	[super didReceiveMemoryWarning];
+	// Dispose of any resources that can be recreated.
 }
 
 /*
-#pragma mark - Navigation
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)GKHScanQCodeViewController:(GKHScanQCodeViewController *)lhScanQCodeViewController readerScanResult:(NSString *)result {
+	
 }
-*/
+
+- (void)encodeWithCoder:(nonnull NSCoder *)aCoder {
+	
+}
+
+- (void)traitCollectionDidChange:(nullable UITraitCollection *)previousTraitCollection {
+	
+}
+
+- (void)preferredContentSizeDidChangeForChildContentContainer:(nonnull id<UIContentContainer>)container {
+	
+}
+
+- (CGSize)sizeForChildContentContainer:(nonnull id<UIContentContainer>)container withParentContainerSize:(CGSize)parentSize {
+	return CGSizeZero;
+}
+
+- (void)systemLayoutFittingSizeDidChangeForChildContentContainer:(nonnull id<UIContentContainer>)container {
+	
+}
+
+- (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(nonnull id<UIViewControllerTransitionCoordinator>)coordinator {
+	
+}
+
+- (void)willTransitionToTraitCollection:(nonnull UITraitCollection *)newCollection withTransitionCoordinator:(nonnull id<UIViewControllerTransitionCoordinator>)coordinator {
+	
+}
+
+- (void)didUpdateFocusInContext:(nonnull UIFocusUpdateContext *)context withAnimationCoordinator:(nonnull UIFocusAnimationCoordinator *)coordinator {
+	
+}
+
+- (void)setNeedsFocusUpdate {
+	
+}
+
+- (BOOL)shouldUpdateFocusInContext:(nonnull UIFocusUpdateContext *)context {
+	return YES;
+}
+
+- (void)updateFocusIfNeeded {
+	
+}
 
 @end
+

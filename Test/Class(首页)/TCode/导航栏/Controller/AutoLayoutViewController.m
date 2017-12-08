@@ -83,8 +83,7 @@
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.row == 3) {
-        NSMutableArray* testArray = [[NSMutableArray alloc] initWithObjects:@"0",@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9",@"11",@"12",
-                                      @"13",@"14", nil];
+        NSMutableArray* testArray = [[NSMutableArray alloc] initWithObjects:@"0",@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9",@"11",@"12",@"13",@"14", nil];
         
         AddCellViewController *addVC = [[AddCellViewController alloc]init];
         [self.navigationController pushViewController:addVC animated:YES];

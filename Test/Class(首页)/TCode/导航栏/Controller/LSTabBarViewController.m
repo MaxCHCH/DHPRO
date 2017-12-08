@@ -40,7 +40,9 @@
     
     YSYPreviewViewController *MyVC = [[YSYPreviewViewController alloc] init];
     [self setupChildViewController:MyVC title:@"我的" imageName:@"SettingN" selectedImageName:@"SettingS"];
-    
+	
+	PostTableViewController*PostVC = [[PostTableViewController alloc] init];
+	[self setupChildViewController:PostVC title:@"我的" imageName:@"SettingN" selectedImageName:@"SettingS"];
     
    
 }

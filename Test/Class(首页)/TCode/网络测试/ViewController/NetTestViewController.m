@@ -24,9 +24,14 @@
 	[self getdata];
 }
 -(void)getdata{
-	NSString *URL = @"http://192.168.0.211:8015/houseInterface.ashx?json=GetListByTopics";
-	NSString *ver = @"2";
-	NSDictionary *param = NSDictionaryOfVariableBindings(ver);
+	NSString *URL = @"https://app.qipai.com/sevenv2/index.php?controller=life";
+	NSString *method = @"requestLifeList";
+	NSString *page_id = @"";
+	NSString *sort_id = @"1";
+	NSString *user_id = @"26";
+
+
+	NSDictionary *param = NSDictionaryOfVariableBindings(method,page_id,sort_id,user_id);
 	[SFNetWorkManager requestWithType:HttpRequestTypeGet withUrlString:URL withParaments:param withSuccessBlock:^(NSDictionary *object) {
 		
 		_dataSource = [DataModel mj_objectArrayWithKeyValuesArray:object[@"data"]];
@@ -36,6 +41,7 @@
 	} progress:^(float progress) {
 		
 	}];
+	
 	
 }
 - (void)didReceiveMemoryWarning {

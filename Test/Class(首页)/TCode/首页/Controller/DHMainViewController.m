@@ -16,6 +16,7 @@
 #import "GKHScanQCodeViewController.h"//二维码
 #import "ContentOffSetVC.h"//滑动
 #import "LSTabBarViewController.h"//四个菜单栏
+#import "LBTabBarTextController.h"//中间突起的菜单栏
 #import "SignatureViewController.h"//签名
 #import "ZLDashboardViewController.h"//动画
 #import "ActionViewController.h"//咖啡机动画
@@ -254,7 +255,7 @@
 	[self addCell:@"01上下滑动" class:@"ContentOffSetVC"];
 	[self addCell:@"023DTouch" class:@"T3DTouchViewController"];
 	[self addCell:@"03二维码" class:@"GKHScanQCodeViewController"];
-	[self addCell:@"04上下滑动" class:@"ContentOffSetVC"];
+	[self addCell:@"04凸起菜单栏" class:@"LBTabBarTextController"];
 	[self addCell:@"05导航栏" class:@"LSTabBarViewController"];
 	[self addCell:@"06签名" class:@"SignatureViewController"];
 	[self addCell:@"07动画" class:@"ZLDashboardViewController"];
@@ -270,7 +271,7 @@
 	[self addCell:@"17网络测试" class:@"NetTestViewController"];
 	[self addCell:@"18倒计时" class:@"CountdownViewController"];
 	[self addCell:@"19菜单栏" class:@"SubparagraphRootViewController"];
-	[self addCell:@"20点赞" class:@"DHZanViewController"];
+//	[self addCell:@"20点赞" class:@"DHZanViewController"];
 	[self addCell:@"21拖拽" class:@"DropViewController"];
 	[self addCell:@"22滚动视图" class:@"ScrollViewController"];
 	[self addCell:@"23微信气泡聊天" class:@"WXPaoPaoViewController"];

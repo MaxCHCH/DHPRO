@@ -79,6 +79,8 @@
 		831EF4971FD9954400D79F4F /* QQListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 831EF4961FD9954400D79F4F /* QQListViewController.m */; };
 		831EF49C1FD9955400D79F4F /* HYBHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 831EF4991FD9955400D79F4F /* HYBHeaderView.m */; };
 		831EF49D1FD9955400D79F4F /* HYBSectionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 831EF49B1FD9955400D79F4F /* HYBSectionModel.m */; };
+		831EF4A01FDA22D500D79F4F /* LBTabBarTextController.m in Sources */ = {isa = PBXBuildFile; fileRef = 831EF49F1FDA22D500D79F4F /* LBTabBarTextController.m */; };
+		831EF4A31FDA23D100D79F4F /* NTButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 831EF4A11FDA23D000D79F4F /* NTButton.m */; };
 		833A836A1F332BB300F45F56 /* UITableView+SDAutoTableViewCellHeight.m in Sources */ = {isa = PBXBuildFile; fileRef = 833A83671F332BB300F45F56 /* UITableView+SDAutoTableViewCellHeight.m */; };
 		833A836B1F332BB300F45F56 /* UIView+SDAutoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 833A83691F332BB300F45F56 /* UIView+SDAutoLayout.m */; };
 		833A83721F332D1C00F45F56 /* GZTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 833A83711F332D1C00F45F56 /* GZTableViewCell.m */; };
@@ -438,6 +440,10 @@
 		831EF4991FD9955400D79F4F /* HYBHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYBHeaderView.m; sourceTree = "<group>"; };
 		831EF49A1FD9955400D79F4F /* HYBSectionModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYBSectionModel.h; sourceTree = "<group>"; };
 		831EF49B1FD9955400D79F4F /* HYBSectionModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYBSectionModel.m; sourceTree = "<group>"; };
+		831EF49E1FDA22D500D79F4F /* LBTabBarTextController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LBTabBarTextController.h; sourceTree = "<group>"; };
+		831EF49F1FDA22D500D79F4F /* LBTabBarTextController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LBTabBarTextController.m; sourceTree = "<group>"; };
+		831EF4A11FDA23D000D79F4F /* NTButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTButton.m; sourceTree = "<group>"; };
+		831EF4A21FDA23D000D79F4F /* NTButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTButton.h; sourceTree = "<group>"; };
 		833A83651F332BB300F45F56 /* SDAutoLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDAutoLayout.h; sourceTree = "<group>"; };
 		833A83661F332BB300F45F56 /* UITableView+SDAutoTableViewCellHeight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+SDAutoTableViewCellHeight.h"; sourceTree = "<group>"; };
 		833A83671F332BB300F45F56 /* UITableView+SDAutoTableViewCellHeight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+SDAutoTableViewCellHeight.m"; sourceTree = "<group>"; };
@@ -1359,6 +1365,17 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		831EF4A41FDA23D700D79F4F /* TabbarText */ = {
+			isa = PBXGroup;
+			children = (
+				831EF49E1FDA22D500D79F4F /* LBTabBarTextController.h */,
+				831EF49F1FDA22D500D79F4F /* LBTabBarTextController.m */,
+				831EF4A21FDA23D000D79F4F /* NTButton.h */,
+				831EF4A11FDA23D000D79F4F /* NTButton.m */,
+			);
+			name = TabbarText;
+			sourceTree = "<group>";
+		};
 		833A83641F332BB300F45F56 /* SDAutolayout */ = {
 			isa = PBXGroup;
 			children = (
@@ -1522,6 +1539,7 @@
 				8348AFE21F18917400F1F7CB /* TestTwoVC.m */,
 				8348AFE41F18918100F1F7CB /* TestThreeVC.h */,
 				8348AFE51F18918100F1F7CB /* TestThreeVC.m */,
+				831EF4A41FDA23D700D79F4F /* TabbarText */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -2969,6 +2987,7 @@
 				8348AFBF1F1890FA00F1F7CB /* SGSegmentedControl.m in Sources */,
 				8348B01C1F18AC6F00F1F7CB /* WLBallView.m in Sources */,
 				8348B02C1F18B93300F1F7CB /* ALiAlertView.m in Sources */,
+				831EF4A31FDA23D100D79F4F /* NTButton.m in Sources */,
 				8348AFD01F1890FA00F1F7CB /* KeyBoardView.m in Sources */,
 				831E53501F12150200F0B6D7 /* rscode.c in Sources */,
 				83650D3B1FD8E060001FAA3D /* SubparagraphRootViewController.h.m in Sources */,
@@ -3040,6 +3059,7 @@
 				8348AF411F1875FC00F1F7CB /* ESMOneViewController.m in Sources */,
 				8348B0481F1AFF1400F1F7CB /* TShopAnimationViewController.m in Sources */,
 				8343376E1F4FD0F300382DEE /* TZPhotoPreviewCell.m in Sources */,
+				831EF4A01FDA22D500D79F4F /* LBTabBarTextController.m in Sources */,
 				8348B01B1F18AC6F00F1F7CB /* WLBallTool.m in Sources */,
 				8343376B1F4FD0F300382DEE /* TZImagePickerController.m in Sources */,
 				83650C961FD8DF70001FAA3D /* UIButton+Delay.m in Sources */,

@@ -41,7 +41,8 @@
 #import "BaseAdressBookViewController.h"//通讯刘
 #import "ShowViewController.h"//弹出框
 #import "QQListViewController.h"//仿照QQ列表
-
+#import "BankCardViewController.h"//信用卡识别
+#import "BankCartViewController.h"//银行卡扫描
 @interface DHMainViewController ()<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout,QRScanViewDelegate,UIAccelerometerDelegate>{
 	NSMutableArray *valueArr;
 	
@@ -278,7 +279,9 @@
 	[self addCell:@"24通讯录" class:@"BaseAdressBookViewController"];
 	[self addCell:@"25弹出框" class:@"ShowViewController"];
 	[self addCell:@"26QQ联系人" class:@"QQListViewController"];
-	
+	[self addCell:@"27信用卡识别" class:@"BankCardViewController"];
+	[self addCell:@"28银行卡识别" class:@"BankCartViewController"];
+//	[self addCell:@"29身份证识别" class:@"XLIDScanViewController"];
 	
 	
 	

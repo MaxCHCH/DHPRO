@@ -21,7 +21,7 @@
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>78</string>
+	<string>102</string>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
 		<string>Identification</string>
@@ -65,6 +65,8 @@
 	<array>
 		<string>armv7</string>
 	</array>
+	<key>UIRequiresFullScreen</key>
+	<string>YES</string>
 	<key>UIStatusBarHidden</key>
 	<false/>
 	<key>UIStatusBarStyle</key>

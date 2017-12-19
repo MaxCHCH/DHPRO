@@ -81,6 +81,18 @@
 		831EF49D1FD9955400D79F4F /* HYBSectionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 831EF49B1FD9955400D79F4F /* HYBSectionModel.m */; };
 		831EF4A01FDA22D500D79F4F /* LBTabBarTextController.m in Sources */ = {isa = PBXBuildFile; fileRef = 831EF49F1FDA22D500D79F4F /* LBTabBarTextController.m */; };
 		831EF4A31FDA23D100D79F4F /* NTButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 831EF4A11FDA23D000D79F4F /* NTButton.m */; };
+		83348E901FE8ED8800BD7BF5 /* BankCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83348E8F1FE8ED8800BD7BF5 /* BankCardViewController.m */; };
+		83348EBF1FE8FE2100BD7BF5 /* easyar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83348EBE1FE8FE2100BD7BF5 /* easyar.framework */; };
+		83348F691FE91A0500BD7BF5 /* BankCartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83348F681FE91A0500BD7BF5 /* BankCartViewController.m */; };
+		83348F6C1FE91A0F00BD7BF5 /* ScanCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83348F6A1FE91A0E00BD7BF5 /* ScanCardViewController.m */; };
+		83348F6F1FE91A2E00BD7BF5 /* CameraManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 83348F6E1FE91A2E00BD7BF5 /* CameraManager.m */; };
+		83348F721FE91A3900BD7BF5 /* OverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 83348F701FE91A3900BD7BF5 /* OverlayView.m */; };
+		83348F751FE91A4200BD7BF5 /* RectManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 83348F731FE91A4200BD7BF5 /* RectManager.m */; };
+		83348F821FE91A7500BD7BF5 /* libbankcard.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 83348F7A1FE91A7500BD7BF5 /* libbankcard.a */; };
+		83348F831FE91A7500BD7BF5 /* libexidcardios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 83348F7D1FE91A7500BD7BF5 /* libexidcardios.a */; };
+		83348F841FE91A7500BD7BF5 /* zocr0.lib in Resources */ = {isa = PBXBuildFile; fileRef = 83348F7F1FE91A7500BD7BF5 /* zocr0.lib */; };
+		83348F871FE91A8A00BD7BF5 /* UIImage+Extend.m in Sources */ = {isa = PBXBuildFile; fileRef = 83348F861FE91A8A00BD7BF5 /* UIImage+Extend.m */; };
+		83348F8A1FE91AA300BD7BF5 /* BankCardSearch.m in Sources */ = {isa = PBXBuildFile; fileRef = 83348F881FE91AA300BD7BF5 /* BankCardSearch.m */; };
 		833A836A1F332BB300F45F56 /* UITableView+SDAutoTableViewCellHeight.m in Sources */ = {isa = PBXBuildFile; fileRef = 833A83671F332BB300F45F56 /* UITableView+SDAutoTableViewCellHeight.m */; };
 		833A836B1F332BB300F45F56 /* UIView+SDAutoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 833A83691F332BB300F45F56 /* UIView+SDAutoLayout.m */; };
 		833A83721F332D1C00F45F56 /* GZTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 833A83711F332D1C00F45F56 /* GZTableViewCell.m */; };
@@ -167,7 +179,6 @@
 		8348B03C1F18C47500F1F7CB /* KSGuideManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8348B03B1F18C47500F1F7CB /* KSGuideManager.m */; };
 		8348B03E1F18C90B00F1F7CB /* File in Resources */ = {isa = PBXBuildFile; fileRef = 8348B03D1F18C90B00F1F7CB /* File */; };
 		8348B0481F1AFF1400F1F7CB /* TShopAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8348B0471F1AFF1400F1F7CB /* TShopAnimationViewController.m */; };
-		835594511E3057A50061376D /* easyar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 835594501E3057A50061376D /* easyar.framework */; };
 		835594531E3057C00061376D /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 835594521E3057C00061376D /* CoreImage.framework */; };
 		835594551E3057C70061376D /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 835594541E3057C70061376D /* CoreMedia.framework */; };
 		835594571E3057CD0061376D /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 835594561E3057CD0061376D /* CoreVideo.framework */; };
@@ -288,6 +299,8 @@
 		83F79B561F3D447B002105A0 /* DataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 83F79B551F3D447B002105A0 /* DataModel.m */; };
 		83F79B5C1F3D4498002105A0 /* CommentsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 83F79B5B1F3D4498002105A0 /* CommentsModel.m */; };
 		83F79B5F1F3D44A4002105A0 /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 83F79B5E1F3D44A4002105A0 /* UserModel.m */; };
+		83FB4B801FE6A92300EAC327 /* UIImage+Extend.m in Sources */ = {isa = PBXBuildFile; fileRef = 83FB4B7F1FE6A92300EAC327 /* UIImage+Extend.m */; };
+		83FB4BD51FE75A3200EAC327 /* UIColor+expanded.m in Sources */ = {isa = PBXBuildFile; fileRef = 83FB4BD41FE75A3200EAC327 /* UIColor+expanded.m */; };
 		83FD36061D1CE42C00A445C8 /* NSString+SU.m in Sources */ = {isa = PBXBuildFile; fileRef = 83FD35D61D1CE42C00A445C8 /* NSString+SU.m */; };
 		83FD36071D1CE42C00A445C8 /* UIButton+SU.m in Sources */ = {isa = PBXBuildFile; fileRef = 83FD35D81D1CE42C00A445C8 /* UIButton+SU.m */; };
 		83FD36081D1CE42C00A445C8 /* UIImage+SU.m in Sources */ = {isa = PBXBuildFile; fileRef = 83FD35DA1D1CE42C00A445C8 /* UIImage+SU.m */; };
@@ -444,6 +457,31 @@
 		831EF49F1FDA22D500D79F4F /* LBTabBarTextController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LBTabBarTextController.m; sourceTree = "<group>"; };
 		831EF4A11FDA23D000D79F4F /* NTButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTButton.m; sourceTree = "<group>"; };
 		831EF4A21FDA23D000D79F4F /* NTButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTButton.h; sourceTree = "<group>"; };
+		83348E8E1FE8ED8800BD7BF5 /* BankCardViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BankCardViewController.h; sourceTree = "<group>"; };
+		83348E8F1FE8ED8800BD7BF5 /* BankCardViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BankCardViewController.m; sourceTree = "<group>"; };
+		83348EBE1FE8FE2100BD7BF5 /* easyar.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = easyar.framework; path = Test/easyar.framework; sourceTree = "<group>"; };
+		83348F671FE91A0500BD7BF5 /* BankCartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BankCartViewController.h; sourceTree = "<group>"; };
+		83348F681FE91A0500BD7BF5 /* BankCartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BankCartViewController.m; sourceTree = "<group>"; };
+		83348F6A1FE91A0E00BD7BF5 /* ScanCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanCardViewController.m; sourceTree = "<group>"; };
+		83348F6B1FE91A0E00BD7BF5 /* ScanCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanCardViewController.h; sourceTree = "<group>"; };
+		83348F6D1FE91A2E00BD7BF5 /* CameraManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraManager.h; sourceTree = "<group>"; };
+		83348F6E1FE91A2E00BD7BF5 /* CameraManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraManager.m; sourceTree = "<group>"; };
+		83348F701FE91A3900BD7BF5 /* OverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OverlayView.m; sourceTree = "<group>"; };
+		83348F711FE91A3900BD7BF5 /* OverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OverlayView.h; sourceTree = "<group>"; };
+		83348F731FE91A4200BD7BF5 /* RectManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RectManager.m; sourceTree = "<group>"; };
+		83348F741FE91A4200BD7BF5 /* RectManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RectManager.h; sourceTree = "<group>"; };
+		83348F771FE91A7500BD7BF5 /* exbankcard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = exbankcard.h; sourceTree = "<group>"; };
+		83348F791FE91A7500BD7BF5 /* exbankcardcore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = exbankcardcore.h; sourceTree = "<group>"; };
+		83348F7A1FE91A7500BD7BF5 /* libbankcard.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libbankcard.a; sourceTree = "<group>"; };
+		83348F7B1FE91A7500BD7BF5 /* BankCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BankCard.h; sourceTree = "<group>"; };
+		83348F7D1FE91A7500BD7BF5 /* libexidcardios.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libexidcardios.a; sourceTree = "<group>"; };
+		83348F7F1FE91A7500BD7BF5 /* zocr0.lib */ = {isa = PBXFileReference; lastKnownFileType = file; path = zocr0.lib; sourceTree = "<group>"; };
+		83348F801FE91A7500BD7BF5 /* commondef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = commondef.h; sourceTree = "<group>"; };
+		83348F811FE91A7500BD7BF5 /* excards.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = excards.h; sourceTree = "<group>"; };
+		83348F851FE91A8A00BD7BF5 /* UIImage+Extend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extend.h"; sourceTree = "<group>"; };
+		83348F861FE91A8A00BD7BF5 /* UIImage+Extend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extend.m"; sourceTree = "<group>"; };
+		83348F881FE91AA300BD7BF5 /* BankCardSearch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BankCardSearch.m; sourceTree = "<group>"; };
+		83348F891FE91AA300BD7BF5 /* BankCardSearch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BankCardSearch.h; sourceTree = "<group>"; };
 		833A83651F332BB300F45F56 /* SDAutoLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDAutoLayout.h; sourceTree = "<group>"; };
 		833A83661F332BB300F45F56 /* UITableView+SDAutoTableViewCellHeight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+SDAutoTableViewCellHeight.h"; sourceTree = "<group>"; };
 		833A83671F332BB300F45F56 /* UITableView+SDAutoTableViewCellHeight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+SDAutoTableViewCellHeight.m"; sourceTree = "<group>"; };
@@ -623,8 +661,6 @@
 		8348B0461F1AFF1400F1F7CB /* TShopAnimationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TShopAnimationViewController.h; sourceTree = "<group>"; };
 		8348B0471F1AFF1400F1F7CB /* TShopAnimationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TShopAnimationViewController.m; sourceTree = "<group>"; };
 		834AE7E31D407AE000BDD80A /* Macros_Font.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Macros_Font.pch; sourceTree = "<group>"; };
-		8355944E1E3057890061376D /* easyar.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = easyar.framework; path = ../../Downloads/EasyARSDK/package/iOS/easyar.framework; sourceTree = "<group>"; };
-		835594501E3057A50061376D /* easyar.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = easyar.framework; sourceTree = "<group>"; };
 		835594521E3057C00061376D /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
 		835594541E3057C70061376D /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		835594561E3057CD0061376D /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
@@ -813,6 +849,8 @@
 		83BCFE0C1CFEBB12007076DC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		83BCFE0F1CFEBB12007076DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		83BCFE111CFEBB12007076DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		83BF693A1FE365700007C8AF /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		83BF693B1FE365890007C8AF /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		83CF76E81F4D5D3B001C58A5 /* DHZanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHZanViewController.h; sourceTree = "<group>"; };
 		83CF76E91F4D5D3B001C58A5 /* DHZanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHZanViewController.m; sourceTree = "<group>"; };
 		83EC8CC61E9E0DFB0007D820 /* TestHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TestHeader.pch; path = ../../../TestHeader.pch; sourceTree = "<group>"; };
@@ -827,6 +865,10 @@
 		83F79B5B1F3D4498002105A0 /* CommentsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentsModel.m; sourceTree = "<group>"; };
 		83F79B5D1F3D44A4002105A0 /* UserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserModel.h; sourceTree = "<group>"; };
 		83F79B5E1F3D44A4002105A0 /* UserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserModel.m; sourceTree = "<group>"; };
+		83FB4B7E1FE6A92300EAC327 /* UIImage+Extend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extend.h"; sourceTree = "<group>"; };
+		83FB4B7F1FE6A92300EAC327 /* UIImage+Extend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extend.m"; sourceTree = "<group>"; };
+		83FB4BD31FE75A3200EAC327 /* UIColor+expanded.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+expanded.h"; sourceTree = "<group>"; };
+		83FB4BD41FE75A3200EAC327 /* UIColor+expanded.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+expanded.m"; sourceTree = "<group>"; };
 		83FD35D51D1CE42C00A445C8 /* NSString+SU.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SU.h"; sourceTree = "<group>"; };
 		83FD35D61D1CE42C00A445C8 /* NSString+SU.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+SU.m"; sourceTree = "<group>"; };
 		83FD35D71D1CE42C00A445C8 /* UIButton+SU.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+SU.h"; sourceTree = "<group>"; };
@@ -879,6 +921,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83348EBF1FE8FE2100BD7BF5 /* easyar.framework in Frameworks */,
+				835594591E3057D30061376D /* OpenGLES.framework in Frameworks */,
 				836315A71E4C150D00D0689F /* StoreKit.framework in Frameworks */,
 				83A089B01EC1C4F30042D791 /* CoreMotion.framework in Frameworks */,
 				83A089AE1EC1C4D80042D791 /* CoreText.framework in Frameworks */,
@@ -886,7 +930,7 @@
 				83A089AA1EC1C4B10042D791 /* libz.tbd in Frameworks */,
 				83A089A81EC1C4AB0042D791 /* libc++.tbd in Frameworks */,
 				835D5D581D34EBBD000F4E02 /* QuartzCore.framework in Frameworks */,
-				835594591E3057D30061376D /* OpenGLES.framework in Frameworks */,
+				83348F821FE91A7500BD7BF5 /* libbankcard.a in Frameworks */,
 				835594571E3057CD0061376D /* CoreVideo.framework in Frameworks */,
 				835594551E3057C70061376D /* CoreMedia.framework in Frameworks */,
 				835594531E3057C00061376D /* CoreImage.framework in Frameworks */,
@@ -894,12 +938,12 @@
 				83A1A7031DED2D6700BC5F58 /* AudioToolbox.framework in Frameworks */,
 				836FE2941DEE805D0071526B /* UIKit.framework in Frameworks */,
 				836DA0031F29CC9B0071F6D2 /* libexidcardios.a in Frameworks */,
-				835594511E3057A50061376D /* easyar.framework in Frameworks */,
 				836C38F01DB9C12B0002BEA1 /* AVFoundation.framework in Frameworks */,
 				8368DF5F1D1396C400FF8492 /* CoreTelephony.framework in Frameworks */,
 				83116AE71D051FDA0013188A /* CoreGraphics.framework in Frameworks */,
 				83116AE51D051FD10013188A /* CoreBluetooth.framework in Frameworks */,
 				B65B892C70FD22A940EE6314 /* Pods_Test.framework in Frameworks */,
+				83348F831FE91A7500BD7BF5 /* libexidcardios.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -909,6 +953,9 @@
 		03746EE5F3296F2515E2549B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				83348EBE1FE8FE2100BD7BF5 /* easyar.framework */,
+				83BF693B1FE365890007C8AF /* Security.framework */,
+				83BF693A1FE365700007C8AF /* MobileCoreServices.framework */,
 				83A089AF1EC1C4F30042D791 /* CoreMotion.framework */,
 				83A089AD1EC1C4D80042D791 /* CoreText.framework */,
 				83A089AB1EC1C4BD0042D791 /* SystemConfiguration.framework */,
@@ -919,7 +966,6 @@
 				835594561E3057CD0061376D /* CoreVideo.framework */,
 				835594541E3057C70061376D /* CoreMedia.framework */,
 				835594521E3057C00061376D /* CoreImage.framework */,
-				8355944E1E3057890061376D /* easyar.framework */,
 				836C38EF1DB9C12B0002BEA1 /* AVFoundation.framework */,
 				835D5D571D34EBBD000F4E02 /* QuartzCore.framework */,
 				8368DF5E1D1396C400FF8492 /* CoreTelephony.framework */,
@@ -947,6 +993,7 @@
 		831E514B1F12150100F0B6D7 /* TCode */ = {
 			isa = PBXGroup;
 			children = (
+				83348E871FE8E71800BD7BF5 /* 银行卡扫描 */,
 				831EF4911FD9953000D79F4F /* 收缩列表 */,
 				831EF4501FD98A9F00D79F4F /* 弹出列表 */,
 				831EF4451FD98A9F00D79F4F /* 日历 */,
@@ -1376,6 +1423,149 @@
 			name = TabbarText;
 			sourceTree = "<group>";
 		};
+		83348E871FE8E71800BD7BF5 /* 银行卡扫描 */ = {
+			isa = PBXGroup;
+			children = (
+				83348E881FE8E71800BD7BF5 /* Model */,
+				83348E891FE8E71800BD7BF5 /* View */,
+				83348E8A1FE8E71800BD7BF5 /* Viewcontroller */,
+			);
+			path = "银行卡扫描";
+			sourceTree = "<group>";
+		};
+		83348E881FE8E71800BD7BF5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		83348E891FE8E71800BD7BF5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		83348E8A1FE8E71800BD7BF5 /* Viewcontroller */ = {
+			isa = PBXGroup;
+			children = (
+				83348F611FE9196E00BD7BF5 /* 银行卡扫描 */,
+				83348F601FE9195E00BD7BF5 /* 信用卡扫描 */,
+			);
+			path = Viewcontroller;
+			sourceTree = "<group>";
+		};
+		83348F601FE9195E00BD7BF5 /* 信用卡扫描 */ = {
+			isa = PBXGroup;
+			children = (
+				83348E8E1FE8ED8800BD7BF5 /* BankCardViewController.h */,
+				83348E8F1FE8ED8800BD7BF5 /* BankCardViewController.m */,
+			);
+			name = "信用卡扫描";
+			sourceTree = "<group>";
+		};
+		83348F611FE9196E00BD7BF5 /* 银行卡扫描 */ = {
+			isa = PBXGroup;
+			children = (
+				83348F661FE919E100BD7BF5 /* Model */,
+				83348F651FE919CE00BD7BF5 /* View */,
+				83348F641FE9199300BD7BF5 /* Category */,
+				83348F631FE9198A00BD7BF5 /* ViewController */,
+				83348F621FE9197C00BD7BF5 /* 所需静态类库 */,
+			);
+			name = "银行卡扫描";
+			sourceTree = "<group>";
+		};
+		83348F621FE9197C00BD7BF5 /* 所需静态类库 */ = {
+			isa = PBXGroup;
+			children = (
+				83348F761FE91A7500BD7BF5 /* bank_io */,
+				83348F7C1FE91A7500BD7BF5 /* libexidcard */,
+			);
+			name = "所需静态类库";
+			sourceTree = "<group>";
+		};
+		83348F631FE9198A00BD7BF5 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				83348F671FE91A0500BD7BF5 /* BankCartViewController.h */,
+				83348F681FE91A0500BD7BF5 /* BankCartViewController.m */,
+				83348F6B1FE91A0E00BD7BF5 /* ScanCardViewController.h */,
+				83348F6A1FE91A0E00BD7BF5 /* ScanCardViewController.m */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		83348F641FE9199300BD7BF5 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				83348F851FE91A8A00BD7BF5 /* UIImage+Extend.h */,
+				83348F861FE91A8A00BD7BF5 /* UIImage+Extend.m */,
+			);
+			name = Category;
+			sourceTree = "<group>";
+		};
+		83348F651FE919CE00BD7BF5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				83348F711FE91A3900BD7BF5 /* OverlayView.h */,
+				83348F701FE91A3900BD7BF5 /* OverlayView.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		83348F661FE919E100BD7BF5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				83348F6D1FE91A2E00BD7BF5 /* CameraManager.h */,
+				83348F6E1FE91A2E00BD7BF5 /* CameraManager.m */,
+				83348F741FE91A4200BD7BF5 /* RectManager.h */,
+				83348F731FE91A4200BD7BF5 /* RectManager.m */,
+				83348F891FE91AA300BD7BF5 /* BankCardSearch.h */,
+				83348F881FE91AA300BD7BF5 /* BankCardSearch.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		83348F761FE91A7500BD7BF5 /* bank_io */ = {
+			isa = PBXGroup;
+			children = (
+				83348F771FE91A7500BD7BF5 /* exbankcard.h */,
+				83348F781FE91A7500BD7BF5 /* exbankcardcore */,
+				83348F7B1FE91A7500BD7BF5 /* BankCard.h */,
+			);
+			path = bank_io;
+			sourceTree = "<group>";
+		};
+		83348F781FE91A7500BD7BF5 /* exbankcardcore */ = {
+			isa = PBXGroup;
+			children = (
+				83348F791FE91A7500BD7BF5 /* exbankcardcore.h */,
+				83348F7A1FE91A7500BD7BF5 /* libbankcard.a */,
+			);
+			path = exbankcardcore;
+			sourceTree = "<group>";
+		};
+		83348F7C1FE91A7500BD7BF5 /* libexidcard */ = {
+			isa = PBXGroup;
+			children = (
+				83348F7D1FE91A7500BD7BF5 /* libexidcardios.a */,
+				83348F7E1FE91A7500BD7BF5 /* dicts */,
+				83348F801FE91A7500BD7BF5 /* commondef.h */,
+				83348F811FE91A7500BD7BF5 /* excards.h */,
+			);
+			path = libexidcard;
+			sourceTree = "<group>";
+		};
+		83348F7E1FE91A7500BD7BF5 /* dicts */ = {
+			isa = PBXGroup;
+			children = (
+				83348F7F1FE91A7500BD7BF5 /* zocr0.lib */,
+			);
+			path = dicts;
+			sourceTree = "<group>";
+		};
 		833A83641F332BB300F45F56 /* SDAutolayout */ = {
 			isa = PBXGroup;
 			children = (
@@ -1644,8 +1834,12 @@
 		8348AFA01F1890FA00F1F7CB /* UI扩展类 */ = {
 			isa = PBXGroup;
 			children = (
+				83FB4BD31FE75A3200EAC327 /* UIColor+expanded.h */,
+				83FB4BD41FE75A3200EAC327 /* UIColor+expanded.m */,
 				8348AFA11F1890FA00F1F7CB /* NSMutableArray+Util.h */,
 				8348AFA21F1890FA00F1F7CB /* NSMutableArray+Util.m */,
+				83FB4B7E1FE6A92300EAC327 /* UIImage+Extend.h */,
+				83FB4B7F1FE6A92300EAC327 /* UIImage+Extend.m */,
 				8348AFA31F1890FA00F1F7CB /* UIColor+JFColor.h */,
 				8348AFA41F1890FA00F1F7CB /* UIColor+JFColor.m */,
 				8348AFA51F1890FA00F1F7CB /* UIImage+compressIMG.h */,
@@ -2441,7 +2635,6 @@
 			isa = PBXGroup;
 			children = (
 				831E51201F12150100F0B6D7 /* Class(首页) */,
-				835594501E3057A50061376D /* easyar.framework */,
 				83BCFE091CFEBB12007076DC /* Main.storyboard */,
 				83BCFE0C1CFEBB12007076DC /* Assets.xcassets */,
 				836DA03D1F29DCAF0071F6D2 /* TabbarBundle.bundle */,
@@ -2765,6 +2958,7 @@
 				831EF3EA1FD9664800D79F4F /* guideImage7.gif in Resources */,
 				831EF4231FD982B000D79F4F /* logo@2x.png in Resources */,
 				83BCFE0B1CFEBB12007076DC /* Main.storyboard in Resources */,
+				83348F841FE91A7500BD7BF5 /* zocr0.lib in Resources */,
 				8343376A1F4FD0F300382DEE /* TZImagePickerController.bundle in Resources */,
 				83650D431FD8E06D001FAA3D /* CountdownViewController.xib in Resources */,
 				83650D211FD8E04E001FAA3D /* photo@2x.png in Resources */,
@@ -2809,7 +3003,6 @@
 				"${BUILT_PRODUCTS_DIR}/MJExtension/MJExtension.framework",
 				"${BUILT_PRODUCTS_DIR}/MLeaksFinder/MLeaksFinder.framework",
 				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
-				"${BUILT_PRODUCTS_DIR}/ReactiveCocoa/ReactiveCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/SDAutoLayout/SDAutoLayout.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
@@ -2827,7 +3020,6 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJExtension.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MLeaksFinder.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDAutoLayout.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
@@ -2880,6 +3072,7 @@
 				834337771F4FD11F00382DEE /* LxGridViewFlowLayout.m in Sources */,
 				83BB70871F4E84250023A24A /* ScrollImageViewViewController.m in Sources */,
 				83BB70961F4E84250023A24A /* MLSelectPhotoPickerBrowserPhotoView.m in Sources */,
+				83348F6C1FE91A0F00BD7BF5 /* ScanCardViewController.m in Sources */,
 				831E53441F12150100F0B6D7 /* NaView.m in Sources */,
 				836DA0491F29E6000071F6D2 /* BaseViewController.m in Sources */,
 				83BB70901F4E84250023A24A /* MLSelectPhotoPickerAssetsViewController.m in Sources */,
@@ -2904,11 +3097,13 @@
 				83650C971FD8DF70001FAA3D /* UIButton+touch.m in Sources */,
 				8348AFED1F189EAB00F1F7CB /* PJRSignatureView.m in Sources */,
 				831EF3D31FD965E100D79F4F /* DHGuidePageHUD.m in Sources */,
+				83348F691FE91A0500BD7BF5 /* BankCartViewController.m in Sources */,
 				8348B0091F18A0A900F1F7CB /* gaunzi.m in Sources */,
 				83BB70991F4E84250023A24A /* MLSelectPhotoPickerFooterCollectionReusableView.m in Sources */,
 				8348AFB91F1890FA00F1F7CB /* iCarousel.m in Sources */,
 				83BB70931F4E84250023A24A /* MLPhotoPickerImageView.m in Sources */,
 				83BB70951F4E84250023A24A /* MLSelectPhotoPickerBrowserPhotoScrollView.m in Sources */,
+				83348F751FE91A4200BD7BF5 /* RectManager.m in Sources */,
 				831E53581F12150200F0B6D7 /* QRCodeVC.m in Sources */,
 				83650D601FD8E0CE001FAA3D /* BaseAdressBookViewController.m in Sources */,
 				83FD36061D1CE42C00A445C8 /* NSString+SU.m in Sources */,
@@ -2960,6 +3155,7 @@
 				834337671F4FD0F300382DEE /* TZGifPhotoPreviewController.m in Sources */,
 				83F79B5C1F3D4498002105A0 /* CommentsModel.m in Sources */,
 				83650D5A1FD8E075001FAA3D /* ZSDPaymentForm.m in Sources */,
+				83FB4B801FE6A92300EAC327 /* UIImage+Extend.m in Sources */,
 				83BB70921F4E84250023A24A /* MLSelectPhotoPickerViewController.m in Sources */,
 				836DA0611F29E8D20071F6D2 /* DHMyInfoViewController.m in Sources */,
 				8348AFD31F1890FA00F1F7CB /* UIImage+compressIMG.m in Sources */,
@@ -3014,17 +3210,20 @@
 				836DA0641F29E8FF0071F6D2 /* DHWorkViewController.m in Sources */,
 				83650D721FD8E117001FAA3D /* ContactModel.m in Sources */,
 				836DA05B1F29E8B50071F6D2 /* DHAdressViewController.m in Sources */,
+				83348F871FE91A8A00BD7BF5 /* UIImage+Extend.m in Sources */,
 				83650D121FD8E04E001FAA3D /* DragViewController.m in Sources */,
 				831EF46A1FD98A9F00D79F4F /* HXTagAttribute.m in Sources */,
 				83650D381FD8E060001FAA3D /* SubparagraphViewController.m in Sources */,
 				83650D371FD8E060001FAA3D /* FixedItemWidthTabController.m in Sources */,
 				8348AF451F1875FC00F1F7CB /* ESMTwoViewController.m in Sources */,
+				83FB4BD51FE75A3200EAC327 /* UIColor+expanded.m in Sources */,
 				83FD360B1D1CE42C00A445C8 /* UIView+SuLine.m in Sources */,
 				8348AF561F18906200F1F7CB /* DetailsDrawViewController.m in Sources */,
 				83FD361E1D1CE42C00A445C8 /* SuPhotoBrowserCell.m in Sources */,
 				833A83781F332D5100F45F56 /* DHNoteViewController.m in Sources */,
 				83BB709A1F4E84250023A24A /* MLSelectPhotoPickerGroupTableViewCell.m in Sources */,
 				831EF4631FD98A9F00D79F4F /* ShopCustomCollectionViewCell.m in Sources */,
+				83348F8A1FE91AA300BD7BF5 /* BankCardSearch.m in Sources */,
 				831EF4241FD982B000D79F4F /* XHMenuButton.m in Sources */,
 				83BB70981F4E84250023A24A /* MLSelectPhotoPickerCollectionViewCell.m in Sources */,
 				834337431F4FC85000382DEE /* DHImagePickerViewController.m in Sources */,
@@ -3038,7 +3237,9 @@
 				83BB708B1F4E84250023A24A /* MLSelectPhotoPickerBrowserPhoto.m in Sources */,
 				83FD360A1D1CE42C00A445C8 /* UIView+SuAnimation.m in Sources */,
 				83650D581FD8E075001FAA3D /* ZSDSetPasswordView.m in Sources */,
+				83348F6F1FE91A2E00BD7BF5 /* CameraManager.m in Sources */,
 				83650D6F1FD8E110001FAA3D /* ChineseToPinyinResource.m in Sources */,
+				83348E901FE8ED8800BD7BF5 /* BankCardViewController.m in Sources */,
 				8348AFBE1F1890FA00F1F7CB /* SGImageButton.m in Sources */,
 				831EF4661FD98A9F00D79F4F /* TagPickerView.m in Sources */,
 				83650D101FD8E04E001FAA3D /* ZJBLTimerButton.m in Sources */,
@@ -3090,6 +3291,7 @@
 				8348AF3E1F1875FC00F1F7CB /* ESMMeViewController.m in Sources */,
 				831E53D81F12150200F0B6D7 /* AppDelegate.m in Sources */,
 				8343376F1F4FD0F300382DEE /* TZPhotoPreviewController.m in Sources */,
+				83348F721FE91A3900BD7BF5 /* OverlayView.m in Sources */,
 				83650C9A1FD8DFB4001FAA3D /* NetWork.m in Sources */,
 				831EF49D1FD9955400D79F4F /* HYBSectionModel.m in Sources */,
 				8348B0011F189FC900F1F7CB /* ZLDashboardViewController.m in Sources */,
@@ -3219,6 +3421,7 @@
 				DEVELOPMENT_TEAM = BQ33HH68K2;
 				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = NO;
+				ENABLE_TESTABILITY = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Test",
@@ -3239,6 +3442,13 @@
 					"$(PROJECT_DIR)/Test",
 					"$(PROJECT_DIR)/Test/libexidcard",
 					"$(PROJECT_DIR)/Test/Class(首页)/TCode/身份证/Controller/libexidcard",
+					"$(PROJECT_DIR)/Test/Class(首页)/TCode/银行卡识别/ModelLib/libexidcard",
+					"$(PROJECT_DIR)/Test/Class(首页)/TCode/银行卡识别/ModelLib/exbankcardcore",
+					"$(PROJECT_DIR)/Test/Class(首页)/TCode/银行卡识别/ModelLib/bank_io/exbankcardcore",
+					"$(PROJECT_DIR)/Test/Class(首页)/TCode/银行卡扫描/Model/bank_io/exbankcardcore",
+					"$(PROJECT_DIR)/Test/Class(首页)/TCode/银行卡扫描/Model/libexidcard",
+					"$(PROJECT_DIR)/Test/Class(首页)/TCode/银行卡扫描/Viewcontroller/bank_io/exbankcardcore",
+					"$(PROJECT_DIR)/Test/Class(首页)/TCode/银行卡扫描/Viewcontroller/libexidcard",
 				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -3297,6 +3507,7 @@
 					"\"SystemConfiguration\"",
 					"-framework",
 					"\"YYKit\"",
+					"-lc++",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = con.zhongkehuabo.Test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -3315,6 +3526,7 @@
 				DEVELOPMENT_TEAM = BQ33HH68K2;
 				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = NO;
+				ENABLE_TESTABILITY = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Test",
@@ -3334,6 +3546,13 @@
 					"$(PROJECT_DIR)/Test",
 					"$(PROJECT_DIR)/Test/libexidcard",
 					"$(PROJECT_DIR)/Test/Class(首页)/TCode/身份证/Controller/libexidcard",
+					"$(PROJECT_DIR)/Test/Class(首页)/TCode/银行卡识别/ModelLib/libexidcard",
+					"$(PROJECT_DIR)/Test/Class(首页)/TCode/银行卡识别/ModelLib/exbankcardcore",
+					"$(PROJECT_DIR)/Test/Class(首页)/TCode/银行卡识别/ModelLib/bank_io/exbankcardcore",
+					"$(PROJECT_DIR)/Test/Class(首页)/TCode/银行卡扫描/Model/bank_io/exbankcardcore",
+					"$(PROJECT_DIR)/Test/Class(首页)/TCode/银行卡扫描/Model/libexidcard",
+					"$(PROJECT_DIR)/Test/Class(首页)/TCode/银行卡扫描/Viewcontroller/bank_io/exbankcardcore",
+					"$(PROJECT_DIR)/Test/Class(首页)/TCode/银行卡扫描/Viewcontroller/libexidcard",
 				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -3392,6 +3611,7 @@
 					"\"SystemConfiguration\"",
 					"-framework",
 					"\"YYKit\"",
+					"-lc++",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = con.zhongkehuabo.Test;
 				PRODUCT_NAME = "$(TARGET_NAME)";

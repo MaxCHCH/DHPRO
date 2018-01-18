@@ -43,6 +43,9 @@
 #import "QQListViewController.h"//仿照QQ列表
 #import "BankCardViewController.h"//信用卡识别
 #import "BankCartViewController.h"//银行卡扫描
+#import "DisassemblyViewController.h"//手势解锁
+#import "ACEViewController.h"//textView自适应高度变化
+
 @interface DHMainViewController ()<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout,QRScanViewDelegate,UIAccelerometerDelegate>{
 	NSMutableArray *valueArr;
 	
@@ -282,6 +285,8 @@
 	[self addCell:@"27信用卡识别" class:@"BankCardViewController"];
 	[self addCell:@"28银行卡识别" class:@"BankCartViewController"];
 //	[self addCell:@"29身份证识别" class:@"XLIDScanViewController"];
+	[self addCell:@"29手势解锁" class:@"DisassemblyViewController"];
+	[self addCell:@"30CEll自适应高度" class:@"ACEViewController"];
 	
 	
 	

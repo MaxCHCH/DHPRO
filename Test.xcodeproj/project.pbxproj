@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		830018B620102DDF00BF051F /* DisassemblyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 830018A820102DDF00BF051F /* DisassemblyView.m */; };
+		830018B720102DDF00BF051F /* DisassemblyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 830018AC20102DDF00BF051F /* DisassemblyViewController.m */; };
+		830018B820102DDF00BF051F /* ACEExpandableTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 830018B020102DDF00BF051F /* ACEExpandableTextCell.m */; };
+		830018B920102DDF00BF051F /* MyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 830018B120102DDF00BF051F /* MyView.m */; };
+		830018BA20102DDF00BF051F /* ACEViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 830018B420102DDF00BF051F /* ACEViewController.m */; };
 		8308064E1F2ACD4B0057F23D /* AppDelegate+DHCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 8308064D1F2ACD4B0057F23D /* AppDelegate+DHCategory.m */; };
 		830806511F2ACD7C0057F23D /* showView.m in Sources */ = {isa = PBXBuildFile; fileRef = 830806501F2ACD7C0057F23D /* showView.m */; };
 		83116AE51D051FD10013188A /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83116AE41D051FD10013188A /* CoreBluetooth.framework */; };
@@ -333,6 +338,16 @@
 /* Begin PBXFileReference section */
 		039FFEF870AA169994FB92C4 /* Pods_Test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5908F0D1C1BF2DB81DA7CB7F /* Pods-Test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Test.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Test/Pods-Test.debug.xcconfig"; sourceTree = "<group>"; };
+		830018A820102DDF00BF051F /* DisassemblyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DisassemblyView.m; sourceTree = "<group>"; };
+		830018A920102DDF00BF051F /* DisassemblyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DisassemblyView.h; sourceTree = "<group>"; };
+		830018AB20102DDF00BF051F /* DisassemblyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DisassemblyViewController.h; sourceTree = "<group>"; };
+		830018AC20102DDF00BF051F /* DisassemblyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DisassemblyViewController.m; sourceTree = "<group>"; };
+		830018AF20102DDF00BF051F /* MyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyView.h; sourceTree = "<group>"; };
+		830018B020102DDF00BF051F /* ACEExpandableTextCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACEExpandableTextCell.m; sourceTree = "<group>"; };
+		830018B120102DDF00BF051F /* MyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyView.m; sourceTree = "<group>"; };
+		830018B220102DDF00BF051F /* ACEExpandableTextCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACEExpandableTextCell.h; sourceTree = "<group>"; };
+		830018B420102DDF00BF051F /* ACEViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACEViewController.m; sourceTree = "<group>"; };
+		830018B520102DDF00BF051F /* ACEViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACEViewController.h; sourceTree = "<group>"; };
 		8308064C1F2ACD4B0057F23D /* AppDelegate+DHCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+DHCategory.h"; sourceTree = "<group>"; };
 		8308064D1F2ACD4B0057F23D /* AppDelegate+DHCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+DHCategory.m"; sourceTree = "<group>"; };
 		8308064F1F2ACD7C0057F23D /* showView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = showView.h; sourceTree = "<group>"; };
@@ -979,6 +994,62 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		830018A620102DDF00BF051F /* 手势解锁 */ = {
+			isa = PBXGroup;
+			children = (
+				830018A720102DDF00BF051F /* View */,
+				830018AA20102DDF00BF051F /* ViewController */,
+			);
+			path = "手势解锁";
+			sourceTree = "<group>";
+		};
+		830018A720102DDF00BF051F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				830018A820102DDF00BF051F /* DisassemblyView.m */,
+				830018A920102DDF00BF051F /* DisassemblyView.h */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		830018AA20102DDF00BF051F /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				830018AB20102DDF00BF051F /* DisassemblyViewController.h */,
+				830018AC20102DDF00BF051F /* DisassemblyViewController.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		830018AD20102DDF00BF051F /* 动态改变高度 */ = {
+			isa = PBXGroup;
+			children = (
+				830018AE20102DDF00BF051F /* View */,
+				830018B320102DDF00BF051F /* ViewController */,
+			);
+			path = "动态改变高度";
+			sourceTree = "<group>";
+		};
+		830018AE20102DDF00BF051F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				830018AF20102DDF00BF051F /* MyView.h */,
+				830018B020102DDF00BF051F /* ACEExpandableTextCell.m */,
+				830018B120102DDF00BF051F /* MyView.m */,
+				830018B220102DDF00BF051F /* ACEExpandableTextCell.h */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		830018B320102DDF00BF051F /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				830018B420102DDF00BF051F /* ACEViewController.m */,
+				830018B520102DDF00BF051F /* ACEViewController.h */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		831E51201F12150100F0B6D7 /* Class(首页) */ = {
 			isa = PBXGroup;
 			children = (
@@ -993,6 +1064,8 @@
 		831E514B1F12150100F0B6D7 /* TCode */ = {
 			isa = PBXGroup;
 			children = (
+				830018AD20102DDF00BF051F /* 动态改变高度 */,
+				830018A620102DDF00BF051F /* 手势解锁 */,
 				83348E871FE8E71800BD7BF5 /* 银行卡扫描 */,
 				831EF4911FD9953000D79F4F /* 收缩列表 */,
 				831EF4501FD98A9F00D79F4F /* 弹出列表 */,
@@ -3085,6 +3158,7 @@
 				831E534A1F12150200F0B6D7 /* GKHScanQCodeViewController.m in Sources */,
 				83650D0F1FD8E04E001FAA3D /* iCarousels.m in Sources */,
 				836DA0671F29EB510071F6D2 /* DHTool.m in Sources */,
+				830018B820102DDF00BF051F /* ACEExpandableTextCell.m in Sources */,
 				834337781F4FD11F00382DEE /* TZTestCell.m in Sources */,
 				8348AF421F1875FC00F1F7CB /* ESMTabBarVC.m in Sources */,
 				831EF3D61FD965FE00D79F4F /* DHGuidepageViewController.m in Sources */,
@@ -3119,6 +3193,7 @@
 				8348B0391F18C45600F1F7CB /* TGuideMViewController.m in Sources */,
 				833A83751F332D2300F45F56 /* GZTimeLineModel.m in Sources */,
 				8348AFE01F18915D00F1F7CB /* TestOneVC.m in Sources */,
+				830018B620102DDF00BF051F /* DisassemblyView.m in Sources */,
 				831E534E1F12150200F0B6D7 /* qrinput.c in Sources */,
 				83BB70971F4E84250023A24A /* MLSelectPhotoPickerCollectionView.m in Sources */,
 				83650C901FD8DF5D001FAA3D /* YPTabBar.m in Sources */,
@@ -3148,6 +3223,7 @@
 				83650D6E1FD8E110001FAA3D /* PinyinFormatter.m in Sources */,
 				83FD361B1D1CE42C00A445C8 /* SuPhotoManager.m in Sources */,
 				83F79B531F3D4405002105A0 /* NetTestViewController.m in Sources */,
+				830018B720102DDF00BF051F /* DisassemblyViewController.m in Sources */,
 				831EF3F51FD96D1500D79F4F /* WebServiceRequest.m in Sources */,
 				8348AFD21F1890FA00F1F7CB /* UIColor+JFColor.m in Sources */,
 				8348AF431F1875FC00F1F7CB /* ESMTabBarViewController.m in Sources */,
@@ -3229,6 +3305,7 @@
 				834337431F4FC85000382DEE /* DHImagePickerViewController.m in Sources */,
 				83650D0E1FD8E04E001FAA3D /* ScrollViewController.m in Sources */,
 				8348AFB81F1890FA00F1F7CB /* GYChangeTextView.m in Sources */,
+				830018B920102DDF00BF051F /* MyView.m in Sources */,
 				831EF49C1FD9955400D79F4F /* HYBHeaderView.m in Sources */,
 				83650D111FD8E04E001FAA3D /* DropViewController.m in Sources */,
 				83BB708D1F4E84250023A24A /* MLSelectPhotoPickerGroup.m in Sources */,
@@ -3272,6 +3349,7 @@
 				8348AF531F18904D00F1F7CB /* ReleaseViewController.m in Sources */,
 				83650D6C1FD8E110001FAA3D /* PinyinHelper.m in Sources */,
 				83650D3A1FD8E060001FAA3D /* SegmentTabController.m in Sources */,
+				830018BA20102DDF00BF051F /* ACEViewController.m in Sources */,
 				831E53DA1F12150200F0B6D7 /* THomeCollectionViewCell.m in Sources */,
 				831EF4681FD98A9F00D79F4F /* HXTagsView.m in Sources */,
 				831E53571F12150200F0B6D7 /* QRCodeReaderView.m in Sources */,

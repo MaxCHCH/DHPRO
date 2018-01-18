@@ -6,7 +6,7 @@ pod 'Masonry'
 pod 'SDAutoLayout'
 pod 'SVProgressHUD'
 pod 'YYKit'
-pod 'CardIO'
+
 #pod 'YYCache'
 #pod 'ReactiveCocoa', '~> 7.0.1'
 #pod 'ReactiveCocoa', '2.3.1'
@@ -24,5 +24,5 @@ pod 'AliPaySDK', '~> 1.0'
 pod 'Masonry'
 pod 'IQKeyboardManager'
 pod 'MBProgressHUD'
-
+pod 'CardIO'
 end

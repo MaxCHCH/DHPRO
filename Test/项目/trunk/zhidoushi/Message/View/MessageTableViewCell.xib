@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MESSAGECELL" rowHeight="130" id="KGk-i7-Jjw" customClass="MessageTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="130"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="129.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="去采天边那束阳光" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q0v-UC-zT4">
+                        <rect key="frame" x="69" y="15" width="120" height="17"/>
+                        <animations/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="17" id="dgP-RK-pjV"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.32549019607843138" green="0.32549019607843138" blue="0.32549019607843138" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="流云在天边，世界在眼前，有一条通往太阳的路，无边又无沿。" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z54-Lq-dMA">
+                        <rect key="frame" x="65" y="37" width="215" height="16"/>
+                        <animations/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="16" id="5ld-rL-YLL"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.58431372549019611" green="0.58431372549019611" blue="0.58431372549019611" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="2014-04-25 12:20" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xCy-W3-p41">
+                        <rect key="frame" x="201.5" y="15" width="107.5" height="13"/>
+                        <animations/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="13" id="ybE-kb-gMr"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" red="0.58431372549019611" green="0.58431372549019611" blue="0.58431372549019611" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mrtx_98_98" translatesAutoresizingMaskIntoConstraints="NO" id="Ie5-GS-nHy">
+                        <rect key="frame" x="15" y="13" width="44" height="44"/>
+                        <animations/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="44" id="acn-Ez-0OD"/>
+                            <constraint firstAttribute="width" constant="44" id="nWJ-Tz-Hoa"/>
+                        </constraints>
+                    </imageView>
+                    <button hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ioD-PZ-jR1">
+                        <rect key="frame" x="42" y="14" width="15" height="15"/>
+                        <animations/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="15" id="U2g-Y8-ClX"/>
+                            <constraint firstAttribute="height" constant="15" id="rqD-mA-mS4"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                        <state key="normal">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                    </button>
+                </subviews>
+                <animations/>
+                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                <constraints>
+                    <constraint firstItem="Z54-Lq-dMA" firstAttribute="top" secondItem="xCy-W3-p41" secondAttribute="bottom" constant="9" id="3BZ-Ft-ZiH"/>
+                    <constraint firstItem="ioD-PZ-jR1" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="42" id="E6V-Q5-hn1"/>
+                    <constraint firstItem="q0v-UC-zT4" firstAttribute="leading" secondItem="Ie5-GS-nHy" secondAttribute="trailing" constant="10" id="HwG-wu-yrb"/>
+                    <constraint firstAttribute="trailing" secondItem="xCy-W3-p41" secondAttribute="trailing" constant="15" id="ItZ-hf-tib"/>
+                    <constraint firstItem="Ie5-GS-nHy" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="Kwt-XY-aS3"/>
+                    <constraint firstAttribute="trailing" secondItem="Z54-Lq-dMA" secondAttribute="trailing" constant="15" id="g4h-ZP-BQW"/>
+                    <constraint firstItem="q0v-UC-zT4" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="ihR-IB-Amu"/>
+                    <constraint firstItem="Z54-Lq-dMA" firstAttribute="leading" secondItem="Ie5-GS-nHy" secondAttribute="trailing" constant="10" id="jFJ-CE-jua"/>
+                    <constraint firstItem="Ie5-GS-nHy" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="13" id="lfM-m6-aWy"/>
+                    <constraint firstItem="xCy-W3-p41" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="lhT-Pi-MZB"/>
+                    <constraint firstItem="ioD-PZ-jR1" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="14" id="omm-Rd-Iyf"/>
+                </constraints>
+            </tableViewCellContentView>
+            <animations/>
+            <inset key="separatorInset" minX="68" minY="0.0" maxX="0.0" maxY="0.0"/>
+            <connections>
+                <outlet property="headerImage" destination="Ie5-GS-nHy" id="Sa9-tZ-3az"/>
+                <outlet property="message" destination="Z54-Lq-dMA" id="ENq-kO-hi1"/>
+                <outlet property="name" destination="q0v-UC-zT4" id="BID-up-42N"/>
+                <outlet property="redDian" destination="ioD-PZ-jR1" id="QEL-aC-4oJ"/>
+                <outlet property="redHeight" destination="rqD-mA-mS4" id="2eU-5i-X1F"/>
+                <outlet property="redWidth" destination="U2g-Y8-ClX" id="8gt-9n-ZXq"/>
+                <outlet property="time" destination="xCy-W3-p41" id="yUt-PE-uVr"/>
+            </connections>
+            <point key="canvasLocation" x="207" y="310"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="mrtx_98_98" width="128" height="128"/>
+    </resources>
+</document>

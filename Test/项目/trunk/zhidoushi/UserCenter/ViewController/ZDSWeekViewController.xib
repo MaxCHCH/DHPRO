@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ZDSWeekViewController">
+            <connections>
+                <outlet property="myConllectionView" destination="xeQ-53-3j6" id="vpy-tl-kS0"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="xeQ-53-3j6">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <animations/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="zOY-bS-m5q">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="edI-fB-hh6"/>
+                        <outlet property="delegate" destination="-1" id="gGH-WB-ttm"/>
+                    </connections>
+                </collectionView>
+            </subviews>
+            <animations/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="xeQ-53-3j6" secondAttribute="trailing" id="FWm-AH-7j2"/>
+                <constraint firstItem="xeQ-53-3j6" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="cEm-He-DSP"/>
+                <constraint firstItem="xeQ-53-3j6" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="hV5-5d-a9m"/>
+                <constraint firstAttribute="bottom" secondItem="xeQ-53-3j6" secondAttribute="bottom" constant="-5" id="kme-2w-huu"/>
+            </constraints>
+            <variation key="default">
+                <mask key="subviews">
+                    <exclude reference="xeQ-53-3j6"/>
+                </mask>
+                <mask key="constraints">
+                    <exclude reference="FWm-AH-7j2"/>
+                    <exclude reference="cEm-He-DSP"/>
+                    <exclude reference="hV5-5d-a9m"/>
+                    <exclude reference="kme-2w-huu"/>
+                </mask>
+            </variation>
+            <variation key="widthClass=compact">
+                <mask key="subviews">
+                    <include reference="xeQ-53-3j6"/>
+                </mask>
+                <mask key="constraints">
+                    <include reference="FWm-AH-7j2"/>
+                    <include reference="cEm-He-DSP"/>
+                    <include reference="hV5-5d-a9m"/>
+                    <include reference="kme-2w-huu"/>
+                </mask>
+            </variation>
+        </view>
+    </objects>
+</document>

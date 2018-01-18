@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="ZDSWeekCollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="157" height="153"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <userGuides>
+                <userLayoutGuide location="76" affinity="minY"/>
+            </userGuides>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="157" height="153"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ICJ-2y-8ZS">
+                        <rect key="frame" x="0.0" y="0.0" width="157" height="153"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </imageView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tagright.png" translatesAutoresizingMaskIntoConstraints="NO" id="2tV-XW-xHU">
+                        <rect key="frame" x="0.0" y="128" width="157" height="25"/>
+                        <animations/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="25" id="R4S-g5-ZXB"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10月16日  2015        " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CXj-Io-4ng">
+                        <rect key="frame" x="0.0" y="128" width="150" height="25"/>
+                        <animations/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="25" id="Zhh-N8-Q2l"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <animations/>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <animations/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="ICJ-2y-8ZS" secondAttribute="trailing" id="1qc-wX-iQr"/>
+                <constraint firstItem="ICJ-2y-8ZS" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="56w-zW-nbV"/>
+                <constraint firstAttribute="trailing" secondItem="2tV-XW-xHU" secondAttribute="trailing" id="6Dv-38-QB5"/>
+                <constraint firstItem="2tV-XW-xHU" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="6rr-62-PDy"/>
+                <constraint firstAttribute="trailing" secondItem="CXj-Io-4ng" secondAttribute="trailing" constant="7" id="gjI-LA-bXi"/>
+                <constraint firstAttribute="bottom" secondItem="2tV-XW-xHU" secondAttribute="bottom" id="hR8-hw-25v"/>
+                <constraint firstAttribute="bottom" secondItem="ICJ-2y-8ZS" secondAttribute="bottom" id="oPg-LI-ubt"/>
+                <constraint firstItem="CXj-Io-4ng" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="rTW-0h-Kah"/>
+                <constraint firstItem="ICJ-2y-8ZS" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="scF-6r-c7O"/>
+                <constraint firstAttribute="bottom" secondItem="CXj-Io-4ng" secondAttribute="bottom" id="tNa-Ik-nqO"/>
+            </constraints>
+            <size key="customSize" width="157" height="153"/>
+            <connections>
+                <outlet property="DateLabel" destination="CXj-Io-4ng" id="mJ5-xN-Xgb"/>
+                <outlet property="backgroundImageVIew" destination="ICJ-2y-8ZS" id="adb-Nx-J8Y"/>
+                <outlet property="imageB" destination="2tV-XW-xHU" id="ucI-38-IEg"/>
+            </connections>
+            <point key="canvasLocation" x="315.5" y="343.5"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="tagright.png" width="190" height="40"/>
+    </resources>
+</document>

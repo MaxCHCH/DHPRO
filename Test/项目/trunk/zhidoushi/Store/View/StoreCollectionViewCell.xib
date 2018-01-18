@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="StoreCollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="160" height="195"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="160" height="195"/>
+                <subviews>
+                    <view autoresizesSubviews="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F0j-tc-YYT">
+                        <rect key="frame" x="0.0" y="0.0" width="160" height="195"/>
+                        <subviews>
+                            <imageView autoresizesSubviews="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cQV-cu-2tu">
+                                <rect key="frame" x="0.0" y="0.0" width="160" height="195"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </imageView>
+                            <label autoresizesSubviews="NO" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="兑换已结束" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3DD-gq-oD9">
+                                <rect key="frame" x="0.0" y="0.0" width="160" height="18"/>
+                                <color key="backgroundColor" red="0.87450980389999999" green="0.87450980389999999" blue="0.87450980389999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="18" id="SCm-Xx-Ogf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <color key="textColor" red="0.60000002384185791" green="0.60000002384185791" blue="0.60000002384185791" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="jifen_32_32.png" translatesAutoresizingMaskIntoConstraints="NO" id="K3i-RP-IhP">
+                                <rect key="frame" x="51" y="168" width="16" height="16"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="16" id="OR2-6E-Uhn"/>
+                                    <constraint firstAttribute="width" constant="16" id="usp-o3-hSL"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="2000" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lEk-Sq-i8i">
+                                <rect key="frame" x="71" y="166" width="60" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="nN7-CI-RUo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.7843137255" green="0.27058823529999998" blue="0.2784313725" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="韩国潮流运动服" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HR1-Ta-IfG">
+                                <rect key="frame" x="8" y="145" width="144" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="ueb-4Y-hrb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VCo-n9-JsK">
+                                <state key="normal" title="2000" image="jifen_32_32"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="K3i-RP-IhP" secondAttribute="bottom" constant="11" id="4N7-l3-nBD"/>
+                            <constraint firstItem="lEk-Sq-i8i" firstAttribute="top" secondItem="HR1-Ta-IfG" secondAttribute="bottom" id="64d-2D-OXS"/>
+                            <constraint firstItem="lEk-Sq-i8i" firstAttribute="leading" secondItem="K3i-RP-IhP" secondAttribute="trailing" constant="4" id="Bfu-Gc-AEQ"/>
+                            <constraint firstItem="3DD-gq-oD9" firstAttribute="leading" secondItem="F0j-tc-YYT" secondAttribute="leading" id="Hg5-qx-c7m"/>
+                            <constraint firstItem="cQV-cu-2tu" firstAttribute="leading" secondItem="F0j-tc-YYT" secondAttribute="leading" id="KD6-eR-eki"/>
+                            <constraint firstItem="3DD-gq-oD9" firstAttribute="top" secondItem="F0j-tc-YYT" secondAttribute="top" id="MwP-Ra-ZqU"/>
+                            <constraint firstItem="HR1-Ta-IfG" firstAttribute="leading" secondItem="F0j-tc-YYT" secondAttribute="leading" constant="8" id="Spe-ZD-CgN"/>
+                            <constraint firstAttribute="trailing" secondItem="3DD-gq-oD9" secondAttribute="trailing" id="TJb-CO-uR1"/>
+                            <constraint firstAttribute="bottom" secondItem="lEk-Sq-i8i" secondAttribute="bottom" constant="8" id="TPT-eM-Rp3"/>
+                            <constraint firstItem="cQV-cu-2tu" firstAttribute="top" secondItem="F0j-tc-YYT" secondAttribute="top" id="V6j-5C-sLN"/>
+                            <constraint firstItem="K3i-RP-IhP" firstAttribute="leading" secondItem="F0j-tc-YYT" secondAttribute="leading" constant="51" id="a0B-Iu-riD"/>
+                            <constraint firstAttribute="trailing" secondItem="HR1-Ta-IfG" secondAttribute="trailing" constant="8" id="abr-z5-uUX"/>
+                            <constraint firstAttribute="bottom" secondItem="cQV-cu-2tu" secondAttribute="bottom" id="yM0-sC-Z7I"/>
+                            <constraint firstAttribute="trailing" secondItem="cQV-cu-2tu" secondAttribute="trailing" id="yso-FD-ETY"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <constraints>
+                <constraint firstItem="F0j-tc-YYT" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="M6N-xD-CK6"/>
+                <constraint firstItem="F0j-tc-YYT" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="hPz-hX-uCR"/>
+                <constraint firstAttribute="trailing" secondItem="F0j-tc-YYT" secondAttribute="trailing" id="icW-Lg-oCy"/>
+                <constraint firstAttribute="bottom" secondItem="F0j-tc-YYT" secondAttribute="bottom" id="moq-Lk-a2f"/>
+            </constraints>
+            <size key="customSize" width="160" height="195"/>
+            <connections>
+                <outlet property="leftImageView" destination="cQV-cu-2tu" id="WHa-8s-c0v"/>
+                <outlet property="leftMoneyLabel" destination="lEk-Sq-i8i" id="gm0-Tb-Uqp"/>
+                <outlet property="leftName" destination="HR1-Ta-IfG" id="uv4-9h-VyX"/>
+                <outlet property="leftOverLabel" destination="3DD-gq-oD9" id="7rs-Sr-hwi"/>
+            </connections>
+            <point key="canvasLocation" x="-36" y="273.5"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="jifen_32_32" width="320" height="390"/>
+        <image name="jifen_32_32.png" width="32" height="32"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

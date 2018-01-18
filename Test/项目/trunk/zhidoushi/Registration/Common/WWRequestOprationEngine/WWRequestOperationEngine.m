@@ -1,0 +1,87 @@
+//
+//  WWRequestOperationEngine.m
+//  zhidoushi
+//
+//  Created by jiangkangyouyi on 14/11/20.
+//  Copyright (c) 2014年 game.zhidoushi.com. All rights reserved.
+//
+
+#import "WWRequestOperationEngine.h"
+#import "JSONKit.h"
+#import "AFNetworking.h"
+#import "LoginViewController.h"
+#import "WINetTool.h"
+#import "UpdateAlert.h"
+#import "OpenUDID.h"
+
+@implementation WWRequestOperationEngine
+
++ (AFHTTPRequestOperation*)operationManagerRequest_NoUserIdPost:(NSString*)urlString parameters:(id)para requestOperationBlock:(WWRequestOperationEngineBlock)block;
+{
+    AFHTTPRequestOperation *operation = nil;
+    
+    //添加接口头
+    para[@"logintype"] = @"0";//登陆类型ios
+    para[@"channel"] = @"appstore";//下载渠道
+    para[@"version"] = @"ios_3.4";//接口版本号
+    para[@"vercode"] = @"2040000";//小版本号
+    para[@"phoneid"] = [OpenUDID value];//机器唯一标示OpenId
+    para[@"phonemodel"] = [WWTolls getCurrentDeviceModel];//机型
+    para[@"phonebrand"] = @"Apple";//手机品牌
+    para[@"netenv"] = [WWTolls newtworkType];//当前网络状况
+    
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+    if ([urlString rangeOfString:@"http"].length<1) {
+        urlString = [NSString stringWithFormat:@"%@%@",ZDS_DEFAULT_HTTP_SERVER_HOST,urlString];
+    }
+    operation = [manager POST:urlString parameters:para success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        
+        NSString *string = operation.responseString;
+        NSDictionary *dic = [string objectFromJSONString];
+        //强制更新错误码
+//        if ([dic[ERRCODE] isEqualToString:@"LGF010"]) {
+//            UpdateAlert *alert = [UpdateAlert sharedUpdateAlert];
+//            alert.updateMessage = dic[@"errinfo"];
+//            [alert show];
+//            return ;
+//        }   
+        //未登录，跳转回登陆界面
+        if([dic[ERRCODE] isEqualToString:@"LGF001"] || [dic[ERRCODE] isEqualToString:@"LGF003"] || [dic[ERRCODE] isEqualToString:@"LGF004"]
+           || [dic[ERRCODE] isEqualToString:@"LGF007"]
+           || [dic[ERRCODE] isEqualToString:@"LGF008"]){
+            [NSUSER_Defaults removeObjectForKey:ZDS_USERID];
+            LoginViewController *login = [[LoginViewController alloc] init];
+            UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:login];
+            login.navigationItem.title = @"进入脂斗士";
+            [nav.navigationBar setBackgroundImage:[UIImage imageNamed:@"navigationbar_640_98"] forBarMetrics:UIBarMetricsDefault];
+            login.navigationController.navigationBar.tintColor = [UIColor greenColor];
+            [UIApplication sharedApplication].keyWindow.rootViewController = nav;
+            [[UIApplication sharedApplication].keyWindow makeKeyAndVisible];
+        }
+        //错误话术
+        if (dic[@"tooltip"] != nil && [dic[@"tooltip"] length] > 0) {
+            [MBProgressHUD showError:dic[@"tooltip"]];
+        }
+        block(dic);
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        block(@{ERRCODE:@"-888"});
+        if (!operation.isCancelled) {
+            [MBProgressHUD showError:ZDS_NONET_HUASHU];
+            //            [MBProgressHUD showError:error.localizedDescription];
+        }
+    }];
+    return operation;
+}
+
++ (AFHTTPRequestOperation*)operationManagerRequest_Post:(NSString*)urlString parameters:(id)para requestOperationBlock:(WWRequestOperationEngineBlock)block;
+{
+    NSString *userID =  [NSUSER_Defaults objectForKey:ZDS_USERID];
+    NSString *userid = [NSString stringWithFormat:@"%@",userID];
+    NSString *key = [NSString getMyKey:userID];
+    [para setObject:userid forKey:@"userid"];
+    [para setObject:key forKey:@"key"];
+    return [self operationManagerRequest_NoUserIdPost:urlString parameters:para requestOperationBlock:block];
+}
+
+@end

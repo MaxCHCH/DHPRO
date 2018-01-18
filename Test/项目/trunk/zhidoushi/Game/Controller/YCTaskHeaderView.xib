@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="YCTaskHeaderView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="167"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="累计完成人次" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MJ1-ee-CfL">
+                    <rect key="frame" x="15" y="103.5" width="90" height="18"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="150" id="ain-Rl-2Yh"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" red="0.30588235294117649" green="0.46666666666666667" blue="0.49803921568627452" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="ain-Rl-2Yh"/>
+                        </mask>
+                    </variation>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2015/11/23 13:14" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AZ3-WT-Era">
+                    <rect key="frame" x="15" y="126" width="96" height="14.5"/>
+                    <animations/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" red="0.65490196078431373" green="0.65490196078431373" blue="0.65490196078431373" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="39" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hmc-5P-uBX">
+                    <rect key="frame" x="240" y="37" width="119.5" height="119.5"/>
+                    <animations/>
+                    <fontDescription key="fontDescription" type="system" pointSize="100"/>
+                    <color key="textColor" red="1" green="0.44705882352941173" blue="0.24313725490196078" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3YP-aw-mrA" userLabel="line">
+                    <rect key="frame" x="15" y="166" width="345" height="1"/>
+                    <animations/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="XcY-cv-eou"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <animations/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="hmc-5P-uBX" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="37" id="0Tk-Hk-RgL"/>
+                <constraint firstAttribute="bottom" secondItem="hmc-5P-uBX" secondAttribute="bottom" constant="10" id="2pD-8W-T8i"/>
+                <constraint firstItem="AZ3-WT-Era" firstAttribute="top" secondItem="MJ1-ee-CfL" secondAttribute="bottom" constant="5" id="6wN-7H-Cyf"/>
+                <constraint firstItem="AZ3-WT-Era" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="8cz-hA-jjD"/>
+                <constraint firstItem="3YP-aw-mrA" firstAttribute="top" secondItem="hmc-5P-uBX" secondAttribute="bottom" constant="10" id="Cw3-PC-Qqd"/>
+                <constraint firstItem="AZ3-WT-Era" firstAttribute="top" secondItem="MJ1-ee-CfL" secondAttribute="bottom" constant="5" id="DpT-tI-sJw"/>
+                <constraint firstItem="3YP-aw-mrA" firstAttribute="top" secondItem="AZ3-WT-Era" secondAttribute="bottom" constant="25" id="Iu6-Cy-rz1"/>
+                <constraint firstAttribute="trailing" secondItem="3YP-aw-mrA" secondAttribute="trailing" constant="15" id="J8t-gR-RKa"/>
+                <constraint firstItem="MJ1-ee-CfL" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="80" id="ddX-YF-sDi"/>
+                <constraint firstItem="3YP-aw-mrA" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="gpd-qU-5LW"/>
+                <constraint firstItem="MJ1-ee-CfL" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="hAA-RK-3g2"/>
+                <constraint firstItem="AZ3-WT-Era" firstAttribute="bottom" secondItem="hmc-5P-uBX" secondAttribute="bottom" id="nlU-kM-5lc"/>
+                <constraint firstItem="MJ1-ee-CfL" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="90" id="nnJ-2f-9AA"/>
+                <constraint firstItem="AZ3-WT-Era" firstAttribute="top" secondItem="MJ1-ee-CfL" secondAttribute="bottom" constant="7" id="s1c-iu-1rU"/>
+                <constraint firstAttribute="trailing" secondItem="hmc-5P-uBX" secondAttribute="trailing" constant="15" id="zkd-VK-gYU"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="ddX-YF-sDi"/>
+                    <exclude reference="nnJ-2f-9AA"/>
+                    <exclude reference="DpT-tI-sJw"/>
+                    <exclude reference="nlU-kM-5lc"/>
+                    <exclude reference="s1c-iu-1rU"/>
+                    <exclude reference="2pD-8W-T8i"/>
+                </mask>
+            </variation>
+            <connections>
+                <outlet property="competeLabel" destination="hmc-5P-uBX" id="FHl-UL-EAl"/>
+                <outlet property="timeLabel" destination="AZ3-WT-Era" id="OOf-K6-u5V"/>
+            </connections>
+            <point key="canvasLocation" x="258.5" y="184.5"/>
+        </view>
+    </objects>
+</document>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell autoresizesSubviews="NO" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="135" id="KGk-i7-Jjw" customClass="InvitationTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="135"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="134.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView autoresizesSubviews="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="yaoqing_120_60-.png" translatesAutoresizingMaskIntoConstraints="NO" id="iav-9b-Owu">
+                        <rect key="frame" x="15" y="15" width="49" height="49"/>
+                        <animations/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="49" id="CE3-u3-hwc"/>
+                            <constraint firstAttribute="height" constant="49" id="YmC-iS-dyU"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="脂斗士哈哈" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SGU-Pc-1eB">
+                        <rect key="frame" x="79" y="21" width="163" height="21"/>
+                        <animations/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="o8l-MC-HQW"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label autoresizesSubviews="NO" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="永远年轻，永远热泪盈眶" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Jt-Hf-MKR">
+                        <rect key="frame" x="79" y="48" width="168" height="16"/>
+                        <animations/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="16" id="dEL-gp-7qu"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view autoresizesSubviews="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jjG-Fy-f2l">
+                        <rect key="frame" x="0.0" y="78" width="320" height="1"/>
+                        <animations/>
+                        <color key="backgroundColor" red="0.77254901960784317" green="0.77254901960784317" blue="0.77254901960784317" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="fKm-oO-knV"/>
+                        </constraints>
+                    </view>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0rk-93-qBG">
+                        <rect key="frame" x="277" y="25" width="29" height="29"/>
+                        <animations/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="29" id="XlG-Ya-9gI"/>
+                            <constraint firstAttribute="width" constant="29" id="gY3-Hk-qw1"/>
+                        </constraints>
+                        <state key="normal" backgroundImage="yaoqing_120_60.png">
+                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <connections>
+                            <action selector="clickInvitationButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="6m7-uM-dVJ"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <animations/>
+                <constraints>
+                    <constraint firstItem="iav-9b-Owu" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="0RD-yc-xfB"/>
+                    <constraint firstItem="SGU-Pc-1eB" firstAttribute="leading" secondItem="iav-9b-Owu" secondAttribute="trailing" constant="15" id="0ht-5v-HV9"/>
+                    <constraint firstAttribute="trailing" secondItem="jjG-Fy-f2l" secondAttribute="trailing" id="5sJ-zT-OsI"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="0rk-93-qBG" secondAttribute="trailing" constant="6" id="8Mr-gc-imf"/>
+                    <constraint firstItem="SGU-Pc-1eB" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="21" id="OTU-jB-44b"/>
+                    <constraint firstItem="0rk-93-qBG" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="17" id="dSt-Qv-uwe"/>
+                    <constraint firstItem="0Jt-Hf-MKR" firstAttribute="leading" secondItem="iav-9b-Owu" secondAttribute="trailing" constant="15" id="m2W-9d-tYZ"/>
+                    <constraint firstItem="0rk-93-qBG" firstAttribute="leading" secondItem="0Jt-Hf-MKR" secondAttribute="trailing" constant="30" id="pKu-Ax-YOX"/>
+                    <constraint firstItem="jjG-Fy-f2l" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="sbf-Ft-B8b"/>
+                    <constraint firstItem="iav-9b-Owu" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="wp2-YJ-OMB"/>
+                    <constraint firstItem="0Jt-Hf-MKR" firstAttribute="top" secondItem="SGU-Pc-1eB" secondAttribute="bottom" constant="6" id="zS4-21-cvB"/>
+                    <constraint firstItem="jjG-Fy-f2l" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="78" id="zlf-sa-pdh"/>
+                </constraints>
+            </tableViewCellContentView>
+            <animations/>
+            <connections>
+                <outlet property="bottomLineView" destination="jjG-Fy-f2l" id="qZg-WX-zjT"/>
+                <outlet property="headImageView" destination="iav-9b-Owu" id="pLg-gQ-Pkr"/>
+                <outlet property="invitationButton" destination="0rk-93-qBG" id="1gU-GE-Qog"/>
+                <outlet property="nameLabel" destination="SGU-Pc-1eB" id="0So-Dn-CJK"/>
+                <outlet property="ocntentLabel" destination="0Jt-Hf-MKR" id="xhz-oz-Q1l"/>
+            </connections>
+            <point key="canvasLocation" x="-112" y="318.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="yaoqing_120_60-.png" width="100" height="100"/>
+        <image name="yaoqing_120_60.png" width="120" height="60"/>
+    </resources>
+</document>

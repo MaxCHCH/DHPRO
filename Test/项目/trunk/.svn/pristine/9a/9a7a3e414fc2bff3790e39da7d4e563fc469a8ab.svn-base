@@ -1,0 +1,788 @@
+//
+//  CreateGroupTwoNewViewController.m
+//  zhidoushi
+//
+//  Created by glaivelee on 15/11/9.
+//  Copyright © 2015年 game.zhidoushi.com. All rights reserved.
+//
+
+#import "CreateGroupTwoNewViewController.h"
+#import "CreatGroupSubViewTwoController.h"
+#import "TPKeyboardAvoidingScrollView.h"
+#import "UITextField+LimitLength.h"
+#import "UITextView+LimitLength.h"
+#import <TuSDKGeeV1/TuSDKGeeV1.h>
+#import "MLSelectPhotoAssets.h"
+#import "EditorTagAlertView.h"
+#import "IQKeyboardManager.h"
+#import "MLImageCrop.h"
+#import "QiniuSDK.h"
+#define MarginH 32
+@interface CreateGroupTwoNewViewController ()<UIActionSheetDelegate,UITextFieldDelegate,UITextViewDelegate,MLImageCropDelegate,EditorTagDelegate,UIPickerViewDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate,UITextFieldDelegate,UITextViewDelegate>{
+    TuSDKCPPhotoEditMultipleComponent *_photoEditMultipleComponent;
+    TuSDKCPAlbumComponent *_albumComponent;
+}
+@property(nonatomic, strong) TPKeyboardAvoidingScrollView *tpBgView;
+@property(nonatomic, retain) UIImagePickerController *picker;//z照片选择器
+@property (weak, nonatomic) IBOutlet UIImageView *backgroundImageView;
+@property(nonatomic, strong) NSMutableArray *tagArray;//标签数组
+@property(nonatomic, strong) UIActionSheet *photoActionSheet;
+@property(nonatomic, strong) UITextField *nameTextField;//名字输入框
+@property(nonatomic, strong) UIButton *imageButton;//选择封面
+@property(nonatomic, strong) UIButton *addTagBtn;//添加标签按钮
+@property(nonatomic, strong) NSMutableArray *hotTags;//备选标签
+@property(nonatomic, strong) NSMutableArray *whereData;//<#强引用#>
+@property(nonatomic, strong) UILabel *textPlacehoader;//占位
+@property(nonatomic, strong) UITextView *content;//文本框
+@property(nonatomic, strong) UIView *tagBgView;//标签背景视图
+@property(nonatomic, strong) UILabel *contentNumLbl;//字数提示
+@property(nonatomic, strong) UIButton *submitBtn;//提交按钮
+@property(nonatomic, assign) CGSize PhotoSize;//尺寸
+@property(nonatomic, assign) BOOL isNew;//是否请求生产新凭证
+@property(nonatomic, assign) long long PhotoBig;//大小
+@property(nonatomic,   copy) NSString *Photohash;//上传图片hash值
+@property(nonatomic,   copy) NSString *Photokey;//上传图片key值
+//导航栏
+@property(nonatomic, strong) UILabel  *titleLabelS;
+@property(nonatomic, strong) UIButton *leftButtonS;
+@property(nonatomic, strong) UIButton *rightButtonS;
+@end
+
+@implementation CreateGroupTwoNewViewController
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    [MobClick endLogPageView:@"创建欢乐减脂团页面"];
+    [self.tpBgView endEditing:YES];
+    [IQKeyboardManager sharedManager].enable = YES;
+    [IQKeyboardManager sharedManager].enableAutoToolbar = YES;
+
+}
+
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    self.automaticallyAdjustsScrollViewInsets = NO;
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault];
+    [MobClick beginLogPageView:@"创建欢乐减脂团页面"];
+    [IQKeyboardManager sharedManager].enable = NO;
+    [IQKeyboardManager sharedManager].enableAutoToolbar = YES;
+    _tpBgView.userInteractionEnabled = YES;
+    _leftButtonS = self.leftButton;
+    _leftButtonS.frame = CGRectMake(15, MarginH, 18, 18);
+    [_leftButtonS addTarget:self action:@selector(backVC) forControlEvents:UIControlEventTouchUpInside];
+    [self.leftButton setBackgroundImage:[UIImage imageNamed:@"fh-36"] forState:UIControlStateNormal];
+
+    
+    _rightButtonS = self.rightButton;
+    [_rightButtonS setTitle:@"下一步" forState:(UIControlStateNormal)];
+    [_rightButtonS addTarget:self action:@selector(Next) forControlEvents:(UIControlEventTouchUpInside)];
+    [_rightButtonS setTitleColor:[WWTolls colorWithHexString:@"#fe5303"] forState:(UIControlStateNormal)];
+    _rightButtonS.frame = CGRectMake(self.view.frame.size.width-350, MarginH, 60, 20);
+    _rightButtonS.titleLabel.font = MyFont(15.0);
+    
+    _titleLabelS = self.titleLabel;
+    _titleLabelS.frame = CGRectMake(SCREEN_MIDDLE(+90), MarginH, 90, 20);
+    _titleLabelS.textAlignment = NSTextAlignmentCenter;
+    [_titleLabelS setTextColor:[WWTolls colorWithHexString:@"#4a5767"]];
+    [_titleLabelS setText:@"创建减肥团"];
+    _titleLabelS.font = MyFont(17);
+    UIImage *bgImage = [WWTolls imageWithColor:[UIColor colorWithWhite:0 alpha:0] size:CGSizeMake(SCREEN_WIDTH, 100)];
+    [self.navigationController.navigationBar setBackgroundImage:bgImage forBarMetrics:UIBarMetricsDefault];
+}
+
+
+-(void)backVC{
+    [self.navigationController popViewControllerAnimated:YES];
+
+}
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+    
+    UIView *viewS = [UIView new];
+    viewS.backgroundColor = [UIColor blackColor];
+    viewS.alpha = 0.1;
+    viewS.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
+    [self.view addSubview:viewS];
+    
+    [self loadWhereTag];
+    self.whereData = [NSMutableArray array];
+    self.tagArray = [NSMutableArray array];
+    self.hotTags = [NSMutableArray array];
+
+    [self setUpUI];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyBoardWillHide:) name:UIKeyboardWillHideNotification object:nil];
+}
+- (void)keyBoardWillHide:(NSNotification *)note{
+    
+    [UIView animateWithDuration:[note.userInfo[UIKeyboardAnimationDurationUserInfoKey] doubleValue] animations:^{
+        self.view.transform = CGAffineTransformIdentity;
+//        self.table.contentOffset = CGPointZero;
+    }];
+}
+-(void)popButton{
+    [WWTolls zdsClick:TJ_CREATEGROUP_QX];
+    [self.navigationController popViewControllerAnimated:YES];
+}
+#pragma mark --点击下一步
+-(void)Next{
+    
+    
+    if (self.nameTextField.text.length<1) {
+        [self showAlertMsg:@"请输入团组名称" yOffset:-40];
+    }else if(self.Photohash.length<1){
+        [self showAlertMsg:@"请选择封面" yOffset:-40];
+    }else if(self.content.text.length<1){
+        [self showAlertMsg:@"请输入减脂方法" yOffset:-40];
+        
+    } else if(![WWTolls isNameValidate:self.nameTextField.text]){
+        [self showAlertMsg:@"团组名称中必须包含汉字、字母或者数字，请修改您的昵称" yOffset:-40];
+    }else if([WWTolls isHasSensitiveWord:self.nameTextField.text]){
+        [self showAlertMsg:@"注意哦！团组名称中含有敏感词！" yOffset:-40];
+    }else if([WWTolls isHasSensitiveWord:self.content.text]){
+        [self showAlertMsg:@"注意哦！减脂方法中含有敏感词！" yOffset:-40];
+    }else{
+        if(self.tagArray.count > 0){
+            for (NSString *tag in self.tagArray) {
+                if ([WWTolls isHasSensitiveWord:tag]) {
+                    [self showAlertMsg:@"注意哦！标签中含有敏感词！" yOffset:-40];
+                    return;
+                }
+            }
+        }
+        NSMutableDictionary *dictionary = [[NSMutableDictionary alloc]initWithCapacity:10];
+        if(self.Photokey.length>0){
+            [dictionary setObject:[NSString stringWithFormat:@"%@?%@?%.0f?%.0f?%lld",self.Photokey,self.Photohash,self.PhotoSize.width,self.PhotoSize.height,self.PhotoBig] forKey:@"imageurl"];
+        }else{
+            [dictionary setObject:ZDS_DEFAULTIMAGEURL forKey:@"imageurl"];
+        }
+        
+        [dictionary setObject:self.nameTextField.text forKey:@"gamename"];//宣言
+        [dictionary setObject:self.content.text forKey:@"gmslogan"];
+        [dictionary setObject:self.tagArray forKey:@"tagArray"];
+        [dictionary setObject:self.hotTags forKey:@"hotTags"];
+        [dictionary setObject:[NSNumber numberWithBool:_isPassWordGrouper] forKey:@"passwordBool"];
+        CreatGroupSubViewTwoController *grouoTwoVC = [CreatGroupSubViewTwoController new];
+        grouoTwoVC.tempDic = dictionary;
+        [NSUSER_Defaults setObject:dictionary forKey:@"ZXLTEMPDIC"];
+        [self.navigationController pushViewController:grouoTwoVC animated:YES];
+
+//        if(_WhereSelected) [dictionary setObject:_WhereSelected forKey:@"whereselected"];
+
+    }
+    
+}
+-(void)name{
+    [self.nameTextField becomeFirstResponder];
+}
+-(void)setUpUI{
+    self.tpBgView = [[TPKeyboardAvoidingScrollView alloc] initWithFrame:CGRectMake(0, NavHeight, SCREEN_WIDTH, SCREEN_HEIGHT - NavHeight)];
+    _tpBgView.scrollEnabled = NO;
+//    _tpBgView.backgroundColor = [UIColor redColor];
+    [_backgroundImageView addSubview:self.tpBgView];
+    
+    //选择封面
+    _imageButton = [[UIButton alloc]init];
+    _imageButton.frame = CGRectMake(33,_tpBgView.bottom-130-100, 50, 45);
+    _imageButton.titleLabel.font = MyFont(12);
+    _imageButton.layer.cornerRadius = 2;
+    [_imageButton setBackgroundImage:[UIImage imageNamed:@"xj-h-104-90"] forState:UIControlStateNormal];
+    [_imageButton addTarget:self action:@selector(photoFileSelector) forControlEvents:UIControlEventTouchUpInside];
+    _picker = [[UIImagePickerController alloc] init];
+    [_picker setDelegate:self];
+    [self.tpBgView addSubview:_imageButton];
+    
+
+    self.nameTextField = [[UITextField alloc] init];
+    self.nameTextField.font = MyFont(23);
+    self.nameTextField.placeholder = @"输入团组名称";
+    [self.nameTextField setValue:[WWTolls colorWithHexString:@"#919aa3"] forKeyPath:@"_placeholderLabel.textColor"];
+    self.nameTextField.frame = CGRectMake(30, _imageButton.frame.size.height+_imageButton.frame.origin.y+30, 150, 25);
+    self.nameTextField.textColor = [UIColor whiteColor];
+//    self.nameTextField.textAlignment = NSTextAlignmentCenter;
+    self.nameTextField.delegate = self;
+    [self.nameTextField limitTextLength:10];
+    [self.tpBgView addSubview:self.nameTextField];
+
+
+    //减肥方式
+    UITextView *text = [[UITextView alloc] init];
+    self.content = text;
+    [text setValue:@30 forKey:@"limit"];
+    text.frame = CGRectMake(28, _nameTextField.frame.origin.y+_nameTextField.frame.size.height+8, 308, 40);
+    text.delegate = self;
+    text.font = MyFont(14);
+    text.backgroundColor = [UIColor clearColor];
+    text.textColor = [WWTolls colorWithHexString:@"#ffffff" AndAlpha:0.8];
+    text.contentInset = UIEdgeInsetsMake(5, 3, -5, -3);
+    [text limitTextLength:31];
+    [self.tpBgView addSubview:text];
+    
+    UILabel *textlbl = [[UILabel alloc] init];
+    textlbl.frame = CGRectMake(30, text.top+12, self.view.frame.size.width-(self.nameTextField.frame.origin.x), 20);
+    textlbl.numberOfLines = 0;
+    self.textPlacehoader = textlbl;
+    textlbl.text = @"点此输入您的减肥宣言，不超过30字";
+    self.textPlacehoader.textColor = [WWTolls colorWithHexString:@"#919aa3"];
+    textlbl.font = MyFont(14);
+    [self.tpBgView addSubview:textlbl];
+    
+    //字数提示
+    UILabel *contentNumLbl = [[UILabel alloc] init];
+    self.contentNumLbl = contentNumLbl;
+    contentNumLbl.frame = CGRectMake(SCREEN_WIDTH - 100, textlbl.bottom+2, 85, 12);
+    contentNumLbl.text = @"0/30";
+    contentNumLbl.textAlignment = NSTextAlignmentRight;
+    contentNumLbl.font = MyFont(11);
+    contentNumLbl.textColor = [WWTolls colorWithHexString:@"#80cafb"];
+//    [self.tpBgView addSubview:contentNumLbl];
+    
+//底部分割线  YES : VIP
+    UILabel *labelBottomline = [UILabel new];
+    labelBottomline.backgroundColor = [WWTolls colorWithHexString:@"#ffffff"];
+    labelBottomline.frame = CGRectMake(0 ,_tpBgView.bottom-68 ,SCREEN_WIDTH , 4);
+    [_tpBgView addSubview:labelBottomline];
+    
+    UILabel *labelBottomGrayline = [UILabel new];
+    labelBottomGrayline.backgroundColor = OrangeColor;
+    if (_isPassWordGrouper) {
+        labelBottomGrayline.frame = CGRectMake(0 ,_tpBgView.bottom-68 ,SCREEN_WIDTH*1/4 , 4);
+    }
+    else{
+        labelBottomGrayline.frame = CGRectMake(0 ,_tpBgView.bottom-68 ,SCREEN_WIDTH*1/3 , 4);
+
+    }
+    [_tpBgView addSubview:labelBottomGrayline];
+
+    
+    
+    //    UIImageView *lineBImageView = [UIImageView new];
+    //    if ([_tempDic[@"passwordBool"] boolValue] == YES) {
+    //        lineBImageView.frame = CGRectMake(self.view.frame.size.width-(self.view.frame.size.width*2/4), self.view.frame.origin.y, self.view.frame.size.width, 4);
+    //
+    //    }
+    //    else{
+    //        lineBImageView.frame = CGRectMake(self.view.frame.size.width-(self.view.frame.size.width*1/3), self.view.frame.origin.y, self.view.frame.size.width, 4);
+    //
+    //    }
+    //
+    //    lineBImageView.backgroundColor = [UIColor grayColor];
+    //    //[WWTolls colorWithHexString:@"#dcdcdc"];
+    //    [self.view addSubview:lineBImageView];
+
+    
+}
+
+#pragma mark - 相机功能
+-(void)photoFileSelector{
+    [self.view endEditing:YES];
+    MLSelectPhotoPickerViewController *pickerVc = [[MLSelectPhotoPickerViewController alloc] init];
+    // 默认显示相册里面的内容SavePhotos
+    pickerVc.topShowPhotoPicker = YES;
+    [NSUSER_Defaults setObject:@"最多只能添加1张图片" forKey:@"zdsselectphotoTip"];
+    //        pickerVc.selectPickers = self.assets;
+    pickerVc.status = PickerViewShowStatusCameraRoll;
+    pickerVc.minCount = 1;
+    [pickerVc showPickerVc:self];
+    __weak typeof(self) weakSelf = self;
+    pickerVc.callBack = ^(NSArray *assets){
+        [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault];
+        UIImage *image;
+            if ([assets[0] isKindOfClass:[MLSelectPhotoAssets class]]) {
+                image = ((MLSelectPhotoAssets*)assets[0]).originImage;
+            }else image = assets[0];
+
+            MLImageCrop *imageCrop = [[MLImageCrop alloc]init];
+            imageCrop.delegate = weakSelf;
+            imageCrop.ratioOfWidthAndHeight = 600.0f/600.0f;
+            imageCrop.image =image;
+            [imageCrop showWithAnimation:NO];
+        
+    };
+    
+}
+- (void)openEditMultipleWithController:(UIViewController *)controller  result:(UIImage *)result
+{
+
+    if (!self || !result) return;
+
+    // 组件选项配置
+    // @see-http://tusdk.com/docs/ios/api/Classes/TuSDKCPPhotoEditMultipleComponent.html
+    WEAKSELF_SS
+    
+    _photoEditMultipleComponent =
+    [TuSDKGeeV1 photoEditMultipleWithController:self
+                                  callbackBlock:^(TuSDKResult *result, NSError *error, UIViewController *controller)
+     {
+         // 如果在RootViewController presentViewController,autoDismissWhenCompelted参数将无效
+         // 请使用以下方法关闭
+         if (controller) {
+             [controller popViewControllerAnimated:YES];
+         }
+         
+         WEAKSELF_SS
+         NSDictionary *dict = [NSMutableDictionary dictionary];
+         [dict setValue:self.isNew?@"0":@"1" forKey:@"isnew"];
+         [weakSelf showWaitView];
+         [WWRequestOperationEngine operationManagerRequest_Post:[NSString stringWithFormat:@"%@%@",ZDS_DEFAULT_HTTP_SERVER_HOST,ZDS_UPLOADTOKEN] parameters:dict requestOperationBlock:^(NSDictionary *dic) {
+             
+             if (dic[ERRCODE]) {
+                 [weakSelf removeWaitView];
+             }else{
+#pragma mark - 七牛上传图片
+                 NSString *token = dic[@"uptoken"];
+                 if(token.length>0){
+                     UIImage *img =  [UIImage imageWithData:[NSData dataWithContentsOfFile:result.imagePath]];
+                     NSData *data = [SSLImageTool compressImage:img withMaxKb:300];
+                     //七牛上传管理器
+                     QNUploadManager *upManager = [[QNUploadManager alloc] init];
+                     //开始上传
+                     CFUUIDRef uuidRef =CFUUIDCreate(NULL);
+                     
+                     CFStringRef uuidStringRef =CFUUIDCreateString(NULL, uuidRef);
+                     
+                     CFRelease(uuidRef);
+                     
+                     NSString *UUIDStr = (__bridge NSString *)uuidStringRef;
+                     NSString *QNkey = [NSString stringWithFormat:@"images/0/%@.jpg",UUIDStr];
+                     [upManager putData:data key:QNkey token:token
+                               complete: ^(QNResponseInfo *info, NSString *key, NSDictionary *resp) {//resp hash key
+                                   weakSelf.isNew = NO;
+                                   [weakSelf removeWaitView];
+                                   if (info.isOK) {
+                                       
+                                       if(resp){
+                                           weakSelf.Photohash = resp[@"hash"];
+                                           weakSelf.Photokey = resp[@"key"];
+                                           weakSelf.PhotoBig = data.length;
+                                           weakSelf.PhotoSize = result.image.size;
+                                           //直接把该图片读出来显示在按钮上
+                                           dispatch_async(dispatch_get_main_queue(), ^{
+                                               //                                          [weakSelf.imageButton setBackgroundImage:[UIImage imageWithData:data] forState:UIControlStateNormal];
+                                               _backgroundImageView.image = [UIImage imageWithData:data];
+//                                               [weakSelf removeWaitView];
+                                               
+                                               UIImage *image = [UIImage imageWithData:data];
+                                               if (image != nil) {
+                                                   [_imageButton setBackgroundImage:[UIImage imageNamed:@"xj-b-104-90"] forState:UIControlStateNormal];
+                                                   [_titleLabelS setTextColor:[UIColor whiteColor]];
+                                                   [_rightButtonS setTitleColor:[UIColor whiteColor] forState:(UIControlStateNormal)];
+                                                   [_leftButtonS setBackgroundImage:[UIImage imageNamed:@"fh-b-36"] forState:UIControlStateNormal];
+                                                   [self.nameTextField setValue:[UIColor whiteColor] forKeyPath:@"_placeholderLabel.textColor"];
+                                                   [self.textPlacehoader setTextColor:[UIColor whiteColor]];
+                                               }
+                                               
+                                               if (image.size.width>image.size.height) {
+                                                   UIGraphicsBeginImageContext(CGSizeMake(image.size.width, image.size.width));
+                                                   
+                                                   // Draw image1
+                                                   [image drawInRect:CGRectMake(0, (image.size.width-image.size.height)/2, image.size.width, image.size.height)];
+                                                   
+                                                   UIImage *newimage = UIGraphicsGetImageFromCurrentImageContext();
+                                                   
+                                                   UIGraphicsEndImageContext();
+                                                   image = nil;
+                                                   image = newimage;
+                                               }else if(image.size.width<image.size.height){
+                                                   UIGraphicsBeginImageContext(CGSizeMake(image.size.height, image.size.height));
+                                                   
+                                                   // Draw image1
+                                                   [image drawInRect:CGRectMake((image.size.height-image.size.width)/2, 0, image.size.width, image.size.height)];
+                                                   
+                                                   UIImage *newimage = UIGraphicsGetImageFromCurrentImageContext();
+                                                   
+                                                   UIGraphicsEndImageContext();
+                                                   image = nil;
+                                                   image = newimage;
+                                               }
+                                               
+                                           });
+                                           //                                           weakSelf.imageBtn.width = 80;
+                                           //                                           weakSelf.imageBtn.height = 80;
+                                           //                                           weakSelf.imageBack.height = 91;
+                                           //                                           weakSelf.bottomView.top = weakSelf.imageBack.maxY + 10;
+                                           //                                           weakSelf.contentNumLbl.top = weakSelf.imageBtn.bottom - 10;
+                                           [weakSelf.rightButton setTitleColor:ZDS_DHL_TITLE_COLOR forState:UIControlStateNormal];
+//                                           NSLog(@"weakSelf.imageBtn.frame:%@",[NSValue valueWithCGRect:weakSelf.imageBtn.frame]);
+//                                           NSLog(@"weakSelf.textView.frame:%@",[NSValue valueWithCGRect:weakSelf.textView.frame]);
+                                       }
+                                   }else{
+                                       if (info.isConnectionBroken) {
+                                           [MBProgressHUD showError:@"网速太不给力了"];
+                                       }
+                                       else if(info.statusCode == 401){//授权失败
+                                           weakSelf.isNew = YES;
+                                           [MBProgressHUD showError:@"上传失败，请重试"];
+                                       }else [MBProgressHUD showError:@"上传失败，请重试"];
+                                   }
+                                   NSLog(@"%@", info);
+                                   NSLog(@"%@", resp);
+                                   
+                               } option:nil];
+                 }else{
+                     [weakSelf removeWaitView];
+                     [MBProgressHUD showError:@"上传失败请重试"];
+                 }
+             }
+         }];
+         
+         // 获取图片失败
+         if (error) {
+             lsqLError(@"editMultiple error: %@", error.userInfo);
+             return;
+         }
+         [result logInfo];
+     }];
+    
+    // 设置图片
+    _photoEditMultipleComponent.inputImage = result;
+    //    _photoEditMultipleComponent.inputTempFilePath = result.imagePath;
+    //    _photoEditMultipleComponent.inputAsset = result.imageAsset;
+    // 是否在组件执行完成后自动关闭组件 (默认:NO)
+    _photoEditMultipleComponent.autoDismissWhenCompelted = YES;
+    [_photoEditMultipleComponent showComponent];
+    
+    
+    
+    //    _albumComponent =
+    //    [TuSDKGeeV1 albumCommponentWithController:controller
+    //                                callbackBlock:^(TuSDKResult *result, NSError *error, UIViewController *controller)
+    //     {
+    //         // 获取图片错误
+    //         if (error) {
+    //             lsqLError(@"album reader error: %@", error.userInfo);
+    //             return;
+    //         }
+    //         [result logInfo];
+    //     }];
+    //
+    //    [_albumComponent showComponent];
+    //
+    
+    
+    
+}
+
+//-(void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex{
+//    //弹出的菜单按钮点击后的响应
+//    if (buttonIndex == _photoActionSheet.cancelButtonIndex)
+//    {
+//    }
+//    switch (buttonIndex)
+//    {
+//        case 0:  //打开照相机拍照
+//            
+//            [self takePhoto:YES];
+//            break;
+//            
+//        case 1:  //打开本地相册
+//            
+//            [self LocalPhoto:YES];
+//            break;
+//    }
+//}
+//
+////调用相机
+//-(void)takePhoto:(BOOL)Editing
+//{
+//    UIImagePickerControllerSourceType sourceType = UIImagePickerControllerSourceTypeCamera;
+//    
+//    if ([UIImagePickerController isSourceTypeAvailable: UIImagePickerControllerSourceTypeCamera])
+//        
+//    {
+//        //设置拍照后的图片可被编辑
+//        _picker.allowsEditing = NO;
+//        _picker.sourceType = sourceType;
+//        [self presentViewController:_picker animated:YES completion:nil];
+//    }else{
+//        NSLog(@"模拟器中无法打开照相机,请在真机中使用");
+//    }
+//    
+//}
+//
+////调用相册
+//-(void)LocalPhoto:(BOOL)Editing
+//{
+//    
+//    _picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+//    
+//    //    _picker.delegate = self;
+//    
+//    //设置选择后的图片可被编辑
+//    
+//    _picker.allowsEditing = NO;
+//    
+//    [self presentViewController:_picker animated:YES completion:nil];
+//    
+//}
+
+//获取图片后的行为
+#pragma mark - crop delegate
+- (void)cropImage:(UIImage*)cropImage forOriginalImage:(UIImage*)originalImage
+{
+//    [self showWaitView];
+    UIImage *image = cropImage;
+//    if (image != nil) {
+//        
+//        [_imageButton setBackgroundImage:[UIImage imageNamed:@"xj-b-104-90"] forState:UIControlStateNormal];
+//        [_titleLabelS setTextColor:[UIColor whiteColor]];
+//        [_rightButtonS setTitleColor:[UIColor whiteColor] forState:(UIControlStateNormal)];
+//        [_leftButtonS setBackgroundImage:[UIImage imageNamed:@"fh-b-36"] forState:UIControlStateNormal];
+//        [self.nameTextField setValue:[UIColor whiteColor] forKeyPath:@"_placeholderLabel.textColor"];
+//        [self.textPlacehoader setTextColor:[UIColor whiteColor]];
+//    }
+
+    if (image.size.width>image.size.height) {
+        UIGraphicsBeginImageContext(CGSizeMake(image.size.width, image.size.width));
+        
+        // Draw image1
+        [image drawInRect:CGRectMake(0, (image.size.width-image.size.height)/2, image.size.width, image.size.height)];
+        
+        UIImage *newimage = UIGraphicsGetImageFromCurrentImageContext();
+        
+        UIGraphicsEndImageContext();
+        image = nil;
+        image = newimage;
+    }else if(image.size.width<image.size.height){
+        UIGraphicsBeginImageContext(CGSizeMake(image.size.height, image.size.height));
+        
+        // Draw image1
+        [image drawInRect:CGRectMake((image.size.height-image.size.width)/2, 0, image.size.width, image.size.height)];
+        
+        UIImage *newimage = UIGraphicsGetImageFromCurrentImageContext();
+        
+        UIGraphicsEndImageContext();
+        image = nil;
+        image = newimage;
+    }
+    [self openEditMultipleWithController:self result:image];
+
+    //    float f = 0.5;
+    //    NSData *data = UIImageJPEGRepresentation(image,1);
+    //    if(data.length>1024*1024*10){
+    //        [self removeWaitView];
+    //        [self showAlertMsg:@"您选择的图片太大,请重新上传" andFrame:CGRectZero];
+    //    }else if (data.length>1024*1024*2) {
+    //        data = UIImageJPEGRepresentation(image,0.3);
+    //    }else{
+    //        while (data.length>300*1024) {
+    //            data=nil;
+    //            data = UIImageJPEGRepresentation(image,f);
+    //            f*=0.8;
+    //        }
+    //    }
+    
+    __weak typeof(self) weakSelf = self;
+    NSDictionary *dict = [NSMutableDictionary dictionary];
+    [dict setValue:self.isNew?@"0":@"1" forKey:@"isnew"];
+    [WWRequestOperationEngine operationManagerRequest_Post:[NSString stringWithFormat:@"%@%@",ZDS_DEFAULT_HTTP_SERVER_HOST,ZDS_UPLOADTOKEN] parameters:dict requestOperationBlock:^(NSDictionary *dic) {
+        
+        if (dic[ERRCODE]) {
+            [weakSelf removeWaitView];
+        }else{
+#pragma mark - 七牛上传图片
+            NSString *token = dic[@"uptoken"];
+            if(token.length>0){
+                NSData *data = [SSLImageTool compressImage:image withMaxKb:300];
+                //七牛上传管理器
+                QNUploadManager *upManager = [[QNUploadManager alloc] init];
+                //开始上传
+                CFUUIDRef uuidRef =CFUUIDCreate(NULL);
+                
+                CFStringRef uuidStringRef =CFUUIDCreateString(NULL, uuidRef);
+                
+                CFRelease(uuidRef);
+                
+                NSString *UUIDStr = (__bridge NSString *)uuidStringRef;
+                NSString *QNkey = [NSString stringWithFormat:@"images/0/%@.jpg",UUIDStr];
+                [upManager putData:data key:QNkey token:token
+                          complete: ^(QNResponseInfo *info, NSString *key, NSDictionary *resp) {//resp hash key
+                              weakSelf.isNew = NO;
+                              [weakSelf removeWaitView];
+                              if (info.isOK) {
+                                  
+                                  if(resp){
+                                      weakSelf.Photohash = resp[@"hash"];
+                                      weakSelf.Photokey = resp[@"key"];
+                                      weakSelf.PhotoSize = image.size;
+                                      weakSelf.PhotoBig = data.length;
+                                      //直接把该图片读出来显示在按钮上
+                                      dispatch_async(dispatch_get_main_queue(), ^{
+//                                          [weakSelf.imageButton setBackgroundImage:[UIImage imageWithData:data] forState:UIControlStateNormal];
+                                          _backgroundImageView.image = [UIImage imageWithData:data];
+                                          [_imageButton setBackgroundImage:[UIImage imageNamed:@"xj-b-104-90"] forState:UIControlStateNormal];
+                                          [_titleLabelS setTextColor:[UIColor whiteColor]];
+                                          [_rightButtonS setTitleColor:[UIColor whiteColor] forState:(UIControlStateNormal)];
+                                          [_leftButtonS setBackgroundImage:[UIImage imageNamed:@"fh-b-36"] forState:UIControlStateNormal];
+                                          [self.nameTextField setValue:[UIColor whiteColor] forKeyPath:@"_placeholderLabel.textColor"];
+                                          [self.textPlacehoader setTextColor:[UIColor whiteColor]];
+
+                                      });
+                                  }
+                              }else{
+                                  if (info.isConnectionBroken) {
+                                      [MBProgressHUD showError:@"网速太不给力了"];
+                                  }
+                                  else if(info.statusCode == 401){//授权失败
+                                      weakSelf.isNew = YES;
+                                      [MBProgressHUD showError:@"上传失败，请重试"];
+                                  }else [MBProgressHUD showError:@"上传失败，请重试"];
+                              }
+                              NSLog(@"%@", info);
+                              NSLog(@"%@", resp);
+
+                          } option:nil];
+            }else{
+                [weakSelf removeWaitView];
+                [MBProgressHUD showError:@"上传失败请重试"];
+            }
+        }
+    }];
+}
+
+//获取图片后的行为
+-(void)imagePickerController:(UIImagePickerController*)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
+{
+    
+    NSString *type = [info objectForKey:UIImagePickerControllerMediaType];
+    //当选择的类型是图片
+    if ([type isEqualToString:@"public.image"])
+    {
+        UIImage* editeImage = [info objectForKey:@"UIImagePickerControllerEditedImage"];
+        UIImage* originalImage = [info objectForKey:@"UIImagePickerControllerOriginalImage"];
+        UIImage *image;//原图
+        
+        if (editeImage!=nil) {
+            image = editeImage;
+        }else{
+            image = originalImage;
+        }
+        [picker dismissViewControllerAnimated:YES completion:^{
+            MLImageCrop *imageCrop = [[MLImageCrop alloc]init];
+            imageCrop.delegate = self;
+            imageCrop.ratioOfWidthAndHeight = 600.0f/600.0f;
+            imageCrop.image =image;
+            [imageCrop showWithAnimation:NO];
+            
+        }];
+        
+    }
+}
+
+#pragma mark - UITextViewDelegate
+-(BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text{
+    if(textView == self.content){
+        if (textView.text.length==0&&text.length==0) {
+            self.textPlacehoader.hidden = NO;
+        }else{
+            self.textPlacehoader.hidden = YES;    }
+        if (textView.text.length==1&&text.length==0) {
+            self.textPlacehoader.hidden = NO;    }
+        if (text.length + textView.text.length - range.length >= 31) {
+            NSString *newText = [textView.text stringByReplacingCharactersInRange:range withString:text];
+            textView.text = [newText substringToIndex:30];
+            return NO;
+        }
+        return YES;
+    }
+    return YES;
+}
+
+-(void)textViewDidChange:(UITextView *)textView{
+    if(textView == self.content){
+        if(textView.text.length>0){
+            self.textPlacehoader.hidden = YES;
+        }
+        self.content = textView;
+    }
+    [self reloadNum];
+    
+}
+- (void)reloadNum{
+    self.textPlacehoader.hidden = _content.text.length > 0;
+    self.contentNumLbl.text = [NSString stringWithFormat:@"%lu/30",(unsigned long)_content.text.length];
+    self.submitBtn.selected = _content.text.length >= 1;
+    
+}
+#pragma mark - 请求标签
+-(void)loadWhereTag{
+    //构造请求参数
+    NSMutableDictionary *dictionary = [[NSMutableDictionary alloc]initWithCapacity:2];
+    
+    //发送请求即将开团
+    NSString *urlString = [NSString stringWithFormat:@"%@%@",ZDS_DEFAULT_HTTP_SERVER_HOST,ZDS_CREATE_TAGS];
+    __weak typeof(self)weakSelf = self;
+    [WWRequestOperationEngine operationManagerRequest_Post:urlString parameters:dictionary requestOperationBlock:^(NSDictionary *dic) {
+        
+        if (![dic isKindOfClass:[NSDictionary class]] || dic==nil) {
+            
+        }else{
+            [weakSelf.whereData removeAllObjects];
+            [weakSelf.whereData addObjectsFromArray:dic[@"wherelist"]];
+            [weakSelf.hotTags removeAllObjects];
+            [weakSelf.hotTags addObjectsFromArray:dic[@"taglist"]];
+            //            [NSUSER_Defaults setValue:dic forKey:ZDS_CREATE_TAGS];
+            if (!weakSelf.nameTextField) {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    [weakSelf setUpUI];
+                });
+            }
+        }
+    }];
+}
+
+-(void)commitEditor:(EditorTagAlertView *)discussAlert{
+    [IQKeyboardManager sharedManager].enableAutoToolbar = YES;
+    NSArray *hotTags = discussAlert.tagWriteView.tags;
+    [_tagArray removeAllObjects];
+    [_tagArray addObjectsFromArray:hotTags];
+    int rowIndex = 0;
+    int WidthSumTemp = 0;
+    CGFloat margin = 8;
+    for (UIView *chirld in self.tagBgView.subviews) {
+        [chirld removeFromSuperview];
+    }
+    for (int i =0; i<hotTags.count; i++) {
+        NSString *tagStr = hotTags[i];
+        ZdsTagButton *tagBtn = [[ZdsTagButton alloc] init];
+        CGFloat fontWidth = [self WidthForString:tagStr fontSize:11] + 16;
+        if (WidthSumTemp + fontWidth > self.tagBgView.bounds.size.width) {
+            WidthSumTemp = 0;
+            rowIndex++;
+        }
+        tagBtn.frame = CGRectMake(WidthSumTemp, rowIndex*(margin+25), fontWidth, 25);
+        tagBtn.tagStr = tagStr;
+        [self.tagBgView addSubview:tagBtn];
+        WidthSumTemp += margin;
+        WidthSumTemp += fontWidth;
+    }
+    self.tagBgView.height = (margin + 25)*(rowIndex+1);
+    self.addTagBtn.top = self.tagBgView.bottom;
+    self.tpBgView.contentSize = CGSizeMake(SCREEN_WIDTH, self.addTagBtn.bottom+15);
+}
+- (CGFloat) WidthForString:(NSString *)value fontSize:(CGFloat)fontsize
+{
+    UIFont *fnt = [UIFont fontWithName:@"HelveticaNeue" size:fontsize];
+    CGSize size = [value sizeWithAttributes:[NSDictionary dictionaryWithObjectsAndKeys:fnt,NSFontAttributeName, nil]];
+    return size.width;
+    
+}
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+/*
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+}
+*/
+
+@end

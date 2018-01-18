@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CreatQuanViewController">
+            <connections>
+                <outlet property="backgroundImageView" destination="ZvM-hc-Yf6" id="3eI-Rs-iQh"/>
+                <outlet property="buttonEight" destination="vm2-Hg-oH6" id="fPV-hJ-GIR"/>
+                <outlet property="buttonFive" destination="vlR-EH-Z6n" id="ioJ-pN-IWH"/>
+                <outlet property="buttonFour" destination="aF5-Aj-JHM" id="oq7-De-eQa"/>
+                <outlet property="buttonOne" destination="Iff-vw-1ud" id="P3r-ZE-kca"/>
+                <outlet property="buttonSeven" destination="ooh-Fn-Gvq" id="z5u-k1-AWk"/>
+                <outlet property="buttonSix" destination="MjA-5n-FSy" id="Pq5-3Z-pb0"/>
+                <outlet property="buttonThree" destination="gMC-xR-8ob" id="mbD-Tn-EBy"/>
+                <outlet property="buttonTwo" destination="a8X-RQ-LGR" id="4yl-WF-T3L"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="qzbj-750-1334.png" translatesAutoresizingMaskIntoConstraints="NO" id="ZvM-hc-Yf6">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <animations/>
+                </imageView>
+                <button opaque="NO" clipsSubviews="YES" tag="31" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a8X-RQ-LGR" customClass="CreatQuanButton">
+                    <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                    <animations/>
+                    <color key="backgroundColor" red="0.96862745098039216" green="0.32549019607843138" blue="0.34509803921568627" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="87" id="OC3-ws-RXj"/>
+                        <constraint firstAttribute="height" constant="87" id="mTT-NT-i7h"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <state key="normal" title="夜跑">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="OC3-ws-RXj"/>
+                            <exclude reference="mTT-NT-i7h"/>
+                        </mask>
+                    </variation>
+                    <variation key="widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="OC3-ws-RXj"/>
+                            <include reference="mTT-NT-i7h"/>
+                        </mask>
+                    </variation>
+                    <connections>
+                        <action selector="touchHealthWithTag:" destination="-1" eventType="touchUpInside" id="o5b-X3-BTs"/>
+                    </connections>
+                </button>
+                <button opaque="NO" clipsSubviews="YES" tag="37" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vm2-Hg-oH6" customClass="CreatQuanButton">
+                    <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                    <animations/>
+                    <color key="backgroundColor" red="0.43529411764705883" green="0.81176470588235294" blue="0.10196078431372549" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="115" id="ABo-r1-gcN"/>
+                        <constraint firstAttribute="height" constant="115" id="N2p-np-mce"/>
+                        <constraint firstAttribute="height" constant="115" id="UIt-co-CuW"/>
+                        <constraint firstAttribute="width" constant="115" id="ZZo-eK-yRE"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <state key="normal" title="运动鞋">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="ABo-r1-gcN"/>
+                            <exclude reference="N2p-np-mce"/>
+                            <exclude reference="UIt-co-CuW"/>
+                            <exclude reference="ZZo-eK-yRE"/>
+                        </mask>
+                    </variation>
+                    <variation key="widthClass=compact">
+                        <mask key="constraints">
+                            <exclude reference="ABo-r1-gcN"/>
+                            <exclude reference="N2p-np-mce"/>
+                            <include reference="UIt-co-CuW"/>
+                            <include reference="ZZo-eK-yRE"/>
+                        </mask>
+                    </variation>
+                    <connections>
+                        <action selector="touchHealthWithTag:" destination="-1" eventType="touchUpInside" id="BZo-ub-Wyd"/>
+                    </connections>
+                </button>
+                <button opaque="NO" clipsSubviews="YES" tag="36" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ooh-Fn-Gvq" customClass="CreatQuanButton">
+                    <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                    <animations/>
+                    <color key="backgroundColor" red="0.50196078430000002" green="0.79215686269999996" blue="0.98431372549999996" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="86.700000000000003" id="9IC-Ff-NUV"/>
+                        <constraint firstAttribute="height" constant="86.700000000000003" id="KxI-xF-87F"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <state key="normal" title="瘦腰">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="9IC-Ff-NUV"/>
+                            <exclude reference="KxI-xF-87F"/>
+                        </mask>
+                    </variation>
+                    <variation key="widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="9IC-Ff-NUV"/>
+                            <include reference="KxI-xF-87F"/>
+                        </mask>
+                    </variation>
+                    <connections>
+                        <action selector="touchHealthWithTag:" destination="-1" eventType="touchUpInside" id="maF-a0-sER"/>
+                    </connections>
+                </button>
+                <button opaque="NO" clipsSubviews="YES" tag="35" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MjA-5n-FSy" customClass="CreatQuanButton">
+                    <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                    <animations/>
+                    <color key="backgroundColor" red="0.20000000000000001" green="0.46666666666666667" blue="0.88627450980392153" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="83" id="LrF-zY-TaH"/>
+                        <constraint firstAttribute="height" constant="83" id="bcT-bh-cFy"/>
+                        <constraint firstAttribute="width" constant="83" id="iFc-NO-5LC"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <state key="normal" title="跑步">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="LrF-zY-TaH"/>
+                            <exclude reference="bcT-bh-cFy"/>
+                            <exclude reference="iFc-NO-5LC"/>
+                        </mask>
+                    </variation>
+                    <variation key="widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="LrF-zY-TaH"/>
+                            <exclude reference="bcT-bh-cFy"/>
+                            <include reference="iFc-NO-5LC"/>
+                        </mask>
+                    </variation>
+                    <connections>
+                        <action selector="touchHealthWithTag:" destination="-1" eventType="touchUpInside" id="Hb2-8H-tva"/>
+                    </connections>
+                </button>
+                <button opaque="NO" clipsSubviews="YES" tag="34" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vlR-EH-Z6n" customClass="CreatQuanButton">
+                    <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                    <animations/>
+                    <color key="backgroundColor" red="1" green="0.74509803921568629" blue="0.16078431372549021" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="105" id="2VV-Wi-Cv3"/>
+                        <constraint firstAttribute="height" constant="105" id="bQG-Rv-fVD"/>
+                        <constraint firstAttribute="width" constant="105" id="mxz-YA-emP"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <state key="normal" title="游泳">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="2VV-Wi-Cv3"/>
+                            <exclude reference="bQG-Rv-fVD"/>
+                            <exclude reference="mxz-YA-emP"/>
+                        </mask>
+                    </variation>
+                    <variation key="widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="2VV-Wi-Cv3"/>
+                            <exclude reference="bQG-Rv-fVD"/>
+                            <include reference="mxz-YA-emP"/>
+                        </mask>
+                    </variation>
+                    <connections>
+                        <action selector="touchHealthWithTag:" destination="-1" eventType="touchUpInside" id="UoN-ov-Kxf"/>
+                    </connections>
+                </button>
+                <button opaque="NO" clipsSubviews="YES" tag="30" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iff-vw-1ud" customClass="CreatQuanButton">
+                    <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                    <animations/>
+                    <color key="backgroundColor" red="0.27450980392156865" green="0.88235294117647056" blue="0.71372549019607845" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="125" id="61q-Lq-lYj"/>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="125" id="f0B-Ef-1HP"/>
+                        <constraint firstAttribute="width" constant="125" id="k3o-6n-qPA"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <state key="normal" title="跑步好地方">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="61q-Lq-lYj"/>
+                            <exclude reference="f0B-Ef-1HP"/>
+                            <exclude reference="k3o-6n-qPA"/>
+                        </mask>
+                    </variation>
+                    <variation key="widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="61q-Lq-lYj"/>
+                            <include reference="f0B-Ef-1HP"/>
+                            <include reference="k3o-6n-qPA"/>
+                        </mask>
+                    </variation>
+                    <connections>
+                        <action selector="touchHealthWithTag:" destination="-1" eventType="touchUpInside" id="Xsw-aa-7N6"/>
+                    </connections>
+                </button>
+                <button opaque="NO" clipsSubviews="YES" tag="32" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gMC-xR-8ob" customClass="CreatQuanButton">
+                    <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                    <animations/>
+                    <color key="backgroundColor" red="0.67450980392156867" green="0.91764705882352937" blue="0.45490196078431372" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="86" id="K5S-Zz-frf"/>
+                        <constraint firstAttribute="width" constant="86" id="Row-BH-2HC"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <state key="normal" title="流汗">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="K5S-Zz-frf"/>
+                            <exclude reference="Row-BH-2HC"/>
+                        </mask>
+                    </variation>
+                    <variation key="widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="K5S-Zz-frf"/>
+                            <include reference="Row-BH-2HC"/>
+                        </mask>
+                    </variation>
+                    <connections>
+                        <action selector="touchHealthWithTag:" destination="-2" eventType="touchUpInside" id="FJ3-fQ-mOD"/>
+                    </connections>
+                </button>
+                <button opaque="NO" clipsSubviews="YES" tag="33" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aF5-Aj-JHM" customClass="CreatQuanButton">
+                    <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                    <animations/>
+                    <color key="backgroundColor" red="0.99215686274509807" green="0.35686274509803922" blue="0.19215686274509805" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="96.299999999999997" id="9kH-I8-uwa"/>
+                        <constraint firstAttribute="height" constant="96.299999999999997" id="wla-0E-9vT"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <state key="normal" title="小蛮腰">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="9kH-I8-uwa"/>
+                            <exclude reference="wla-0E-9vT"/>
+                        </mask>
+                    </variation>
+                    <variation key="widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="9kH-I8-uwa"/>
+                            <include reference="wla-0E-9vT"/>
+                        </mask>
+                    </variation>
+                    <connections>
+                        <action selector="touchHealthWithTag:" destination="-2" eventType="touchUpInside" id="Gk9-Qs-0If"/>
+                    </connections>
+                </button>
+            </subviews>
+            <animations/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="vlR-EH-Z6n" secondAttribute="bottom" constant="181" id="246-Kc-OdF"/>
+                <constraint firstItem="vlR-EH-Z6n" firstAttribute="leading" secondItem="vm2-Hg-oH6" secondAttribute="trailing" constant="-10" id="3HF-Ih-WIT"/>
+                <constraint firstAttribute="trailing" secondItem="vlR-EH-Z6n" secondAttribute="trailing" constant="26" id="5E4-d5-aJj"/>
+                <constraint firstItem="vlR-EH-Z6n" firstAttribute="top" secondItem="MjA-5n-FSy" secondAttribute="bottom" constant="16" id="7wc-6s-UFQ"/>
+                <constraint firstItem="MjA-5n-FSy" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="175" id="Aka-ry-13B"/>
+                <constraint firstItem="a8X-RQ-LGR" firstAttribute="top" secondItem="Iff-vw-1ud" secondAttribute="bottom" id="F2d-70-UCw"/>
+                <constraint firstItem="vm2-Hg-oH6" firstAttribute="top" secondItem="Iff-vw-1ud" secondAttribute="bottom" constant="22" id="FO1-Vy-uc0"/>
+                <constraint firstItem="vm2-Hg-oH6" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="HFo-Eo-7bF"/>
+                <constraint firstItem="vm2-Hg-oH6" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="K61-cn-qep"/>
+                <constraint firstItem="vm2-Hg-oH6" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="QGU-LY-n82"/>
+                <constraint firstItem="vm2-Hg-oH6" firstAttribute="leading" secondItem="gMC-xR-8ob" secondAttribute="trailing" constant="8" id="Rdf-WS-uaI"/>
+                <constraint firstAttribute="bottom" secondItem="ZvM-hc-Yf6" secondAttribute="bottom" id="Rir-Ac-JL3"/>
+                <constraint firstItem="vm2-Hg-oH6" firstAttribute="top" secondItem="ooh-Fn-Gvq" secondAttribute="bottom" constant="200" id="U7Y-Uo-Lgk"/>
+                <constraint firstAttribute="trailing" secondItem="vlR-EH-Z6n" secondAttribute="trailing" constant="41" id="Wk5-c9-mFr"/>
+                <constraint firstItem="ZvM-hc-Yf6" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="XgD-hn-jDg"/>
+                <constraint firstItem="MjA-5n-FSy" firstAttribute="top" secondItem="ooh-Fn-Gvq" secondAttribute="bottom" constant="-12" id="YjS-j7-rXb"/>
+                <constraint firstItem="MjA-5n-FSy" firstAttribute="leading" secondItem="vm2-Hg-oH6" secondAttribute="trailing" constant="35" id="Ywa-qE-0EU"/>
+                <constraint firstItem="aF5-Aj-JHM" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="cWO-4W-fzR"/>
+                <constraint firstItem="MjA-5n-FSy" firstAttribute="leading" secondItem="vm2-Hg-oH6" secondAttribute="trailing" constant="135" id="dgG-CA-gUo"/>
+                <constraint firstItem="aF5-Aj-JHM" firstAttribute="top" secondItem="vm2-Hg-oH6" secondAttribute="bottom" constant="21" id="eYw-6n-lRc"/>
+                <constraint firstAttribute="trailing" secondItem="vlR-EH-Z6n" secondAttribute="trailing" constant="25" id="jUO-KU-VRn"/>
+                <constraint firstItem="Iff-vw-1ud" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="69" id="jkK-rk-Kb0"/>
+                <constraint firstItem="ooh-Fn-Gvq" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="100" id="jts-xQ-moi"/>
+                <constraint firstAttribute="trailing" secondItem="ZvM-hc-Yf6" secondAttribute="trailing" id="kfL-s4-1E3"/>
+                <constraint firstItem="vm2-Hg-oH6" firstAttribute="leading" secondItem="a8X-RQ-LGR" secondAttribute="trailing" constant="125" id="l8S-7C-aQS"/>
+                <constraint firstItem="vlR-EH-Z6n" firstAttribute="leading" secondItem="vm2-Hg-oH6" secondAttribute="trailing" constant="-10" id="nBR-V3-Ki4"/>
+                <constraint firstItem="gMC-xR-8ob" firstAttribute="top" secondItem="a8X-RQ-LGR" secondAttribute="bottom" constant="25" id="oJ5-4R-OkK"/>
+                <constraint firstItem="vm2-Hg-oH6" firstAttribute="leading" secondItem="a8X-RQ-LGR" secondAttribute="trailing" constant="30" id="oiA-7l-2lw"/>
+                <constraint firstItem="vlR-EH-Z6n" firstAttribute="top" secondItem="MjA-5n-FSy" secondAttribute="bottom" constant="16" id="qJ8-ec-FZf"/>
+                <constraint firstItem="ooh-Fn-Gvq" firstAttribute="leading" secondItem="Iff-vw-1ud" secondAttribute="trailing" constant="6" id="qsc-Cr-ekz"/>
+                <constraint firstItem="vm2-Hg-oH6" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="u3m-yC-jwW"/>
+                <constraint firstItem="vm2-Hg-oH6" firstAttribute="top" secondItem="ooh-Fn-Gvq" secondAttribute="bottom" constant="14" id="uf3-AC-1K9"/>
+                <constraint firstItem="vm2-Hg-oH6" firstAttribute="leading" secondItem="a8X-RQ-LGR" secondAttribute="trailing" constant="15" id="ugh-ux-gIR"/>
+                <constraint firstItem="MjA-5n-FSy" firstAttribute="leading" secondItem="vm2-Hg-oH6" secondAttribute="trailing" constant="20" id="wgI-hx-y0o"/>
+                <constraint firstItem="ZvM-hc-Yf6" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="x0u-Xc-soT"/>
+            </constraints>
+            <variation key="default">
+                <mask key="subviews">
+                    <exclude reference="ZvM-hc-Yf6"/>
+                    <exclude reference="a8X-RQ-LGR"/>
+                    <exclude reference="vm2-Hg-oH6"/>
+                    <exclude reference="ooh-Fn-Gvq"/>
+                    <exclude reference="MjA-5n-FSy"/>
+                    <exclude reference="vlR-EH-Z6n"/>
+                    <exclude reference="Iff-vw-1ud"/>
+                    <exclude reference="gMC-xR-8ob"/>
+                    <exclude reference="aF5-Aj-JHM"/>
+                </mask>
+                <mask key="constraints">
+                    <exclude reference="jkK-rk-Kb0"/>
+                    <exclude reference="Aka-ry-13B"/>
+                    <exclude reference="YjS-j7-rXb"/>
+                    <exclude reference="Ywa-qE-0EU"/>
+                    <exclude reference="dgG-CA-gUo"/>
+                    <exclude reference="wgI-hx-y0o"/>
+                    <exclude reference="F2d-70-UCw"/>
+                    <exclude reference="cWO-4W-fzR"/>
+                    <exclude reference="eYw-6n-lRc"/>
+                    <exclude reference="oJ5-4R-OkK"/>
+                    <exclude reference="jts-xQ-moi"/>
+                    <exclude reference="qsc-Cr-ekz"/>
+                    <exclude reference="246-Kc-OdF"/>
+                    <exclude reference="3HF-Ih-WIT"/>
+                    <exclude reference="5E4-d5-aJj"/>
+                    <exclude reference="7wc-6s-UFQ"/>
+                    <exclude reference="Wk5-c9-mFr"/>
+                    <exclude reference="jUO-KU-VRn"/>
+                    <exclude reference="nBR-V3-Ki4"/>
+                    <exclude reference="qJ8-ec-FZf"/>
+                    <exclude reference="FO1-Vy-uc0"/>
+                    <exclude reference="HFo-Eo-7bF"/>
+                    <exclude reference="K61-cn-qep"/>
+                    <exclude reference="QGU-LY-n82"/>
+                    <exclude reference="Rdf-WS-uaI"/>
+                    <exclude reference="U7Y-Uo-Lgk"/>
+                    <exclude reference="l8S-7C-aQS"/>
+                    <exclude reference="oiA-7l-2lw"/>
+                    <exclude reference="u3m-yC-jwW"/>
+                    <exclude reference="uf3-AC-1K9"/>
+                    <exclude reference="ugh-ux-gIR"/>
+                    <exclude reference="Rir-Ac-JL3"/>
+                    <exclude reference="XgD-hn-jDg"/>
+                    <exclude reference="kfL-s4-1E3"/>
+                    <exclude reference="x0u-Xc-soT"/>
+                </mask>
+            </variation>
+            <variation key="widthClass=compact">
+                <mask key="subviews">
+                    <include reference="ZvM-hc-Yf6"/>
+                    <include reference="a8X-RQ-LGR"/>
+                    <include reference="vm2-Hg-oH6"/>
+                    <include reference="ooh-Fn-Gvq"/>
+                    <include reference="MjA-5n-FSy"/>
+                    <include reference="vlR-EH-Z6n"/>
+                    <include reference="Iff-vw-1ud"/>
+                    <include reference="gMC-xR-8ob"/>
+                    <include reference="aF5-Aj-JHM"/>
+                </mask>
+                <mask key="constraints">
+                    <include reference="jkK-rk-Kb0"/>
+                    <include reference="Aka-ry-13B"/>
+                    <exclude reference="YjS-j7-rXb"/>
+                    <include reference="Ywa-qE-0EU"/>
+                    <exclude reference="dgG-CA-gUo"/>
+                    <exclude reference="wgI-hx-y0o"/>
+                    <include reference="F2d-70-UCw"/>
+                    <include reference="cWO-4W-fzR"/>
+                    <include reference="eYw-6n-lRc"/>
+                    <include reference="oJ5-4R-OkK"/>
+                    <include reference="jts-xQ-moi"/>
+                    <include reference="qsc-Cr-ekz"/>
+                    <exclude reference="246-Kc-OdF"/>
+                    <exclude reference="3HF-Ih-WIT"/>
+                    <exclude reference="5E4-d5-aJj"/>
+                    <include reference="7wc-6s-UFQ"/>
+                    <exclude reference="Wk5-c9-mFr"/>
+                    <include reference="jUO-KU-VRn"/>
+                    <exclude reference="nBR-V3-Ki4"/>
+                    <exclude reference="qJ8-ec-FZf"/>
+                    <include reference="FO1-Vy-uc0"/>
+                    <include reference="HFo-Eo-7bF"/>
+                    <exclude reference="K61-cn-qep"/>
+                    <exclude reference="QGU-LY-n82"/>
+                    <include reference="Rdf-WS-uaI"/>
+                    <exclude reference="U7Y-Uo-Lgk"/>
+                    <exclude reference="l8S-7C-aQS"/>
+                    <exclude reference="oiA-7l-2lw"/>
+                    <exclude reference="u3m-yC-jwW"/>
+                    <include reference="uf3-AC-1K9"/>
+                    <include reference="ugh-ux-gIR"/>
+                    <include reference="Rir-Ac-JL3"/>
+                    <include reference="XgD-hn-jDg"/>
+                    <include reference="kfL-s4-1E3"/>
+                    <include reference="x0u-Xc-soT"/>
+                </mask>
+            </variation>
+        </view>
+    </objects>
+    <resources>
+        <image name="qzbj-750-1334.png" width="750" height="1334"/>
+    </resources>
+</document>

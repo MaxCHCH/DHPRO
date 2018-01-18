@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="searchermancell" rowHeight="100" id="KGk-i7-Jjw" customClass="UserListTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="334" height="70"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="334" height="69.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Zb-wf-pMW">
+                        <rect key="frame" x="66" y="68" width="268" height="1"/>
+                        <animations/>
+                        <color key="backgroundColor" red="0.86274509803921573" green="0.86274509803921573" blue="0.86274509803921573" alpha="0.5985536317567568" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="u3K-Qc-QSG"/>
+                        </constraints>
+                    </view>
+                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cAh-Rh-ceE">
+                        <rect key="frame" x="18" y="27" width="16" height="16"/>
+                        <animations/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="16" id="1n7-ov-Uay"/>
+                            <constraint firstAttribute="width" constant="16" id="OIf-0q-c7c"/>
+                        </constraints>
+                        <state key="normal" backgroundImage="wxz-34.png">
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <state key="selected" backgroundImage="xz-34.png"/>
+                        <connections>
+                            <action selector="selectButtonClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="xAU-ts-vXA"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jZL-Qd-7QM">
+                        <rect key="frame" x="304" y="28" width="16" height="16"/>
+                        <animations/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="16" id="fYM-3X-puA"/>
+                            <constraint firstAttribute="height" constant="16" id="mIj-8E-pvN"/>
+                        </constraints>
+                        <state key="normal" backgroundImage="jgz-32.png">
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <state key="highlighted" backgroundImage="guanzhu-cp-96-68.png"/>
+                        <connections>
+                            <action selector="clickAttentionSender:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="fzQ-ZC-mDE"/>
+                        </connections>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="天边" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yu1-3H-Z0D">
+                        <rect key="frame" x="66" y="18" width="34" height="17"/>
+                        <animations/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="17" id="Kuo-92-2ug"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.27843137254901962" green="0.33333333333333331" blue="0.39215686274509803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="流云在天边，世界在眼前，有一条通往太阳的路" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h2b-Wx-qiA">
+                        <rect key="frame" x="66" y="40" width="252" height="14.5"/>
+                        <animations/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.65490196078431373" green="0.65490196078431373" blue="0.65490196078431373" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gEm-bk-eZ9">
+                        <rect key="frame" x="15" y="15" width="44" height="44"/>
+                        <animations/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="44" id="jmc-8m-2eX"/>
+                            <constraint firstAttribute="width" constant="44" id="vCF-p5-0MP"/>
+                        </constraints>
+                        <state key="normal" backgroundImage="mrtx_98_98">
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <connections>
+                            <action selector="headerButtonClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Pi1-Iq-gOS"/>
+                        </connections>
+                    </button>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nan-26.png" translatesAutoresizingMaskIntoConstraints="NO" id="leI-Ps-qYj">
+                        <rect key="frame" x="105" y="21" width="13" height="13"/>
+                        <animations/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="13" id="QCC-2q-8gq"/>
+                            <constraint firstAttribute="width" constant="13" id="yR5-cn-Teh"/>
+                        </constraints>
+                    </imageView>
+                    <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tuanzhang_40.png" translatesAutoresizingMaskIntoConstraints="NO" id="fV0-zO-1gb">
+                        <rect key="frame" x="39" y="39" width="20" height="20"/>
+                        <animations/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="5NL-DR-5C1"/>
+                            <constraint firstAttribute="width" constant="20" id="ZCE-5x-BVp"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <animations/>
+                <constraints>
+                    <constraint firstItem="yu1-3H-Z0D" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="18" id="3in-z6-i8y"/>
+                    <constraint firstItem="leI-Ps-qYj" firstAttribute="leading" secondItem="yu1-3H-Z0D" secondAttribute="trailing" constant="5" id="5Nr-L3-w2l"/>
+                    <constraint firstItem="leI-Ps-qYj" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="21" id="5sA-T0-Dua"/>
+                    <constraint firstItem="cAh-Rh-ceE" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="19" id="6zt-mo-Kz8"/>
+                    <constraint firstItem="gEm-bk-eZ9" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="7" id="71a-Vt-2WP"/>
+                    <constraint firstItem="jZL-Qd-7QM" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="28" id="7PT-JV-fxx"/>
+                    <constraint firstAttribute="bottom" secondItem="0Zb-wf-pMW" secondAttribute="bottom" id="EFX-9P-Wm4"/>
+                    <constraint firstAttribute="trailing" secondItem="jZL-Qd-7QM" secondAttribute="trailing" constant="14" id="H2R-BN-krf"/>
+                    <constraint firstItem="leI-Ps-qYj" firstAttribute="leading" secondItem="yu1-3H-Z0D" secondAttribute="trailing" constant="5" id="MZX-HD-mmN"/>
+                    <constraint firstItem="fV0-zO-1gb" firstAttribute="trailing" secondItem="gEm-bk-eZ9" secondAttribute="trailing" id="RwQ-5v-1wd"/>
+                    <constraint firstAttribute="trailing" secondItem="0Zb-wf-pMW" secondAttribute="trailing" id="WAu-u8-ucd"/>
+                    <constraint firstItem="h2b-Wx-qiA" firstAttribute="top" secondItem="leI-Ps-qYj" secondAttribute="bottom" constant="6" id="aXa-Jl-OoS"/>
+                    <constraint firstAttribute="bottom" secondItem="fV0-zO-1gb" secondAttribute="bottom" constant="10" id="dIQ-zf-FSc"/>
+                    <constraint firstItem="cAh-Rh-ceE" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="fd0-IJ-jJl"/>
+                    <constraint firstItem="h2b-Wx-qiA" firstAttribute="leading" secondItem="yu1-3H-Z0D" secondAttribute="leading" id="iwV-w7-mNV"/>
+                    <constraint firstItem="0Zb-wf-pMW" firstAttribute="leading" secondItem="yu1-3H-Z0D" secondAttribute="leading" id="tff-hh-jhC"/>
+                    <constraint firstItem="gEm-bk-eZ9" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="7" id="uNi-Do-2ID"/>
+                    <constraint firstItem="yu1-3H-Z0D" firstAttribute="leading" secondItem="gEm-bk-eZ9" secondAttribute="trailing" constant="7" id="xro-1m-U0g"/>
+                </constraints>
+            </tableViewCellContentView>
+            <animations/>
+            <connections>
+                <outlet property="guanzhuBtn" destination="jZL-Qd-7QM" id="a0Q-3n-qAF"/>
+                <outlet property="headerButton" destination="gEm-bk-eZ9" id="msw-k0-fis"/>
+                <outlet property="headerButtonLeading" destination="uNi-Do-2ID" id="6uw-mF-SoZ"/>
+                <outlet property="line" destination="0Zb-wf-pMW" id="BoO-yZ-N4N"/>
+                <outlet property="lineHeight" destination="u3K-Qc-QSG" id="Ktt-6Y-VOs"/>
+                <outlet property="msgLbl" destination="h2b-Wx-qiA" id="vy7-ko-INd"/>
+                <outlet property="nameLbl" destination="yu1-3H-Z0D" id="YOp-Dt-xZ1"/>
+                <outlet property="selectButton" destination="cAh-Rh-ceE" id="xJx-vv-hot"/>
+                <outlet property="sexIcon" destination="leI-Ps-qYj" id="VWQ-6N-cOz"/>
+                <outlet property="tuanzhangImage" destination="fV0-zO-1gb" id="WVu-Zk-bUf"/>
+            </connections>
+            <point key="canvasLocation" x="-1568" y="-56"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="guanzhu-cp-96-68.png" width="96" height="68"/>
+        <image name="jgz-32.png" width="32" height="32"/>
+        <image name="mrtx_98_98" width="128" height="128"/>
+        <image name="nan-26.png" width="26" height="26"/>
+        <image name="tuanzhang_40.png" width="40" height="40"/>
+        <image name="wxz-34.png" width="34" height="34"/>
+        <image name="xz-34.png" width="34" height="34"/>
+    </resources>
+</document>

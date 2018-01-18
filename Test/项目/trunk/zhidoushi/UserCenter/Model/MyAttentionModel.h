@@ -1,0 +1,46 @@
+//
+//  MyAttentionModel.h
+//  zhidoushi
+//
+//  Created by xinglei on 15/1/5.
+//  Copyright (c) 2015年 game.zhidoushi.com. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+
+#import "MyAttentionTableViewCell.h"
+
+@interface MyAttentionModel : NSObject
+
+@property(nonatomic,strong) MyAttentionTableViewCell * coachCell;
+/**
+ *  Description 给coachCell值
+ *
+ *  @param cell            coachCell
+ *  @param index           点选的下标
+ *  @param array           数据流
+ *  @param indexJudgeArray 存放coachCell状态的数组
+ */
++(void)initWithCoachCell:(MyAttentionTableViewCell*)cell index:(NSInteger)index dataArray:(NSMutableArray*)array judgeIndexArray:(NSMutableSet*)indexJudgeSet;
+
++(NSMutableArray*)changesThisCoachModel:(NSMutableArray*)myModelArray andIndex:(NSInteger)index adnSet:(NSMutableSet*)myset andFlwstatus:(NSString*)flwstatus;
+
+@end
+@interface MePhotoModel : NSObject
+
+@property (nonatomic ,strong)NSString *photosid;
+@property (nonatomic, strong)NSString *recorddate;
+@property (nonatomic, strong)NSString *linktype;
+@property (nonatomic, strong)NSString *linkid;
+@property (nonatomic, strong)NSString *createtime;
+@property (nonatomic, strong)NSString *imageurl;
+@end
+
+@interface MeWeightModel : NSObject
+
+@property (nonatomic ,strong)NSString *weightid;
+@property (nonatomic, strong)NSString *weight;
+@property (nonatomic, strong)NSString *recorddate;
+
+@end
+

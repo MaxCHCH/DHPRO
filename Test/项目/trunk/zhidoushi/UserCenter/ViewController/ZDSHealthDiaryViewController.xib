@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ZDSHealthDiaryViewController">
+            <connections>
+                <outlet property="m_tableView" destination="jt0-vi-eaX" id="mjY-Ta-JAx"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="jt0-vi-eaX">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <animations/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="fYa-zN-u1l"/>
+                        <outlet property="delegate" destination="-1" id="T3c-Dt-g0f"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <animations/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="jt0-vi-eaX" secondAttribute="bottom" id="33I-vx-6Xd"/>
+                <constraint firstAttribute="trailing" secondItem="jt0-vi-eaX" secondAttribute="trailing" id="Ct7-Nm-y9Z"/>
+                <constraint firstItem="jt0-vi-eaX" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="dwh-gV-t7o"/>
+                <constraint firstItem="jt0-vi-eaX" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="xgw-vL-aHN"/>
+            </constraints>
+            <variation key="default">
+                <mask key="subviews">
+                    <exclude reference="jt0-vi-eaX"/>
+                </mask>
+                <mask key="constraints">
+                    <exclude reference="33I-vx-6Xd"/>
+                    <exclude reference="Ct7-Nm-y9Z"/>
+                    <exclude reference="dwh-gV-t7o"/>
+                    <exclude reference="xgw-vL-aHN"/>
+                </mask>
+            </variation>
+            <variation key="widthClass=compact">
+                <mask key="subviews">
+                    <include reference="jt0-vi-eaX"/>
+                </mask>
+                <mask key="constraints">
+                    <include reference="33I-vx-6Xd"/>
+                    <include reference="Ct7-Nm-y9Z"/>
+                    <include reference="dwh-gV-t7o"/>
+                    <include reference="xgw-vL-aHN"/>
+                </mask>
+            </variation>
+        </view>
+    </objects>
+</document>

@@ -1,0 +1,25 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "be573f26-aa6b-429a-9b42-52d00433c19c++9111",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+    "be573f26-aa6b-429a-9b42-52d00433c19c++9111" : {
+
+    }
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "be573f26-aa6b-429a-9b42-52d00433c19c++9111" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "499DCAD9-68B8-474B-A70B-F89F42239CD7",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "be573f26-aa6b-429a-9b42-52d00433c19c++9111" : "trunk\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "zhidoushi",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "zhidoushi.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "svn:\/\/svn.healthhope.cn\/zhidoushi",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Subversion",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "be573f26-aa6b-429a-9b42-52d00433c19c++9111"
+    }
+  ]
+}

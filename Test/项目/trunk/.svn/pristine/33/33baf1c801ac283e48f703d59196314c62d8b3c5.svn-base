@@ -1,0 +1,26 @@
+//
+//  CreatQuanViewController.h
+//  zhidoushi
+//
+//  Created by glaivelee on 15/11/14.
+//  Copyright © 2015年 game.zhidoushi.com. All rights reserved.
+//
+
+#import "BaseViewController.h"
+
+@interface CreatQuanViewController : BaseViewController
+
+@property (nonatomic,strong)NSMutableDictionary *tempDic;
+@property (weak, nonatomic) IBOutlet UIButton *buttonOne;
+@property (weak, nonatomic) IBOutlet UIButton *buttonTwo;
+@property (weak, nonatomic) IBOutlet UIButton *buttonThree;
+@property (weak, nonatomic) IBOutlet UIButton *buttonFour;
+@property (weak, nonatomic) IBOutlet UIButton *buttonFive;
+@property (weak, nonatomic) IBOutlet UIButton *buttonSix;
+@property (weak, nonatomic) IBOutlet UIButton *buttonSeven;
+@property (weak, nonatomic) IBOutlet UIButton *buttonEight;
+@property (weak, nonatomic) IBOutlet UIImageView *backgroundImageView;
+
+- (IBAction)touchHealthWithTag:(id)sender;
+
+@end

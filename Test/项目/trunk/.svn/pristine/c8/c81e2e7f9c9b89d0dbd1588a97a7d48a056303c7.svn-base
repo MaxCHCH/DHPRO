@@ -1,0 +1,56 @@
+//
+//  Prefix header
+//
+//  The contents of this file are implicitly included at the beginning of every source file.
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_7_0
+#warning "This project uses features only available in iOS SDK 7.0 and later."
+#endif
+
+#ifdef __OBJC__
+    #import "Define.h"
+    #import "UIViewExt.h"
+    #import "UIViewController+ShowAlert.h"
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+    #import "WWTolls.h"
+    #import "WWRequestOperationEngine.h"
+    #import "UIImageView+WebCache.h"
+    #import "NSString+NARSafeString.h"
+    #import "MBProgressHUD+MJ.h"
+    #import "MJRefresh.h"
+    #import "QiniuSDK.h"
+    #import "MobClick.h"
+    #import "JSONKit.h"
+    #import "UIView+LoadFromNib.h"
+    #import "NSObject+Log.h"
+    #import "WIUtilsDefine.h"
+#endif
+
+#if 1
+
+#define NSLog(FORMAT, ...) fprintf(stderr,"[%s:%d行] %s\n",[[[NSString stringWithUTF8String:__FILE__] lastPathComponent] UTF8String], __LINE__, [[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String]);
+#else
+#define NSLog(FORMAT, ...) nil
+
+#endif
+
+#ifdef __OBJC__
+
+#define     SHAREDAPPDELE           ((AppDelegate*)[[UIApplication sharedApplication] delegate])
+#define     MyFont(A)                   [UIFont systemFontOfSize:A]
+#define     SCREEN_HEIGHT                   [WWTolls getScreenHeight]
+#define     SCREEN_WIDTH                   ([[UIScreen mainScreen] bounds].size.width)
+#define     NavHeight                       64
+#define     SCREEN_MIDDLE(A)               (SCREEN_WIDTH-A)/2
+#define     SCREEN_HEIGHT_MIDDLE(A)               (SCREEN_HEIGHT-A)/2
+#define     kVIEW_BOUNDS_WIDTH      ([[UIScreen mainScreen]bounds].size.width)
+#define     kVIEW_BOUNDS_HEIGHT     ([[UIScreen mainScreen] bounds].size.height)
+#define     NSUSER_Defaults         [NSUserDefaults standardUserDefaults]
+
+#endif
+
+
